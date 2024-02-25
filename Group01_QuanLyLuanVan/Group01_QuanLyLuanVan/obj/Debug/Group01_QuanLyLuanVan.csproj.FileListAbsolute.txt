@@ -26,3 +26,5 @@ D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_
 D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
 D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.exe
 D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
+D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginView.g.cs
+D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginView.baml
