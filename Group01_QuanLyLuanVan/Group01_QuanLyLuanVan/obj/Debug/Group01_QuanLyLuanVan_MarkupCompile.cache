@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
 Group01_QuanLyLuanVan
 none
 false
 DEBUG;TRACE
-D:\Nam3_HK2\winform\cuoiki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-4945628768
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
+5102777529
 
-8509817900
-16876344824
-MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;View\LoginView.xaml;
+101691672076
+16-982872488
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ButtonStyles.xaml;View\LoginView.xaml;
 
 False
 
