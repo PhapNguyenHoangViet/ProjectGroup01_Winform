@@ -67,13 +67,27 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\SinhVien.cs" />
-    <Compile Include="UserControls\ButtonStyles.xaml.cs">
-      <DependentUpon>ButtonStyles.xaml</DependentUpon>
+    <Compile Include="UserControls\ControlBarUC.xaml.cs">
+      <DependentUpon>ControlBarUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\ControlBarViewModel.cs" />
+    <Compile Include="ViewModel\ForgetPasswordViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
+    <Compile Include="View\ForgetPasswordView.xaml.cs">
+      <DependentUpon>ForgetPasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginPageView.xaml.cs">
+      <DependentUpon>LoginPageView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUpView.xaml.cs">
+      <DependentUpon>SignUpView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -95,11 +109,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\ButtonStyles.xaml">
+    <Page Include="UserControls\ControlBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ForgetPasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SignUpView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

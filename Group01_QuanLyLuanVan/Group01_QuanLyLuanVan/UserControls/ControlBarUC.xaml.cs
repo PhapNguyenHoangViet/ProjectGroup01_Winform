@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Group01_QuanLyLuanVan.UserControls
 {
     /// <summary>
-    /// Interaction logic for ButtonStyles.xaml
+    /// Interaction logic for ControlBarUC.xaml
     /// </summary>
-    public partial class ButtonStyles : UserControl
+    public partial class ControlBarUC : UserControl
     {
-        public ButtonStyles()
+        public ControlBarUC()
         {
             InitializeComponent();
         }

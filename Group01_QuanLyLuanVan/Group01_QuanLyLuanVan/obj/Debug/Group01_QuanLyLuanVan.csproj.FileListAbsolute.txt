@@ -58,5 +58,11 @@ D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_Q
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.exe
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
-D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.g.cs
-D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.baml
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.g.cs
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.baml
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\ForgetPasswordView.g.cs
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginPageView.g.cs
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\SignUpView.g.cs
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\ForgetPasswordView.baml
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginPageView.baml
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\SignUpView.baml
