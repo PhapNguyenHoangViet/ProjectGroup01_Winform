@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-5102777529
+8-1043265373
 
-11-390416542
+191115253355
 16-982872488
-MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ButtonStyles.xaml;View\LoginView.xaml;
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;View\ForgetPasswordView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;
 
-True
+False
 
