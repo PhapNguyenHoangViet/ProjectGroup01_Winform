@@ -25,7 +25,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <uc:ControlBarUC Panel.ZIndex="5" Height="45" VerticalAlignment="Top" Margin="-26,39,51,0" Grid.ColumnSpan="2"/>
+        <uc:ControlBarUC Panel.ZIndex="5" Height="45" VerticalAlignment="Top" Margin="0,28,39,0" Grid.ColumnSpan="2"/>
 
 
         <materialDesign:Card 
@@ -35,6 +35,8 @@
             Grid.RowSpan="4" 
             Grid.ColumnSpan="2">
         </materialDesign:Card>
+
+        <Image Source="/Resource/Image/login-background.png" Margin="95,2,0,-2"/>
 
         <Frame x:Name="frame"
                Background="#FFF9F5"
@@ -48,9 +50,6 @@
             </i:Interaction.Triggers>
         </Frame>
 
-
-
-
-
     </Grid>
 </Window>
+
