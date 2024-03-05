@@ -78,6 +78,10 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
+    <Compile Include="ViewModel\ADMainViewModel.cs" />
+    <Compile Include="View\ADMainView.xaml.cs">
+      <DependentUpon>ADMainView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ForgetPasswordView.xaml.cs">
       <DependentUpon>ForgetPasswordView.xaml</DependentUpon>
     </Compile>
@@ -111,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ControlBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ADMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,12 +166,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resource\Image\addava.png" />
+    <Resource Include="Resource\Test\7979364.jpg" />
+    <Resource Include="Resource\Test\add.png" />
+    <Resource Include="Resource\Test\addava.png" />
+    <Resource Include="Resource\Test\bannerbook.png" />
+    <Resource Include="Resource\Test\library.jpg" />
+    <Resource Include="Resource\Test\login-background.png" />
+    <Resource Include="Resource\Test\logo.png" />
+    <Resource Include="Resource\Test\NextAct.png" />
+    <Resource Include="Resource\Test\NextPas.png" />
+    <Resource Include="Resource\Test\Password_16x16.png" />
+    <Resource Include="Resource\Test\PrevAct.png" />
+    <Resource Include="Resource\Test\PrevPas.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\Image\login-background.png" />
+    <Resource Include="Resource\Image\addava.png" />
+    <Resource Include="Resource\Image\bg1.png" />
+    <Resource Include="Resource\Image\bg2.png" />
+    <Resource Include="Resource\Image\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
