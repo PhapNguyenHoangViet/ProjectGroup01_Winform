@@ -30,5 +30,11 @@ namespace Group01_QuanLyLuanVan.View
             SignUpView signUpView = new SignUpView();
             signUpView.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherMainView teacherMainView = new TeacherMainView();
+            teacherMainView.Show();
+        }
     }
 }

@@ -49,7 +49,7 @@
 
             <Border Grid.Column="0"
                 Background="#353A55"
-                CornerRadius="40,0,0,40" Height="750" VerticalAlignment="Center">
+                CornerRadius="50,0,0,50" Height="750" VerticalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
@@ -79,8 +79,7 @@
                                 Style="{StaticResource BtnDeTai}"
                                 Uid="1"
                                 FontFamily="{StaticResource Custom}"
-                                x:Name="btnBooks"
-                                Command="{Binding }" >
+                                x:Name="btnDeTai">
                             </RadioButton>
 
 

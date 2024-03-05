@@ -46,12 +46,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new ForgetPasswordView();
             });
 
-            LoginCM = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                Window oldWindow = App.Current.MainWindow;
-                App.Current.MainWindow = oldWindow;
-                oldWindow.Close();
-            });
         }
     }
 }

@@ -578,14 +578,14 @@
                     >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                        Kind="Sync"
+                        Kind="Star"
                         Width="25"
                         Height="25"
                         VerticalAlignment="Center"
                         Margin="6"
                         />
                                 <TextBlock 
-                        Text="Check đạo văn"
+                        Text="Check Đạo Văn"
                         FontSize="13"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
