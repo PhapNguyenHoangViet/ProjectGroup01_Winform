@@ -558,6 +558,52 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+   TargetType="RadioButton"
+   x:Key="BtnCheckDaoVan">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                    Width="155"
+                    Height="40"
+                    CornerRadius="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="{TemplateBinding Background}"
+                    Margin="0,0,0,6"
+                    >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                        Kind="Sync"
+                        Width="25"
+                        Height="25"
+                        VerticalAlignment="Center"
+                        Margin="6"
+                        />
+                                <TextBlock 
+                        Text="Check đạo văn"
+                        FontSize="13"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                               />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
     <!--#endregion-->
 
     <!--#region Next Button-->

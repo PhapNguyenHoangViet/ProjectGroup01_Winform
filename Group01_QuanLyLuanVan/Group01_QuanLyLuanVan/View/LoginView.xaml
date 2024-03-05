@@ -36,7 +36,7 @@
             Grid.ColumnSpan="2">
         </materialDesign:Card>
 
-        <Image Source="/Resource/Image/login-background.png" Margin="95,2,0,-2"/>
+        <Image Source="/Resource/Image/bg1.png" Margin="95,2,0,-2"/>
 
         <Frame x:Name="frame"
                Background="#FFF9F5"

@@ -137,8 +137,7 @@
                             </StackPanel>
                             <StackPanel
                             Orientation="Horizontal"
-                            Margin="0,10,0,0"
-                        >
+                            Margin="0,10,0,0">
                                 <TextBox    
                                 Margin="0,10,0,0" Foreground="Black" 
                                 materialDesign:HintAssist.Foreground="Black"
@@ -203,18 +202,33 @@
                                 materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
                                 FontFamily="Josefin Sans"
                                 materialDesign:HintAssist.Hint="Email" Width="390"/>
-                            <TextBox 
-                                Foreground="Black" 
-                                Margin="-50,10,0,0"
-                                Style="{StaticResource MaterialDesignFilledTextBox}"
-                                VerticalAlignment="Top"
-                                AcceptsReturn="True"
-                                TextWrapping="Wrap"
-                                MaxWidth="400" x:Name="DC"
-                                materialDesign:HintAssist.Foreground="Black"
-                                materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
-                                FontFamily="Josefin Sans"
-                                materialDesign:HintAssist.Hint="Địa chỉ" Width="390"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox    
+                                    Foreground="Black" 
+                                    Margin="0,10,0,0"
+                                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                                    VerticalAlignment="Top"
+                                    AcceptsReturn="True"
+                                    TextWrapping="Wrap"
+                                    MaxWidth="400" x:Name="MSSV"
+                                    materialDesign:HintAssist.Foreground="Black"
+                                    materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
+                                    FontFamily="Josefin Sans"
+                                    materialDesign:HintAssist.Hint="MSSV" Width="190"/>
+                                <TextBox 
+                                    Foreground="Black" 
+                                    Margin="10,10,0,0"
+                                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                                    VerticalAlignment="Top"
+                                    AcceptsReturn="True"
+                                    TextWrapping="Wrap"
+                                    MaxWidth="400" x:Name="Lop"
+                                    materialDesign:HintAssist.Foreground="Black"
+                                    materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
+                                    FontFamily="Josefin Sans"
+                                    materialDesign:HintAssist.Hint="Lớp" Width="190"/>
+                            </StackPanel>
+
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
