@@ -23,6 +23,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         public TeacherMainViewModel()
         {
+            LoadPageCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame = p;
+                p.Content = new HomeView();
+            });
+
+            HomeCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+                MainFrame.Content = new HomeView();
+            });
 
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
             {

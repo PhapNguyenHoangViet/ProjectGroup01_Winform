@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -43,6 +44,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
             ForgetPasswordCM = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 MainFrame.Content = new ForgetPasswordView();
+            });
+
+            LoginCM = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                Window oldWindow = App.Current.MainWindow;
+                App.Current.MainWindow = oldWindow;
+                oldWindow.Close();
             });
         }
     }

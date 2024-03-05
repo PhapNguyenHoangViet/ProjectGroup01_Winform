@@ -7,4 +7,6 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ForgetPasswordViewModel x:Key="ForgetPassVM"></viewmodel:ForgetPasswordViewModel>
     <viewmodel:SignUpViewModel x:Key="SignUpVM"></viewmodel:SignUpViewModel>
+    <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
+
 </ResourceDictionary>

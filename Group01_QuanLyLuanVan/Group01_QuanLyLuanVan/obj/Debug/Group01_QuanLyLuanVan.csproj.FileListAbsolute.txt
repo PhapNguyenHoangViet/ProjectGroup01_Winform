@@ -146,3 +146,7 @@ D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01
 D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
 D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherMainView.g.cs
 D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherMainView.baml
+D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\SlideCard.g.cs
+D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\HomeView.g.cs
+D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\SlideCard.baml
+D:\Nam3_HK2\winform\cuoi_ki\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\HomeView.baml
