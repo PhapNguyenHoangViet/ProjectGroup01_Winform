@@ -7,6 +7,15 @@
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ForgetPasswordViewModel x:Key="ForgetPassVM"></viewmodel:ForgetPasswordViewModel>
     <viewmodel:SignUpViewModel x:Key="SignUpVM"></viewmodel:SignUpViewModel>
+    <viewmodel:ChangePasswordViewModel x:Key="ChangePasswordVM"></viewmodel:ChangePasswordViewModel>
     <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
-
+    <viewmodel:SystemErrorReportViewModel x:Key="SystemErrorReportVM"></viewmodel:SystemErrorReportViewModel>
+    <viewmodel:TeacherAddDissertationView x:Key="TeacherAddDissertationVM"></viewmodel:TeacherAddDissertationView>
+    <viewmodel:TeacherDissertationDetailViewModel x:Key="TeacherDissertationDetailVM"></viewmodel:TeacherDissertationDetailViewModel>
+    <viewmodel:TeacherDissertationViewModel x:Key="TeacherDissertationVM"></viewmodel:TeacherDissertationViewModel>
+    <viewmodel:TeacherNotificationViewModel x:Key="TeacherNotificationVM"></viewmodel:TeacherNotificationViewModel>
+    <viewmodel:TeacherProgressDetailViewModel x:Key="TeacherProgressDetailVM"></viewmodel:TeacherProgressDetailViewModel>
+    <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
+    <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
+    <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
 </ResourceDictionary>

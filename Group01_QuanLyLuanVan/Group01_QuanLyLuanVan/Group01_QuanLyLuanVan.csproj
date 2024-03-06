@@ -75,6 +75,7 @@
       <DependentUpon>SlideCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\ForgetPasswordViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
@@ -83,9 +84,21 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ADMainViewModel.cs" />
+    <Compile Include="ViewModel\SystemErrorReportViewModel.cs" />
+    <Compile Include="ViewModel\TeacherAddDissertationViewModel.cs" />
+    <Compile Include="ViewModel\TeacherDissertationDetailViewModel.cs" />
+    <Compile Include="ViewModel\TeacherDissertationViewModel.cs" />
     <Compile Include="ViewModel\TeacherMainViewModel.cs" />
+    <Compile Include="ViewModel\TeacherNotificationViewModel.cs" />
+    <Compile Include="ViewModel\TeacherProgressDetailViewModel.cs" />
+    <Compile Include="ViewModel\TeacherProgressViewModel.cs" />
+    <Compile Include="ViewModel\TeacherScoreViewModel.cs" />
+    <Compile Include="ViewModel\TeacherSettingViewModel.cs" />
     <Compile Include="View\ADMainView.xaml.cs">
       <DependentUpon>ADMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChangePasswordView.xaml.cs">
+      <DependentUpon>ChangePasswordView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ForgetPasswordView.xaml.cs">
       <DependentUpon>ForgetPasswordView.xaml</DependentUpon>
@@ -102,8 +115,35 @@
     <Compile Include="View\SignUpView.xaml.cs">
       <DependentUpon>SignUpView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SystemErrorReport.xaml.cs">
+      <DependentUpon>SystemErrorReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherAddDissertationView.xaml.cs">
+      <DependentUpon>TeacherAddDissertationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherDissertationDetailView.xaml.cs">
+      <DependentUpon>TeacherDissertationDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherDissertationView.xaml.cs">
+      <DependentUpon>TeacherDissertationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TeacherMainView.xaml.cs">
       <DependentUpon>TeacherMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherNotificationView.xaml.cs">
+      <DependentUpon>TeacherNotificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherProgressDetailView.xaml.cs">
+      <DependentUpon>TeacherProgressDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherProgressView.xaml.cs">
+      <DependentUpon>TeacherProgressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherScoreView.xaml.cs">
+      <DependentUpon>TeacherScoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherSettingView.xaml.cs">
+      <DependentUpon>TeacherSettingView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +177,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ChangePasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ForgetPasswordView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,7 +201,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SystemErrorReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherAddDissertationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherDissertationDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherDissertationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TeacherMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherNotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherProgressDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherProgressView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherScoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherSettingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
