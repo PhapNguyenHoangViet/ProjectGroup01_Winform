@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
 Group01_QuanLyLuanVan
 none
 false
 DEBUG;TRACE
-D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-8-1043265373
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
+191318305493
 
-19-1339316343
-16-1986652464
-MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;View\ForgetPasswordView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;
+30-1772534857
+16-1480835567
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;View\AdminManageDetailStudent.xaml;View\AdminManageDetailTeacher.xaml;View\AdminManageStudent.xaml;View\AdminManageTeacher.xaml;View\ForgetPasswordView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentProgressUpdate.xaml;View\StudentReceiveEvaluationFromTeacher.xaml;View\StudentRegisterView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitThesisView.xaml;View\StudentUpdateInforView.xaml;
 
-False
+True
 

@@ -78,6 +78,18 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
+    <Compile Include="View\AdminManageDetailStudent.xaml.cs">
+      <DependentUpon>AdminManageDetailStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManageDetailTeacher.xaml.cs">
+      <DependentUpon>AdminManageDetailTeacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManageStudent.xaml.cs">
+      <DependentUpon>AdminManageStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManageTeacherView.xaml.cs">
+      <DependentUpon>AdminManageTeacherView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ForgetPasswordView.xaml.cs">
       <DependentUpon>ForgetPasswordView.xaml</DependentUpon>
     </Compile>
@@ -89,6 +101,27 @@
     </Compile>
     <Compile Include="View\SignUpView.xaml.cs">
       <DependentUpon>SignUpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentReceiveEvaluationView.xaml.cs">
+      <DependentUpon>StudentReceiveEvaluationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentRegisterTopicView.xaml.cs">
+      <DependentUpon>StudentRegisterTopicView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentScoreView.xaml.cs">
+      <DependentUpon>StudentScoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentScoreView2.xaml.cs">
+      <DependentUpon>StudentScoreView2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentSubmitView.xaml.cs">
+      <DependentUpon>StudentSubmitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentUpdateInforView.xaml.cs">
+      <DependentUpon>StudentUpdateInforView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentUpdateProgressView.xaml.cs">
+      <DependentUpon>StudentUpdateProgressView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +147,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AdminManageDetailStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminManageDetailTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminManageStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminManageTeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ForgetPasswordView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +176,34 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SignUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentReceiveEvaluationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentRegisterTopicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentScoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentScoreView2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentSubmitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentUpdateInforView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentUpdateProgressView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,16 +231,37 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resource\Font\Nunito-ExtraBold.ttf" />
+    <Resource Include="Resource\Font\NunitoBold.ttf" />
+    <Resource Include="Resource\Font\NunitoRegular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resource\Image\addava.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Image\login-background.png" />
+    <Resource Include="Resource\Image\QuanLyLuanVan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\ava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\congratulation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\congratulation-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\mochi_mat_sang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\votay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\student_register.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

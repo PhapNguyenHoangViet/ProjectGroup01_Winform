@@ -58,6 +58,7 @@ D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_Q
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.exe
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
+<<<<<<< Updated upstream
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.g.cs
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.baml
 D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\ForgetPasswordView.g.cs
@@ -104,3 +105,77 @@ D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLy
 D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
 D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.exe
 D:\Nam3_HK2\winform\ProjectGroup01_Winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
+=======
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.g.cs
+D:\Nam3_HK2\winform\cuoiKy\Group1_QuanLyLuanVan\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Group01_QuanLyLuanVan.exe.config
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Group01_QuanLyLuanVan.exe
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Group01_QuanLyLuanVan.pdb
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\MaterialDesignColors.dll
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\MaterialDesignColors.pdb
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.AssemblyReference.cache
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.SuggestedBindingRedirects.cache
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Resource\StyleResource.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\MainWindow.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\DangKyDeTai.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\App.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan_MarkupCompile.cache
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan_MarkupCompile.lref
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\App.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\MainWindow.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Resource\MainResource.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ButtonStyles.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\DangKyDeTai.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.g.resources
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.Properties.Resources.resources
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.GenerateResource.cache
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CoreCompileInputs.cache
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.exe
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.pdb
+>>>>>>> Stashed changes
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\ForgetPasswordView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginPageView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\SignUpView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\ControlBarUC.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\ForgetPasswordView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\LoginPageView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\SignUpView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentRegisterView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentRegisterView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\PersonalInformationView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\PersonalInformationView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentProgressUpdate.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentProgressUpdate.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentReceiveEvaluationFromTeacher.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentReceiveEvaluationFromTeacher.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentUpdateInforView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentUpdateInforView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentSubmitThesis.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentSubmitThesis.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentScoreView.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentScoreView.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentScoreView2.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentScoreView2.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageTeacher.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageStudent.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageStudent.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageTeacher.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageDetailStudent.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageDetailStudent.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageDetailTeacher.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageDetailTeacher.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\Page1.g.cs
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\Page1.baml
+D:\lt winform\DOANCUOIKY\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentSubmitThesisView.g.cs
