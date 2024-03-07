@@ -8,9 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/addava.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/bg1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/bg2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/ava.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/congratulation-text.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/congratulation.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/mochi_mat_sang.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/quanlyluanvan.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/student_register.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/student_register.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/image/votay.png")]
 
 

@@ -76,10 +76,19 @@
 
                             <RadioButton
                                 Width="200"
-                                Style="{StaticResource BtnQLTaiKhoan}"
+                                Style="{StaticResource BtnQLGiaoVien}"
                                 Uid="1"
                                 FontFamily="{StaticResource Custom}"
-                                x:Name="btnBooks"
+                                x:Name="btnTeachers"
+                                Command="{Binding }">
+                            </RadioButton>
+                            
+                            <RadioButton
+                                Width="200"
+                                Style="{StaticResource BtnQLSinhVien}"
+                                Uid="1"
+                                FontFamily="{StaticResource Custom}"
+                                x:Name="btnStudents"
                                 Command="{Binding }">
                             </RadioButton>
 

@@ -5,6 +5,185 @@
     <FontFamily x:Key="Custom">Font/Nunito-ExtraBold.ttf #Nunito ExtraBold</FontFamily>
 
     <FontFamily x:Key="Custom1">Font/NunitoRegular.ttf #Nunito</FontFamily>
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+   TargetType="RadioButton"
+   x:Key="BtnNopLuanVan">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                    Width="155"
+                    Height="40"
+                    CornerRadius="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="{TemplateBinding Background}"
+                    Margin="0,0,0,6"
+                    >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                        Kind="Star"
+                        Width="25"
+                        Height="25"
+                        VerticalAlignment="Center"
+                        Margin="6"
+                        />
+                                <TextBlock 
+                        Text="Nộp Luận văn"
+                        FontSize="13"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                               />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+       TargetType="RadioButton"
+       x:Key="BtnDiemLuanVan">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="155"
+                        Height="40"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        Margin="0,0,0,6"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="Star"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                                <TextBlock 
+                            Text="Điểm Luận Văn"
+                            FontSize="13"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                                   />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+       TargetType="RadioButton"
+       x:Key="BtnCapNhatTienDo">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="155"
+                        Height="40"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        Margin="0,0,0,6"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="Sync"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                                <TextBlock 
+                            Text="Cập Nhật Tiến Độ"
+                            FontSize="13"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                                   />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+       TargetType="RadioButton"
+       x:Key="BtnDangKyDeTai">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="155"
+                        Height="40"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        Margin="0,0,0,6">
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="Book"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                                <TextBlock 
+                            Text="Đăng Ký Đề Tài"
+                            FontSize="13"                                
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                                   />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#303551"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
        TargetType="RadioButton"
        x:Key="BtnDashboard">
@@ -51,7 +230,7 @@
 
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
        TargetType="RadioButton"
-       x:Key="BtnQLTaiKhoan">
+       x:Key="BtnQLGiaoVien">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
@@ -74,7 +253,51 @@
                             Margin="6"
                             />
                                 <TextBlock 
-                            Text="Quản lý tài khoản"
+                            Text="Quản lý giáo viên"
+                            FontSize="13"                                
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                                   />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+       TargetType="RadioButton"
+       x:Key="BtnQLSinhVien">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="155"
+                        Height="40"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        Margin="0,0,0,6"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="Account"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                                <TextBlock 
+                            Text="Quản lý sinh viên"
                             FontSize="13"                                
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
