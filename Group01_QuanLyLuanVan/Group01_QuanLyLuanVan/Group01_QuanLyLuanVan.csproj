@@ -112,6 +112,9 @@
     <Compile Include="View\AdminModifyTeacherView.xaml.cs">
       <DependentUpon>AdminModifyTeacherView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\AdminModifyTopicView.xaml.cs">
+      <DependentUpon>AdminModifyTopicView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ChangePasswordView.xaml.cs">
       <DependentUpon>ChangePasswordView.xaml</DependentUpon>
     </Compile>
@@ -233,6 +236,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AdminModifyTeacherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminModifyTopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
