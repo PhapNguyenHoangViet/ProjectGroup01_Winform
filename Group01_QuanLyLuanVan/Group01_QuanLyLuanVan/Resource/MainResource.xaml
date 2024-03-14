@@ -4,6 +4,8 @@
 
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
     <viewmodel:TeacherMainViewModel x:Key="TeacherMainVM"></viewmodel:TeacherMainViewModel>
+    <viewmodel:ADMainViewModel x:Key="ADMainVM"></viewmodel:ADMainViewModel>
+
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ForgetPasswordViewModel x:Key="ForgetPassVM"></viewmodel:ForgetPasswordViewModel>
     <viewmodel:SignUpViewModel x:Key="SignUpVM"></viewmodel:SignUpViewModel>
@@ -18,4 +20,5 @@
     <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
+    
 </ResourceDictionary>

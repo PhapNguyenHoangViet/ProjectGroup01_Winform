@@ -67,7 +67,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Const.cs" />
+    <Compile Include="Model\DanhGia.cs" />
+    <Compile Include="Model\DeTai.cs" />
+    <Compile Include="Model\GiangVien.cs" />
+    <Compile Include="Model\Khoa.cs" />
+    <Compile Include="Model\Nhom.cs" />
     <Compile Include="Model\SinhVien.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\TheLoai.cs" />
+    <Compile Include="Model\TienDo.cs" />
+    <Compile Include="Model\YeuCau.cs" />
     <Compile Include="UserControls\ControlBarUC.xaml.cs">
       <DependentUpon>ControlBarUC.xaml</DependentUpon>
     </Compile>
