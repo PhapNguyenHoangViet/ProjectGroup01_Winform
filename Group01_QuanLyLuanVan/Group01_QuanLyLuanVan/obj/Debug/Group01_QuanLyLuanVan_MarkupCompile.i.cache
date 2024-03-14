@@ -12,9 +12,9 @@ DEBUG;TRACE
 D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
 36442303906
 
-612031615893
+70-1308037166
 161819649123
 MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentMainView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotificationView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;
 
-True
+False
 
