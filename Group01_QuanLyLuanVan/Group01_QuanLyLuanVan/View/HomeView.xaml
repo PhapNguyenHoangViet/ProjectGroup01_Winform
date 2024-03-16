@@ -15,6 +15,7 @@
       Background="Transparent"
       x:Name="HomeViewWd">
 
+
     <Border Background="White"
         CornerRadius="20">
         <Grid>

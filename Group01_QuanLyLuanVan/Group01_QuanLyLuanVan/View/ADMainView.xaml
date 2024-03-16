@@ -8,13 +8,13 @@
         xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
         xmlns:uc="clr-namespace:Group01_QuanLyLuanVan.UserControls"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Quản lý luận văn" Height="720" Width="1280"
+        Title="Quản lý luận văn" Height="750" Width="1100"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        DataContext="{StaticResource MainVM}"
+        DataContext="{StaticResource ADMainVM}"
         Name="ADMainWd">
 
     <i:Interaction.Triggers>
@@ -156,8 +156,8 @@
                     </Border>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="563*"/>
-                            <ColumnDefinition Width="237*"/>
+                            <ColumnDefinition Width="113*"/>
+                            <ColumnDefinition Width="67*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="1">
                             <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
@@ -200,9 +200,10 @@
                             </StackPanel>
                         </Grid>
                     </Grid>
+                    
                     <Frame x:Name="frame"
                        Background="White" Margin="25,10,25,25"
-                       NavigationUIVisibility="Hidden" Grid.Row="2" DataContext="{StaticResource MainVM}">
+                       NavigationUIVisibility="Hidden" Grid.Row="2" DataContext="{StaticResource ADMainVM}"  Width="800" Height="605">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Loaded">
                                 <i:InvokeCommandAction Command="{Binding LoadPageCM}"
