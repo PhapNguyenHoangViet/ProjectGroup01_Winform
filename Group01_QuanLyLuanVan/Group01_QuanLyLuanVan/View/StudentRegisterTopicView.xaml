@@ -8,7 +8,23 @@
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Height="605" Width="700"
-      Title="StudentRegisterTopicView">
+      DataContext="{StaticResource StudentMainVM}"
+      Title="StudentRegisterTopicView"
+      Name="StudentRegisterWd">
+
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Page.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <ThicknessAnimation Storyboard.TargetName="StudentRegisterWd"
+                                    Storyboard.TargetProperty="Margin"
+                                    From="426,0,0,0"
+                                    To="0"
+                                    Duration="0:0:0.2" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
 
     <Grid>
         <Grid.RowDefinitions>

@@ -154,18 +154,19 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Background="{TemplateBinding Background}"
-                        Margin="0,0,0,6">
+                        Margin="0,0,0,6"
+                        >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                            Kind="Book"
+                            Kind="Sync"
                             Width="25"
                             Height="25"
                             VerticalAlignment="Center"
                             Margin="6"
                             />
                                 <TextBlock 
-                            Text="Đăng Ký Đề Tài"
-                            FontSize="13"                                
+                            Text="Đăng ký đề tài"
+                            FontSize="13"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                                    />
@@ -179,14 +180,14 @@
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#303551"></Setter>
+                <Setter Property="Background" Value="#126392"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
        TargetType="RadioButton"
-       x:Key="BtnDashboard">
+       x:Key="BtnDashboardStudent">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
@@ -198,10 +199,11 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Background="{TemplateBinding Background}"
-                        Margin="0,0,0,6">
+                        Margin="0,0,0,6"
+                        >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                            Kind="ViewDashboard"
+                            Kind="Sync"
                             Width="25"
                             Height="25"
                             VerticalAlignment="Center"
@@ -209,7 +211,7 @@
                             />
                                 <TextBlock 
                             Text="Dashboard"
-                            FontSize="13"                                
+                            FontSize="13"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                                    />
@@ -223,7 +225,7 @@
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#303551"></Setter>
+                <Setter Property="Background" Value="#126392"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>

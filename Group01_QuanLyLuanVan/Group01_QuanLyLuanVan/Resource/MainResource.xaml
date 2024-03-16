@@ -18,4 +18,6 @@
     <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
+    <viewmodel:StudentMainViewModel x:Key="StudentMainVM"></viewmodel:StudentMainViewModel>
+    <viewmodel:StudentRegisterTopicViewModel x:Key="StudentRegisterVM"></viewmodel:StudentRegisterTopicViewModel>
 </ResourceDictionary>

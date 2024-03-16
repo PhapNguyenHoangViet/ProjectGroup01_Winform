@@ -263,3 +263,5 @@ D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Q
 D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentMainView.baml
 D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageTopicView.g.cs
 D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminManageTopicView.baml
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminModifyTopicView.g.cs
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\AdminModifyTopicView.baml
