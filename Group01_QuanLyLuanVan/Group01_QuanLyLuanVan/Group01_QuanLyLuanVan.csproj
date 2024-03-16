@@ -66,6 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="Model\Const.cs" />
     <Compile Include="Model\DanhGia.cs" />
     <Compile Include="Model\DeTai.cs" />
