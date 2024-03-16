@@ -13,6 +13,7 @@ namespace Group01_QuanLyLuanVan.Model
         private string moTa;
         private string yeuCauChung;
         private int soLuong;
+        private string trangThai;
         private DateTime ngayBatDau;
         private DateTime ngayKetThuc;
         private string theLoaiId;
@@ -21,13 +22,14 @@ namespace Group01_QuanLyLuanVan.Model
 
         public DeTai() { }
 
-        public DeTai(string deTaiId, string tenDeTai, string moTa, string yeuCauChung, int soLuong, DateTime ngayBatDau, DateTime ngayKetThuc, string theLoaiId, string nhomId, string giangVienId)
+        public DeTai(string deTaiId, string tenDeTai, string moTa, string yeuCauChung, int soLuong, string trangThai, DateTime ngayBatDau, DateTime ngayKetThuc, string theLoaiId, string nhomId, string giangVienId)
         {
             this.deTaiId = deTaiId;
             this.tenDeTai = tenDeTai;
             this.moTa = moTa;
             this.yeuCauChung = yeuCauChung;
             this.soLuong = soLuong;
+            this.trangThai = trangThai;
             this.ngayBatDau = ngayBatDau;
             this.ngayKetThuc = ngayKetThuc;
             this.theLoaiId = theLoaiId;
@@ -40,6 +42,7 @@ namespace Group01_QuanLyLuanVan.Model
         public string MoTa { get => moTa; set => moTa = value; }
         public string YeuCauChung { get => yeuCauChung; set => yeuCauChung = value; }
         public int SoLuong { get => soLuong; set => soLuong = value; }
+        public string TrangThai { get => trangThai; set => trangThai = value; }
         public DateTime NgayBatDau { get => ngayBatDau; set => ngayBatDau = value; }
         public DateTime NgayKetThuc { get => ngayKetThuc; set => ngayKetThuc = value; }
         public string TheLoaiId { get => theLoaiId; set => theLoaiId = value; }
