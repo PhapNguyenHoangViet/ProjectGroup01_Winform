@@ -67,6 +67,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="Model\Const.cs" />
     <Compile Include="Model\DanhGia.cs" />
     <Compile Include="Model\DeTai.cs" />

@@ -12,19 +12,26 @@ namespace Group01_QuanLyLuanVan.Model
         private string password;
         private string mail;
         private string quyen;
-        private string code;
         private int trangThai;
-        
+        private string code;
+
         public TaiKhoan() { }
 
-        public TaiKhoan(string username, string password, string mail, string quyen, string code, int trangThai)
+        public TaiKhoan(string username, string mail, string code)
+        {
+            this.username = username;
+            this.mail = mail;
+            this.code = code;
+        }
+
+        public TaiKhoan(string username, string password, string mail, string quyen, int trangThai, string code)
         {
             this.username = username;
             this.password = password;
             this.mail = mail;
             this.quyen = quyen;
-            this.code = code;
             this.trangThai = trangThai;
+            this.code = code;
         }
 
         public string Username { get => username; set => username = value; }
