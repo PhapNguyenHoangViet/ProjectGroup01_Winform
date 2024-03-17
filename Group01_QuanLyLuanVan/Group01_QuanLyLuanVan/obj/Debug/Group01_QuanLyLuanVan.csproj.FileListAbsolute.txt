@@ -357,3 +357,5 @@ D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qu
 D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.GenerateResource.cache
 D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CoreCompileInputs.cache
 D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
+D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\VerifyCodeView.g.cs
+D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\VerifyCodeView.baml
