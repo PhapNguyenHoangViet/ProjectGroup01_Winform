@@ -11,9 +11,10 @@ namespace Group01_QuanLyLuanVan.Model
         private string username;
         private string password;
         private string mail;
-        private string quyen;
+        private int quyen;
         private int trangThai;
         private string code;
+        private string avatar;
 
         public TaiKhoan() { }
 
@@ -24,7 +25,7 @@ namespace Group01_QuanLyLuanVan.Model
             this.code = code;
         }
 
-        public TaiKhoan(string username, string password, string mail, string quyen, int trangThai, string code)
+        public TaiKhoan(string username, string password, string mail, int quyen, int trangThai, string code, string avatar)
         {
             this.username = username;
             this.password = password;
@@ -32,13 +33,16 @@ namespace Group01_QuanLyLuanVan.Model
             this.quyen = quyen;
             this.trangThai = trangThai;
             this.code = code;
+            this.avatar = avatar;
         }
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public string Mail { get => mail; set => mail = value; }
-        public string Quyen { get => quyen; set => quyen = value; }
+        public int Quyen { get => quyen; set => quyen = value; }
         public string Code { get => code; set => code = value; }
         public int  TrangThai { get => trangThai; set => trangThai = value; }
+        public string Avatar { get => avatar; set => avatar = value; }
+
     }
 }
