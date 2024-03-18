@@ -53,7 +53,7 @@ namespace Group01_QuanLyLuanVan.DAO
 
         public TaiKhoan FindOne(string username, string passowrd)
         {
-            string sqlStr = string.Format("(select * from TaiKhoan where username='{0}' and passowrd='{1}' ) ", username, passowrd);
+            string sqlStr = string.Format("(select * from TaiKhoan where username='{0}' and password='{1}' ) ", username, passowrd);
             DataTable tb = dbcon.Sql_Select(sqlStr);
             if (tb.Rows.Count > 0)
             {

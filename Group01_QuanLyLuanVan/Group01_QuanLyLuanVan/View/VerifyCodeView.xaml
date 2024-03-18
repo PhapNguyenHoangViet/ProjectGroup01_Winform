@@ -83,12 +83,13 @@
                             FontFamily="Josefin Sans" Width="446"/>
                     </Grid>
                     <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="180,87,183,87">
-                        <TextBox x:Name="Digit1" Width="40" Height="40" TextAlignment="Center" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="20"/>
-                        <TextBox x:Name="Digit2" Width="40" Height="40" TextAlignment="Center" Margin="5,0" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="18"/>
-                        <TextBox x:Name="Digit3" Width="40" Height="40" TextAlignment="Center" Margin="5,0" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="18"/>
-                        <TextBox x:Name="Digit4" Width="40" Height="40" TextAlignment="Center" Margin="5,0" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="18"/>
-                        <TextBox x:Name="Digit5" Width="40" Height="40" TextAlignment="Center" Margin="5,0" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="18"/>
-                        <TextBox x:Name="Digit6" Width="40" Height="40" TextAlignment="Center" Margin="5,0" KeyUp="OnDigitKeyUp" PreviewTextInput="PreviewTextInputHandler" FontSize="18"/>
+                        <TextBox x:Name="Digit1" Width="40" Height="40" TextAlignment="Center" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+                        <TextBox x:Name="Digit2" Width="40" Height="40" TextAlignment="Center" Margin="5,0" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+                        <TextBox x:Name="Digit3" Width="40" Height="40" TextAlignment="Center" Margin="5,0" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+                        <TextBox x:Name="Digit4" Width="40" Height="40" TextAlignment="Center" Margin="5,0" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+                        <TextBox x:Name="Digit5" Width="40" Height="40" TextAlignment="Center" Margin="5,0" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+                        <TextBox x:Name="Digit6" Width="40" Height="40" TextAlignment="Center" Margin="5,0" TextChanged="OnDigitTextChanged" KeyUp="OnDigitKeyUp" PreviewKeyDown="OnDigitPreviewKeyDown" FontSize="18" />
+
                     </StackPanel>
 
                     <Grid Margin="0,252,0,0" Grid.RowSpan="2">
@@ -106,8 +107,8 @@
 
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Click">
-                                    <i:InvokeCommandAction Command="{Binding Register}"
-                                                   CommandParameter="{Binding ElementName=SignUpWd}"></i:InvokeCommandAction>
+                                    <i:InvokeCommandAction Command="{Binding ConfirmCommand}"
+                                                   CommandParameter="{Binding ElementName=VerifyWd}"></i:InvokeCommandAction>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </Button>

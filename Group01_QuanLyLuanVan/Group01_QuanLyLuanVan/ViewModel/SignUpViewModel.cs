@@ -69,15 +69,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MessageBox.Show("Tên đăng nhập đã tồn tại !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (tkDAO.FindOneByUsername(parameter.username.Text) != null)
+            if (DateTime.Now.Year - parameter.ngaySinh.SelectedDate.Value.Year < 18)
             {
-                MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
-            Regex reg = new Regex(match);
-            if (!reg.IsMatch(parameter.mail.Text))
-            {
-                MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Số tuổi phải lớn hơn 18 !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             string match1 = @"^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
@@ -87,60 +81,55 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MessageBox.Show("Số điện thoại không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            MessageBoxResult h = System.Windows.MessageBox.Show("Bạn muốn đăng ký tài khoản ?", "THÔNG BÁO", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
-            if (h == MessageBoxResult.Yes)
+            if (tkDAO.FindOneByMail(parameter.mail.Text) != null)
             {
-                TaiKhoan tk = new TaiKhoan();
-                tk.Username = parameter.username.Text;
-                tk.Password = password;
-                tk.Mail = parameter.mail.Text;
-                tk.Quyen = 1;
-                tk.TrangThai = 0;
-                Random rand = new Random();
-                tk.Code = rand.Next(100000, 999999).ToString();
-                SinhVien sv = new SinhVien();
-                sv.SinhVienId = "SV0" + parameter.sinhVienId.Text;
-                sv.KhoaId = "K0" + (parameter.tenKhoa.SelectedIndex).ToString();
-                sv.HoTen = parameter.hoTen.Text;
-                sv.SDT = parameter.sdt.Text;
-                sv.GioiTinh = parameter.gioiTinh.Text;
-                sv.SDT = parameter.sdt.Text;
-                if (linkaddimage == "/Resource/Image/addava.png")
-                    tk.Avatar = "/Resource/Image/addava.png";
-                else
-                    tk.Avatar = "/Resource/Ava/" + sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString();
-                Const.taiKhoan = tk;
-                SendCode(tk.Mail, tk.Code);
-
-                tkDAO.Register(tk);
-                try
-                {
-                    File.Copy(linkaddimage, Const._localLink + @"/Resource/Ava/" +sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                }
-
-                //MessageBox.Show("Chúc mừng bạn đã đăng ký thành công !", "THÔNG BÁO", MessageBoxButton.OK);
-                //parameter.username.Clear();
-                //parameter.password.Clear();
-                //parameter.mail.Clear();
-                //parameter.tenKhoa.SelectedItem = null;
-                //parameter.gioiTinh.SelectedItem = null;
-                //parameter.ngaySinh.SelectedDate = null;
-                //parameter.sinhVienId.Clear();
-                //parameter.hoTen.Clear();
-                //parameter.sdt.Clear();
-                //linkaddimage = "/Resource/Image/addava.png";
-                //parameter.ProfilePicture.ImageSource = new BitmapImage(new Uri(Const._localLink + linkaddimage));
+                MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
+            Regex reg = new Regex(match);
+            if (!reg.IsMatch(parameter.mail.Text))
+            {
+                MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
 
+            TaiKhoan tk = new TaiKhoan();
+            tk.Username = parameter.username.Text;
+            tk.Password = password;
+            tk.Mail = parameter.mail.Text;
+            tk.Quyen = 2;
+            tk.TrangThai = 0;
+            Random rand = new Random();
+            tk.Code = rand.Next(100000, 999999).ToString();
+            SinhVien sv = new SinhVien();
+            sv.SinhVienId = "SV0" + parameter.sinhVienId.Text;
+            sv.KhoaId = "K0" + (parameter.tenKhoa.SelectedIndex).ToString();
+            sv.HoTen = parameter.hoTen.Text;
+            sv.SDT = parameter.sdt.Text;
+            sv.GioiTinh = parameter.gioiTinh.Text;
+            sv.SDT = parameter.sdt.Text;
 
+
+            if (linkaddimage == "/Resource/Image/addava.png")
+                tk.Avatar = "/Resource/Image/addava.png";
+            else
+                tk.Avatar = "/Resource/Ava/" + sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+            Const.taiKhoan = tk;
+            SendCode(tk.Mail, tk.Code);
+
+            tkDAO.Register(tk);
+            File.Copy(linkaddimage, Const._localLink + @"/Resource/Ava/" +sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
+
+            Window oldWindow = App.Current.MainWindow;
+            oldWindow.Hide();
+            VerifyCodeView verifyCodeView = new VerifyCodeView();
+            oldWindow.Close();
+            App.Current.MainWindow = verifyCodeView;
+            verifyCodeView.ShowDialog();
         }
         void SendCode(string mail, string code)
         {
-            
             string nd = "Vui lòng nhập code: " + code + " để đăng ký tài khoản. Trân trọng !";
             MailMessage message = new MailMessage("21110587@student.hcmute.edu.vn", mail, "Xác nhận đăng ký", nd);
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);

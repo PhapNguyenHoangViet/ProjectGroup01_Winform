@@ -27,14 +27,10 @@ namespace Group01_QuanLyLuanVan.View
 
         private void OpenSignUp(object sender, RoutedEventArgs e)
         {
+            Window oldWindow = App.Current.MainWindow;
             SignUpView signUpView = new SignUpView();
-            signUpView.Show();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            TeacherMainView teacherMainView = new TeacherMainView();
-            teacherMainView.Show();
+            App.Current.MainWindow = signUpView;
+            signUpView.ShowDialog();
         }
     }
 }
