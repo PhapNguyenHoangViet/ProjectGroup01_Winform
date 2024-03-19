@@ -409,7 +409,7 @@
     </Style>
     <Style BasedOn="{StaticResource {x:Type Button}}"
        TargetType="Button"
-       x:Key="BtnSetting">
+       x:Key="BtnTeacherUpdateInfor">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>

@@ -110,6 +110,7 @@
     <Compile Include="ViewModel\TeacherProgressViewModel.cs" />
     <Compile Include="ViewModel\TeacherScoreViewModel.cs" />
     <Compile Include="ViewModel\TeacherSettingViewModel.cs" />
+    <Compile Include="ViewModel\TeacherUpdateInforViewModel.cs" />
     <Compile Include="ViewModel\VerifyCodeViewModel.cs" />
     <Compile Include="View\ADMainView.xaml.cs">
       <DependentUpon>ADMainView.xaml</DependentUpon>
@@ -206,6 +207,9 @@
     </Compile>
     <Compile Include="View\TeacherSettingView.xaml.cs">
       <DependentUpon>TeacherSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherUpdateInforView.xaml.cs">
+      <DependentUpon>TeacherUpdateInforView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VerifyCodeView.xaml.cs">
       <DependentUpon>VerifyCodeView.xaml</DependentUpon>
@@ -363,6 +367,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherUpdateInforView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
