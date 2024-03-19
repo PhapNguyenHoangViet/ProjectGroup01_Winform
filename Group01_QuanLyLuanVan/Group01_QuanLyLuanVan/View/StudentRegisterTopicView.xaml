@@ -8,7 +8,7 @@
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Height="605" Width="700"
-      DataContext="{StaticResource StudentMainVM}"
+      DataContext="{StaticResource StudentRegisterVM}"
       Title="StudentRegisterTopicView"
       Name="StudentRegisterWd">
 
@@ -28,134 +28,257 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="320"/>
-            <RowDefinition Height="130"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="123"/>
+            <RowDefinition Height="86"/>
+            <RowDefinition Height="89"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <TextBlock
-                    HorizontalAlignment="Center"
                     Text="ĐĂNG KÝ ĐỀ TÀI"
-                    FontSize="24"
-                    FontFamily="{StaticResource Custom}"
-                    Foreground="#353A55" 
-                    Margin="0,20,0,0"/>
+                    FontWeight = "SemiBold"
+                    FontFamily = "{StaticResource Custom}"
+                    FontSize = "30"
+                    Foreground = "#353A55"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            </TextBlock >
         </Grid>
         <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Center">
-                    <StackPanel>
-                        <ComboBox 
-                            Background="#E0E0E0"
-                            Margin="0,20,0,0"
-                            x:Name="Teacher" FontFamily="Josefin Sans" FontSize="16"
-                            Style="{StaticResource MaterialDesignFilledComboBox}"
-                            materialDesign:HintAssist.Foreground="Black"
-                            materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
-                            materialDesign:HintAssist.Hint="Chọn giảng viên"
-                            Height="50"
-                            Width="300" >
-                            <ComboBoxItem
-                                Content="Thanh Huyền" />
-                            <ComboBoxItem
-                                Content="Việt Pháp" />
-                            <ComboBoxItem
-                                Content="Thu Thủy" />
-                        </ComboBox>
-                    </StackPanel>
-                    <StackPanel>
-                        <ComboBox 
-                            Background="#E0E0E0"
-                            Margin="0,20,0,0"
-                            x:Name="Topic" FontFamily="Josefin Sans" FontSize="16"
-                            Style="{StaticResource MaterialDesignFilledComboBox}"
-                            materialDesign:HintAssist.Foreground="Black"
-                            materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
-                            materialDesign:HintAssist.Hint="Chọn đề tài"
-                            Height="50"
-                            Width="300" >
-                            <ComboBoxItem
-                                Content="Bán hàng online" />
-                            <ComboBoxItem
-                                Content="Đặt vé máy bay" />
-                            <ComboBoxItem
-                                Content="Bán vé xem phim" />
-                        </ComboBox>
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock
-                            Foreground="DimGray" 
-                            Margin="0,30,0,0"
-                            VerticalAlignment="Top"
-                            Background="#E0E0E0"
-                            TextWrapping="Wrap"
-                            MaxWidth="400" x:Name="DayStart"
-                            FontFamily="Josefin Sans" FontSize="16"
-                            Width="300" Height="50"/>
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock
-                            Foreground="DimGray" 
-                            Margin="0,30,0,0"
-                            VerticalAlignment="Top"
-                            Background="#E0E0E0"
-                            TextWrapping="Wrap"
-                            MaxWidth="400" x:Name="DayFinish"
-                            FontFamily="Josefin Sans" FontSize="16"
-                            Width="300" Height="50"/>
-                    </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock
+                    Text="MÃ ĐỀ TÀI"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="deTaiId"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
                 </StackPanel>
-
-            </Grid>
-            <Grid Grid.Column="1">
                 <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Left">
-                    <Image  Source="/Resource/Image/student_register.png" 
-                            Height="150"
-                            Margin="0,50,0,0" Width="236"/>
-                    <Label FontWeight="Bold"                            
-                           Margin="0,30,5,0"
-                           FontSize="16">
-                        <TextBlock TextAlignment="Center">
-                            <Run Text="Hãy chọn đề tài bạn "/>
-                            <LineBreak/>
-                            <Run Text="cảm thấy yêu thích nhất nha!"/>
-                        </TextBlock>
-                    </Label>
+                            Margin="20,0,0,0">
+                    <TextBlock
+                    Text="TÊN ĐỀ TÀI"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="TenDeTai"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
                 </StackPanel>
-            </Grid>
+            </StackPanel>
+            
         </Grid>
         <Grid Grid.Row="2">
-            <StackPanel>
-                <TextBlock
-                    Padding="15"
-                    Text="Mô tả đề tài" 
-                    Foreground="DimGray" 
-                    Margin="0,10,0,0"
-                    VerticalAlignment="Top"
-                    Background="#E0E0E0"
-                    TextWrapping="Wrap"
-                    MaxWidth="600" x:Name="Describe"
-                    FontFamily="Josefin Sans" FontSize="16"
-                    materialDesign:HintAssist.Hint="Mô tả đề tài" 
-                    Width="600" Height="100"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock
+                    Text="TÊN THỂ LOẠI"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="TenTheLoai"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="20,0,0,0">
+                    <TextBlock
+                    Text="TÊN GIẢNG VIÊN HƯỚNG DẪN"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="HoTen"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3">
-            <StackPanel>
-                <Button Content="Đăng ký"                        
-                        Width="120"
-                        Background="#353A55"
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock
+                    Text="NGÀY BẮT ĐẦU"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="NgayBatDau"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
-                        x:Name="btn_register"
-                        Margin="0,10,0,0"/>
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="20,0,0,0">
+                    <TextBlock
+                    Text="NGÀY KẾT THÚC"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <TextBox
+                        x:Name="NgayKetThuc"
+                        HorizontalAlignment="Left"
+                        Width="300"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+
             </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <StackPanel Orientation="Vertical"
+                        Margin="0,10,0,0">
+                <TextBlock
+                    Text="MÔ TẢ"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                    <TextBox
+                        x:Name="MoTa"
+                        HorizontalAlignment="Left"
+                        Width="620"
+                        Height="80"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="5">
+            <StackPanel Orientation="Vertical">
+                <TextBlock
+                    Text="YÊU CẦU"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                    <TextBox
+                        x:Name="YeuCau"
+                        HorizontalAlignment="Left"
+                        Width="620"
+                        Height="50"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="6">
+            <StackPanel Orientation="Vertical">
+                <TextBlock
+                    Text="THÀNH VIÊN"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <ComboBox x:Name="multiSelectComboBox" HorizontalAlignment="Left" Width="278" Height="50" Margin="10,0,0,0" IsTextSearchEnabled="False" IsDropDownOpen="False" MaxDropDownHeight="50" materialDesign:HintAssist.Hint="Chọn thành viên">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding FullInfo}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                            
+                            <ComboBox.ItemContainerStyle>
+                                <Style TargetType="ComboBoxItem">
+                                    <Setter Property="Height" Value="30" />
+                                </Style>
+                            </ComboBox.ItemContainerStyle>
+                        </ComboBox>
+                    </Border>
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300" Margin="20,0,0,0">
+                        <TextBox x:Name="selectedItemTextBlock" Text=""/>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="7">
+            <Button Content="ĐĂNG KÝ"
+                    Margin="0,-50,0,0"
+                            Width="230"
+                            BorderThickness="0"
+                            x:Name="btnregister"
+                            materialDesign:ButtonAssist.CornerRadius="10"
+                            Background="#353A55"
+                            Click="RegisterButton_Click">
+            </Button>
+            <Button Margin="529,50,23,10" Background="#353A55">
+                <TextBlock Text="Quay lại"
+                                       Height="30"
+                                       Width="53"
+                                       />
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding back}"
+                                                   CommandParameter="{Binding ElementName=DetailTopicwd}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
         </Grid>
     </Grid>
 </Page>

@@ -10,16 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-36442303906
+37236427884
 
-<<<<<<< HEAD
-72-1478691829
+77-1953392021
 161819649123
-=======
-71887550313
-16-2137612485
->>>>>>> origin/DAO
-MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentMainView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotificationView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentListTopicView.xaml;View\StudentMainView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotificationView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;
 
-True
+False
 

@@ -30,7 +30,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             StudentRegisterCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-                MainFrame.Content = new StudentRegisterTopicView();
+                MainFrame.Content = new StudentListTopicView();
             });
 
         }

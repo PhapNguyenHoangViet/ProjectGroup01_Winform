@@ -142,7 +142,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Button
                                     Style="{StaticResource BtnLogOut}"
-                                    FontFamily="{StaticResource Custom}" Margin="-5,0,10,-65" Grid.ColumnSpan="2"
+                                    FontFamily="{StaticResource Custom}" Margin="0,0,0,-47" Grid.ColumnSpan="2"
                                    >
                                 </Button>
                             </Grid>
@@ -211,7 +211,7 @@
                         </Grid>
                     </Grid>
                     <Frame x:Name="frame"
-                           Background="White" Margin="43,34,43,42"
+                           Background="White" Margin="43,0,43,42"
                            NavigationUIVisibility="Hidden" Grid.Row="2" DataContext="{StaticResource StudentMainVM}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Loaded">

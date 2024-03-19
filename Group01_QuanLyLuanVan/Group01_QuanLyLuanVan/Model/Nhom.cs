@@ -8,15 +8,15 @@ namespace Group01_QuanLyLuanVan.Model
 {
     public class Nhom
     {
-        private string nhomId;
+        private int nhomId;
 
         public Nhom() { }
 
-        public Nhom(string nhomId)
+        public Nhom(int nhomId)
         {
             this.nhomId = nhomId;
         }
 
-        public string NhomId { get => nhomId; set => nhomId = value; }
+        public int NhomId { get => nhomId; set => nhomId = value; }
     }
 }

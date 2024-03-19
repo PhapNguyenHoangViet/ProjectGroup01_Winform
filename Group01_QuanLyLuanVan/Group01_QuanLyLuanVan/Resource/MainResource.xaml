@@ -22,4 +22,5 @@
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
     <viewmodel:StudentMainViewModel x:Key="StudentMainVM"></viewmodel:StudentMainViewModel>
     <viewmodel:StudentRegisterTopicViewModel x:Key="StudentRegisterVM"></viewmodel:StudentRegisterTopicViewModel>
+    <viewmodel:StudentListTopicViewModel x:Key="StudentListTopicVM"></viewmodel:StudentListTopicViewModel>
 </ResourceDictionary>

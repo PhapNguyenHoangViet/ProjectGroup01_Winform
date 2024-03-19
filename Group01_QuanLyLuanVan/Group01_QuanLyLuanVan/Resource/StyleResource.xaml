@@ -158,7 +158,7 @@
                         >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                            Kind="Sync"
+                            Kind="Book"
                             Width="25"
                             Height="25"
                             VerticalAlignment="Center"
@@ -203,7 +203,7 @@
                         >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                            Kind="Sync"
+                            Kind="ViewDashboard"
                             Width="25"
                             Height="25"
                             VerticalAlignment="Center"

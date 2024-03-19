@@ -362,3 +362,7 @@ D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qu
 D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CoreCompileInputs.cache
 D:\Nam3_HK2\winform\Phap\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\Group01_QuanLyLuanVan.csproj.CopyComplete
 >>>>>>> DAO
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\ViewModel\StudentListTopicView.g.cs
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\ViewModel\StudentListTopicView.baml
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentListTopicView.g.cs
+D:\lt winform\DOANCUOIKY2\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentListTopicView.baml

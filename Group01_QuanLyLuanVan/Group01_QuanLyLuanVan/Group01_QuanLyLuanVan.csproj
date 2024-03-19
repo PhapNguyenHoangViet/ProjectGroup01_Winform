@@ -67,6 +67,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="DAO\DeTaiDAO.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="Model\Const.cs" />
     <Compile Include="Model\DanhGia.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ADMainViewModel.cs" />
+    <Compile Include="ViewModel\StudentListTopicViewModel.cs" />
     <Compile Include="ViewModel\StudentMainViewModel.cs" />
     <Compile Include="ViewModel\StudentRegisterTopicViewModel.cs" />
     <Compile Include="ViewModel\SystemErrorReportViewModel.cs" />
@@ -145,6 +148,9 @@
     </Compile>
     <Compile Include="View\SignUpView.xaml.cs">
       <DependentUpon>SignUpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentListTopicView.xaml.cs">
+      <DependentUpon>StudentListTopicView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\StudentMainView.xaml.cs">
       <DependentUpon>StudentMainView.xaml</DependentUpon>
@@ -277,6 +283,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SignUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StudentListTopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
