@@ -37,8 +37,10 @@ namespace Group01_QuanLyLuanVan.DAO
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thành công");
+                if (cmd.ExecuteNonQuery() <= 0)
+                {
+                    throw new Exception();
+                }
             }
             catch (Exception ex)
             {
