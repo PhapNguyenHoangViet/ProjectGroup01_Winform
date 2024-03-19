@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
+using Group01_QuanLyLuanVan.Properties;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
@@ -17,6 +18,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public static Frame MainFrame { get; set; }
 
         public ICommand LoadPageCM { get; set; }
+        public ICommand TeacherUpdateInforCM { get; set; }
 
         public ICommand SignoutCM { get; set; }
         public ICommand HomeCM { get; set; }
@@ -32,6 +34,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
             HomeCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
                 MainFrame.Content = new HomeView();
+            });
+
+
+            TeacherUpdateInforCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherUpdateInforView();
             });
 
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>

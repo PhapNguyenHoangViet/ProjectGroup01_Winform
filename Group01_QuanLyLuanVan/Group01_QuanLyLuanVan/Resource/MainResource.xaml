@@ -21,5 +21,5 @@
     <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
-    
+    <viewmodel:TeacherUpdateInforViewModel x:Key="TeacherUpdateInforVM"></viewmodel:TeacherUpdateInforViewModel>
 </ResourceDictionary>
