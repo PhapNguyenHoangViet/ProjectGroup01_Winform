@@ -15,6 +15,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
+        SinhVienDAO svDAO = new SinhVienDAO();
         TaiKhoanDAO tkDAO = new TaiKhoanDAO();
 
         private string username;
@@ -79,6 +80,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             }
                             else
                             {
+                                SinhVien sv = svDAO.FindOneByUsername(Const.taiKhoan.Username);
                                 Window oldWindow = App.Current.MainWindow;
                                 StudentMainView studentMainView = new StudentMainView();
                                 App.Current.MainWindow = studentMainView;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,11 @@ namespace Group01_QuanLyLuanVan.Model
         private string sdt;
         private string khoaId;
         private string username;
-        private string nhomId;
+        private int nhomId;
 
         public SinhVien() { }
 
-        public SinhVien(string sinhVienId, string hoTen, DateTime ngaySinh, string gioiTinh, string diaChi, string email, string sdt, string khoaId, string username, string nhomId)
+        public SinhVien(string sinhVienId, string hoTen, DateTime ngaySinh, string gioiTinh, string diaChi, string email, string sdt, string khoaId, string username, int nhomId)
         {
             this.sinhVienId = sinhVienId;
             this.hoTen = hoTen;
@@ -44,6 +45,8 @@ namespace Group01_QuanLyLuanVan.Model
         public string SDT { get => sdt; set => sdt = value; }
         public string KhoaId { get => khoaId; set => khoaId = value; }
         public string Username { get => username; set => username = value; }
-        public string NhomId { get => nhomId; set => nhomId = value; }
+        public int NhomId { get => nhomId; set => nhomId = value; }
+        public bool IsSelected { get; set; }
+        public string FullInfo => $"{SinhVienId} - {HoTen}";
     }
 }

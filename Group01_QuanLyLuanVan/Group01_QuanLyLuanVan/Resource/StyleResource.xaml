@@ -154,7 +154,8 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Background="{TemplateBinding Background}"
-                        Margin="0,0,0,6">
+                        Margin="0,0,0,6"
+                        >
                             <DockPanel>
                                 <materialDesign:PackIcon
                             Kind="Book"
@@ -164,8 +165,8 @@
                             Margin="6"
                             />
                                 <TextBlock 
-                            Text="Đăng Ký Đề Tài"
-                            FontSize="13"                                
+                            Text="Đăng ký đề tài"
+                            FontSize="13"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                                    />
@@ -179,14 +180,14 @@
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#303551"></Setter>
+                <Setter Property="Background" Value="#126392"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
 
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
        TargetType="RadioButton"
-       x:Key="BtnDashboard">
+       x:Key="BtnDashboardStudent">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
@@ -198,7 +199,8 @@
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Background="{TemplateBinding Background}"
-                        Margin="0,0,0,6">
+                        Margin="0,0,0,6"
+                        >
                             <DockPanel>
                                 <materialDesign:PackIcon
                             Kind="ViewDashboard"
@@ -209,7 +211,7 @@
                             />
                                 <TextBlock 
                             Text="Dashboard"
-                            FontSize="13"                                
+                            FontSize="13"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                                    />
@@ -223,7 +225,7 @@
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#303551"></Setter>
+                <Setter Property="Background" Value="#126392"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -408,6 +410,39 @@
     <Style BasedOn="{StaticResource {x:Type Button}}"
        TargetType="Button"
        x:Key="BtnTeacherUpdateInfor">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="40"
+                        Height="40"
+                        CornerRadius="20"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{TemplateBinding Background}"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="AccountWrenchOutline"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+    </Style>
+    <Style BasedOn="{StaticResource {x:Type Button}}"
+       TargetType="Button"
+       x:Key="BtnSetting">
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>

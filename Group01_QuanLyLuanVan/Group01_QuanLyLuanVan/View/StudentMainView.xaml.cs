@@ -25,9 +25,5 @@ namespace Group01_QuanLyLuanVan.View
             InitializeComponent();
         }
 
-        private void btnDeTai_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

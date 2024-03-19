@@ -14,29 +14,25 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        DataContext="{StaticResource TeacherMainVM}"
-        Name="StudentMainWd">
+        DataContext="{StaticResource StudentMainVM}"
+        Name="Studentmainview">
 
-    <i:Interaction.Triggers>
-        <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding Loadwd}"
-                               CommandParameter="{Binding ElementName=StudentMainWd}"></i:InvokeCommandAction>
-        </i:EventTrigger>
-    </i:Interaction.Triggers>
+
 
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
                 <Storyboard>
-                    <DoubleAnimation Storyboard.TargetName="StudentMainWd"
-                                 Storyboard.TargetProperty="Opacity"
-                                 From="0"
-                                 To="1"
-                                 Duration="0:0:0.1" />
+                    <DoubleAnimation Storyboard.TargetName="Studentmainview"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0"
+                                     To="1"
+                                     Duration="0:0:0.1" />
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
+
 
     <Border CornerRadius="45"
         Background="#EBEEF4">
@@ -65,21 +61,24 @@
 
                         <StackPanel>
                             <RadioButton
+                                Command="{Binding HomeStudentCM}"
                                 Width="200"
-                                x:Name="btnHome"
-                                Style="{StaticResource BtnDashboard}"
+                                x:Name="btnDashboard"
+                                Style="{StaticResource BtnDashboardStudent}"
                                 IsChecked="True"  
                                 FontFamily="{StaticResource Custom}"
                                 Uid="0"
-                                Command="{Binding HomeCM}">
+                                >
                             </RadioButton>
 
                             <RadioButton
+                                Command="{Binding StudentRegisterCM}"
                                 Width="200"
-                                Style="{StaticResource BtnDangKyDeTai}"
+                                x:Name="btnDangKyDeTai"
                                 Uid="1"
+                                Style="{StaticResource BtnDangKyDeTai}"
                                 FontFamily="{StaticResource Custom}"
-                                x:Name="btnDangKyDeTai" >
+                                >
                             </RadioButton>
 
 
@@ -89,7 +88,7 @@
                                 Uid="2"
                                 Style="{StaticResource BtnCapNhatTienDo}"
                                 FontFamily="{StaticResource Custom}"
-                                Command="{Binding FineMoneyCM}">
+                                >
                             </RadioButton>
 
                             <RadioButton
@@ -98,7 +97,7 @@
                                 FontFamily="{StaticResource Custom}"
                                 Visibility="{Binding }"
                                 Uid="3"
-                                Command="{Binding }">
+                                >
                             </RadioButton>
 
                             <RadioButton
@@ -106,35 +105,35 @@
                                 Style="{StaticResource BtnNopLuanVan}"
                                 FontFamily="{StaticResource Custom}"
                                 Visibility="{Binding }"
-                                Uid="3"
-                                Command="{Binding }">
+                                Uid="4"
+                                >
                             </RadioButton>
 
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnNoti}"
                                 FontFamily="{StaticResource Custom}"
-                                Uid="4"
-                                Visibility="{Binding SetQuanLy}"
-                                Command="{Binding SupportCM}">
+                                Uid="5"
+                                Visibility="{Binding }"
+                                >
                             </RadioButton>
 
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnThongKe}"
                                 FontFamily="{StaticResource Custom}"
-                                Uid="5"
+                                Uid="6"
                                 Visibility="{Binding }"
-                                Command="{Binding }">
+                                >
                             </RadioButton>
 
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnSupport}"
                                 FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding SetNV}"
-                                Uid="6"
-                                Command="{Binding NotiCM}">
+                                
+                                Uid="7"
+                                >
                             </RadioButton>
                             <Grid Grid.Row="2" VerticalAlignment="Bottom">
                                 <Grid.ColumnDefinitions>
@@ -143,9 +142,8 @@
                                 </Grid.ColumnDefinitions>
                                 <Button
                                     Style="{StaticResource BtnLogOut}"
-                                    FontFamily="{StaticResource Custom}" Margin="-5,0,0,-65"
-                                    Command="{Binding SignoutCM}"
-                                    CommandParameter="{Binding ElementName=TeacherMainWd}" Grid.ColumnSpan="2">
+                                    FontFamily="{StaticResource Custom}" Margin="0,0,0,-47" Grid.ColumnSpan="2"
+                                   >
                                 </Button>
                             </Grid>
                         </StackPanel>
@@ -213,12 +211,12 @@
                         </Grid>
                     </Grid>
                     <Frame x:Name="frame"
-                       Background="White" Margin="25,10,25,25"
-                       NavigationUIVisibility="Hidden" Grid.Row="2" DataContext="{StaticResource MainVM}" Width="800" Height="605">
+                           Background="White" Margin="43,0,43,42"
+                           NavigationUIVisibility="Hidden" Grid.Row="2" DataContext="{StaticResource StudentMainVM}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Loaded">
-                                <i:InvokeCommandAction Command="{Binding LoadPageCM}"
-                                CommandParameter="{Binding ElementName=frame}" />
+                                <i:InvokeCommandAction Command="{Binding LoadPageHomeCM}"
+                                    CommandParameter="{Binding ElementName=frame}" />
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Frame>
