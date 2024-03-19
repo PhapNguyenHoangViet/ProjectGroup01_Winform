@@ -440,6 +440,39 @@
             <Setter Property="BorderThickness" Value="0"/>
         </Style.Setters>
     </Style>
+    <Style BasedOn="{StaticResource {x:Type Button}}"
+       TargetType="Button"
+       x:Key="BtnSetting">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="40"
+                        Height="40"
+                        CornerRadius="20"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="{TemplateBinding Background}"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="AccountWrenchOutline"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+    </Style>
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
        TargetType="RadioButton"
        x:Key="BtnNoti">

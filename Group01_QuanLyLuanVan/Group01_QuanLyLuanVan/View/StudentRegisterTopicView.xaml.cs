@@ -149,6 +149,9 @@ namespace Group01_QuanLyLuanVan.View
                         updateSinhVienCommand.Parameters.AddWithValue("@nhomId", nhomId);
                         updateSinhVienCommand.Parameters.AddWithValue("@sinhVienId", sinhVienId);
 
+                        updateSinhVienQuery = "UPDATE SinhVien SET nhomId = @nhomId WHERE sinhVienId = " + Const.sinhVien.SinhVienId ;
+                        updateSinhVienCommand = new SqlCommand(updateSinhVienQuery, conn);
+                        updateSinhVienCommand.Parameters.AddWithValue("@nhomId", nhomId);
                         try
                         {
                             // Thực thi truy vấn cập nhật nhomId trong bảng SinhVien
