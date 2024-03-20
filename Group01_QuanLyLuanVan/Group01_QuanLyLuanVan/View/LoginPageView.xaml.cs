@@ -32,5 +32,31 @@ namespace Group01_QuanLyLuanVan.View
             App.Current.MainWindow = signUpView;
             signUpView.ShowDialog();
         }
+        private void ShowPassword_Checked(object sender, RoutedEventArgs e)
+        {
+            // Khi CheckBox được kiểm tra, hiển thị mật khẩu
+            Password11.Visibility = Visibility.Visible;
+            Password11.Text = PasswordBox.Password;
+            PasswordBox.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            // Khi CheckBox bị bỏ kiểm tra, ẩn mật khẩu
+            PasswordBox.Visibility = Visibility.Visible;
+            PasswordBox.Password = Password11.Text;
+            Password11.Visibility = Visibility.Collapsed;
+        }
+
+        private void Password11_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            PasswordBox.Password = Password11.Text;
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Password11.Text = PasswordBox.Password;
+        }
+
     }
 }
