@@ -11,6 +11,10 @@
       DataContext="{StaticResource LoginVM}"
       Name="LoginWd">
 
+
+    <Page.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding LoginCM}" />
+    </Page.InputBindings>
     <Page.Triggers>
         <EventTrigger RoutedEvent="Page.Loaded">
             <BeginStoryboard>
@@ -41,30 +45,47 @@
                     materialDesign:HintAssist.Hint="Tên đăng nhập" 
                     FontFamily="Josefin Sans"
                     Text="{Binding Username}" 
+                    FontSize="15"
                     Height="40" 
                     Width="300"
-                    Padding="20,15,0,0">
+                    Padding="15,15,0,0">
                 </TextBox>
             </StackPanel>
-            <PasswordBox
-                x:Name="PasswordBox"
-                materialDesign:HintAssist.HelperText=""
-                materialDesign:HintAssist.Hint="Mật khẩu" FontFamily="Josefin Sans"
-                materialDesign:TextFieldAssist.HasClearButton="True" Width="300"
-                Margin="0,37,0,0"
-                Height="40"
-                Padding="20,15,0,0">
 
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="PasswordChanged">
-                        <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}"
-                               CommandParameter="{Binding ElementName=PasswordBox}">
-                        </i:InvokeCommandAction>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
+            <StackPanel x:Name="PasswordContainer" Margin="0,37,0,0">
+                <TextBox
+                    x:Name="Password11"
+                    materialDesign:HintAssist.Hint="Mật khẩu"
+                    FontFamily="Josefin Sans"
+                    FontSize="15"
+                    Height="40" 
+                    Width="300"
+                    Padding="15,15,0,0"
+                    Visibility="Collapsed"
+                    TextChanged="Password11_TextChanged">
+                </TextBox>
+                <PasswordBox
+                    x:Name="PasswordBox"
+                    materialDesign:HintAssist.HelperText=""
+                    materialDesign:HintAssist.Hint="Mật khẩu" FontFamily="Josefin Sans"
+                    FontSize="15"
+                    materialDesign:TextFieldAssist.HasClearButton="True" Width="300"
+                    Height="40"
+                    Padding="15,15,0,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PasswordChanged">
+                            <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}"
+                   CommandParameter="{Binding ElementName=PasswordBox}">
+                            </i:InvokeCommandAction>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
 
-            </PasswordBox>
-            <CheckBox Content="Hiện mật khẩu" Width="110" Height="40" HorizontalAlignment="Left" Margin="18,0,0,0" IsChecked="True" />
+                </PasswordBox>
+            </StackPanel>
+            
+            
+            <CheckBox x:Name="ShowPasswordCheckBox" FontSize="15" Content="Hiện mật khẩu" Width="131" Height="40" HorizontalAlignment="Left" Margin="15,5,0,0" IsChecked="False"
+          Checked="ShowPassword_Checked" Unchecked="ShowPassword_Unchecked" />
             <!--<StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                 <RadioButton Content="Sinh viên" IsChecked="True" Height="20" Width="100" Margin="18,0,0,0" />
                 <RadioButton Content="Giáo viên" Width="100" ></RadioButton>
@@ -87,20 +108,17 @@
                     <RowDefinition Height="7*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="60*"/>
-                    <ColumnDefinition Width="121*"/>
-                    <ColumnDefinition Width="9*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="89*"/>
+                    <ColumnDefinition Width="52*"/>
+                    <ColumnDefinition Width="auto" MinWidth="159"/>
                 </Grid.ColumnDefinitions>
 
                 <Button 
-                    Margin="0,55,0,20"
-                    Content = "Đăng ký" FontSize="13"
+                    Margin="0,50,0,0"
+                    Content = "Đăng ký" FontSize="16"
                     FontFamily="Josefin Sans"
-                    Height="25"
                     BorderBrush="Transparent"
-                    Cursor="Hand" Click="OpenSignUp">
+                    Cursor="Hand" Click="OpenSignUp" RenderTransformOrigin="0.387,0.553">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="Transparent"/>
@@ -115,7 +133,7 @@
                     </Button.Style>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Width="60" Height="25"
+                            <Border Width="85" Height="35"
                                 CornerRadius="9"
                                 Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
@@ -126,14 +144,12 @@
                     </Button.Template>
                 </Button>
 
-                <Button Grid.Column="4"
+                <Button Grid.Column="2"
                     Content = "Quên mật khẩu"
-                    FontSize="13"
+                    FontSize="16"
                     FontFamily="Josefin Sans"
-                    Height="25"
-                    HorizontalAlignment="Center"
                     BorderBrush="Transparent"
-                    Cursor="Hand"  Margin="0,55,0,20"
+                    Cursor="Hand"  Margin="25,50,0,0"
                     Command="{Binding ForgetPasswordCM}" >
                     <Button.Style>
                         <Style TargetType="Button">
@@ -149,7 +165,7 @@
                     </Button.Style>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25"
+                            <Border Width="130" Height="35"
                                 CornerRadius="9"
                                 Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"

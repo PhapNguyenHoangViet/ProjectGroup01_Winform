@@ -9,6 +9,7 @@ namespace Group01_QuanLyLuanVan.Model
 {
     public class Const : BaseViewModel
     {
+        public static SinhVien sinhVien { get; set; }
         public static TaiKhoan taiKhoan { get; set; }
         public static string _localLink = System.Reflection.Assembly.GetExecutingAssembly().Location.Remove(System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf(@"bin\Debug"));
     }

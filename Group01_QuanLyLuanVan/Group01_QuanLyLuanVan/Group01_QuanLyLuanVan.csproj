@@ -67,6 +67,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="DAO\DeTaiDAO.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="Model\Const.cs" />
     <Compile Include="Model\DanhGia.cs" />
@@ -95,6 +97,9 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ADMainViewModel.cs" />
+    <Compile Include="ViewModel\StudentListTopicViewModel.cs" />
+    <Compile Include="ViewModel\StudentMainViewModel.cs" />
+    <Compile Include="ViewModel\StudentRegisterTopicViewModel.cs" />
     <Compile Include="ViewModel\SystemErrorReportViewModel.cs" />
     <Compile Include="ViewModel\TeacherAddDissertationViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationDetailViewModel.cs" />
@@ -105,6 +110,7 @@
     <Compile Include="ViewModel\TeacherProgressViewModel.cs" />
     <Compile Include="ViewModel\TeacherScoreViewModel.cs" />
     <Compile Include="ViewModel\TeacherSettingViewModel.cs" />
+    <Compile Include="ViewModel\TeacherUpdateInforViewModel.cs" />
     <Compile Include="ViewModel\VerifyCodeViewModel.cs" />
     <Compile Include="View\ADMainView.xaml.cs">
       <DependentUpon>ADMainView.xaml</DependentUpon>
@@ -144,6 +150,9 @@
     </Compile>
     <Compile Include="View\SignUpView.xaml.cs">
       <DependentUpon>SignUpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentListTopicView.xaml.cs">
+      <DependentUpon>StudentListTopicView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\StudentMainView.xaml.cs">
       <DependentUpon>StudentMainView.xaml</DependentUpon>
@@ -198,6 +207,9 @@
     </Compile>
     <Compile Include="View\TeacherSettingView.xaml.cs">
       <DependentUpon>TeacherSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherUpdateInforView.xaml.cs">
+      <DependentUpon>TeacherUpdateInforView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VerifyCodeView.xaml.cs">
       <DependentUpon>VerifyCodeView.xaml</DependentUpon>
@@ -282,6 +294,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\StudentListTopicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StudentMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -351,6 +367,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherUpdateInforView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
+using Group01_QuanLyLuanVan.Properties;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
@@ -17,6 +18,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public static Frame MainFrame { get; set; }
 
         public ICommand LoadPageCM { get; set; }
+        public ICommand TeacherUpdateInforCM { get; set; }
 
         public ICommand SignoutCM { get; set; }
         public ICommand HomeCM { get; set; }
@@ -34,29 +36,20 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new HomeView();
             });
 
-            SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
+
+            TeacherUpdateInforCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
-                FrameworkElement window = GetParentWindow(p);
-                var w = window as Window;
-                if (w != null)
-                {
-                    w.Hide();
-                    LoginView w1 = new LoginView();
-                    w1.ShowDialog();
-                    w.Close();
-                }
+                MainFrame.Content = new TeacherUpdateInforView();
             });
 
-            FrameworkElement GetParentWindow(FrameworkElement p)
+            SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
             {
-                FrameworkElement parent = p;
-
-                while (parent.Parent != null)
-                {
-                    parent = parent.Parent as FrameworkElement;
-                }
-                return parent;
-            }
+                Window oldWindow = App.Current.MainWindow;
+                LoginView loginView = new LoginView();
+                App.Current.MainWindow = loginView;
+                oldWindow.Close();
+                loginView.Show();
+            });
         }
     }
 }
