@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -25,11 +26,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand DetailTopicsCommand { get; set; }
         public ObservableCollection<DeTai> Topics { get; set; }
         public ICommand LoadTopicsCommand { get; set; }
-
+        public ICommand AddTopicsCommand { get; set; }
         public StudentListTopicViewModel()
         {
             Topics = new ObservableCollection<DeTai>();
-            var topicsData = dtDAO.LoadListTopic();
+            var topicsData = dtDAO.LoadListTopicCoGV();
             foreach (DataRow row in topicsData.Rows)
             {
                 string deTaiId = row["deTaiId"].ToString();
@@ -39,18 +40,43 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 string moTa = row["moTa"].ToString();
                 string yeuCauChung = row["yeuCauChung"].ToString();
                 DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
-                DateTime ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                DateTime ngayKetThuc;
+                try
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                }
+                catch
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
+                }
                 int soLuong = Convert.ToInt32(row["soLuong"]);
+                int trangThai = Convert.ToInt32(row["trangThai"]);
+                int an = Convert.ToInt32(row["an"]);
+                string tenTrangThai = "";
 
-
-                Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, hoTen, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong));
+                if (trangThai == 1)
+                {
+                    tenTrangThai = "Đã đăng ký";
+                }
+                else
+                {
+                    tenTrangThai = "Chưa đăng ký";
+                }
+                if (an != 1)
+                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, hoTen, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
             }
+            MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
             ListTopic = Topics;
             ListTK = new ObservableCollection<string>() { "Đề tài", "Thể loại", "Giảng viên" };
             DetailTopicsCommand = new RelayCommand<StudentListTopicView>((p) => { return p.ListTopicView.SelectedItem == null ? false : true; }, (p) => _DetailTopicsCommand(p));
             SearchTopicsCommand = new RelayCommand<StudentListTopicView>((p) => { return p == null ? false : true; }, (p) => _SearchTopicsCommand(p));
             LoadTopicsCommand = new RelayCommand<StudentListTopicView>((p) => true, (p) => _LoadTopicsCommand(p));
-
+            AddTopicsCommand = new RelayCommand<StudentListTopicView>((p) => true, (p) => _AddTopicsCommand(p));
+        }
+        void _AddTopicsCommand(StudentListTopicView topicsView)
+        {
+            StudentAddTopicsView addTopicsView = new StudentAddTopicsView();
+            StudentMainViewModel.MainFrame.Content = addTopicsView;
         }
         void _LoadTopicsCommand(StudentListTopicView topicsView)
         {
@@ -67,7 +93,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
             detailTopic.MoTa.Text = temp.MoTa;
             detailTopic.YeuCau.Text = temp.YeuCauChung;
             detailTopic.NgayBatDau.Text = temp.NgayBatDau.ToString();
-            detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
+            if (temp.NgayBatDau.ToString() == temp.NgayKetThuc.ToString())
+                detailTopic.NgayKetThuc.Text = "";
+            else
+                detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
+            detailTopic.SoLuong.Text = temp.SoLuong.ToString();
+            detailTopic.TenTrangThai.Text = temp.TenTrangThai.ToString();
 
             ListTopic = Topics;
             topicsView.ListTopicView.ItemsSource = ListTopic;

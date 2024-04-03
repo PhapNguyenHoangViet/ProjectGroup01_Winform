@@ -6,6 +6,52 @@
 
     <FontFamily x:Key="Custom1">Font/NunitoRegular.ttf #Nunito</FontFamily>
 
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+       TargetType="RadioButton"
+       x:Key="BtnCapNhatTask">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                        Width="155"
+                        Height="40"
+                        CornerRadius="10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        Margin="0,0,0,6"
+                        >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                            Kind="Sync"
+                            Width="25"
+                            Height="25"
+                            VerticalAlignment="Center"
+                            Margin="6"
+                            />
+                                <TextBlock 
+                            Text="Cập Nhật Task"
+                            FontSize="13"
+                            HorizontalAlignment="Left"
+VerticalAlignment="Center"
+                                   />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
     <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
    TargetType="RadioButton"
    x:Key="BtnNopLuanVan">
@@ -31,10 +77,10 @@
                         Margin="6"
                         />
                                 <TextBlock 
-                        Text="Nộp Luận văn"
-                        FontSize="13"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
+                                    Text="Nộp Luận văn"
+                                    FontSize="13"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
                                />
                             </DockPanel>
                         </Border>
@@ -747,6 +793,51 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+   TargetType="RadioButton"
+   x:Key="BtnTask">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border
+                    Width="155"
+                    Height="40"
+                    CornerRadius="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="{TemplateBinding Background}"
+                    Margin="0,0,0,6"
+                    >
+                            <DockPanel>
+                                <materialDesign:PackIcon
+                        Kind="TaskAdd"
+                        Width="25"
+                        Height="25"
+                        VerticalAlignment="Center"
+                        Margin="6"
+                        />
+                                <TextBlock 
+                        Text="Task"
+                        FontSize="13"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                               />
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="#126392"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
     <Style 
     x:Key="BtnLogOut"
     TargetType="{x:Type Button}"
@@ -847,7 +938,7 @@
                     >
                             <DockPanel>
                                 <materialDesign:PackIcon
-                        Kind="Star"
+                        Kind="Checkbook"
                         Width="25"
                         Height="25"
                         VerticalAlignment="Center"

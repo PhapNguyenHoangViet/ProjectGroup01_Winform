@@ -73,6 +73,8 @@ namespace Group01_QuanLyLuanVan.DAO
             dbcon.Sql_Them_Xoa_Sua(sqlStr);
         }
 
+
+
         public List<TaiKhoan> FindAll()
         {
             List<TaiKhoan> dsTK = new List<TaiKhoan>();
@@ -92,9 +94,15 @@ namespace Group01_QuanLyLuanVan.DAO
             }
         }
 
+        public void UpdateTaiKhoan(string mail, string avatar, string username)
+        {
+            string sqlStr = string.Format("update TaiKhoan set mail='{0}', avatar='{1}' where username='{2}'", mail, avatar, username);
+            dbcon.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
         public void ChangePassword(string username, string matKhauMoi)
         {
-            string sqlStr = string.Format("update TaiKhoan set matKhau='{0}' where username='{1}'", matKhauMoi, username);
+            string sqlStr = string.Format("update TaiKhoan set password='{0}' where username='{1}'", matKhauMoi, username);
             dbcon.Sql_Them_Xoa_Sua(sqlStr);
         }
 

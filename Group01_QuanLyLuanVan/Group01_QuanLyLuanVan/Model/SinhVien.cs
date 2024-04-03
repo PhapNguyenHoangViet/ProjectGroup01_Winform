@@ -9,6 +9,7 @@ namespace Group01_QuanLyLuanVan.Model
 {
     public class SinhVien
     {
+        private string id;
         private string sinhVienId;
         private string hoTen;
         private DateTime ngaySinh;
@@ -48,7 +49,7 @@ namespace Group01_QuanLyLuanVan.Model
             this.khoaId = khoaId;
             this.username = username;
         }
-
+        public string Id { get => id; set => id = value; }
         public string SinhVienId { get => sinhVienId; set => sinhVienId = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }

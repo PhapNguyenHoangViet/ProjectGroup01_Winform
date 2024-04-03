@@ -83,10 +83,21 @@
 
 
                             <RadioButton
+                                Command="{Binding StudentUpdateProgressCM}"
                                 Width="200"
                                 x:Name="btnCapNhatTienDo"
                                 Uid="2"
                                 Style="{StaticResource BtnCapNhatTienDo}"
+                                FontFamily="{StaticResource Custom}"
+                                >
+                            </RadioButton>
+
+                            <RadioButton
+                                Command="{Binding StudentUpdateTaskCM}"
+                                Width="200"
+                                x:Name="btnCapNhatTask"
+                                Uid="2"
+                                Style="{StaticResource BtnCapNhatTask}"
                                 FontFamily="{StaticResource Custom}"
                                 >
                             </RadioButton>
@@ -110,6 +121,7 @@
                             </RadioButton>
 
                             <RadioButton
+                                Command="{Binding StudentNotiCM}"
                                 Width="200"
                                 Style="{StaticResource BtnNoti}"
                                 FontFamily="{StaticResource Custom}"
@@ -147,7 +159,7 @@
                                     CommandParameter="{Binding ElementName=Studentmainview}" Grid.ColumnSpan="2"
                                    >
                                 </Button>
-                                
+
                             </Grid>
                         </StackPanel>
                     </Grid>

@@ -1,14 +1,20 @@
 ﻿<Page x:Class="Group01_QuanLyLuanVan.View.TeacherUpdateInforView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Group01_QuanLyLuanVan.View"
       Width="700" Height="605"
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="TeacherUpdateInforView"
-      DataContext="{StaticResource TeacherUpdateInforVM}">
+      DataContext="{StaticResource TeacherUpdateInforVM}"
+      Name="TeacherUpdateInforWd">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction  Command="{Binding Loadwd}"
+                                    CommandParameter="{Binding ElementName=TeacherUpdateInforWd}">
+
+            </i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="102"/>
@@ -49,9 +55,9 @@
                                 <ImageBrush x:Name="ProfilePicture" ImageSource="{Binding Ava}"/>
                             </Ellipse.Fill>
                             <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click">
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
                                     <i:InvokeCommandAction Command="{Binding AddImage}"
-                                    CommandParameter="{Binding ElementName=ProfilePicture}"></i:InvokeCommandAction>
+                                                              CommandParameter="{Binding ElementName=ProfilePicture}" ></i:InvokeCommandAction>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </Ellipse>
@@ -67,7 +73,7 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,20,0"
                                 HorizontalAlignment="Center">
                         <TextBox    
-                            x:Name="giaoVienId"
+                            x:Name="giangVienId"
                             Foreground="Black" 
                             materialDesign:HintAssist.Foreground="Black"
                             materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
@@ -78,27 +84,28 @@
                             TextWrapping="Wrap"
                             MaxWidth="400"
                             FontFamily="Josefin Sans"
-                            materialDesign:HintAssist.Hint="Mã số" Text ="{Binding Id}" Height="45"/>
+                            IsReadOnly="True"
+                            materialDesign:HintAssist.Hint="Mã số" Text ="{Binding GiangVienId}" Height="45"/>
                         <ComboBox  
                             Margin="20,0,0,0"
                             x:Name="tenKhoa" FontFamily="Josefin Sans"
                             Style="{StaticResource MaterialDesignFilledComboBox}"
                             materialDesign:HintAssist.Foreground="Black"
                             materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                            materialDesign:HintAssist.Hint="Khoa" SelectedIndex="{Binding GioiTinh}"
+                            materialDesign:HintAssist.Hint="Khoa" SelectedIndex="{Binding TenKhoa}"
                             Height="45"
                             Width="190">
                             <ComboBoxItem
-                                    Content="Nam" />
+                                Content="Công nghệ thông tin" />
                             <ComboBoxItem
-                                    Content="Nữ" />
+                                Content="Kinh tế" />
                         </ComboBox>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0,20,20,0"
                             HorizontalAlignment="Center">
                         <TextBox    
-                        x:Name="IdBox"
+                        x:Name="hoTen"
                         Foreground="Black" 
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
@@ -109,7 +116,7 @@
                         TextWrapping="Wrap"
                         MaxWidth="400"
                         FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Họ tên" Text ="{Binding Id}" Height="45"/>
+                        materialDesign:HintAssist.Hint="Họ tên" Text ="{Binding HoTen}" Height="45"/>
                         <ComboBox  
         Margin="20,0,0,0"
         x:Name="GTBox" FontFamily="Josefin Sans"
@@ -133,7 +140,7 @@
                             Foreground="Black" x:Name="DateBox"
                             FontFamily="Josefin Sans"
                             Focusable="False"
-                            materialDesign:HintAssist.Hint="Ngày sinh"  Text="{Binding DoB}" Style="{StaticResource MaterialDesignFilledDatePicker}"  
+                            materialDesign:HintAssist.Hint="Ngày sinh"  Text="{Binding NgaySinh}" Style="{StaticResource MaterialDesignFilledDatePicker}"  
                             Width="190">
                         </DatePicker>
                         <TextBox 
@@ -144,7 +151,7 @@
                             VerticalAlignment="Top"
                             AcceptsReturn="True"
                             TextWrapping="Wrap"
-                            HorizontalAlignment="Left" x:Name="SDTBox"  Text="{Binding SDT}" 
+                            HorizontalAlignment="Left" x:Name="sdt"  Text="{Binding SDT}" 
                             FontFamily="Josefin Sans"
                             materialDesign:HintAssist.Hint="Số điện thoại" />
                     </StackPanel>
@@ -159,6 +166,7 @@
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
                         FontFamily="Josefin Sans"
+                        IsReadOnly="True"
                         materialDesign:HintAssist.Hint="Email"/>
                     <TextBox 
                         Foreground="Black" 
@@ -167,7 +175,7 @@
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        MaxWidth="400" x:Name="AddressBox"  Text="{Binding DiaChi}"
+                        MaxWidth="400" x:Name="DiaChi"  Text="{Binding DiaChi}"
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
                         FontFamily="Josefin Sans"
@@ -186,7 +194,7 @@
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <i:InvokeCommandAction Command="{Binding UpdateInfo}"
-                                                       CommandParameter="{Binding ElementName=StudentUpdateInforViewPage}"></i:InvokeCommandAction>
+                                                       CommandParameter="{Binding ElementName=TeacherUpdateInforWd}"></i:InvokeCommandAction>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -203,6 +211,12 @@
                 BorderBrush="Transparent"
                 Cursor="Hand"  Margin="572,38,0,63">
 
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding ChangePass}"
+                                                       CommandParameter="{Binding ElementName=TeacherUpdateInforWd}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>

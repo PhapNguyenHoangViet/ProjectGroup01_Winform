@@ -161,12 +161,6 @@
                                      materialDesign:TextFieldAssist.UnderlineBrush="#6C63FF"
                                      materialDesign:HintAssist.Hint="Khoa"
                                      Width="190" >
-                                    <ComboBoxItem
-                                        Content="Công nghệ thông tin" />
-                                    <ComboBoxItem
-                                        Content="Ngôn ngữ anh" />
-                                    <ComboBoxItem
-                                        Content="Kinh tế" />
                                 </ComboBox>
                             </StackPanel>
                             <StackPanel

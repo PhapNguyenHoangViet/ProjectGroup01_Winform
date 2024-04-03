@@ -1,0 +1,227 @@
+﻿<Page x:Class="Group01_QuanLyLuanVan.View.TeacherTaskDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Group01_QuanLyLuanVan.ViewModel"
+      mc:Ignorable="d"
+      xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Height="605" Width="700"
+      DataContext="{StaticResource TeacherTaskDetailVM}"
+      x:Name="TeacherTaskDetailWd">
+
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
+                               CommandParameter="{Binding ElementName= TeacherTaskDetailWd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
+    <Border
+    Height = "605"
+    Width = "700"
+    Background = "Transparent"
+    CornerRadius = "20"
+    BorderThickness = "5">
+        <Grid >
+            <Grid.RowDefinitions >
+                <RowDefinition Height = "65" />
+                <RowDefinition Height = "70" />
+                <RowDefinition />
+            </Grid.RowDefinitions >
+            <Grid Grid.Row = "0" >
+                <StackPanel Orientation = "Horizontal" >
+                    <TextBlock
+                        FontWeight = "SemiBold"
+                        FontFamily = "{StaticResource Custom}"
+                        FontSize = "30"
+                        Foreground = "#353A55"
+                        Margin = "15,10,0,0" Width = "650"
+                        HorizontalAlignment = "Center"
+                        VerticalAlignment = "Center" Text="NHIỆM VỤ"/>
+                </StackPanel >
+            </Grid >
+            <Grid Grid.Row = "1" >
+                <StackPanel Orientation = "Horizontal" >
+                    <TextBlock Text = "Đề tài: "
+                               Margin = "15,0,0,0" 
+                   HorizontalAlignment = "Center"
+                   VerticalAlignment = "Center"
+                   FontFamily = "{StaticResource Custom}"
+                   FontSize = "20"
+                   FontWeight = "SemiBold"
+                   />
+
+                    <TextBlock Text = ""
+                               x:Name="TenDeTai"
+                               Width = "450"
+                        HorizontalAlignment = "Center"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom}"
+                        FontSize = "20"
+                        FontWeight = "SemiBold"
+                        />
+
+                </StackPanel >
+            </Grid >
+            <Grid Grid.Row = "2" >
+                <StackPanel >
+                    <Border                   
+                    Width = "652"
+                    Height = "50"
+                    CornerRadius = "10"
+                    >
+
+                        <Grid >
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width = "462" />
+                                <ColumnDefinition Width = "190" />
+                                <ColumnDefinition Width="0*"/>
+                            </Grid.ColumnDefinitions >
+                            <Grid Grid.Column = "0" >
+                                <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <TextBlock Text = "TASK"
+                                       HorizontalAlignment = "Center"
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "12"
+                                       FontWeight = "SemiBold"
+                                       />
+                                </StackPanel >
+
+
+                            </Grid >
+                            <Grid Grid.Column = "1" >
+                                <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <TextBlock Text = "TRẠNG THÁI"
+                                       HorizontalAlignment = "Center"
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "12"
+                                       FontWeight = "SemiBold"
+                                       />
+                                </StackPanel >
+
+                            </Grid >
+                        </Grid >
+
+                    </Border >
+                    <ListView ItemsSource="{Binding ListTask}" HorizontalContentAlignment="Stretch"                    
+                    x:Name = "ListTaskView"
+                    Height = "350"
+                    Width = "670"
+                    SelectionMode = "Single"
+                    ScrollViewer.VerticalScrollBarVisibility = "Hidden"
+                    Foreground="White"
+                    >
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <Border
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                Width = "652"
+                                Height = "40"
+                                CornerRadius = "10"
+                                Background = "#353A55"
+                                >
+                                    <Grid >
+                                        <Grid.ColumnDefinitions >
+                                            <ColumnDefinition Width = "462" />
+                                            <ColumnDefinition Width = "190" />
+                                            <ColumnDefinition Width="0*"/>
+
+                                        </Grid.ColumnDefinitions >
+                                        <Grid Grid.Column = "0" >
+                                            <TextBlock
+                                            Text = "{Binding NoiDung}"
+                                            HorizontalAlignment = "Center"
+                                            VerticalAlignment = "Center"
+                                            FontFamily = "{StaticResource Custom}"
+                                            FontSize = "12"
+                                            >
+                                            </TextBlock >
+                                        </Grid >
+                                        <Grid Grid.Column = "1" >
+                                            <TextBlock
+                                            Text = "{Binding TrangThai}"
+                                            HorizontalAlignment = "Center"
+                                            VerticalAlignment = "Center"
+                                            FontFamily = "{StaticResource Custom}"
+                                            FontSize = "12"
+                                            
+                                            >
+                                            </TextBlock >
+                                        </Grid >
+                                    </Grid >
+
+                                </Border >
+                            </DataTemplate >
+                        </ListView.ItemTemplate >
+                        <ListView.ItemsPanel >
+                            <ItemsPanelTemplate >
+                                <WrapPanel Orientation = "Vertical" />
+                            </ItemsPanelTemplate >
+                        </ListView.ItemsPanel >
+                        <i:Interaction.Triggers >
+                            <i:EventTrigger EventName = "SelectionChanged" >
+                                <i:InvokeCommandAction Command = "{Binding DetailTopicsCommand}"
+                                                       CommandParameter="{Binding ElementName=TeacherTaskDetailWd}"></i:InvokeCommandAction >
+                            </i:EventTrigger >
+                        </i:Interaction.Triggers >
+                    </ListView >
+                    
+                    <StackPanel Orientation = "Horizontal" >
+                        <TextBlock Text = "Thêm Task: "
+                                    Margin = "30,15,0,0" 
+                        HorizontalAlignment = "Center"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom1}"
+                        FontSize = "16"
+                        FontWeight = "Light"
+                        />
+                        <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" 
+                Margin = "20,15,0,0" Width="400" Height="40">
+                            <TextBox
+                                x:Name="TaskName"
+                                HorizontalAlignment="Left"
+                        VerticalAlignment = "Center"
+                                Width="400"
+                                Height="40"
+                                 FontSize = "16"
+                                Margin = "0,8,0,0"
+                        FontWeight = "Light"
+                                FontFamily="{StaticResource Custom1}"
+                                BorderThickness="0"
+                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                materialDesign:TextFieldAssist.TextBoxViewMargin="20,0,0,0"/>
+                        </Border>
+                        <Button
+                            Content = "+ Thêm"
+                            Margin = "30,15,0,0"
+                            Width = "86"
+                            Height = "41"
+                            VerticalAlignment = "Center"
+                            materialDesign:ButtonAssist.CornerRadius = "15"
+                            Background = "#353A55"
+                            FontFamily = "{StaticResource Custom}">
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction     
+                            Command="{Binding AddDissertation}"
+                            CommandParameter="{Binding ElementName=TeacherAddDissertationWd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                    </StackPanel >
+                </StackPanel >
+            </Grid >
+        </Grid >
+
+    </Border >
+</Page>
+
+

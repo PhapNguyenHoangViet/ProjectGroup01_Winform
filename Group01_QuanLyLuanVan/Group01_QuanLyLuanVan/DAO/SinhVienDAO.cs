@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Group01_QuanLyLuanVan.DAO
 {
@@ -15,7 +16,7 @@ namespace Group01_QuanLyLuanVan.DAO
         public DataTable LoadListSinhVienDangKyDeTai()
         {
             DataTable dt = new DataTable();
-            string sqlStr = $"SELECT * FROM SinhVien WHERE khoaId = " + Const.sinhVien.KhoaId + " AND nhomId IS NULL";
+            String sqlStr = string.Format("SELECT * FROM SinhVien WHERE khoaId = '{0}' AND nhomId IS NULL AND username != '{1}'", Const.sinhVien.KhoaId, Const.taiKhoan.Username);
             dt = conn.Sql_Select(sqlStr);
             return dt;
         }
@@ -26,23 +27,26 @@ namespace Group01_QuanLyLuanVan.DAO
             if (tb.Rows.Count > 0)
             {
                 DataRow dr = tb.Rows[0];
-                if (dr["nhomId"] == null)
-                {
-                    SinhVien sinhVien = new SinhVien(dr["sinhVienId"].ToString(), dr["hoTen"].ToString(), DateTime.Parse(dr["ngaySinh"].ToString()), dr["gioiTinh"].ToString(),
-                    dr["diaChi"].ToString(), dr["email"].ToString(), dr["sdt"].ToString(), dr["khoaId"].ToString(), dr["username"].ToString(), int.Parse(dr["nhomId"].ToString()));
-                    return sinhVien;
-                }
+                int nhomId;
+                if (dr["nhomId"].ToString() == "")
+                    nhomId = -1;
                 else
-                {
-                    SinhVien sinhVien = new SinhVien(dr["sinhVienId"].ToString(), dr["hoTen"].ToString(), DateTime.Parse(dr["ngaySinh"].ToString()), dr["gioiTinh"].ToString(),
-                    dr["diaChi"].ToString(), dr["email"].ToString(), dr["sdt"].ToString(), dr["khoaId"].ToString(), dr["username"].ToString());
-                    return sinhVien;
-                }
+                    nhomId = int.Parse(dr["nhomId"].ToString());
+
+                SinhVien sinhVien = new SinhVien(dr["sinhVienId"].ToString(), dr["hoTen"].ToString(), DateTime.Parse(dr["ngaySinh"].ToString()), dr["gioiTinh"].ToString(),
+                dr["diaChi"].ToString(), dr["email"].ToString(), dr["sdt"].ToString(), dr["khoaId"].ToString(), dr["username"].ToString(), nhomId);
+                return sinhVien;
             }
             else
             {
                 return null;
             }
+        }
+
+        public void Register(SinhVien model)
+        {
+            string sqlStr = string.Format("Insert into SinhVien(id, hoTen, ngaySinh, gioiTinh, email, SDT, khoaId, username) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", model.Id, model.HoTen, model.NgaySinh, model.GioiTinh, model.Email, model.SDT, model.KhoaId, model.Username);
+            conn.Sql_Them_Xoa_Sua(sqlStr);
         }
     }
 }

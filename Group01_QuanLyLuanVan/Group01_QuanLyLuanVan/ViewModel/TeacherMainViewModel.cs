@@ -14,17 +14,30 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherMainViewModel : BaseViewModel
     {
+        private string ava;
+        public string Ava { get => ava; set { ava = value; OnPropertyChanged(); } }
+        private string tenDangNhap;
+        public string TenDangNhap { get => tenDangNhap; set { tenDangNhap = value; OnPropertyChanged(); } }
         public ICommand Loadwd { get; set; }
         public static Frame MainFrame { get; set; }
-
         public ICommand LoadPageCM { get; set; }
         public ICommand TeacherUpdateInforCM { get; set; }
-
         public ICommand SignoutCM { get; set; }
         public ICommand HomeCM { get; set; }
+        public ICommand TeacherDissertationCM { get; set; }
+        public ICommand TeacherTaskCM { get; set; }
+        public ICommand TeacherProgressCM { get; set; }
+        public ICommand TeacherNotiCM { get; set; }
+        public void LoadTenND(TeacherMainView p)
+        {
+            p.TenDangNhap.Text = Const.giangVien.HoTen;
+        }
 
         public TeacherMainViewModel()
         {
+
+            Loadwd = new RelayCommand<TeacherMainView>((p) => true, (p) => _Loadwd(p));
+
             LoadPageCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
                 MainFrame = p;
@@ -36,10 +49,29 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new HomeView();
             });
 
-
             TeacherUpdateInforCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
                 MainFrame.Content = new TeacherUpdateInforView();
+            });
+
+            TeacherDissertationCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherDissertationView();
+            });
+
+            TeacherTaskCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherTaskView();
+            });
+
+            TeacherProgressCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherProgressView();
+            });
+
+            TeacherNotiCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherNotiView();
             });
 
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
@@ -50,6 +82,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 oldWindow.Close();
                 loginView.Show();
             });
+        }
+
+        void _Loadwd(TeacherMainView p)
+        {
+            if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                Ava = Const._localLink + "/Resource/Image/addava.png";
+            else
+                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+            LoadTenND(p);
         }
     }
 }

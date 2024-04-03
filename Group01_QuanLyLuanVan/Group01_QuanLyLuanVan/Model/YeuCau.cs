@@ -8,13 +8,14 @@ namespace Group01_QuanLyLuanVan.Model
 {
     public class YeuCau
     {
-        private string yeuCauId;
+        private int yeuCauId;
+        private string tenYeuCau;
         private string noiDung;
         private int trangThai;
         private string deTaiId;
 
         public YeuCau() { }
-        public YeuCau(string yeuCauId, string noiDung, int trangThai, string deTaiId)
+        public YeuCau(int yeuCauId, string noiDung, int trangThai, string deTaiId)
         {
             this.yeuCauId = yeuCauId;
             this.noiDung = noiDung;
@@ -22,9 +23,11 @@ namespace Group01_QuanLyLuanVan.Model
             this.deTaiId = deTaiId;
         }
 
-        public string YeuCauId { get => yeuCauId; set => yeuCauId = value; }
+        public int YeuCauId { get => yeuCauId; set => yeuCauId = value; }
+        public string TenYeuCau { get => tenYeuCau; set => tenYeuCau = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public int TrangThai { get => trangThai;set => trangThai = value; }
         public string DeTaiId { get => deTaiId; set => deTaiId = value; }
+        public bool IsSelected { get; set; }
     }
 }

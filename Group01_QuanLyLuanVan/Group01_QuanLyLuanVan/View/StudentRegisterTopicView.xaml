@@ -11,7 +11,12 @@
       DataContext="{StaticResource StudentRegisterVM}"
       Title="StudentRegisterTopicView"
       Name="StudentRegisterWd">
-
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding GetMaDT}"
+                                   CommandParameter="{Binding ElementName=StudentRegisterWd}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Page.Triggers>
         <EventTrigger RoutedEvent="Page.Loaded">
             <BeginStoryboard>
@@ -80,19 +85,18 @@
                             />
                     <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
                         <TextBox
-                        x:Name="TenDeTai"
-                        HorizontalAlignment="Left"
+                        x:Name="TenDeTai"      
                         Width="300"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"                        
                         IsEnabled="False"
                         materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
                     </Border>
                 </StackPanel>
             </StackPanel>
-            
+
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -102,11 +106,11 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
                         <TextBox
                         x:Name="TenTheLoai"
                         HorizontalAlignment="Left"
-                        Width="300"
+                        Width="200"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
@@ -116,17 +120,37 @@
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
-                            Margin="20,0,0,0">
+                            Margin="10,0,0,0">
                     <TextBlock
                     Text="TÊN GIẢNG VIÊN HƯỚNG DẪN"
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
                         <TextBox
                         x:Name="HoTen"
                         HorizontalAlignment="Left"
-                        Width="300"
+                        Width="200"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="10,0,0,0">
+                    <TextBlock
+                    Text="TRẠNG THÁI"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
+                        <TextBox
+                        x:Name="TenTrangThai"
+                        HorizontalAlignment="Left"
+                        Width="200"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
@@ -146,11 +170,11 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
                         <TextBox
                         x:Name="NgayBatDau"
                         HorizontalAlignment="Left"
-                        Width="300"
+                        Width="200"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
@@ -160,17 +184,37 @@
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
-                            Margin="20,0,0,0">
+                            Margin="10,0,0,0">
                     <TextBlock
                     Text="NGÀY KẾT THÚC"
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
                         <TextBox
                         x:Name="NgayKetThuc"
                         HorizontalAlignment="Left"
-                        Width="300"
+                        Width="200"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                        IsEnabled="False"
+                        materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="10,0,0,0">
+                    <TextBlock
+                    Text="SỐ LƯỢNG THÀNH VIÊN"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="200">
+                        <TextBox
+                        x:Name="SoLuong"
+                        HorizontalAlignment="Left"
+                        Width="200"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
@@ -237,13 +281,13 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
                     <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
-                        <ComboBox x:Name="multiSelectComboBox" HorizontalAlignment="Left" Width="278" Height="50" Margin="10,0,0,0" IsTextSearchEnabled="False" IsDropDownOpen="False" MaxDropDownHeight="50" materialDesign:HintAssist.Hint="Chọn thành viên">
+                        <ComboBox x:Name="multiSelectComboBox" HorizontalAlignment="Left" Width="278" Height="66" Margin="10,0,0,0" IsTextSearchEnabled="False" IsDropDownOpen="False" MaxDropDownHeight="100" materialDesign:HintAssist.Hint="Chọn thành viên">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <CheckBox Content="{Binding FullInfo}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" />
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
-                            
+
                             <ComboBox.ItemContainerStyle>
                                 <Style TargetType="ComboBoxItem">
                                     <Setter Property="Height" Value="30" />
@@ -257,15 +301,22 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="7">
+        <Grid Grid.Row="7" Height="87" VerticalAlignment="Bottom">
             <Button Content="ĐĂNG KÝ"
                     Margin="0,-50,0,0"
                             Width="230"
                             BorderThickness="0"
                             x:Name="btnregister"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55"
-                            Click="RegisterButton_Click">
+                            Background="#353A55">
+                <!--Click="RegisterButton_Click"-->
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding Register}"
+                                                   CommandParameter="{Binding ElementName=StudentRegisterWd}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
             </Button>
             <Button Margin="529,50,23,10" Background="#353A55">
                 <TextBlock Text="Quay lại"

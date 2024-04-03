@@ -156,18 +156,18 @@
                     </Border>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="113*"/>
-                            <ColumnDefinition Width="67*"/>
+                            <ColumnDefinition Width="139*"/>
+                            <ColumnDefinition Width="11*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="1">
-                            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                        <Grid Grid.Column="0">
+                            <StackPanel Orientation="Horizontal" Margin="650,0,0,0">
                                 <DockPanel Margin="0,0,25,0">
                                     <Border
-                                    Height="40"
-                                    Width="40"
-                                    Background="Black"
-                                    CornerRadius="50"
-                                    Margin="30,5,10,5">
+                    Height="40"
+                    Width="40"
+                    Background="Black"
+                    CornerRadius="50"
+                    Margin="30,5,10,5">
 
                                         <Ellipse Height="40" Width="40" VerticalAlignment="Top">
                                             <Ellipse.Fill>
@@ -178,26 +178,29 @@
                                     </Border>
                                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                                         <TextBlock x:Name="TenDangNhap" 
-                                        FontSize="15"
-                                        Text="Nguyen Hoang Viet Phap"
-                                        Foreground="black"
-                                        FontWeight="Thin"
-                                        FontFamily="{StaticResource Custom}"
-                                        >
+                    FontSize="15"
+                    Text="Viet Phap"
+                    Foreground="black"
+                    FontWeight="Thin"
+                    FontFamily="{StaticResource Custom}"
+                    >
 
                                         </TextBlock>
                                         <TextBlock x:Name="Quyen" 
-                                            Text="Admin"
-                                            FontSize="13"
-                                            Foreground="black"
-                                            FontFamily="{StaticResource Custom}"
-                                            FontWeight="Thin">
+                        Text="Admin"
+                        FontSize="13"
+                        Foreground="black"
+                        FontFamily="{StaticResource Custom}"
+                        FontWeight="Thin">
                                         </TextBlock>
 
                                     </StackPanel>
                                 </DockPanel>
-                                <Button Style="{StaticResource BtnSetting}" Height="50" x:Name="btnSetting" Command="{Binding SettingCM}"/>
                             </StackPanel>
+                        </Grid>
+                        <Grid Grid.Column="1">
+
+                            <Button Style="{StaticResource BtnSetting}" Height="50" x:Name="btnStudentUpdateInfor" Command="{Binding StudentUpdateInforCM}" />
                         </Grid>
                     </Grid>
 

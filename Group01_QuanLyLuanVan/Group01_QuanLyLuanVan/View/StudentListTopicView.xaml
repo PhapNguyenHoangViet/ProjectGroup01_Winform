@@ -10,13 +10,6 @@
       Height="605" Width="700"
       DataContext="{StaticResource StudentListTopicVM}"
       x:Name="Topicswd">
-
-    <i:Interaction.Triggers >
-        <i:EventTrigger EventName = "Loaded" >
-            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
-                               CommandParameter="{Binding ElementName= Topicswd}"></i:InvokeCommandAction >
-        </i:EventTrigger >
-    </i:Interaction.Triggers >
     <Border
     Height = "605"
     Width = "700"
@@ -101,7 +94,7 @@
                         </i:Interaction.Triggers >
                     </TextBox >
                     <Button
-                    Content = "+ thêm"
+                    Content = "+Thêm"
                     Margin = "20,0,0,0"
                     Width = "80"
                     Height = "40"
@@ -111,8 +104,8 @@
                     >
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "Click" >
-                                <i:InvokeCommandAction Command = "{Binding AddReadersCommand}"
-                                                   CommandParameter="{Binding ElementName=Readerswd}"></i:InvokeCommandAction >
+                                <i:InvokeCommandAction Command = "{Binding AddTopicsCommand}"
+                                                   CommandParameter="{Binding ElementName=Topicswd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
                     </Button >
@@ -125,12 +118,12 @@
                     Height = "50"
                     CornerRadius = "10"
                     >
-
                         <Grid >
                             <Grid.ColumnDefinitions >
-                                <ColumnDefinition Width = "267" />
-                                <ColumnDefinition Width = "194" />
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width = "198" />
+                                <ColumnDefinition Width = "140" />
+                                <ColumnDefinition Width = "205"/>
+                                <ColumnDefinition  />
                             </Grid.ColumnDefinitions >
                             <Grid Grid.Column = "0" >
                                 <StackPanel Orientation = "Horizontal"
@@ -172,6 +165,19 @@
                                 </StackPanel >
 
                             </Grid >
+                            <Grid Grid.Column = "3" >
+                                <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <TextBlock Text = "TRẠNG THÁI"
+                                       HorizontalAlignment = "Center"
+                                       VerticalAlignment = "Center"
+FontFamily = "{StaticResource Custom}"
+                                       FontSize = "12"
+                                       FontWeight = "SemiBold"
+                                       />
+                                </StackPanel >
+
+                            </Grid >
                         </Grid >
 
                     </Border >
@@ -195,13 +201,15 @@
                                 >
                                     <Grid >
                                         <Grid.ColumnDefinitions >
-                                            <ColumnDefinition Width = "267" />
-                                            <ColumnDefinition Width = "194" />
-                                            <ColumnDefinition />
+                                            <ColumnDefinition Width = "198" />
+                                            <ColumnDefinition Width = "140" />
+                                            <ColumnDefinition Width = "205"/>
+                                            <ColumnDefinition  />
 
                                         </Grid.ColumnDefinitions >
                                         <Grid Grid.Column = "0" >
                                             <TextBlock
+                                            x:Name="TenDeTai"
                                             Text = "{Binding TenDeTai}"
                                             HorizontalAlignment = "Center"
                                             VerticalAlignment = "Center"
@@ -212,18 +220,31 @@
                                         </Grid >
                                         <Grid Grid.Column = "1" >
                                             <TextBlock
+                                            x:Name="TenTheLoai"    
                                             Text = "{Binding TenTheLoai}"
                                             HorizontalAlignment = "Center"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
                                             FontSize = "12"
-                                            
-                                            >
+>
                                             </TextBlock >
                                         </Grid >
                                         <Grid Grid.Column = "2" >
                                             <TextBlock
+                                            x:Name="HoTen"
                                             Text = "{Binding HoTen}"
+                                            HorizontalAlignment = "Center"
+                                            VerticalAlignment = "Center"
+                                            FontFamily = "{StaticResource Custom}"
+                                            FontSize = "12"
+                                           
+                                            >
+                                            </TextBlock >
+                                        </Grid >
+                                        <Grid Grid.Column = "3" >
+                                            <TextBlock
+                                            x:Name="TenTrangThai"
+                                            Text = "{Binding TenTrangThai}"
                                             HorizontalAlignment = "Center"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"

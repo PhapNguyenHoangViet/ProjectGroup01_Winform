@@ -8,11 +8,12 @@
        xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Height="605" Width="700"
+      DataContext="{StaticResource StudentUpdateProgessVM}"
       Title="StudentUpdateProgressView">
 
     <Grid>
         <Grid>
-            <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Width="680">
+            <StackPanel HorizontalAlignment="Center" Orientation="Vertical" >
                 <TextBlock
                     Text="CẬP NHẬT TIẾN ĐỘ" Height="60"
                     FontFamily="Josefin Sans"
@@ -22,7 +23,8 @@
                     FontWeight="Bold"
                     HorizontalAlignment="Center" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <DatePicker   
+                    <DatePicker  
+                        
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
                         Foreground="Black" x:Name="DateBox"
@@ -32,19 +34,9 @@
                         HorizontalAlignment="Left" 
                         Width="200">
                     </DatePicker>
+
                     <TextBox 
-                        Margin="20,0,0,0"  Width="100"
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        materialDesign:HintAssist.Foreground="Black"
-                        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        HorizontalAlignment="Left" x:Name="TienDoBox" 
-                        FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Tiến độ (%)" />
-                    <TextBox 
-                        Margin="20,0,0,0"  Width="338"
+                        Margin="20,0,0,0"  Width="480"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
@@ -56,7 +48,7 @@
                         materialDesign:HintAssist.Hint="Tiêu đề" />
                 </StackPanel>
                 <TextBox 
-                        Width="680" Height="100"
+                         Height="100"
                         Margin="0,30,0,0"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         materialDesign:HintAssist.Foreground="Black"
@@ -66,7 +58,7 @@
                         TextWrapping="Wrap"
                         x:Name="DescriptionBox" 
                         FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Mô tả chi tiết"/>
+                        materialDesign:HintAssist.Hint="Nội dung"/>
                 <Button Content="Cập nhật"
                         Margin="0,30,0,0"
                         Width="120"
@@ -77,8 +69,7 @@
                     <Grid >
                         <Grid.ColumnDefinitions >
                             <ColumnDefinition Width = "90" />
-                            <ColumnDefinition Width = "170" />
-                            <ColumnDefinition Width = "100" />
+                            <ColumnDefinition Width = "220" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions >
                         <Grid Grid.Column = "0" >
@@ -104,21 +95,9 @@
                             </StackPanel >
                         </Grid >
                         <Grid Grid.Column = "2" >
-                            <StackPanel Orientation = "Horizontal" 
-                                        HorizontalAlignment="Center">
-                                <TextBlock Text = "TIẾN ĐỘ"
-                                       HorizontalAlignment = "Left"
-                                       VerticalAlignment = "Center"
-                                       FontFamily = "{StaticResource Custom}"
-                                       FontSize = "12"
-                                       FontWeight = "SemiBold"
-                                       />
-                            </StackPanel >
-                        </Grid >
-                        <Grid Grid.Column = "3" >
                             <StackPanel Orientation = "Horizontal"
                                         HorizontalAlignment="Center">
-                                <TextBlock Text = "MÔ TẢ"
+                                <TextBlock Text = "NỘI DUNG"
                                        HorizontalAlignment = "Left"
                                        VerticalAlignment = "Center"
                                        FontFamily = "{StaticResource Custom}"
@@ -150,13 +129,12 @@
                                 <Grid >
                                     <Grid.ColumnDefinitions >
                                         <ColumnDefinition Width = "90" />
-                                        <ColumnDefinition Width = "170" />
-                                        <ColumnDefinition Width = "100" />
+                                        <ColumnDefinition Width = "220" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions >
                                     <Grid Grid.Column = "0" >
                                         <TextBlock
-                                            Text = "{Binding Date}"
+                                            Text = "{Binding Ngay}"
                                             HorizontalAlignment = "Center"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
@@ -166,7 +144,7 @@
                                     </Grid >
                                     <Grid Grid.Column = "1" >
                                         <TextBlock
-                                            Text = "{Binding Topic}"
+                                            Text = "{Binding TieuDe}"
                                             HorizontalAlignment = "Left"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
@@ -177,18 +155,7 @@
                                     </Grid >
                                     <Grid Grid.Column = "2" >
                                         <TextBlock
-                                            Text = "{Binding Progress}"
-                                            HorizontalAlignment = "Left"
-                                            VerticalAlignment = "Center"
-                                            FontFamily = "{StaticResource Custom}"
-                                            FontSize = "12"
-                                            Margin = "5,0,0,0"
-                                            >
-                                        </TextBlock >
-                                    </Grid >
-                                    <Grid Grid.Column = "3" >
-                                        <TextBlock
-                                            Text = "{Binding Description}"
+                                            Text = "{Binding NoiDung}"
                                             HorizontalAlignment = "Left"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"

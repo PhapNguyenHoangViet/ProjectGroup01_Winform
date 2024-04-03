@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group01_QuanLyLuanVan.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace Group01_QuanLyLuanVan.View
     /// </summary>
     public partial class SignUpView : Window
     {
+        ComboBoxData comboBoxData = new ComboBoxData();
         public SignUpView()
         {
             InitializeComponent();
+            tenKhoa.ItemsSource = comboBoxData.TenKhoa();
         }
     }
 }

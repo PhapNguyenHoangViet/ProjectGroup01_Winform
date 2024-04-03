@@ -459,3 +459,15 @@ D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qua
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentListTopicView.baml
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherUpdateInforView.g.cs
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherUpdateInforView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskDetailView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskDetailView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherNotiView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherNotiView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentAddTopicsView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentNotiView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentUpdateTaskView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentAddTopicsView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentNotiView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentUpdateTaskView.baml
