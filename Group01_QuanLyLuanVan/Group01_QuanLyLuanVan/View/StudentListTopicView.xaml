@@ -10,6 +10,12 @@
       Height="605" Width="700"
       DataContext="{StaticResource StudentListTopicVM}"
       x:Name="Topicswd">
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
+                            CommandParameter="{Binding ElementName= Topicswd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
     <Border
     Height = "605"
     Width = "700"

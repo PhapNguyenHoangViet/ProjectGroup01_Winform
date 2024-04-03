@@ -30,6 +30,23 @@ namespace Group01_QuanLyLuanVan.DAO
             }
         }
 
+        public GiangVien FindOneById(string giangVienId)
+        {
+            string sqlStr = string.Format("select * from GiangVien where giangVienId = '{0}'", giangVienId);
+            DataTable tb = conn.Sql_Select(sqlStr);
+            if (tb.Rows.Count > 0)
+            {
+                DataRow dr = tb.Rows[0];
+                GiangVien giangVien = new GiangVien(dr["giangVienId"].ToString(), dr["hoTen"].ToString(), DateTime.Parse(dr["ngaySinh"].ToString()), dr["gioiTinh"].ToString(),
+                dr["diaChi"].ToString(), dr["email"].ToString(), dr["sdt"].ToString(), dr["khoaId"].ToString(), dr["username"].ToString());
+                return giangVien;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public void UpdateGiangVien(GiangVien gv)
         {
             string sqlStr = string.Format("update GiangVien set khoaId='{0}', hoTen=N'{1}', gioiTinh=N'{2}',ngaySinh='{3}', sdt='{4}', email='{5}', diaChi= N'{6}' where giangVienId='{7}'",gv.KhoaId, gv.HoTen,gv.GioiTinh, gv.NgaySinh, gv.SDT, gv.Email, gv.DiaChi, gv.GiangVienId);

@@ -114,7 +114,16 @@ namespace Group01_QuanLyLuanVan.Model
             this.theLoaiId = theLoaiId;
             this.giangVienId = giangVienId;
         }
+        public DeTai(string deTaiId, string tenDeTai, string moTa, string yeuCauChung,
+     int soLuong)
+        {
+            this.deTaiId = deTaiId;
+            this.TenDeTai = tenDeTai;
+            this.moTa = moTa;
+            this.yeuCauChung = yeuCauChung;
+            this.soLuong = soLuong;
 
+        }
         public DeTai(string deTaiId, string tenDeTai, string tenTheLoai, string tenNhom)
         {
             this.deTaiId = deTaiId;

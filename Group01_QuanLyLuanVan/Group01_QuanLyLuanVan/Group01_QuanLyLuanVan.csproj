@@ -107,6 +107,7 @@
     <Compile Include="ViewModel\ADMainViewModel.cs" />
     <Compile Include="ViewModel\StudentAddTopicsViewModel.cs" />
     <Compile Include="ViewModel\StudentListTopicViewModel.cs" />
+    <Compile Include="ViewModel\StudentMailViewModel.cs" />
     <Compile Include="ViewModel\StudentMainViewModel.cs" />
     <Compile Include="ViewModel\StudentNotiViewModel.cs" />
     <Compile Include="ViewModel\StudentReceiveEvaluationViewModel.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="ViewModel\TeacherDissertationDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationViewModel.cs" />
     <Compile Include="ViewModel\TeacherMainViewModel.cs" />
+    <Compile Include="ViewModel\TeacherNotiAddViewModel.cs" />
+    <Compile Include="ViewModel\TeacherNotiDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotificationViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotiViewModel.cs" />
     <Compile Include="ViewModel\TeacherProgressDetailViewModel.cs" />
@@ -173,6 +176,9 @@
     <Compile Include="View\StudentListTopicView.xaml.cs">
       <DependentUpon>StudentListTopicView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StudentMailView.xaml.cs">
+      <DependentUpon>StudentMailView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentMainView.xaml.cs">
       <DependentUpon>StudentMainView.xaml</DependentUpon>
     </Compile>
@@ -217,6 +223,12 @@
     </Compile>
     <Compile Include="View\TeacherMainView.xaml.cs">
       <DependentUpon>TeacherMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherNotiAddView.xaml.cs">
+      <DependentUpon>TeacherNotiAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherNotiDetailView.xaml.cs">
+      <DependentUpon>TeacherNotiDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TeacherNotificationView.xaml.cs">
       <DependentUpon>TeacherNotificationView.xaml</DependentUpon>
@@ -336,6 +348,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\StudentMailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StudentMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -393,6 +409,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherNotiAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherNotiDetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -494,22 +518,8 @@
     <Resource Include="Resource\Image\student_register.png" />
     <Resource Include="Resource\Image\votay.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resource\Ava\SV0.png" />
-    <Resource Include="Resource\Ava\SV01.jpg" />
-    <Resource Include="Resource\Ava\SV01.png" />
-    <Resource Include="Resource\Ava\SV014.png" />
-    <Resource Include="Resource\Ava\SV01414.png" />
-    <Resource Include="Resource\Ava\SV021.png" />
-    <Resource Include="Resource\Ava\SV04.png" />
-    <Resource Include="Resource\Ava\SV0a.png" />
-    <Resource Include="Resource\Ava\SV0d.png" />
-    <Resource Include="Resource\Ava\SV0dada.png" />
-    <Resource Include="Resource\Ava\SV0fd.png" />
-    <Resource Include="Resource\Ava\SV0fsd.png" />
-    <Resource Include="Resource\Ava\SV0gf.png" />
-    <Resource Include="Resource\Ava\SV0h,h.png" />
+    <Folder Include="Resource\Ava\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

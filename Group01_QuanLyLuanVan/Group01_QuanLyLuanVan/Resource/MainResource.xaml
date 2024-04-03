@@ -23,9 +23,10 @@
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
     <viewmodel:TeacherUpdateInforViewModel x:Key="TeacherUpdateInforVM"></viewmodel:TeacherUpdateInforViewModel>
-
     <viewmodel:TeacherTaskViewModel x:Key="TeacherTaskVM"></viewmodel:TeacherTaskViewModel>
     <viewmodel:TeacherTaskDetailViewModel x:Key="TeacherTaskDetailVM"></viewmodel:TeacherTaskDetailViewModel>
+    <viewmodel:TeacherNotiDetailViewModel x:Key="TeacherNotiDetailVM"></viewmodel:TeacherNotiDetailViewModel>
+    <viewmodel:TeacherNotiAddViewModel x:Key="TeacherNotiAddVM"></viewmodel:TeacherNotiAddViewModel>
 
     <viewmodel:StudentMainViewModel x:Key="StudentMainVM"></viewmodel:StudentMainViewModel>
     <viewmodel:StudentRegisterTopicViewModel x:Key="StudentRegisterVM"></viewmodel:StudentRegisterTopicViewModel>
@@ -35,5 +36,6 @@
     <viewmodel:StudentNotiViewModel x:Key="StudentNotiVM"></viewmodel:StudentNotiViewModel>
     <viewmodel:StudentUpdateProgressViewModel x:Key="StudentUpdateProgessVM"></viewmodel:StudentUpdateProgressViewModel>
     <viewmodel:StudentReceiveEvaluationViewModel x:Key="StudentReceiveEvaluationVM"></viewmodel:StudentReceiveEvaluationViewModel>
+    <viewmodel:StudentMailViewModel x:Key="StudentMailVM"></viewmodel:StudentMailViewModel>
 
 </ResourceDictionary>

@@ -58,6 +58,21 @@ namespace Group01_QuanLyLuanVan.DAO
             }
         }
 
+        public string FindGiangVienIdByDeTaiId(string deTaiId)
+        {
+            string sqlStr = string.Format("select giangVienId from DeTai where deTaiId = '{0}'", deTaiId);
+            DataTable tb = conn.Sql_Select(sqlStr);
+            if (tb.Rows.Count > 0)
+            {
+                DataRow dr = tb.Rows[0];
+                return dr["giangVienId"].ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         public List<DeTai> FindDeTaiByGVID(string giaoVienId)
         {
             List<DeTai> dsTL = new List<DeTai>();
@@ -79,14 +94,14 @@ namespace Group01_QuanLyLuanVan.DAO
 
         public void AddTopic(DeTai dt)
         {
-            string sqlStr = string.Format("insert into DeTai (tenDeTai, moTa, yeuCauChung,soLuong, trangThai, ngayBatDau, ngayKetThuc, theLoaiId, giangVienId, an) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", dt.TenDeTai, dt.MoTa, dt.YeuCauChung, dt.SoLuong, dt.TrangThai, dt.NgayBatDau, dt.NgayKetThuc, dt.TheLoaiId, dt.GiangVienId, 0);
+            string sqlStr = string.Format("insert into DeTai (tenDeTai, moTa, yeuCauChung,soLuong, trangThai, ngayBatDau, ngayKetThuc, theLoaiId, giangVienId, an) values (N'{0}', N'{1}', N'{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", dt.TenDeTai, dt.MoTa, dt.YeuCauChung, dt.SoLuong, dt.TrangThai, dt.NgayBatDau, dt.NgayKetThuc, dt.TheLoaiId, dt.GiangVienId, 0);
             conn.Sql_Them_Xoa_Sua(sqlStr);
         }
 
 
-        public void UpdateTopic(string deTaiId)
+        public void UpdateTopic(DeTai dt)
         {
-            string sqlStr = string.Format("update DeTai set deTaiId ='{0}' where deTaiId='{1}'", 1, deTaiId);
+            string sqlStr = string.Format("update DeTai set tenDeTai = N'{0}', moTa = N'{1}', yeuCauChung = '{2}', soLuong = '{3}' where deTaiId='{4}'",dt.TenDeTai, dt.MoTa, dt.YeuCauChung,dt.SoLuong, dt.DeTaiId);
             conn.Sql_Them_Xoa_Sua(sqlStr);
         }
 

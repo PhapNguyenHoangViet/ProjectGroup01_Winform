@@ -40,33 +40,10 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 string deTaiId = row["deTaiId"].ToString();
                 string tenDeTai = row["tenDeTai"].ToString();
                 string tenTheLoai = row["tenTheLoai"].ToString();
-                string moTa = row["moTa"].ToString();
-                string yeuCauChung = row["yeuCauChung"].ToString();
-                DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
-                DateTime ngayKetThuc;
-                try
-                {
-                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
-                }
-                catch
-                {
-                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
-                }
-
-                int soLuong = Convert.ToInt32(row["soLuong"]);
-                int trangThai = Convert.ToInt32(row["trangThai"]);
                 int an = Convert.ToInt32(row["an"]);
-                string tenTrangThai = "";
                 int nhomId = dtDAO.FindNhomIdByDeTaiId(deTaiId);
                 string tenNhom = "Nhóm " + nhomId.ToString();
-                if (trangThai == 1)
-                {
-                    tenTrangThai = "Đã đăng ký";
-                }
-                else
-                {
-                    tenTrangThai = "Chưa đăng ký";
-                }
+
                 if (an != 1 && nhomId != -1)
                     Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, tenNhom));
             }
@@ -88,6 +65,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             TeacherTaskDetailView taskView = new TeacherTaskDetailView();
             DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
             taskView.TenDeTai.Text = temp.TenDeTai;
+            Const.deTaiId =  temp.DeTaiId;
             Tasks = new ObservableCollection<YeuCau>();
             var tasksdata = yeuCauDAO.LoadListTask(temp.DeTaiId);
             foreach (DataRow row in tasksdata.Rows)
@@ -158,32 +136,10 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 string deTaiId = row["deTaiId"].ToString();
                 string tenDeTai = row["tenDeTai"].ToString();
                 string tenTheLoai = row["tenTheLoai"].ToString();
-                string moTa = row["moTa"].ToString();
-                string yeuCauChung = row["yeuCauChung"].ToString();
-                DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
-                DateTime ngayKetThuc;
-                try
-                {
-                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
-                }
-                catch
-                {
-                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
-                }
-                int soLuong = Convert.ToInt32(row["soLuong"]);
-                int trangThai = Convert.ToInt32(row["trangThai"]);
                 int an = Convert.ToInt32(row["an"]);
-                string tenTrangThai = "";
                 int nhomId = dtDAO.FindNhomIdByDeTaiId(deTaiId);
                 string tenNhom = "Nhóm " + nhomId.ToString(); 
-                if (trangThai == 1)
-                {
-                    tenTrangThai = "Đã đăng ký";
-                }
-                else
-                {
-                    tenTrangThai = "Chưa đăng ký";
-                }
+
                 if (an != 1 && nhomId != -1)
                     Topics.Add(new DeTai(deTaiId,tenDeTai, tenTheLoai, tenNhom));
             }

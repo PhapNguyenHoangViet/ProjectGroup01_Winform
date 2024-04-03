@@ -18,15 +18,17 @@ namespace Group01_QuanLyLuanVan.ViewModel
     public class StudentListTopicViewModel : BaseViewModel
     {
         DeTaiDAO dtDAO = new DeTaiDAO();
+
         private ObservableCollection<DeTai> _ListTopic;
-        public ObservableCollection<DeTai> ListTopic { get => _ListTopic; set { _ListTopic = value;/* OnPropertyChanged();*/ } }
+        public ObservableCollection<DeTai> ListTopic { get => _ListTopic; set { _ListTopic = value; OnPropertyChanged(); } }
         private ObservableCollection<string> _ListTK;
         public ObservableCollection<string> ListTK { get => _ListTK; set { _ListTK = value; OnPropertyChanged(); } }
         public ICommand SearchTopicsCommand { get; set; }
         public ICommand DetailTopicsCommand { get; set; }
-        public ObservableCollection<DeTai> Topics { get; set; }
         public ICommand LoadTopicsCommand { get; set; }
         public ICommand AddTopicsCommand { get; set; }
+
+        public ObservableCollection<DeTai> Topics { get; set; }
         public StudentListTopicViewModel()
         {
             Topics = new ObservableCollection<DeTai>();
@@ -65,7 +67,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 if (an != 1)
                     Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, hoTen, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
             }
-            MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
             ListTopic = Topics;
             ListTK = new ObservableCollection<string>() { "Đề tài", "Thể loại", "Giảng viên" };
             DetailTopicsCommand = new RelayCommand<StudentListTopicView>((p) => { return p.ListTopicView.SelectedItem == null ? false : true; }, (p) => _DetailTopicsCommand(p));
@@ -80,6 +81,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
         }
         void _LoadTopicsCommand(StudentListTopicView topicsView)
         {
+            topicsView.ListTopicView.ItemsSource = listTopic();
+            topicsView.ListTopicView.Items.Refresh();
             topicsView.cbxChon.SelectedIndex = 0;
         }
         void _DetailTopicsCommand(StudentListTopicView topicsView)
@@ -151,6 +154,48 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
             else
                 topicsView.ListTopicView.ItemsSource = ListTopic;
+        }
+
+        ObservableCollection<DeTai> listTopic()
+        {
+            Topics = new ObservableCollection<DeTai>();
+
+            var topicsData = dtDAO.LoadListTopicCoGV();
+            foreach (DataRow row in topicsData.Rows)
+            {
+                string deTaiId = row["deTaiId"].ToString();
+                string tenDeTai = row["tenDeTai"].ToString();
+                string tenTheLoai = row["tenTheLoai"].ToString();
+                string hoTen = row["hoTen"].ToString();
+                string moTa = row["moTa"].ToString();
+                string yeuCauChung = row["yeuCauChung"].ToString();
+                DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
+                DateTime ngayKetThuc;
+                try
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                }
+                catch
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
+                }
+                int soLuong = Convert.ToInt32(row["soLuong"]);
+                int trangThai = Convert.ToInt32(row["trangThai"]);
+                int an = Convert.ToInt32(row["an"]);
+                string tenTrangThai = "";
+
+                if (trangThai == 1)
+                {
+                    tenTrangThai = "Đã đăng ký";
+                }
+                else
+                {
+                    tenTrangThai = "Chưa đăng ký";
+                }
+                if (an != 1)
+                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, hoTen, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
+            }
+            return Topics;
         }
 
     }

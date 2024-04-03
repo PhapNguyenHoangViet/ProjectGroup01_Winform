@@ -211,8 +211,8 @@
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Click">
                                     <i:InvokeCommandAction     
-                            Command="{Binding AddDissertation}"
-                            CommandParameter="{Binding ElementName=TeacherAddDissertationWd}"/>
+                            Command="{Binding AddTask}"
+                            CommandParameter="{Binding ElementName=TeacherTaskDetailWd}"/>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </Button>

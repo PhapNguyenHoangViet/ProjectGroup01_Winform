@@ -598,7 +598,7 @@ VerticalAlignment="Center"
                             Margin="6"
                             />
                                 <TextBlock 
-                            Text="Báo lỗi"
+                            Text="Gửi mail"
                             FontSize="13"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"

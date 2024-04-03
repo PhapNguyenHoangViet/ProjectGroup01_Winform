@@ -32,7 +32,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         YeuCauDAO ycDAO = new YeuCauDAO();
         ThongBaoDAO tbDAO = new ThongBaoDAO();
         DeTaiDAO dtDAO = new DeTaiDAO();
-        public ICommand LoadPageHomeCM { get; set; }
+        SinhVienDAO sinhVienDAO = new SinhVienDAO();
+        GiangVienDAO gvDAO = new GiangVienDAO();
+            public ICommand LoadPageHomeCM { get; set; }
         public static Frame MainFrame { get; set; }
         public ICommand HomeStudentCM { get; set; }
         public ICommand StudentRegisterCM { get; set; }
@@ -40,6 +42,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand StudentUpdateProgressCM { get; set; }
         public ICommand SignoutCM { get; set; }
         public ICommand StudentNotiCM { get; set; }
+
+        public ICommand StudentMailCM { get; set; }
         public ObservableCollection<DeTai> Topics { get; set; }
 
         public StudentMainViewModel()
@@ -77,6 +81,32 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 tbDAO.LoadListThongBao();
                 MainFrame.Content = new StudentNotiView();
+
+            });
+
+            StudentMailCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+
+                StudentMailView studentMailView = new StudentMailView();
+                GiangVien gv = new GiangVien();
+                if (Const.sinhVien.NhomId.ToString() != ""&& Const.sinhVien.NhomId!= -1)
+                {
+                    string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
+                    string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
+                    gv = gvDAO.FindOneById(gvId);
+                }
+                if (gv != null)
+                {
+
+                    studentMailView.HoTen.Text = gv.HoTen.ToString();
+                    studentMailView.EmailAddress.Text = gv.Email.ToString();
+                }
+                else
+                {
+                    studentMailView.HoTen.Text = "";
+                    studentMailView.EmailAddress.Text = "";
+                }
+                MainFrame.Content = studentMailView;
 
             });
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>

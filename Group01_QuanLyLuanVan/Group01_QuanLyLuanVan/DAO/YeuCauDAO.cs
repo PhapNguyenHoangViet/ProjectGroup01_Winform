@@ -36,6 +36,12 @@ namespace Group01_QuanLyLuanVan.DAO
                 return null;
             }
         }
+        public void AddTask(string noiDung, int trangThai, string deTaiId)
+        {
+
+            string sqlStr = string.Format("Insert into YeuCau(noiDung, trangThai, deTaiId) values(N'{0}', '{1}', '{2}')", noiDung, trangThai, deTaiId);
+            conn.Sql_Them_Xoa_Sua(sqlStr);
+        }
         public DataTable LoadListYeuCau()
         {
             DataTable dt = new DataTable();
@@ -43,6 +49,12 @@ namespace Group01_QuanLyLuanVan.DAO
             dt = conn.Sql_Select(sqlStr);
             return dt;
         }
-
+        public DataTable ListYeuCauByDeTaiId(string deTaiId)
+        {
+            DataTable dt = new DataTable();
+            string sqlStr = string.Format("SELECT yeuCauId, noiDung, trangThai, deTaiId FROM YeuCau where deTaiId = '{0}'", deTaiId);
+            dt = conn.Sql_Select(sqlStr);
+            return dt;
+        }
     }
 }

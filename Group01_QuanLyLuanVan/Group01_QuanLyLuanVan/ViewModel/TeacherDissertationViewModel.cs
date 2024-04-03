@@ -17,6 +17,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
     public class TeacherDissertationViewModel : BaseViewModel
     {
         DeTaiDAO dtDAO = new DeTaiDAO();
+        SinhVienDAO svDAO = new SinhVienDAO();
 
         private ObservableCollection<DeTai> _ListTopic;
         public ObservableCollection<DeTai> ListTopic { get => _ListTopic; set { _ListTopic = value;OnPropertyChanged(); } }
@@ -90,11 +91,29 @@ namespace Group01_QuanLyLuanVan.ViewModel
             detailTopic.HoTen.Text = Const.giangVien.HoTen;
             detailTopic.MoTa.Text = temp.MoTa;
             detailTopic.YeuCau.Text = temp.YeuCauChung;
+            detailTopic.SoLuong.Text = temp.SoLuong.ToString();
             detailTopic.NgayBatDau.Text = temp.NgayBatDau.ToString();
             if (temp.NgayBatDau.ToString() == temp.NgayKetThuc.ToString())
                 detailTopic.NgayKetThuc.Text = "";
             else
                 detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
+            string thanhVien = "";
+            //MessageBox.Show(temp.DeTaiId.ToString());
+            //int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
+            //MessageBox.Show(nhomId.ToString());
+
+            //if (nhomId != -1)
+            //{
+            //    List<SinhVien> sinhViens = svDAO.FindByDeTaiId(nhomId);
+            //    if (sinhViens != null)
+            //    {
+            //        foreach (SinhVien sinhVien in sinhViens)
+            //        {
+            //            thanhVien += sinhVien.HoTen + "/n";
+            //        }
+            //    }
+            //}
+            detailTopic.ThanhVien.Text = thanhVien;
             ListTopic = Topics;
             topicsView.ListTopicView.ItemsSource = ListTopic;
             topicsView.ListTopicView.SelectedItem = null;

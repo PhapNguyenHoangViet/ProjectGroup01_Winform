@@ -36,8 +36,18 @@ namespace Group01_QuanLyLuanVan.ViewModel
         }
         void _UpdateTopicCM(TeacherDissertationDetailView p)
         {
-            DeTai dt = new DeTai();
-            dt.DeTaiId = p.deTaiId.Text;
+            string deTaiId = p.deTaiId.Text;
+            string tenDeTai = p.TenDeTai.Text;
+            string moTa = p.MoTa.Text;
+            string yeuCau = p.YeuCau.Text;
+            int soLuong = int.Parse(p.SoLuong.Text);
+            DeTai dt = new DeTai(deTaiId, tenDeTai, moTa, yeuCau, soLuong);
+            deTaiDAO.UpdateTopic(dt);
+            MessageBox.Show("Đã cập nhật đề tài này !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            TeacherDissertationView topicsView = new TeacherDissertationView();
+            topicsView.ListTopicView.ItemsSource = listTopic();
+            topicsView.ListTopicView.Items.Refresh();
+            TeacherMainViewModel.MainFrame.Content = topicsView;
         }
 
         void _DeleteTopicCM(TeacherDissertationDetailView p)

@@ -19,5 +19,20 @@ namespace Group01_QuanLyLuanVan.DAO
             dt = conn.Sql_Select(sqlStr);
             return dt;
         }
+        public DataTable LoadListThongBao(string deTaiId)
+        {
+            DataTable dt = new DataTable();
+            string sqlStr = string.Format("SELECT thongBaoId, tieude, noiDung, ThongBao.deTaiId, ngay  FROM ThongBao INNER JOIN DeTai ON ThongBao.deTaiId = DeTai.deTaiId WHERE DeTai.deTaiId = '{0}'", deTaiId);
+            dt = conn.Sql_Select(sqlStr);
+            return dt;
+        }
+
+        public void AddThongBao(ThongBao tb)
+        {
+            string sqlStr = string.Format("Insert into ThongBao(tieude, noidung, deTaiId, ngay) values(N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.DeTaiId, tb.Ngay);
+            conn.Sql_Them_Xoa_Sua(sqlStr);
+        }
+
+
     }
 }

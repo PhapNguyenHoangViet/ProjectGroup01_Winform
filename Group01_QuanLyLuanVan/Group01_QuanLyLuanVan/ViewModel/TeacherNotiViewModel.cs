@@ -16,7 +16,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
     {
         DeTaiDAO dtDAO = new DeTaiDAO();
 
-        YeuCauDAO yeuCauDAO = new YeuCauDAO();
+        ThongBaoDAO tbDAO = new ThongBaoDAO();
 
         private ObservableCollection<DeTai> _ListTopic;
         public ObservableCollection<DeTai> ListTopic { get => _ListTopic; set { _ListTopic = value; OnPropertyChanged(); } }
@@ -27,7 +27,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand LoadListTopicCommand { get; set; }
         public ObservableCollection<DeTai> Topics { get; set; }
 
-        public ObservableCollection<YeuCau> Tasks { get; set; }
+        public ObservableCollection<ThongBao> Notis { get; set; }
 
         public TeacherNotiViewModel()
         {
@@ -70,6 +70,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
             ListTopic = Topics;
             ListTK = new ObservableCollection<string>() { "Đề tài", "Thể loại", "Nhóm" };
+            DetailTopicsCommand = new RelayCommand<TeacherNotiView>((p) => { return p.ListTopicView.SelectedItem == null ? false : true; }, (p) => _DetailTopicsCommand(p));
             SearchTopicsCommand = new RelayCommand<TeacherNotiView>((p) => { return p == null ? false : true; }, (p) => _SearchTopicsCommand(p));
             LoadListTopicCommand = new RelayCommand<TeacherNotiView>((p) => true, (p) => _LoadListTopicCommand(p));
         }
@@ -79,8 +80,30 @@ namespace Group01_QuanLyLuanVan.ViewModel
             topicsView.ListTopicView.Items.Refresh();
             topicsView.cbxChon.SelectedIndex = 0;
         }
-      
 
+        void _DetailTopicsCommand(TeacherNotiView topicsView)
+        {
+            // chuyển sang view detail topic
+            TeacherNotiDetailView notiView = new TeacherNotiDetailView();
+            DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
+            notiView.TenDeTai.Text = temp.TenDeTai;
+            Const.deTaiId = temp.DeTaiId;
+            Notis = new ObservableCollection<ThongBao>();
+            var thongBaosData = tbDAO.LoadListThongBao(Const.deTaiId);
+
+            foreach (DataRow row in thongBaosData.Rows)
+            {
+                int thongBaoId = Convert.ToInt32(row["thongBaoId"]);
+                string tieuDe = row["tieuDe"].ToString();
+                string noiDung = row["noiDung"].ToString();
+                string deTaiId = row["deTaiId"].ToString();
+                DateTime ngay = Convert.ToDateTime(row["ngay"]);
+                Notis.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
+            }
+            notiView.ListThongBaoView.ItemsSource = Notis;
+            notiView.ListThongBaoView.SelectedItem = null;
+            TeacherMainViewModel.MainFrame.Content = notiView;
+        }
         void _SearchTopicsCommand(TeacherNotiView topicsView)
         {
             ObservableCollection<DeTai> temp = new ObservableCollection<DeTai>();

@@ -19,6 +19,7 @@ FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qu
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\SignUpView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentAddTopicsView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentListTopicView.xaml;;
+FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentMailView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentMainView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentNotiView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentReceiveEvaluationView.xaml;;
@@ -43,4 +44,6 @@ FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qu
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherTaskDetailView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherTaskView.xaml;;
 FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\VerifyCodeView.xaml;;
+FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherNotiDetailView.xaml;;
+FD:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherNotiAddView.xaml;;
 

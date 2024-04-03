@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-45-725220370
+48-1770362262
 
-103-827405730
+1091419970882
 161342492648
-MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentAddTopicsView.xaml;View\StudentListTopicView.xaml;View\StudentMainView.xaml;View\StudentNotiView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\StudentUpdateTaskView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotificationView.xaml;View\TeacherNotiView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;View\TeacherTaskDetailView.xaml;View\TeacherTaskView.xaml;View\TeacherUpdateInforView.xaml;View\VerifyCodeView.xaml;
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentAddTopicsView.xaml;View\StudentListTopicView.xaml;View\StudentMailView.xaml;View\StudentMainView.xaml;View\StudentNotiView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\StudentUpdateTaskView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotiAddView.xaml;View\TeacherNotiDetailView.xaml;View\TeacherNotificationView.xaml;View\TeacherNotiView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;View\TeacherTaskDetailView.xaml;View\TeacherTaskView.xaml;View\TeacherUpdateInforView.xaml;View\VerifyCodeView.xaml;
 
 False
 
