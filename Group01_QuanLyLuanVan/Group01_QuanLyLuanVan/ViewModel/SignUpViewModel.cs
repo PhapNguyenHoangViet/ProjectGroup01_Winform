@@ -22,6 +22,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
     public class SignUpViewModel : BaseViewModel
     {
         TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+        SinhVienDAO svDAO = new SinhVienDAO();
 
         private string _linkaddimage;
         public string linkaddimage { get => _linkaddimage; set { _linkaddimage = value; OnPropertyChanged(); } }
@@ -47,7 +48,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.jpg; *.png)|*.jpg; *.png";
-
             if (open.ShowDialog() == true)
             {
                 if (open.FileName != "")
@@ -59,40 +59,40 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         void _Register(SignUpView parameter)
         {
-            if (parameter.username.Text == "" || password == "" || parameter.sinhVienId.Text == "" || parameter.tenKhoa.Text == "" || parameter.ngaySinh.SelectedDate == null || parameter.hoTen.Text == "" || parameter.gioiTinh.Text == "" || parameter.sdt.Text == "" || parameter.mail.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            if (tkDAO.FindOneByUsername(parameter.username.Text) != null)
-            {
-                MessageBox.Show("Tên đăng nhập đã tồn tại !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            if (DateTime.Now.Year - parameter.ngaySinh.SelectedDate.Value.Year < 18)
-            {
-                MessageBox.Show("Số tuổi phải lớn hơn 18 !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            string match1 = @"^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
-            Regex reg1 = new Regex(match1);
-            if (!reg1.IsMatch(parameter.sdt.Text))
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            if (tkDAO.FindOneByMail(parameter.mail.Text) != null)
-            {
-                MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
-            Regex reg = new Regex(match);
-            if (!reg.IsMatch(parameter.mail.Text))
-            {
-                MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+            //if (parameter.username.Text == "" || password == "" || parameter.sinhVienId.Text == "" || parameter.tenKhoa.Text == "" || parameter.ngaySinh.SelectedDate == null || parameter.hoTen.Text == "" || parameter.gioiTinh.Text == "" || parameter.sdt.Text == "" || parameter.mail.Text == "")
+            //{
+            //    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
+            //if (tkDAO.FindOneByUsername(parameter.username.Text) != null)
+            //{
+            //    MessageBox.Show("Tên đăng nhập đã tồn tại !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
+            //if (DateTime.Now.Year - parameter.ngaySinh.SelectedDate.Value.Year < 18)
+            //{
+            //    MessageBox.Show("Số tuổi phải lớn hơn 18 !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
+            //string match1 = @"^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
+            //Regex reg1 = new Regex(match1);
+            //if (!reg1.IsMatch(parameter.sdt.Text))
+            //{
+            //    MessageBox.Show("Số điện thoại không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
+            //if (tkDAO.FindOneByMail(parameter.mail.Text) != null)
+            //{
+            //    MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
+            //string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
+            //Regex reg = new Regex(match);
+            //if (!reg.IsMatch(parameter.mail.Text))
+            //{
+            //    MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
 
             TaiKhoan tk = new TaiKhoan();
             tk.Username = parameter.username.Text;
@@ -103,23 +103,26 @@ namespace Group01_QuanLyLuanVan.ViewModel
             Random rand = new Random();
             tk.Code = rand.Next(100000, 999999).ToString();
             SinhVien sv = new SinhVien();
-            sv.SinhVienId = "SV0" + parameter.sinhVienId.Text;
-            sv.KhoaId = "K0" + (parameter.tenKhoa.SelectedIndex).ToString();
+            sv.Id = parameter.sinhVienId.Text;
+            sv.KhoaId = "K01";
             sv.HoTen = parameter.hoTen.Text;
             sv.SDT = parameter.sdt.Text;
             sv.GioiTinh = parameter.gioiTinh.Text;
-            sv.SDT = parameter.sdt.Text;
+            sv.NgaySinh = DateTime.Parse(parameter.ngaySinh.Text.ToString());
+            sv.Username = parameter.username.Text;
+            sv.Email = parameter.mail.Text;
 
 
             if (linkaddimage == "/Resource/Image/addava.png")
                 tk.Avatar = "/Resource/Image/addava.png";
             else
-                tk.Avatar = "/Resource/Ava/" + sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                tk.Avatar = "/Resource/Ava/" + tk.Username + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString();
             Const.taiKhoan = tk;
             SendCode(tk.Mail, tk.Code);
 
             tkDAO.Register(tk);
-            File.Copy(linkaddimage, Const._localLink + @"/Resource/Ava/" +sv.SinhVienId + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
+            svDAO.Register(sv);
+            File.Copy(linkaddimage, Const._localLink + @"/Resource/Ava/" + tk.Username + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
 
             Window oldWindow = App.Current.MainWindow;
             oldWindow.Hide();

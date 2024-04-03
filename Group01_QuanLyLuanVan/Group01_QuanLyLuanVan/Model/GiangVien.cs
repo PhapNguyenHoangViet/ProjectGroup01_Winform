@@ -19,7 +19,7 @@ namespace Group01_QuanLyLuanVan.Model
         private string khoaId;
         private string username;
 
-        public GiangVien () { }
+        public GiangVien() { }
 
         public GiangVien(string giangVienId, string hoTen, DateTime ngaySinh, string gioiTinh, string diaChi, string email, string sdt, string khoaId, string username)
         {
@@ -36,7 +36,7 @@ namespace Group01_QuanLyLuanVan.Model
 
         public string GiangVienId { get => giangVienId; set => giangVienId = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
-        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value;}
+        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string Email { get => email; set => email = value; }

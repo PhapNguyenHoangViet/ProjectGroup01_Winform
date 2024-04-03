@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group01_QuanLyLuanVan.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Group01_QuanLyLuanVan.View
         public TeacherDissertationView()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherAddDissertationView addTopicView = new TeacherAddDissertationView();
+            TeacherMainViewModel.MainFrame.Content = addTopicView;
         }
     }
 }

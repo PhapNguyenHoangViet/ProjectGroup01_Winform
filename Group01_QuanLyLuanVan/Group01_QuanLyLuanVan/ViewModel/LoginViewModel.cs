@@ -15,7 +15,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
+        SinhVienDAO svDAO = new SinhVienDAO();
         TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+        GiangVienDAO gvDAO = new GiangVienDAO();
 
         private string username;
         public string Username { get => username; set { username = value; OnPropertyChanged(); } }
@@ -24,13 +26,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public string Password { get => password; set { password = value; OnPropertyChanged(); } }
 
         public static Frame MainFrame { get; set; }
-
         public ICommand LoginCM { get; set; }
-
         public ICommand LoadLoginPageCM { get; set; }
-
         public ICommand ForgetPasswordCM { get; set; }
-
         public ICommand PasswordChangedCommand { get; set; }
 
         public LoginViewModel()
@@ -71,6 +69,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             }
                             else if (tk.Quyen == 1)
                             {
+                                GiangVien gv = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
+                                Const.giangVien = gv;
                                 Window oldWindow = App.Current.MainWindow;
                                 TeacherMainView teacherMainView = new TeacherMainView();
                                 App.Current.MainWindow = teacherMainView;
@@ -79,6 +79,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             }
                             else
                             {
+                                SinhVien sv = svDAO.FindOneByUsername(Username);
+                                Const.sinhVien = sv;
                                 Window oldWindow = App.Current.MainWindow;
                                 StudentMainView studentMainView = new StudentMainView();
                                 App.Current.MainWindow = studentMainView;

@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Group01_QuanLyLuanVan.DAO;
+using Group01_QuanLyLuanVan.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +25,12 @@ namespace Group01_QuanLyLuanVan.View
     /// </summary>
     public partial class TeacherDissertationDetailView : Page
     {
+
         public TeacherDissertationDetailView()
         {
             InitializeComponent();
         }
+
+        
     }
 }

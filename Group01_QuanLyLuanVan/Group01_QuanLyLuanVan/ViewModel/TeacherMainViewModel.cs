@@ -8,21 +8,36 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
+using Group01_QuanLyLuanVan.Properties;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherMainViewModel : BaseViewModel
     {
+        private string ava;
+        public string Ava { get => ava; set { ava = value; OnPropertyChanged(); } }
+        private string tenDangNhap;
+        public string TenDangNhap { get => tenDangNhap; set { tenDangNhap = value; OnPropertyChanged(); } }
         public ICommand Loadwd { get; set; }
         public static Frame MainFrame { get; set; }
-
         public ICommand LoadPageCM { get; set; }
-
+        public ICommand TeacherUpdateInforCM { get; set; }
         public ICommand SignoutCM { get; set; }
         public ICommand HomeCM { get; set; }
+        public ICommand TeacherDissertationCM { get; set; }
+        public ICommand TeacherTaskCM { get; set; }
+        public ICommand TeacherProgressCM { get; set; }
+        public ICommand TeacherNotiCM { get; set; }
+        public void LoadTenND(TeacherMainView p)
+        {
+            p.TenDangNhap.Text = Const.giangVien.HoTen;
+        }
 
         public TeacherMainViewModel()
         {
+
+            Loadwd = new RelayCommand<TeacherMainView>((p) => true, (p) => _Loadwd(p));
+
             LoadPageCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
                 MainFrame = p;
@@ -34,29 +49,48 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new HomeView();
             });
 
-            SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
+            TeacherUpdateInforCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
-                FrameworkElement window = GetParentWindow(p);
-                var w = window as Window;
-                if (w != null)
-                {
-                    w.Hide();
-                    LoginView w1 = new LoginView();
-                    w1.ShowDialog();
-                    w.Close();
-                }
+                MainFrame.Content = new TeacherUpdateInforView();
             });
 
-            FrameworkElement GetParentWindow(FrameworkElement p)
+            TeacherDissertationCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
-                FrameworkElement parent = p;
+                MainFrame.Content = new TeacherDissertationView();
+            });
 
-                while (parent.Parent != null)
-                {
-                    parent = parent.Parent as FrameworkElement;
-                }
-                return parent;
-            }
+            TeacherTaskCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherTaskView();
+            });
+
+            TeacherProgressCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherProgressView();
+            });
+
+            TeacherNotiCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherNotiView();
+            });
+
+            SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
+            {
+                Window oldWindow = App.Current.MainWindow;
+                LoginView loginView = new LoginView();
+                App.Current.MainWindow = loginView;
+                oldWindow.Close();
+                loginView.Show();
+            });
+        }
+
+        void _Loadwd(TeacherMainView p)
+        {
+            if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                Ava = Const._localLink + "/Resource/Image/addava.png";
+            else
+                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+            LoadTenND(p);
         }
     }
 }
