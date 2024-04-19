@@ -98,7 +98,7 @@
                 IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
                 Margin="20,49,0,0" Width="150" Height="40"
-                Background="#353A55" HorizontalAlignment="Center" VerticalContentAlignment="Center">
+                Background="#55b3d9" HorizontalAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock Text="Đăng nhập" x:Name="LoginButton" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Josefin Sans"/>
             </Button>
 
@@ -122,7 +122,7 @@
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="Transparent"/>
-                            <Setter Property="Foreground" Value="#353A55"/>
+                            <Setter Property="Foreground" Value="#55b3d9"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="#6891DF"/>
@@ -154,7 +154,7 @@
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="Transparent"/>
-                            <Setter Property="Foreground" Value="#353A55"/>
+                            <Setter Property="Foreground" Value="#55b3d9"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="#6891DF"/>

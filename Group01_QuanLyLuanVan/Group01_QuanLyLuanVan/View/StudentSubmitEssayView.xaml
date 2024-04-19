@@ -21,7 +21,7 @@
                 FontFamily="Josefin Sans"
                 FontSize=" 25"
                 Margin="0,20,0,10"                    
-                Foreground="#353A55"
+                Foreground="#55b3d9"
                 FontWeight="Bold"
                 HorizontalAlignment="Center"/>
         </Grid>
@@ -57,7 +57,7 @@
                         <Button Content="Nộp"
                                 FontFamily="Josefin Sans"
                                 Foreground="White"
-                                Background="#353A55"
+                                Background="#55b3d9"
                                 Width="70"
                                 materialDesign:ButtonAssist.CornerRadius="10">
                         </Button>

@@ -20,7 +20,7 @@
                     FontWeight = "SemiBold"
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
-                    Foreground = "#353A55"
+                    Foreground = "#55b3d9"
                     Margin = "15,-500,0,0" Width = "442"
                     VerticalAlignment = "Center"
                 ><Run Text = "BÁO LỖI PHẦN MỀM" />
@@ -66,7 +66,7 @@
                             Margin="501,474,113,0"
                             BorderThickness="0"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55">
+                            Background="#55b3d9">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <i:InvokeCommandAction  Command="{Binding SendMSG}"
@@ -80,7 +80,7 @@
                             Margin="61,474,499,0"
                             BorderThickness="0"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55"
+                            Background="#55b3d9"
                             Name ="attachButton">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">

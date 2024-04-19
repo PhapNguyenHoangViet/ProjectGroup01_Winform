@@ -1,0 +1,225 @@
+﻿<Page x:Class="Group01_QuanLyLuanVan.View.TeacherTaskMessageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Group01_QuanLyLuanVan.ViewModel"
+      mc:Ignorable="d"
+      xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Height="605" Width="700"
+      DataContext="{StaticResource TeacherTaskMessageVM}"
+      x:Name="TeacherTaskMessageWd">
+
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
+                               CommandParameter="{Binding ElementName= TeacherTaskMessageWd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
+    <Border
+    Height = "605"
+    Width = "700"
+    Background = "Transparent"
+    CornerRadius = "20"
+    BorderThickness = "5">
+        <Grid >
+            <Grid.RowDefinitions >
+                <RowDefinition Height = "58" />
+                <RowDefinition Height = "44" />
+                <RowDefinition />
+            </Grid.RowDefinitions >
+            <Grid Grid.Row = "0" Margin="0,0,0,24" >
+                <StackPanel Orientation = "Horizontal" >
+                    <TextBlock Text = "Đề tài: "
+                       Margin = "15,0,0,0" 
+                       HorizontalAlignment = "Center"
+                       VerticalAlignment = "Center"
+                       FontFamily = "{StaticResource Custom}"
+                       FontSize = "20"
+                       FontWeight = "SemiBold"   
+                        TextWrapping="Wrap"
+                       />
+
+                    <TextBlock Text = ""
+                           x:Name="TenDeTai"
+                           Width = "585"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom}"
+                        FontSize = "20"
+                        FontWeight = "SemiBold" Height="33"
+                        />
+
+                </StackPanel >
+            </Grid >
+            <Grid Grid.Row = "1" >
+                <StackPanel Orientation = "Horizontal" >
+                    <TextBlock Text = "Task: "
+                               Margin = "15,0,0,0" 
+                   HorizontalAlignment = "Center"
+                   VerticalAlignment = "Center"
+                   FontFamily = "{StaticResource Custom}"
+                   FontSize = "20"
+                   FontWeight = "SemiBold"
+                   />
+
+                    <TextBlock 
+                        Margin = "15,0,0,0" 
+                        Text = ""
+                        x:Name="TenTask"
+                        Width = "578"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom}"
+                        FontSize = "20"
+                        FontWeight = "Normal"
+                        TextWrapping="Wrap"
+                        />
+
+                </StackPanel >
+            </Grid >
+            <Grid Grid.Row = "2" >
+                <StackPanel >
+                    <StackPanel Orientation = "Horizontal"            
+                    Height = "59" >
+                        <TextBlock Text = "Tiến độ: "
+                            Margin = "30,15,0,0" 
+                            HorizontalAlignment = "Center"
+                            VerticalAlignment = "Center"
+                            FontFamily = "{StaticResource Custom1}"
+                            FontSize = "18"
+                            FontWeight = "Light"
+                            />
+                        <Slider
+                           Margin = "30,15,0,0" 
+                           Minimum="0"
+                           Maximum="100"
+                           Style="{StaticResource MaterialDesignDiscreteSlider}"
+                           ToolTip="MaterialDesignDiscreteSlider"
+                           Value="50" Width="406" Height="28"/>
+                    </StackPanel>
+                    <ListView ItemsSource="{Binding ListMessage}" HorizontalContentAlignment="Stretch"                    
+                        x:Name = "ListTaskView"
+                        Height = "364"
+                        Width = "671"
+                        SelectionMode = "Single"
+                        ScrollViewer.VerticalScrollBarVisibility = "Hidden"
+                        Foreground="White"
+                    >
+                        <ListView.ItemTemplate >
+                            <DataTemplate>
+                                <Border
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Width = "652"
+                                    Height = "40"
+                                    CornerRadius = "10"
+                                    Background = "#55b3d9"
+                                    >
+                                    <Grid >
+                                        <Grid.ColumnDefinitions >
+                                            <ColumnDefinition Width = "342" />
+                                            <ColumnDefinition Width = "224" />
+                                            <ColumnDefinition/>
+
+                                        </Grid.ColumnDefinitions >
+                                        <Grid Grid.Column = "0" >
+                                            <TextBlock
+                                                Text = "{Binding tinNhan}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12">
+                                            </TextBlock >
+
+                                        </Grid >
+                                        <Grid Grid.Column = "1" >
+                                            <TextBlock
+                                                Text = "{Binding nguoiGuiId}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12">
+                                            </TextBlock >
+                                        </Grid >
+
+                                        <Grid Grid.Column = "2" >
+                                            <TextBlock
+                                                Text = "{Binding nguoiNhanId}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12">
+                                            </TextBlock >
+                                        </Grid >
+                                    </Grid >
+
+                                </Border >
+                            </DataTemplate >
+                        </ListView.ItemTemplate >
+                        <ListView.ItemsPanel >
+                            <ItemsPanelTemplate >
+                                <WrapPanel Orientation = "Vertical" />
+                            </ItemsPanelTemplate >
+                        </ListView.ItemsPanel >
+                        <i:Interaction.Triggers >
+                            <i:EventTrigger EventName = "SelectionChanged" >
+                                <i:InvokeCommandAction Command = "{Binding DetailTopicsCommand}"
+                                                       CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"></i:InvokeCommandAction >
+                            </i:EventTrigger >
+                        </i:Interaction.Triggers >
+                    </ListView >
+
+                    <StackPanel Orientation = "Horizontal" Height="61" Width="689" >
+                        <TextBlock Text = "Tin nhắn: "
+                                    Margin = "30,15,0,0" 
+                        HorizontalAlignment = "Center"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom1}"
+                        FontSize = "16"
+                        FontWeight = "Light"
+                        />
+                        <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" 
+                Margin = "20,15,0,0" Width="400" Height="40">
+                            <TextBox
+                                x:Name="TaskName"
+                                HorizontalAlignment="Left"
+                        VerticalAlignment = "Center"
+                                Width="400"
+                                Height="40"
+                                 FontSize = "16"
+                                Margin = "0,8,0,0"
+                        FontWeight = "Light"
+                                FontFamily="{StaticResource Custom1}"
+                                BorderThickness="0"
+                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                materialDesign:TextFieldAssist.TextBoxViewMargin="20,0,0,0"/>
+                        </Border>
+                        <Button
+                            Content = "Gửi"
+                            Margin = "30,15,0,0"
+                            Width = "86"
+                            Height = "41"
+                            VerticalAlignment = "Center"
+                            materialDesign:ButtonAssist.CornerRadius = "15"
+                            Background = "#55b3d9"
+                            FontFamily = "{StaticResource Custom}">
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction     
+                            Command="{Binding AddTask}"
+                            CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                    </StackPanel >
+                </StackPanel >
+            </Grid >
+        </Grid >
+
+    </Border >
+</Page>
+
+
+

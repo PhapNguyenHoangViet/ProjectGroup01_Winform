@@ -11,7 +11,12 @@
       DataContext="{StaticResource StudentNotiVM}"
       x:Name="studentnotiwd"
       Title="StudentNotiView">
-
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadThongBaosCommand}"
+                               CommandParameter="{Binding ElementName= studentnotiwd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="366*"/>
@@ -30,14 +35,14 @@
                     FontFamily="Josefin Sans"
                     FontSize=" 25"
                     Margin="0,20,0,10"                    
-                    Foreground="#353A55"
+                    Foreground="#55b3d9"
                     FontWeight="Bold"
                     HorizontalAlignment="Center"
                     />
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions >
-                    <ColumnDefinition Width = "140" />
+                    <ColumnDefinition Width = "300" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions >
                 <Grid Grid.Column = "0" >
@@ -46,7 +51,7 @@
                                 VerticalAlignment = "Center">
                         <TextBlock Text = "NGÀY"
                             FontFamily = "{StaticResource Custom}"
-                            FontSize = "12"
+                            FontSize = "16"
                             FontWeight = "SemiBold"/>
                     </StackPanel >
                 </Grid >
@@ -56,7 +61,7 @@
                                 VerticalAlignment = "Center">
                         <TextBlock Text = "TIÊU ĐỀ"                           
                             FontFamily = "{StaticResource Custom}"
-                            FontSize = "12"
+                            FontSize = "16"
                             FontWeight = "SemiBold"/>
                     </StackPanel >
                 </Grid >
@@ -75,43 +80,57 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border
-                                Width = "684"
-                                Height = "34"
-                                CornerRadius = "10"
-                                Background = "#353A55"
-                                >
-                                <Grid >
-                                    <Grid.ColumnDefinitions >
-                                        <ColumnDefinition Width = "140" />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions >
-                                    <Grid Grid.Column = "0" >
-                                        <TextBlock
-                                            x:Name="Ngay"
-                                            Text = "{Binding Ngay}"
-                                            HorizontalAlignment = "Center"
-                                            VerticalAlignment = "Center"
-                                            FontFamily = "{StaticResource Custom}"
-                                            FontSize = "12"
-                                            >
-                                        </TextBlock >
-                                    </Grid >
-                                    <Grid Grid.Column = "1" >
-                                        <TextBlock
-                                            x:Name="TieuDe"
-                                            Text = "{Binding TieuDe}"
-                                            HorizontalAlignment = "Center"
-                                            VerticalAlignment = "Center"
-                                            FontFamily = "{StaticResource Custom}"
-                                            FontSize = "12"
-                                            
-                                            >
-                                        </TextBlock >
-                                    </Grid >
-                                </Grid >
-                            </Border >
+                                BorderBrush="Gray" BorderThickness="0.5"
+                                CornerRadius="10" Background = "white" Width="684" Height="50">
+                                <Grid>
+                                    <Grid >
+                                        <StackPanel VerticalAlignment="Center" >
+                                            <StackPanel Orientation="Horizontal"
+                                                        >
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="69"/>
+                                                        <ColumnDefinition Width="250" />
+                                                        <ColumnDefinition  Width="350"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0">
+                                                        <Image Source="/Resource/Image/noti.png" Width="30"  Height="30"/>
+                                                    </Grid>
+                                                    <Grid Grid.Column="1">
+                                                        <TextBlock
+                                                            x:Name="Ngay"
+                                                            VerticalAlignment="Center"
+                                                            FontWeight="Bold"
+                                                            Text="{Binding Ngay}"
+                                                            Foreground="#1e90ff"
+                                                            FontFamily="{StaticResource Custom}"
+                                                            FontSize="16"
+                                                            TextWrapping="Wrap"/>
+                                                    </Grid>
+                                                    <Grid Grid.Column="2">
+                                                        <TextBlock
+                                                       HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        x:Name="TieuDe"
+                                                        Text="{Binding TieuDe}"
+                                                        Foreground="#1e90ff"
+                                                        FontFamily="{StaticResource Custom}"
+                                                        FontSize="16"                                                           
+                                                        TextWrapping="Wrap"/>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </Border>
                         </DataTemplate >
                     </ListView.ItemTemplate >
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Margin" Value="0,0,0,1" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
                     <ListView.ItemsPanel >
                         <ItemsPanelTemplate >
                             <WrapPanel Orientation = "Vertical" />
@@ -129,14 +148,16 @@
                 <StackPanel Orientation="Vertical" Margin="0,95,0,0">
                     <TextBlock Text = "NỘI DUNG"
                         FontFamily = "{StaticResource Custom}"
-                        FontSize = "12"
+                        FontSize = "16"
                         FontWeight = "SemiBold"
                         Padding="50,10,0,10"/>
                     <Border  
+                        BorderBrush="Gray"
+                        BorderThickness="0.5"
                         CornerRadius="10"
-                        Background="#E0E0E0"
+                        Background="White"
                         Margin="10,0,10,0">
-                        <TextBlock Foreground="Black"  
+                        <TextBlock Foreground="#ff6a6a"  
                            Text="{Binding SelectedThongBaoNoiDung}"
                            VerticalAlignment="Top"
                            TextWrapping="Wrap"

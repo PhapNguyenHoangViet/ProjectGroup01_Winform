@@ -10,6 +10,12 @@
       Height="605" Width="700"  
       DataContext="{StaticResource StudentAddTopicVM}"
       x:Name="addtopicwd">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loadwd}"
+                                   CommandParameter="{Binding ElementName=addtopicwd}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Page.Triggers>
         <EventTrigger RoutedEvent="Page.Loaded">
             <BeginStoryboard>
@@ -28,8 +34,9 @@
             <RowDefinition Height="70"/>
             <RowDefinition Height="97"/>
             <RowDefinition Height="71"/>
-            <RowDefinition Height="144"/>
-            <RowDefinition Height="115"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="114"/>
             <RowDefinition />
         </Grid.RowDefinitions>
 
@@ -39,7 +46,7 @@
                     FontWeight = "SemiBold"
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
-                    Foreground = "#353A55"
+                    Foreground = "#55b3d9"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             </TextBlock >
@@ -53,9 +60,9 @@
                     HorizontalAlignment="Center"
                     Margin="0,0,0,10"
                             />
-                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="620">
                     <TextBox
-                        
+                        Text="{Binding TenDeTai}"
                         x:Name="TenDeTai"
                         HorizontalAlignment="Left"
                         Width="608"
@@ -75,7 +82,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300" Height="40">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300" Height="40">
                         <ComboBox x:Name="GiangVien" 
                                   FontFamily="{StaticResource Custom}" 
                                   Height="40"
@@ -89,7 +96,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300" Height="40">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300" Height="40">
                         <ComboBox x:Name="TheLoai" 
                                   FontFamily="{StaticResource Custom}" 
                                   Height="40"
@@ -106,21 +113,38 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="620" Height="70">
                     <TextBox
                         x:Name="MoTa"
                         HorizontalAlignment="Left"
                         Width="608"
-                        Height="100"
                         FontFamily="{StaticResource Custom}"
                         BorderThickness="0"
-                        Margin="10,10,10,0"/>
+                        Margin="10,8,0,8"/>
                 </Border>
             </StackPanel>
         </Grid>
 
-
         <Grid Grid.Row="4">
+            <StackPanel Orientation="Vertical"                      >
+                <TextBlock
+                    Text="YÊU CẦU"
+                    FontFamily="{StaticResource Custom}"
+                    HorizontalAlignment="Center"
+                            />
+                <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="620" Height="48">
+                    <TextBox
+                        x:Name="YeuCau"
+                        HorizontalAlignment="Left"
+                        Width="608"
+                        FontFamily="{StaticResource Custom}"
+                        BorderThickness="0"
+                        Margin="10,8,0,8"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="5">
             <StackPanel Orientation="Vertical">
                 <TextBlock
                     Margin="0,0,0,10"
@@ -130,8 +154,8 @@
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
-                        <ComboBox x:Name="multiSelectComboBox" HorizontalAlignment="Left" Width="278" Height="66" Margin="10,0,0,0" IsTextSearchEnabled="False" IsDropDownOpen="False" MaxDropDownHeight="100">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300">
+                        <ComboBox x:Name="multiSelectComboBox" HorizontalAlignment="Left" Width="278" Height="66" Margin="10,0,0,0" IsTextSearchEnabled="False" IsDropDownOpen="False" MaxDropDownHeight="100" ItemsSource="{Binding Items}">
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
                                     <CheckBox Content="{Binding FullInfo}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" />
@@ -145,7 +169,7 @@
                             </ComboBox.ItemContainerStyle>
                         </ComboBox>
                     </Border>
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300" Margin="20,0,0,0">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300" Margin="20,0,0,0">
                         <TextBox x:Name="selectedItemTextBlock" Text=""/>
                     </Border>
                 </StackPanel>
@@ -153,24 +177,24 @@
         </Grid>
 
 
-        <Grid Grid.Row="5">
+        <Grid Grid.Row="6">
             <Button Content="ĐỀ XUẤT"
                     Margin="0,-50,0,0"
                             Width="230"
                             BorderThickness="0"
                             x:Name="btnregister"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55">
+                            Background="#55b3d9">
 
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <i:InvokeCommandAction Command="{Binding DeXuat}"
+                        <i:InvokeCommandAction Command="{Binding DeXuatCommand}"
                                                    CommandParameter="{Binding ElementName=addtopicwd}"></i:InvokeCommandAction>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
 
             </Button>
-            <Button Margin="529,50,23,10" Background="#353A55">
+            <Button Margin="529,50,23,10" Background="#55b3d9">
                 <TextBlock Text="Quay lại"
                                        Height="30"
                                        Width="53"

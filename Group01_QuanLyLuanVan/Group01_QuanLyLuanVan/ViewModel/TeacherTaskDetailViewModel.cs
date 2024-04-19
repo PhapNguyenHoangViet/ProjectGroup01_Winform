@@ -17,13 +17,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherTaskDetailViewModel : BaseViewModel
     {
+        YeuCauDAO ycDAO = new YeuCauDAO();
+        MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void NotifyPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        YeuCauDAO ycDAO = new YeuCauDAO();
+
         public ICommand AddTask { get; set; }
 
 
@@ -33,10 +35,21 @@ namespace Group01_QuanLyLuanVan.ViewModel
             get { return _ListTask ?? (_ListTask = new ObservableCollection<YeuCau>()); }
             set { _ListTask = value; }
         }
+        private ObservableCollection<YeuCau> _ListMessage;
+        public ObservableCollection<YeuCau> ListMessage
+        {
+            get { return _ListMessage ?? (_ListMessage = new ObservableCollection<YeuCau>()); }
+            set { _ListMessage = value; }
+        }
+
+        public ICommand MessageTaskCommand { get; set; }
+
+        public ObservableCollection<MessageTask> MessageTasks { get; set; }
 
         public TeacherTaskDetailViewModel()
         {
             AddTask = new RelayCommand<TeacherTaskDetailView>((p) => true, (p) => _AddTask(p));
+            MessageTaskCommand = new RelayCommand<TeacherTaskDetailView>((p) => { return p.ListTaskView.SelectedItem == null ? false : true; }, (p) => _MessageTaskCommand(p));
             var tasksdata = ycDAO.LoadListTask(Const.deTaiId);
             foreach (DataRow row in tasksdata.Rows)
             {
@@ -48,8 +61,28 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
         }
 
-
-
+        void _MessageTaskCommand(TeacherTaskDetailView teacherTaskDetailView)
+        {
+            TeacherTaskMessageView messageView = new TeacherTaskMessageView();
+            YeuCau temp = (YeuCau)teacherTaskDetailView.ListTaskView.SelectedItem;
+            messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
+            messageView.TenTask.Text = temp.NoiDung.ToString();
+            MessageTasks = new ObservableCollection<MessageTask>();
+            var messages = messageTaskDAO.LoadListMessageTask(temp.YeuCauId);
+            foreach (DataRow row in messages.Rows)
+            {
+                int tinNhanId = int.Parse(row["tinNhanId"].ToString());
+                string tinNhan = row["tinNhan"].ToString();
+                string nguoiGuiId = row["nguoiGuiId"].ToString();
+                string nguoiNhanId = row["nguoiNhanId"].ToString();
+                DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
+                int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, nguoiGuiId, nguoiNhanId, thoiGian, yeuCauId));
+            }
+            messageView.ListTaskView.ItemsSource = MessageTasks;
+            messageView.ListTaskView.SelectedItem = null;
+            TeacherMainViewModel.MainFrame.Content = messageView;
+        }
         void _AddTask(TeacherTaskDetailView p)
         {
             if (p.TaskName.Text == "")

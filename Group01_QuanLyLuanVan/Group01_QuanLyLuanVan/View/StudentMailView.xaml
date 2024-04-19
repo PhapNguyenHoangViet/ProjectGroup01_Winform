@@ -28,7 +28,7 @@
                 FontFamily = "{StaticResource Custom}"
                 FontWeight = "SemiBold"
                 FontSize = "30"
-                Foreground = "#353A55"
+                Foreground = "#55b3d9"
                 Margin = "15,0,0,0" Width = "442"
                 VerticalAlignment = "Center">
                 <Run Text = " GỬI MAIL" />
@@ -107,7 +107,7 @@
                             Margin="514,509,100,64"
                             BorderThickness="0"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55">
+                            Background="#55b3d9">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <i:InvokeCommandAction  Command="{Binding SendMSG}"
@@ -121,7 +121,7 @@
                             Margin="61,509,499,64"
                             BorderThickness="0"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55"
+                            Background="#55b3d9"
                             Name ="attachButton">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">

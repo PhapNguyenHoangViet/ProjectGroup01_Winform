@@ -90,22 +90,22 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _DetailTopicsCommand(TeacherProgressView topicsView)
         {
             // chuyển sang view detail topic
-            TeacherTaskDetailView taskView = new TeacherTaskDetailView();
-            DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
-            taskView.TenDeTai.Text = temp.TenDeTai;
-            Tasks = new ObservableCollection<YeuCau>();
-            var tasksdata = yeuCauDAO.LoadListTask(temp.DeTaiId);
-            foreach (DataRow row in tasksdata.Rows)
-            {
-                int yeuCauId = int.Parse(row["yeuCauId"].ToString());
-                string noiDung = row["noiDung"].ToString();
-                string deTaiId = row["deTaiId"].ToString();
-                int trangThai = Convert.ToInt32(row["trangThai"]);
-                Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
-            }
-            taskView.ListTaskView.ItemsSource = Tasks;
-            taskView.ListTaskView.SelectedItem = null;
-            TeacherMainViewModel.MainFrame.Content = taskView;
+            //TeacherTaskDetailView taskView = new TeacherTaskDetailView();
+            //DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
+            //taskView.TenDeTai.Text = temp.TenDeTai;
+            //Tasks = new ObservableCollection<YeuCau>();
+            //var tasksdata = yeuCauDAO.LoadListTask(temp.DeTaiId);
+            //foreach (DataRow row in tasksdata.Rows)
+            //{
+            //    int yeuCauId = int.Parse(row["yeuCauId"].ToString());
+            //    string noiDung = row["noiDung"].ToString();
+            //    string deTaiId = row["deTaiId"].ToString();
+            //    int trangThai = Convert.ToInt32(row["trangThai"]);
+            //    Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
+            //}
+            //taskView.ListTaskView.ItemsSource = Tasks;
+            //taskView.ListTaskView.SelectedItem = null;
+            //TeacherMainViewModel.MainFrame.Content = taskView;
         }
 
         void _SearchTopicsCommand(TeacherProgressView topicsView)

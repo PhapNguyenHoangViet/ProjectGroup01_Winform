@@ -59,9 +59,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 {
                     tenTrangThai = "Đã đăng ký";
                 }
-                else
+                else if (trangThai == 0)
                 {
                     tenTrangThai = "Chưa đăng ký";
+                }
+                else 
+                
+                {
+                    tenTrangThai = "Đề xuất";
                 }
                 if (an != 1)
                 Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
@@ -203,9 +208,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 {
                     tenTrangThai = "Đã đăng ký";
                 }
-                else
+                else if (trangThai == 0)
                 {
                     tenTrangThai = "Chưa đăng ký";
+                }
+                else
+
+                {
+                    tenTrangThai = "Đề xuất";
                 }
                 if (an != 1)
                     Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));

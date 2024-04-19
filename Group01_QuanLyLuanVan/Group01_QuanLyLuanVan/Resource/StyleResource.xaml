@@ -1266,7 +1266,7 @@ VerticalAlignment="Center"
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="20">
-                            <Border BorderBrush="{x:Null}" BorderThickness="2" CornerRadius="2">
+                            <Border BorderBrush="{x:Null}" BorderThickness="0.5" CornerRadius="2">
                                 <Grid>
                                     <Grid.Resources>
                                         <ControlTemplate x:Key="PreviousButtonTemplate" TargetType="{x:Type Button}">

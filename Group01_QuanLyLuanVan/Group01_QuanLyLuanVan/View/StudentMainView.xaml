@@ -44,7 +44,7 @@
 
 
             <Border Grid.Column="0"
-                Background="#353A55"
+                Background="#55b3d9"
                 CornerRadius="40,0,0,40" Height="750" VerticalAlignment="Center">
                 <Grid>
                     <Grid.RowDefinitions>

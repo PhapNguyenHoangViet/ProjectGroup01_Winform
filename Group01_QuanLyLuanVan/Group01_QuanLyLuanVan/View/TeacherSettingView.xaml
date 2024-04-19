@@ -36,7 +36,7 @@
                             Margin="15 0 0 0"
                             FontFamily="Josefin Sans"
                             FontSize=" 25"
-                            Foreground="#353A55"
+                            Foreground="#55b3d9"
                             FontWeight="Bold" RenderTransformOrigin="0.719,0.72" Width="260"/>
                     </StackPanel>
                 </Grid>
@@ -164,7 +164,7 @@
                             BorderThickness="0"
                             FontFamily="Josefin Sans"
                             Foreground="White"
-                            Background="#353A55"
+                            Background="#55b3d9"
                             Height="40"
                             Style="{StaticResource MaterialDesignFlatMidBgButton}"
                             Margin="25,-25,0,0">
@@ -194,7 +194,7 @@
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="Transparent"/>
-                                        <Setter Property="Foreground" Value="#353A55"/>
+                                        <Setter Property="Foreground" Value="#55b3d9"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background" Value="#6891DF"/>

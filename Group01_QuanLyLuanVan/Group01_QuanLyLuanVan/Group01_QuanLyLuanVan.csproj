@@ -66,11 +66,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Chat\Core\RelayCommand.cs" />
+    <Compile Include="Chat\Core\ObservableObject.cs" />
+    <Compile Include="Chat\Net\Server.cs" />
+    <Compile Include="Chat\ViewModel\ChatViewModel.cs" />
     <Compile Include="DAO\ComboBoxData.cs" />
     <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\DeTaiDAO.cs" />
     <Compile Include="DAO\GiangVienDAO.cs" />
     <Compile Include="DAO\KhoaDAO.cs" />
+    <Compile Include="DAO\MessageTaskDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
@@ -82,6 +87,7 @@
     <Compile Include="Model\DeTai.cs" />
     <Compile Include="Model\GiangVien.cs" />
     <Compile Include="Model\Khoa.cs" />
+    <Compile Include="Model\MessageTask.cs" />
     <Compile Include="Model\Nhom.cs" />
     <Compile Include="Model\SinhVien.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Include="UserControls\SlideCard.xaml.cs">
       <DependentUpon>SlideCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ChangePasswordViewModel.cs" />
@@ -128,6 +137,7 @@
     <Compile Include="ViewModel\TeacherScoreViewModel.cs" />
     <Compile Include="ViewModel\TeacherSettingViewModel.cs" />
     <Compile Include="ViewModel\TeacherTaskDetailViewModel.cs" />
+    <Compile Include="ViewModel\TeacherTaskMessageViewModel.cs" />
     <Compile Include="ViewModel\TeacherTaskViewModel.cs" />
     <Compile Include="ViewModel\TeacherUpdateInforViewModel.cs" />
     <Compile Include="ViewModel\VerifyCodeViewModel.cs" />
@@ -251,6 +261,9 @@
     <Compile Include="View\TeacherTaskDetailView.xaml.cs">
       <DependentUpon>TeacherTaskDetailView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\TeacherTaskMessageView.xaml.cs">
+      <DependentUpon>TeacherTaskMessageView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TeacherTaskView.xaml.cs">
       <DependentUpon>TeacherTaskView.xaml</DependentUpon>
     </Compile>
@@ -285,6 +298,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SlideCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -448,6 +465,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\TeacherTaskMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TeacherTaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -520,6 +541,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resource\Ava\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\noti.png" />
+    <Resource Include="Resource\Image\topic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

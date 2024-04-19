@@ -35,7 +35,7 @@
                     FontWeight = "SemiBold"
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
-                    Foreground = "#353A55"
+                    Foreground = "#55b3d9"
                     Margin = "15,10,0,0" Width = "650"
                     HorizontalAlignment = "Center"
                     VerticalAlignment = "Center" Text="TIẾN ĐỘ"/>
@@ -48,7 +48,7 @@
     Height = "40"
     Width = "115"
     CornerRadius = "16"
-    Background = "#353A55">
+    Background = "#55b3d9">
                         <ComboBox
         x:Name = "cbxChon"
         Style = "{StaticResource MaterialDesignFilledComboBox}"
@@ -78,7 +78,7 @@
             Width = "415"
             Height = "40"
             Margin = "15,0,0,0"
-            BorderBrush = "#353A55"
+            BorderBrush = "#55b3d9"
             Foreground = "Black"
             FontSize = "18"
             FontWeight = "SemiBold"
@@ -192,7 +192,7 @@
                                 Width = "652"
                                 Height = "40"
                                 CornerRadius = "10"
-                                Background = "#353A55"
+                                Background = "#55b3d9"
                                 >
                                     <Grid >
                                         <Grid.ColumnDefinitions >
