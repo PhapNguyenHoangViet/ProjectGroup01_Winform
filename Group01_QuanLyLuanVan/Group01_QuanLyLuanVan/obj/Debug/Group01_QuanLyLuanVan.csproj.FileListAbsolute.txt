@@ -477,3 +477,7 @@ D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_Qua
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherNotiDetailView.baml
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherNotiAddView.g.cs
 D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherNotiAddView.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\UserControl1.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\UserControls\UserControl1.baml
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskMessageView.g.cs
+D:\Nam3_HK2\winform\vs3\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherTaskMessageView.baml

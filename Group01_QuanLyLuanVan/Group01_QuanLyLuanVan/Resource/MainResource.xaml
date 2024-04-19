@@ -37,5 +37,5 @@
     <viewmodel:StudentUpdateProgressViewModel x:Key="StudentUpdateProgessVM"></viewmodel:StudentUpdateProgressViewModel>
     <viewmodel:StudentReceiveEvaluationViewModel x:Key="StudentReceiveEvaluationVM"></viewmodel:StudentReceiveEvaluationViewModel>
     <viewmodel:StudentMailViewModel x:Key="StudentMailVM"></viewmodel:StudentMailViewModel>
-
+    <viewmodel:TeacherTaskMessageViewModel x:Key="TeacherTaskMessageVM"></viewmodel:TeacherTaskMessageViewModel>
 </ResourceDictionary>

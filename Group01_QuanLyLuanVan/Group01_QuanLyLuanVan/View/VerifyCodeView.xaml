@@ -63,7 +63,7 @@
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
                 FontSize="24"
-                Foreground="#353A55"
+                Foreground="#55b3d9"
                 FontFamily="Josefin Sans" Grid.Column="1" Width="107"/>
             </Grid>
             <Grid Grid.Row="3" Margin="0,15,0,0" Grid.ColumnSpan="2">
@@ -79,7 +79,7 @@
                             Margin= "113,59,0,212"
                             HorizontalAlignment="Left"
                             FontSize="18"
-                            Foreground="#353A55"
+                            Foreground="#55b3d9"
                             FontFamily="Josefin Sans" Width="446"/>
                     </Grid>
                     <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="180,87,183,87">
@@ -101,7 +101,7 @@
                         BorderThickness="0"
                         FontFamily="Josefin Sans"
                         Foreground="White"
-                        Background="#353A55"
+                        Background="#55b3d9"
                         Height="40"
                         Style="{StaticResource MaterialDesignFlatMidBgButton}" Margin="0,16,0,0">
 

@@ -85,14 +85,18 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 int trangThai = Convert.ToInt32(row["trangThai"]);
                 int an = Convert.ToInt32(row["an"]);
                 string tenTrangThai = "";
-
                 if (trangThai == 1)
                 {
                     tenTrangThai = "Đã đăng ký";
                 }
-                else
+                else if (trangThai == 0)
                 {
                     tenTrangThai = "Chưa đăng ký";
+                }
+                else
+
+                {
+                    tenTrangThai = "Đề xuất";
                 }
                 if (an != 1)
                 Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));

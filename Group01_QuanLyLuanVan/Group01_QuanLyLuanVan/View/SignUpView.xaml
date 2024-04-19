@@ -63,7 +63,7 @@
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
                 FontSize="24"
-                Foreground="#353A55"
+                Foreground="#55b3d9"
                 FontFamily="Josefin Sans" Grid.Column="1"/>
             </Grid>
             <Grid Grid.Row="3" Margin="0,15,0,0" Grid.ColumnSpan="2">
@@ -95,7 +95,7 @@
                     Style="{StaticResource MaterialDesignFlatMidBgButton}"
                     Content="Thêm ảnh đại diện" FontFamily="{StaticResource Custom}"
                     BorderThickness="0"
-                    Width="160" Height="40" Background="#353A55" Foreground="White"
+                    Width="160" Height="40" Background="#55b3d9" Foreground="White"
                     Grid.Row="1">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
@@ -241,7 +241,7 @@
                         BorderThickness="0"
                         FontFamily="Josefin Sans"
                         Foreground="White"
-                        Background="#353A55"
+                        Background="#55b3d9"
                         Height="40"
                         Style="{StaticResource MaterialDesignFlatMidBgButton}" Margin="0,13,0,0">
 

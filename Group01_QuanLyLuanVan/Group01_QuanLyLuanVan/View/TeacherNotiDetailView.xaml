@@ -30,7 +30,7 @@
                     FontFamily="Josefin Sans"
                     FontSize=" 25"
                     Margin="0,0,0,51"                    
-                    Foreground="#353A55"
+                    Foreground="#55b3d9"
                     FontWeight="Bold"
                     HorizontalAlignment="Center" Width="150"
                     />
@@ -60,7 +60,7 @@
     Height = "35"
     VerticalAlignment = "Center"
     materialDesign:ButtonAssist.CornerRadius = "15"
-    Background = "#353A55"
+    Background = "#55b3d9"
     FontFamily = "{StaticResource Custom}">
 
                         <i:Interaction.Triggers>
@@ -116,7 +116,7 @@
                                 Width = "684"
                                 Height = "34"
                                 CornerRadius = "10"
-                                Background = "#353A55"
+                                Background = "#55b3d9"
                                 >
                                 <Grid >
                                     <Grid.ColumnDefinitions >

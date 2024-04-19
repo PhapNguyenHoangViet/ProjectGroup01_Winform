@@ -48,10 +48,29 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
             }
             ListThongBao = ThongBaos;
+            LoadThongBaosCommand = new RelayCommand<StudentNotiView>((p) => true, (p) => _LoadThongBaosCommand(p));
             DetailThongBaoCommand = new RelayCommand<StudentNotiView>((p) => { return p.ListThongBaoView.SelectedItem == null ? false : true; }, (p) => _DetailThongBaoCommand(p));
         }
+        void _LoadThongBaosCommand(StudentNotiView notiView)
+        {
+            notiView.ListThongBaoView.ItemsSource = listThongBao();
+        }
+        ObservableCollection<ThongBao> listThongBao()
+        {
+            ThongBaos = new ObservableCollection<ThongBao>();
+            var thongBaosData = tbDAO.LoadListThongBao();
+            foreach (DataRow row in thongBaosData.Rows)
+            {
+                int thongBaoId = Convert.ToInt32(row["thongBaoId"]);
+                string tieuDe = row["tieuDe"].ToString();
+                string noiDung = row["noiDung"].ToString();
+                string deTaiId = row["deTaiId"].ToString();
+                DateTime ngay = Convert.ToDateTime(row["ngay"]);
 
-
+                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
+            }
+            return ThongBaos;
+        }
         void _DetailThongBaoCommand(StudentNotiView tbView)
         {
             if (tbView != null && tbView.ListThongBaoView.SelectedItem != null)

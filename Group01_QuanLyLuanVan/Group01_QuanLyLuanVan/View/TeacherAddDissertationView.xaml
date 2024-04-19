@@ -71,7 +71,7 @@
                     FontWeight = "SemiBold"
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
-                    Foreground = "#353A55"
+                    Foreground = "#55b3d9"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             </TextBlock >
@@ -86,7 +86,7 @@
                     Text="TÊN ĐỀ TÀI"
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center" />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300">
                         <TextBox
                             x:Name="TenDeTai"
                             FontSize="16"
@@ -105,7 +105,7 @@
                         FontFamily="{StaticResource Custom}"
                         HorizontalAlignment="Center"
                                 />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300">
                         <ComboBox
                             x:Name="LTL"
                             FontSize="16"
@@ -148,7 +148,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300">
                         <DatePicker
                             x:Name="NgayBatDau"
                             HorizontalAlignment="Center"
@@ -170,7 +170,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                    <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="300">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="300">
                         <TextBox
                         x:Name="SoLuong"
                         HorizontalAlignment="Center"
@@ -196,7 +196,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="620">
                     <TextBox
                         x:Name="MoTa"
                         HorizontalAlignment="Center"
@@ -218,7 +218,7 @@
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center"
                             />
-                <Border BorderThickness="2" BorderBrush="Gray" CornerRadius="10" Width="620">
+                <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="620">
                     <TextBox
                         x:Name="YeuCau"
                         FontSize="16"
@@ -239,7 +239,7 @@
                     Margin="478,0,42,0"
                             BorderThickness="0"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#353A55" Height="42" VerticalAlignment="Center">
+                            Background="#55b3d9" Height="42" VerticalAlignment="Center">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <i:InvokeCommandAction     
