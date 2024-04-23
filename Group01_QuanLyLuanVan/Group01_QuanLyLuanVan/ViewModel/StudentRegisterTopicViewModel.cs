@@ -22,6 +22,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
     {
 
         DeTaiDAO dtDAO = new DeTaiDAO();
+        SinhVienDAO svDAO = new SinhVienDAO();
 
         public ObservableCollection<DeTai> Topics { get; set; }
         public ICommand Register { get; set; }
@@ -143,6 +144,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
                         }
                         MessageBox.Show("Đăng ký thành công.");
+                        SinhVien sv = svDAO.FindOneByUsername(Const.sinhVien.Username);
+                        Const.sinhVien = sv;
 
                     }
                 }

@@ -178,8 +178,56 @@
                     >
                         <ListView.ItemTemplate >
                             <DataTemplate>
-                                <!--<Border
-                                </Border >-->
+                                <Border
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Width = "652"
+                                        Height = "40"
+                                        CornerRadius = "10"
+                                        Background = "#353A55"
+                                        >
+                                    <Grid >
+                                        <Grid.ColumnDefinitions >
+                                            <ColumnDefinition Width = "267" />
+                                            <ColumnDefinition Width = "194" />
+                                            <ColumnDefinition />
+
+                                        </Grid.ColumnDefinitions >
+                                        <Grid Grid.Column = "0" >
+                                            <TextBlock
+                                                Text = "{Binding TenDeTai}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12"
+                                                >
+                                            </TextBlock >
+                                        </Grid >
+                                        <Grid Grid.Column = "1" >
+                                            <TextBlock
+                                                Text = "{Binding TenTheLoai}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12"
+            
+                                                >
+                                            </TextBlock >
+                                        </Grid >
+                                        <Grid Grid.Column = "2" >
+                                            <TextBlock
+                                                Text = "{Binding TenTrangThai}"
+                                                HorizontalAlignment = "Center"
+                                                VerticalAlignment = "Center"
+                                                FontFamily = "{StaticResource Custom}"
+                                                FontSize = "12"
+                                                >
+                                            </TextBlock >
+                                        </Grid >
+
+                                    </Grid >
+
+                                </Border >
                             </DataTemplate >
                         </ListView.ItemTemplate >
                         <ListView.ItemsPanel >

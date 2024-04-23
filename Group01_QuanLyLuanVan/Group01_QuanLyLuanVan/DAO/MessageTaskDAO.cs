@@ -18,27 +18,27 @@ namespace Group01_QuanLyLuanVan.DAO
             DataTable tb = conn.Sql_Select(sqlStr);
             return tb;
         }
-        public List<YeuCau> ListTask(string deTaiId)
+        public List<MessageTask> ListMessageTask(int yeuCauId)
         {
-            List<YeuCau> dsYC = new List<YeuCau>();
-            string sqlStr = string.Format("SELECT * From YeuCau WHERE deTaiId = '{0}'", deTaiId);
+            List<MessageTask> dsTn = new List<MessageTask>();
+            string sqlStr = string.Format("SELECT * From TinNhanYeuCau WHERE yeuCauId = '{0}'", yeuCauId);
             DataTable tb = conn.Sql_Select(sqlStr);
             if (tb.Rows.Count > 0)
             {
                 for (int i = 0; i < tb.Rows.Count; i++)
                 {
-                    dsYC.Add(new YeuCau(int.Parse(tb.Rows[i]["yeuCauId"].ToString()), tb.Rows[i]["noiDung"].ToString(), int.Parse(tb.Rows[i]["trangThai"].ToString()), tb.Rows[i]["deTaiId"].ToString()));
+                    dsTn.Add(new MessageTask(int.Parse(tb.Rows[i]["tinNhanId"].ToString()), tb.Rows[i]["tinNhan"].ToString(), DateTime.Parse(tb.Rows[i]["thoiGian"].ToString()), tb.Rows[i]["username"].ToString(), int.Parse(tb.Rows[i]["yeuCauId"].ToString())));
                 }
-                return dsYC;
+                return dsTn;
             }
             else
             {
                 return null;
             }
         }
-        public void AddMessage(string noiDung, int trangThai, string deTaiId)
+        public void AddMessage(string tinNhan, DateTime thoiGian, string username, int yeuCauId)
         {
-            string sqlStr = string.Format("Insert into YeuCau(noiDung, trangThai, deTaiId) values(N'{0}', '{1}', '{2}')", noiDung, trangThai, deTaiId);
+            string sqlStr = string.Format("Insert into TinNhanYeuCau(tinNhan, thoiGian, username,yeuCauId) values(N'{0}', '{1}', '{2}', '{3}')", tinNhan, thoiGian, username, yeuCauId);
             conn.Sql_Them_Xoa_Sua(sqlStr);
         }
         public DataTable ListYeuCauByDeTaiId(string deTaiId)

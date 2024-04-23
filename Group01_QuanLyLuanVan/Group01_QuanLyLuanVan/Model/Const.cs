@@ -15,6 +15,7 @@ namespace Group01_QuanLyLuanVan.Model
         public static TaiKhoan taiKhoan { get; set; }
 
         public static string deTaiId { get; set; }
+        public static int yeuCauId { get; set; }
 
         public static string _localLink = System.Reflection.Assembly.GetExecutingAssembly().Location.Remove(System.Reflection.Assembly.GetExecutingAssembly().Location.IndexOf(@"bin\Debug"));
     }

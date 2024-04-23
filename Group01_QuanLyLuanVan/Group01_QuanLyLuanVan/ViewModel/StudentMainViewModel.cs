@@ -89,11 +89,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
                 StudentMailView studentMailView = new StudentMailView();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != ""&& Const.sinhVien.NhomId!= -1)
+                MessageBox.Show(Const.sinhVien.NhomId.ToString());
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
                     gv = gvDAO.FindOneById(gvId);
+                }
+                else {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
                 }
                 if (gv != null)
                 {

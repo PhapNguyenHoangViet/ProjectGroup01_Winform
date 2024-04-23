@@ -35,10 +35,10 @@ namespace Group01_QuanLyLuanVan.ViewModel
             get { return _ListTask ?? (_ListTask = new ObservableCollection<YeuCau>()); }
             set { _ListTask = value; }
         }
-        private ObservableCollection<YeuCau> _ListMessage;
-        public ObservableCollection<YeuCau> ListMessage
+        private ObservableCollection<MessageTask> _ListMessage;
+        public ObservableCollection<MessageTask> ListMessage
         {
-            get { return _ListMessage ?? (_ListMessage = new ObservableCollection<YeuCau>()); }
+            get { return _ListMessage ?? (_ListMessage = new ObservableCollection<MessageTask>()); }
             set { _ListMessage = value; }
         }
 
@@ -65,6 +65,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             TeacherTaskMessageView messageView = new TeacherTaskMessageView();
             YeuCau temp = (YeuCau)teacherTaskDetailView.ListTaskView.SelectedItem;
+
+            Const.yeuCauId = temp.YeuCauId;
             messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
             messageView.TenTask.Text = temp.NoiDung.ToString();
             MessageTasks = new ObservableCollection<MessageTask>();
@@ -73,21 +75,20 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 int tinNhanId = int.Parse(row["tinNhanId"].ToString());
                 string tinNhan = row["tinNhan"].ToString();
-                string nguoiGuiId = row["nguoiGuiId"].ToString();
-                string nguoiNhanId = row["nguoiNhanId"].ToString();
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
+                string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, nguoiGuiId, nguoiNhanId, thoiGian, yeuCauId));
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
             }
-            messageView.ListTaskView.ItemsSource = MessageTasks;
-            messageView.ListTaskView.SelectedItem = null;
+            messageView.ListMessageView.ItemsSource = MessageTasks;
+            messageView.ListMessageView.SelectedItem = null;
             TeacherMainViewModel.MainFrame.Content = messageView;
         }
         void _AddTask(TeacherTaskDetailView p)
         {
             if (p.TaskName.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập nội dung cho task.");
+                MessageBox.Show("Vui lòng nhập nội dung.");
                 return;
             }
             else

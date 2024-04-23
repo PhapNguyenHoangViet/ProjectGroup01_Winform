@@ -98,7 +98,7 @@
                            Value="50" Width="406" Height="28"/>
                     </StackPanel>
                     <ListView ItemsSource="{Binding ListMessage}" HorizontalContentAlignment="Stretch"                    
-                        x:Name = "ListTaskView"
+                        x:Name = "ListMessageView"
                         Height = "364"
                         Width = "671"
                         SelectionMode = "Single"
@@ -124,7 +124,7 @@
                                         </Grid.ColumnDefinitions >
                                         <Grid Grid.Column = "0" >
                                             <TextBlock
-                                                Text = "{Binding tinNhan}"
+                                                Text = "{Binding TinNhan}"
                                                 HorizontalAlignment = "Center"
                                                 VerticalAlignment = "Center"
                                                 FontFamily = "{StaticResource Custom}"
@@ -134,7 +134,7 @@
                                         </Grid >
                                         <Grid Grid.Column = "1" >
                                             <TextBlock
-                                                Text = "{Binding nguoiGuiId}"
+                                                Text = "{Binding Username}"
                                                 HorizontalAlignment = "Center"
                                                 VerticalAlignment = "Center"
                                                 FontFamily = "{StaticResource Custom}"
@@ -144,7 +144,7 @@
 
                                         <Grid Grid.Column = "2" >
                                             <TextBlock
-                                                Text = "{Binding nguoiNhanId}"
+                                                Text = "{Binding ThoiGian}"
                                                 HorizontalAlignment = "Center"
                                                 VerticalAlignment = "Center"
                                                 FontFamily = "{StaticResource Custom}"
@@ -163,7 +163,7 @@
                         </ListView.ItemsPanel >
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "SelectionChanged" >
-                                <i:InvokeCommandAction Command = "{Binding DetailTopicsCommand}"
+                                <i:InvokeCommandAction Command = ""
                                                        CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
@@ -181,7 +181,7 @@
                         <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" 
                 Margin = "20,15,0,0" Width="400" Height="40">
                             <TextBox
-                                x:Name="TaskName"
+                                x:Name="Msg"
                                 HorizontalAlignment="Left"
                         VerticalAlignment = "Center"
                                 Width="400"
@@ -208,7 +208,7 @@
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="Click">
                                     <i:InvokeCommandAction     
-                            Command="{Binding AddTask}"
+                            Command="{Binding AddMsg}"
                             CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"/>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
