@@ -8,19 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv01.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv01.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv014.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv01414.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv021.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv04.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0a.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0d.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0dada.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0fd.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0fsd.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0gf.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/sv0h,h.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/addava.png")]
 
 

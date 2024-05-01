@@ -24,5 +24,6 @@ namespace Group01_QuanLyLuanVan.View
         {
             InitializeComponent();
         }
+
     }
 }

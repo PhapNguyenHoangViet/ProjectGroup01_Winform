@@ -82,7 +82,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                         insertDeTaiCommand.Parameters.AddWithValue("@yeuCauChung", p.YeuCau.Text);
                         insertDeTaiCommand.Parameters.AddWithValue("@trangThai", 2);
                         insertDeTaiCommand.Parameters.AddWithValue("@ngayBatDau", DateTime.Today);
-                        insertDeTaiCommand.Parameters.AddWithValue("@an", 1);
+                        insertDeTaiCommand.Parameters.AddWithValue("@an", 0);
                         insertDeTaiCommand.Parameters.AddWithValue("@nhomId", nhomId);
                         insertDeTaiCommand.Parameters.AddWithValue("@theLoaiId", theLoaiId);
                         insertDeTaiCommand.Parameters.AddWithValue("@giangVienId", giangVienId);

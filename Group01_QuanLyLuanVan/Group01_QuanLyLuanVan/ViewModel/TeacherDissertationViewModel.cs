@@ -93,7 +93,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             detailTopic.deTaiId.Text = temp.DeTaiId;
             detailTopic.TenDeTai.Text = temp.TenDeTai;
             detailTopic.TenTheLoai.Text = temp.TenTheLoai;
-            detailTopic.HoTen.Text = Const.giangVien.HoTen;
+            detailTopic.TenTrangThai.Text = temp.TenTrangThai;
             detailTopic.MoTa.Text = temp.MoTa;
             detailTopic.YeuCau.Text = temp.YeuCauChung;
             detailTopic.SoLuong.Text = temp.SoLuong.ToString();

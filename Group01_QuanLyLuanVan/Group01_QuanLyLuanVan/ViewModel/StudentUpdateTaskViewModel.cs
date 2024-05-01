@@ -26,11 +26,10 @@ namespace Group01_QuanLyLuanVan.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public int TongHT { get; set; }
-        public int TongCHT { get; set; }
+        
         YeuCauDAO ycDAO = new YeuCauDAO();
         public ICommand ThemTask { get; set; }
-        public ICommand CheckBoxCommand { get; set; }
+        
         private ObservableCollection<YeuCau> _myCollection;
         public ObservableCollection<YeuCau> MyCollection
         {
@@ -40,27 +39,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         public StudentUpdateTaskViewModel()
         {
-            TongHT = 0;
-            TongCHT = 0;
-
-            CheckBoxCommand = new RelayCommand(CheckBoxExecute);
+            
             ThemTask = new RelayCommand<StudentUpdateTaskView>((p) => true, (p) => _ThemTask(p));
             DataTable dataTable = ycDAO.LoadListYeuCau();
             foreach (DataRow row in dataTable.Rows)
-            {
-                bool isSelected = false;
-                if (row["TrangThai"].ToString() == "1")
-                {
-                    TongHT++;
-                    isSelected = true;
-                }
-                else
-                {
-                    TongCHT++;
-                }
+            {               
                 YeuCau yeucau = new YeuCau
                 {
-                    IsSelected = isSelected,
+                    
                     NoiDung = row["NoiDung"].ToString()
                 };
                 MyCollection.Add(yeucau);
@@ -124,22 +110,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
                     }
                 }
 
-                TongCHT++;
-                NotifyPropertyChanged("TongHT");
-                NotifyPropertyChanged("TongCHT");
+                
                 DataTable dataTable = ycDAO.LoadListYeuCau();
                 if (dataTable.Rows.Count > 0)
                 {
                     DataRow lastRow = dataTable.Rows[dataTable.Rows.Count - 1];
-                    bool isSelected = false;
-                    if (lastRow["TrangThai"].ToString() == "1")
-                    {
-                        isSelected = true;
-                    }
+                    
 
                     YeuCau yeucau = new YeuCau
                     {
-                        IsSelected = isSelected,
+                        
                         NoiDung = lastRow["NoiDung"].ToString()
                     };
                     MyCollection.Add(yeucau);
@@ -152,19 +132,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         }
 
 
-        private void CheckBoxExecute(object parameter)
-        {
-            if (parameter is YeuCau yeucau)
-            {
-                int trangThai = yeucau.IsSelected ? 1 : 0;
-                UpdateTrangThai(yeucau.NoiDung, trangThai);
-                TongHT += yeucau.IsSelected ? 1 : -1;
-                TongCHT += yeucau.IsSelected ? -1 : 1;
-                NotifyPropertyChanged("TongHT");
-                NotifyPropertyChanged("TongCHT");
-
-            }
-        }
+       
         public void UpdateTrangThai(string noiDung, int trangThai)
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))

@@ -44,9 +44,13 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="53*"/>
+                <RowDefinition Height="17*"/>
+            </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal"
-                Grid.Row="0">
+                Grid.Row="0" Grid.RowSpan="2">
                 <Label Cursor="Hand"
                     Height="70"
                     Grid.Row="0"
@@ -57,6 +61,7 @@
                     <materialDesign:PackIcon Kind="ArrowLeft"
                       Height="40"
                       Width="35"
+                      Foreground="#55b3d9"
                       Margin="30 10 0 0"/>
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="MouseLeftButtonDown">
@@ -72,7 +77,7 @@
                     FontSize = "30"
                     Foreground = "#55b3d9"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"><Run Language="vi-vn" Text="THÔNG BÁO"/></TextBlock>
+                    VerticalAlignment="Top" Margin="0,15,0,0" Grid.RowSpan="2"><Run Language="vi-vn" Text="THÔNG BÁO"/></TextBlock>
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal"
@@ -84,15 +89,16 @@
                     Text="THỜI GIAN"
                     FontFamily="{StaticResource Custom}"
                     HorizontalAlignment="Center" />
-                    <Border BorderThickness="0.5" BorderBrush="Gray" Margin="0,0,50,2" CornerRadius="10" Width="238" Height="37">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" Margin="0,-2,50,2" CornerRadius="10" Width="185" Height="40">
                         <TextBox
+                            Height="50"
                             x:Name="Ngay"
                             FontSize="16"
                             FontFamily="{StaticResource Custom1}"
                             BorderThickness="0"
                             materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                            materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0" Margin="0,0,0,2" HorizontalAlignment="Center" Width="238"/>
+                            materialDesign:TextFieldAssist.TextBoxViewMargin="10,0,0,0" Margin="0,0,0,-10" HorizontalAlignment="Center" Width="164"/>
                     </Border>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="20,0,0,0">
@@ -101,19 +107,20 @@
                         FontFamily="{StaticResource Custom}"
                         HorizontalAlignment="Center"
                                 />
-                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="313" Height="40">
+                    <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" Width="366" Height="40">
                         <TextBox
     x:Name="TieuDe"
     HorizontalAlignment="Center"
         VerticalContentAlignment="Center"
         HorizontalContentAlignment="Center"
-    Width="292"
+    Width="328"
+                            Height="50"
         FontSize="16"
     FontFamily="{StaticResource Custom1}"
     BorderThickness="0"
     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
     materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-    materialDesign:TextFieldAssist.TextBoxViewMargin="0,0,0,0" Margin="0,-2,0,-2"/>
+    materialDesign:TextFieldAssist.TextBoxViewMargin="0,0,0,0" Margin="0,-2,0,-8"/>
                     </Border>
                 </StackPanel>
 

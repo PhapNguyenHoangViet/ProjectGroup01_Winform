@@ -9,12 +9,14 @@
       xmlns:i = "http://schemas.microsoft.com/xaml/behaviors"
       d:DesignHeight = "605" 
       d:DesignWidth = "700"
-      Title="AdminManageTeacherView">
+      DataContext="{StaticResource AdminManageTeacherVM}"
+      Title="AdminManageTeacherView"
+      x:Name="teachermaxwd">
 
     <i:Interaction.Triggers >
         <i:EventTrigger EventName = "Loaded" >
-            <i:InvokeCommandAction Command = "{Binding LoadReadersCommand}"
-                               CommandParameter="{Binding ElementName= ManageTeacherswd}"></i:InvokeCommandAction >
+            <i:InvokeCommandAction Command = "{Binding LoadListGVCommand}"
+                               CommandParameter="{Binding ElementName= teachermaxwd}"></i:InvokeCommandAction >
         </i:EventTrigger >
     </i:Interaction.Triggers >
     <Border
@@ -38,9 +40,7 @@
                     Foreground = "#55b3d9"
                     Margin = "15,10,0,0" Width = "650"
                     HorizontalAlignment = "Center"
-                    VerticalAlignment = "Center">
-                    <Run Text = "QUẢN LÝ GIÁO VIÊN" />
-                    </TextBlock >
+                    VerticalAlignment = "Center" Text="GIÁO VIÊN HOÀN THÀNH TỐT"/>
                 </StackPanel >
             </Grid >
             <Grid Grid.Row = "1" >
@@ -95,8 +95,8 @@
                             VerticalAlignment = "Center" CaretBrush = "Gray" >
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "TextChanged" >
-                                <i:InvokeCommandAction Command = "{Binding SearchReadersCommand}"
-                                                   CommandParameter="{Binding ElementName= ManageTeacherswd}"></i:InvokeCommandAction >
+                                <i:InvokeCommandAction Command = "{Binding SearchGVCommand}"
+                                                   CommandParameter="{Binding ElementName= teachermaxwd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
                     </TextBox >
@@ -113,9 +113,9 @@
 
                         <Grid >
                             <Grid.ColumnDefinitions >
-                                <ColumnDefinition Width = "90" />
-                                <ColumnDefinition Width = "170" />
-                                <ColumnDefinition Width = "120" />
+                                <ColumnDefinition Width = "112" />
+                                <ColumnDefinition Width = "337" />
+                                <ColumnDefinition Width = "150" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions >
                             <Grid Grid.Column = "0" >
@@ -126,7 +126,7 @@
                                        FontFamily = "{StaticResource Custom}"
                                        FontSize = "12"
                                        FontWeight = "SemiBold"
-                                           Margin = "35,0,0,0"
+                                           Margin = "45,0,0,0"
                                        />
 
                                 </StackPanel >
@@ -147,37 +147,27 @@
                             </Grid >
                             <Grid Grid.Column = "2" >
                                 <StackPanel Orientation = "Horizontal" >
-                                    <TextBlock Text = "SỐ ĐIỆN THOẠI"
+                                    <TextBlock Text = "TASK GIAO"
                                        HorizontalAlignment = "Left"
                                        VerticalAlignment = "Center"
                                        FontFamily = "{StaticResource Custom}"
                                        FontSize = "12"
                                        FontWeight = "SemiBold"
-                                       Margin = "5,0,0,0"/>
+                                       Margin = "20,0,0,0"/>
                                 </StackPanel >
 
                             </Grid >
-                            <Grid Grid.Column = "3" >
-                                <StackPanel Orientation = "Horizontal" >
-                                    <TextBlock Text = "ĐỊA CHỈ"
-                                       HorizontalAlignment = "Center"
-                                       VerticalAlignment = "Center"
-                                       FontFamily = "{StaticResource Custom}"
-                                       FontSize = "12"
-                                       FontWeight = "SemiBold"
-                                       Margin = "80,0,0,0" RenderTransformOrigin = "0.986,0.782"/>
-                                </StackPanel >
-                            </Grid >
+                            <Grid Grid.Column = "3" />
                         </Grid >
 
                     </Border >
                     <ListView
-                    x:Name = "ListViewStudent"
+                    x:Name = "ListViewGV"
                     Height = "410"
                     Width = "675"
                     SelectionMode = "Single"
                     ScrollViewer.VerticalScrollBarVisibility = "Hidden"
-                    ItemsSource = "{Binding ListStudent}" 
+                    ItemsSource = "{Binding ListGV}" 
                     Foreground="White"
                     >
                         <ListView.ItemTemplate >
@@ -191,14 +181,14 @@
                                 >
                                     <Grid >
                                         <Grid.ColumnDefinitions >
-                                            <ColumnDefinition Width = "90" />
-                                            <ColumnDefinition Width = "170" />
-                                            <ColumnDefinition Width = "120" />
+                                            <ColumnDefinition Width = "128" />
+                                            <ColumnDefinition Width = "333" />
+                                            <ColumnDefinition Width = "56" />
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions >
                                         <Grid Grid.Column = "0" >
                                             <TextBlock
-                                            Text = "{Binding MATC}"
+                                            Text = "{Binding GiangVienId}"
                                             HorizontalAlignment = "Center"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
@@ -208,7 +198,7 @@
                                         </Grid >
                                         <Grid Grid.Column = "1" >
                                             <TextBlock
-                                            Text = "{Binding NAMETC}"
+                                            Text = "{Binding HoTen}"
                                             HorizontalAlignment = "Left"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
@@ -217,25 +207,14 @@
                                             >
                                             </TextBlock >
                                         </Grid >
-                                        <Grid Grid.Column = "2" >
+                                        <Grid Grid.Column = "2" Margin="0,0,9,0" >
                                             <TextBlock
-                                            Text = "{Binding PHONE}"
+                                            Text = "{Binding SoLuongTaskGiao}"
                                             HorizontalAlignment = "Left"
                                             VerticalAlignment = "Center"
                                             FontFamily = "{StaticResource Custom}"
                                             FontSize = "12"
                                             Margin = "5,0,0,0"
-                                            >
-                                            </TextBlock >
-                                        </Grid >
-                                        <Grid Grid.Column = "3" >
-                                            <TextBlock
-                                            Text = "{Binding ADDRESS}"
-                                            HorizontalAlignment = "Left"
-                                            VerticalAlignment = "Center"
-                                            FontFamily = "{StaticResource Custom}"
-                                            FontSize = "12"
-                                            Margin = "10,0,0,0"
                                             >
                                             </TextBlock >
                                         </Grid >
@@ -251,8 +230,8 @@
                         </ListView.ItemsPanel >
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "SelectionChanged" >
-                                <i:InvokeCommandAction Command = "{Binding DetailStudentsCommand}"
-                                                       CommandParameter="{Binding ElementName=ManageTeacherswd}"></i:InvokeCommandAction >
+                                <i:InvokeCommandAction Command = "{Binding DetailTeacherCommand}"
+                                                       CommandParameter="{Binding ElementName=teachermaxwd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
                     </ListView >

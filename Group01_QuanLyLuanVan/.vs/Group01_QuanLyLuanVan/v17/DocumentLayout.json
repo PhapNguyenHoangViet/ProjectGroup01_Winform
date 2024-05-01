@@ -1,242 +1,142 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\",
+  "WorkspaceRootPath": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskmessageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskmessageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskdetailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskdetailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\studentlisttopicview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\studentlisttopicview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\theloaidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\theloaidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|d:\\nam3_hk2\\winform\\vs3\\projectgroup01_winform\\group01_quanlyluanvan\\group01_quanlyluanvan\\resource\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\resource\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\viewmodel\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\viewmodel\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\core\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\core\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\net\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\net\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskmessageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskmessageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachersettingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachersettingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teacherprogressdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teacherprogressdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teacherprogressviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teacherprogressviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachermainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachermainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\adminmanagestudentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\adminmanagestudentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\admainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\admainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\admainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\admainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\changepasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\forgetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\forgetpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\controlbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\controlbarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\verifycodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\verifycodeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teacherupdateinforviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|d:\\winform\\qllv_n1\\qllv_n1\\projectgroup01_winform\\group01_quanlyluanvan\\group01_quanlyluanvan\\viewmodel\\teacherupdateinforviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teacherupdateinforviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\systemerrorreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\systemerrorreportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentupdateprogressviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentupdateprogressviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\resource\\ava\\addava.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\resource\\ava\\addava.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentregistertopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentregistertopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentreceiveevaluationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentreceiveevaluationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachertaskmessageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachertaskmessageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentnotiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentnotiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskmessageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskmessageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentmainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentmainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teacherupdateinforview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teacherupdateinforview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\verifycodeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\verifycodeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\net\\io\\packetreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\net\\io\\packetreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\usercontrols\\usercontrol1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\messagetaskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\messagetaskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachernotidetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachernotidetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\thongbaodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\thongbaodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentaddtopicsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentaddtopicsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teacherscoreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teacherscoreviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachernotificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachernotificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teacherdissertationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teacherdissertationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentlisttopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentlisttopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\studentregistertopicview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\studentregistertopicview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\detaidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\detaidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\detaidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\const.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\const.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskdetailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskdetailview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\yeucaudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\yeucaudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskmessageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskmessageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\khoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\net\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\net\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\messagetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentlisttopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentlisttopicviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\studentaddtopicsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\studentaddtopicsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\chatyeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\chatyeucau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\net\\io\\packetbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\net\\io\\packetbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\core\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\core\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\chat\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\chat\\core\\observableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\giangviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\giangviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\messagetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\messagetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\model\\nhom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\model\\nhom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\messagetaskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\messagetaskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\studentnotiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\studentnotiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\resource\\styleresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\resource\\styleresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\comboboxdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\comboboxdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\adminmanageteacherviewmodel1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\adminmanageteacherviewmodel1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\teachertaskdetailview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\teachertaskdetailview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\viewmodel\\teachersettingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\viewmodel\\teachersettingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\view\\admainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\view\\admainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\group01_quanlyluanvan\\dao\\khoadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F97E9B6-D543-4769-9BE1-331FA394BA37}|Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan.csproj|solutionrelative:group01_quanlyluanvan\\dao\\khoadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -246,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -270,707 +170,410 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainResource.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\MainResource.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Resource\\MainResource.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\MainResource.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Resource\\MainResource.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:06:21.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "TeacherScoreViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherScoreViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherScoreViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherScoreViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherScoreViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:37:35.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TheLoaiDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\TheLoaiDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\TheLoaiDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\TheLoaiDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\TheLoaiDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:44.922Z",
-              "EditorCaption": ""
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TeacherTaskDetailView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:55:03.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StudentListTopicView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentListTopicView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\StudentListTopicView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentListTopicView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\StudentListTopicView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:15:35.071Z",
-              "EditorCaption": ""
+              "Title": "TeacherTaskViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAIwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:26:56.108Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TeacherTaskMessageView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T02:27:17.641Z",
+              "Title": "TeacherUpdateInforViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJkAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:26:54.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "TeacherNotificationViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherNotificationViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherNotificationViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherNotificationViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherNotificationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "TeacherTaskMessageViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIMAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:37:40.757Z"
+              "WhenOpened": "2024-05-01T07:26:51.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "addava.png",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\Ava\\addava.png",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Resource\\Ava\\addava.png",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\Ava\\addava.png",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Resource\\Ava\\addava.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-05-01T16:20:51.464Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\App.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\App.xaml",
+              "Title": "TeacherTaskMessageView.xaml",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-15T06:40:22.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "StudentNotiViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentNotiViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentNotiViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentNotiViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentNotiViewModel.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAowFMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:19:05.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "StudentReceiveEvaluationViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentReceiveEvaluationViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentReceiveEvaluationViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentReceiveEvaluationViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentReceiveEvaluationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T02:17:48.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "StudentRegisterTopicViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentRegisterTopicViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentRegisterTopicViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentRegisterTopicViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentRegisterTopicViewModel.cs",
-              "ViewState": "AQIAAK8AAAAAAAAAAAAowNwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:19:37.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "VerifyCodeView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\VerifyCodeView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\VerifyCodeView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\VerifyCodeView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\VerifyCodeView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T02:44:13.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T06:04:33.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "SystemErrorReportViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\SystemErrorReportViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\SystemErrorReportViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\SystemErrorReportViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\SystemErrorReportViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:30.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "StudentUpdateProgressViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentUpdateProgressViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentUpdateProgressViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentUpdateProgressViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentUpdateProgressViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:30.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "StudentMainViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentMainViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentMainViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentMainViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentMainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:27.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "TeacherTaskView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T02:39:55.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "TeacherUpdateInforView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherUpdateInforView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherUpdateInforView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherUpdateInforView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherUpdateInforView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T02:39:55.206Z"
+              "WhenOpened": "2024-05-01T07:29:28.359Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\ViewModel\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\ViewModel\\ChatViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\ViewModel\\ChatViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\ViewModel\\ChatViewModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T06:07:38.161Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "StudentAddTopicsViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAA1wBoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:18:16.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "StudentListTopicViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
-              "ViewState": "AQIAAMIAAAAAAAAAAAAowM4AAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:18:11.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "StudentRegisterTopicView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentRegisterTopicView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\StudentRegisterTopicView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentRegisterTopicView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\StudentRegisterTopicView.xaml",
+              "Title": "TeacherTaskView.xaml",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:17:10.121Z"
+              "WhenOpened": "2024-05-01T07:28:57.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Server.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBkAAAAFAAAA",
+              "DocumentIndex": 7,
+              "Title": "PacketReader.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketReader.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketReader.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketReader.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketReader.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAvwBwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T06:01:11.417Z"
+              "WhenOpened": "2024-05-01T13:22:26.219Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Const.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Const.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\Const.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Const.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\Const.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAawBMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:28:02.944Z"
+              "WhenOpened": "2024-05-01T07:27:34.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeacherTaskDetailViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAywIwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:26:49.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DeTaiDAO.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T16:00:11.705Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:23.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ObservableObject.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T05:52:05.182Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TeacherTaskMessageViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskMessageViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:37:30.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TeacherProgressDetailViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressDetailViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressDetailViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressDetailViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressDetailViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:59:08.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TeacherSettingViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:37:32.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TeacherTaskDetailViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskDetailViewModel.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAwwE0AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:30:50.767Z"
+              "Title": "TeacherTaskDetailView.xaml",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-01T08:24:46.699Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "TeacherTaskViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherTaskViewModel.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAcwJUAAAAAAAAA",
+              "Title": "StudentListTopicViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentListTopicViewModel.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:37.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TeacherMainView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherMainView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherMainView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherMainView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherMainView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-13T09:28:20.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AdminManageStudentView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\AdminManageStudentView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\AdminManageStudentView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\AdminManageStudentView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\AdminManageStudentView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-13T09:28:17.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ADMainView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-13T09:28:08.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:28:02.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TeacherProgressViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherProgressViewModel.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwCwAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:30:52.208Z"
+              "WhenOpened": "2024-05-01T14:56:26.081Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\LoginViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\LoginViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\LoginViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\RelayCommand.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:28:01.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ADMainViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ADMainViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\ADMainViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ADMainViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\ADMainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:21.324Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ChangePasswordViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ChangePasswordViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\ChangePasswordViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ChangePasswordViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\ChangePasswordViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:25.173Z"
+              "WhenOpened": "2024-05-01T10:12:22.037Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "ForgetPasswordViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ForgetPasswordViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\ForgetPasswordViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ForgetPasswordViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\ForgetPasswordViewModel.cs",
+              "Title": "ComboBoxData.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\ComboBoxData.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\ComboBoxData.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\ComboBoxData.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\ComboBoxData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:27:59.671Z"
+              "WhenOpened": "2024-05-01T10:12:05.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "VerifyCodeViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\VerifyCodeViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\VerifyCodeViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\VerifyCodeViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\VerifyCodeViewModel.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAowCsAAAAJAAAA",
+              "DocumentIndex": 31,
+              "Title": "TeacherSettingViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherSettingViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:32.72Z"
+              "WhenOpened": "2024-05-01T08:27:11.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Server.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Net\\Server.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAtwBkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:22:55.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ObservableObject.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Core\\ObservableObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:13:56.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChatYeuCau.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\ChatYeuCau.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\ChatYeuCau.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\ChatYeuCau.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\ChatYeuCau.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:33:16.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PacketBuilder.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketBuilder.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketBuilder.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketBuilder.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Net\\IO\\PacketBuilder.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBgAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T13:21:56.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Chat\\Core\\RelayCommand.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:13:58.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GiangVienDAO.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\GiangVienDAO.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\GiangVienDAO.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\GiangVienDAO.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\GiangVienDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:27:31.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MessageTask.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAmwBQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:27:42.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MessageTaskDAO.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:27:18.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.xaml",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\App.xaml",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.xaml",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-01T11:03:10.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.config",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\App.config",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\App.config",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-01T11:04:17.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentAddTopicsViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\StudentAddTopicsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:56:25.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TeacherTaskMessageView.xaml.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskMessageView.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAqwBgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T08:28:01.127Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\HomeViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\HomeViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\HomeViewModel.cs",
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\BaseViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:26.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "TeacherUpdateInforViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherUpdateInforViewModel.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:33.937Z"
+              "WhenOpened": "2024-05-01T10:11:49.313Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "ControlBarViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ControlBarViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\ControlBarViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\ControlBarViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\ControlBarViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T09:25:24.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UserControl1.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\UserControls\\UserControl1.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\UserControls\\UserControl1.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\UserControls\\UserControl1.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\UserControls\\UserControl1.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T02:25:58.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "MessageTaskDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\MessageTaskDAO.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAqwCcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:55.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "TeacherNotiDetailViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherNotiDetailViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherNotiDetailViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherNotiDetailViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherNotiDetailViewModel.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:37:41.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
               "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
               "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
               "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\DBConnection.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T10:12:01.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AdminManageTeacherViewModel1.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\AdminManageTeacherViewModel1.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\AdminManageTeacherViewModel1.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\AdminManageTeacherViewModel1.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\AdminManageTeacherViewModel1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T02:29:54.44Z"
+              "WhenOpened": "2024-05-01T10:11:55.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ThongBaoDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\ThongBaoDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\ThongBaoDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\ThongBaoDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\ThongBaoDAO.cs",
+              "DocumentIndex": 29,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\MainViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:48.962Z"
+              "WhenOpened": "2024-05-01T10:11:53.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "TeacherDissertationViewModel.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherDissertationViewModel.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\ViewModel\\TeacherDissertationViewModel.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\ViewModel\\TeacherDissertationViewModel.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\ViewModel\\TeacherDissertationViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 30,
+              "Title": "TeacherTaskDetailView.xaml.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\TeacherTaskDetailView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T02:17:52.381Z"
+              "WhenOpened": "2024-05-01T08:29:39.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "DeTaiDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\DeTaiDAO.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAowFQAAADWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:56.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "TaiKhoanDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\TaiKhoanDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\TaiKhoanDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\TaiKhoanDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\TaiKhoanDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:53.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "YeuCauDAO.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\YeuCauDAO.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\YeuCauDAO.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\YeuCauDAO.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\YeuCauDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:46.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "GiangVien.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\GiangVien.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\GiangVien.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\GiangVien.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\GiangVien.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:43.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Khoa.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Khoa.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\Khoa.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Khoa.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\Khoa.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:49:42.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Nhom.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Nhom.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\Nhom.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\Nhom.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\Nhom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:48:40.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "MessageTask.cs",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Model\\MessageTask.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAwwA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T01:47:13.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "StyleResource.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\StyleResource.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\Resource\\StyleResource.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\Resource\\StyleResource.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\Resource\\StyleResource.xaml",
+              "DocumentIndex": 32,
+              "Title": "ADMainView.xaml",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\ADMainView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:06:19.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-01T07:27:47.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "StudentNotiView.xaml",
-              "DocumentMoniker": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentNotiView.xaml",
-              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\View\\StudentNotiView.xaml",
-              "ToolTip": "D:\\Nam3_HK2\\winform\\vs3\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\View\\StudentNotiView.xaml",
-              "RelativeToolTip": "Group01_QuanLyLuanVan\\View\\StudentNotiView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-11T01:06:03.684Z"
+              "DocumentIndex": 33,
+              "Title": "KhoaDAO.cs",
+              "DocumentMoniker": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\KhoaDAO.cs",
+              "RelativeDocumentMoniker": "Group01_QuanLyLuanVan\\DAO\\KhoaDAO.cs",
+              "ToolTip": "D:\\winform\\QLLV_N1\\QLLV_N1\\ProjectGroup01_Winform\\Group01_QuanLyLuanVan\\Group01_QuanLyLuanVan\\DAO\\KhoaDAO.cs",
+              "RelativeToolTip": "Group01_QuanLyLuanVan\\DAO\\KhoaDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:27:32.84Z"
             }
           ]
         },
@@ -992,7 +595,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

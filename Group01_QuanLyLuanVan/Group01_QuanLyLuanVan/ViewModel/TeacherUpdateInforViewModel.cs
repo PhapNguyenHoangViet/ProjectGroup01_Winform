@@ -142,6 +142,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 Const.taiKhoan.Avatar = "/Resource/Ava/" + Const.taiKhoan.Username + ((Ava.Contains(".jpg")) ? ".jpg" : ".png").ToString();
             }
             tkDAO.UpdateTaiKhoan(Const.taiKhoan.Mail, Const.taiKhoan.Avatar, Const.taiKhoan.Username);
+            File.Copy(Ava, Const._localLink + @"/Resource/Ava/" + Const.taiKhoan.Username + ((Ava.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
+
             Window oldWindow = App.Current.MainWindow;
             TeacherMainView teacherMainView = new TeacherMainView();
             App.Current.MainWindow = teacherMainView;

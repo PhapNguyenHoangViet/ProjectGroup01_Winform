@@ -100,11 +100,13 @@
                                                         <TextBlock
                                                             x:Name="Ngay"
                                                             VerticalAlignment="Center"
-                                                            FontWeight="Bold"
+                                                            
                                                             Text="{Binding Ngay}"
                                                             Foreground="#1e90ff"
-                                                            FontFamily="{StaticResource Custom}"
                                                             FontSize="16"
+                                                            FontWeight="Bold"
+                                                            FontFamily="{StaticResource Custom}"
+                                                            
                                                             TextWrapping="Wrap"/>
                                                     </Grid>
                                                     <Grid Grid.Column="2">
