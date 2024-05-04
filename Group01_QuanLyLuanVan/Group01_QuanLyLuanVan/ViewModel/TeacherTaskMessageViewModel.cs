@@ -12,21 +12,19 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using Group01_QuanLyLuanVan.Chat.Net;
+using System.Windows.Controls;
+using System.Security.Cryptography;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
-    public class TeacherTaskMessageViewModel : BaseViewModel
+    public class TeacherTaskMessageViewModel : BaseViewModel, INotifyPropertyChanged
     {
         public ObservableCollection<MessageTask> Users { get; set; }
         public string Message { get; set; }
+        public string Quyen { get; set; }
+
 
         MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         public ICommand AddMsg { get; set; }
 
@@ -37,9 +35,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
             set { _ListMessage = value; }
         }
 
+        public ICommand back { get; set; }
+        public ICommand LoadTaskMessageCommand { get; set; }
+
+
         public TeacherTaskMessageViewModel()
         {
             
+            back = new RelayCommand<TeacherTaskMessageView>((p) => true, p => _back(p));
+
             var msgsdata = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
             foreach (DataRow row in msgsdata.Rows)
             {
@@ -53,11 +57,19 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
             Users = new ObservableCollection<MessageTask>();
             ListMessage = new ObservableCollection<MessageTask>();
+
             Const._server.connectedEvent += UserConnected;
             Const._server.msgReceivedEvent += MessageReceived;
             Const._server.userDisconnectEvent += UserDisconnected;
-
             AddMsg = new RelayCommand<TeacherTaskMessageView>((p) => true, (p) => _AddMsg(p));
+            LoadTaskMessageCommand = new RelayCommand<TeacherTaskMessageView>((p) => true, (p) => _LoadTaskMessageCommand(p));
+
+        }
+
+        void _LoadTaskMessageCommand(TeacherTaskMessageView msgView)
+        {
+            msgView.TenTask.Text = Const.YeuCau.NoiDung;
+            msgView.ListMessageView.ItemsSource = listMsg();
 
         }
 
@@ -65,18 +77,19 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             var uid = Const._server.PacketReader.ReadMessage();
             var user = Users.Where(x => x.UID == uid).FirstOrDefault();
-            //Application.Current.Dispatcher.Invoke(() => Users.Remove(user));
+            Application.Current.Dispatcher.Invoke(() => Users.Remove(user));
 
         }
 
         private void MessageReceived()
         {
-            var msg = Const._server.PacketReader.ReadMessage();
+            Quyen = "0";
+            string msg = Const._server.PacketReader.ReadMessage().ToString();
             string[] splittedStrings = msg.Split(new string[] { "iiiiii" }, StringSplitOptions.None);
             string message = splittedStrings[0].ToString();
-            int yeucauId = int.Parse(splittedStrings[1].ToString());
-/*            messageTaskDAO.AddMessage(message, DateTime.Now, Const.giangVien.Username, yeucauId);
-            DataTable dataTable = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
+            int yeucauId = (int)int.Parse(splittedStrings[1].ToString());
+
+            DataTable dataTable = messageTaskDAO.LoadListMessageTask(yeucauId);
             if (dataTable.Rows.Count > 0)
             {
                 DataRow lastRow = dataTable.Rows[dataTable.Rows.Count - 1];
@@ -85,8 +98,20 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(lastRow["thoiGian"].ToString());
                 string username = lastRow["username"].ToString();
                 int yeuCauId = Convert.ToInt32(lastRow["yeuCauId"]);
-                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-            }*/
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+                });
+            }
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                TeacherTaskMessageView teacherTaskMessageView = new TeacherTaskMessageView();
+                teacherTaskMessageView.TenTask.Text = Const.YeuCau.NoiDung;
+                teacherTaskMessageView.ListMessageView.ItemsSource = listMsg();
+                teacherTaskMessageView.ListMessageView.Items.Refresh();
+                TeacherMainViewModel.MainFrame.Content = teacherTaskMessageView;
+            });
+
         }
 
         private void UserConnected()
@@ -95,10 +120,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 (Const._server.PacketReader.ReadMessage(),
                 Const._server.PacketReader.ReadMessage());
 
-/*            if (!Users.Any(x => x.UID == user.UID))
+            if (!Users.Any(x => x.UID == user.UID))
             {
                 Application.Current.Dispatcher.Invoke(() => Users.Add(user));
-            }*/
+
+            }
         }
 
         void _AddMsg(TeacherTaskMessageView p)
@@ -110,27 +136,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
             else
             {
-                Const._server.SendMessageToServer(Message+ "iiiiii" + Const.yeuCauId.ToString());
-
+                Quyen = "1";
                 messageTaskDAO.AddMessage(p.Msg.Text, DateTime.Now, Const.giangVien.Username, Const.yeuCauId);
-                DataTable dataTable = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
-                if (dataTable.Rows.Count > 0)
-                {
-                    DataRow lastRow = dataTable.Rows[dataTable.Rows.Count - 1];
-                    int tinNhanId = int.Parse(lastRow["tinNhanId"].ToString());
-                    string tinNhan = lastRow["tinNhan"].ToString();
-                    DateTime thoiGian = DateTime.Parse(lastRow["thoiGian"].ToString());
-                    string username = lastRow["username"].ToString();
-                    int yeuCauId = Convert.ToInt32(lastRow["yeuCauId"]);
-                    ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-                }
+                Const._server.SendMessageToServer(Message+ "|" + Const.yeuCauId.ToString());
                 p.Msg.Text = "";
 
-                TeacherTaskMessageView teacherTaskMessageView = new TeacherTaskMessageView();
-                teacherTaskMessageView.TenTask.Text = Const.YeuCau.TenYeuCau;
-                teacherTaskMessageView.ListMessageView.ItemsSource = listMsg();
-                teacherTaskMessageView.ListMessageView.Items.Refresh();
-                TeacherMainViewModel.MainFrame.Content = teacherTaskMessageView;
             }
 
         }
@@ -148,6 +158,18 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
             }
             return ListMessage;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        void _back(TeacherTaskMessageView paramater)
+        {
+            TeacherTaskDetailView taskView = new TeacherTaskDetailView();
+            TeacherMainViewModel.MainFrame.Content = taskView;
         }
     }
 }

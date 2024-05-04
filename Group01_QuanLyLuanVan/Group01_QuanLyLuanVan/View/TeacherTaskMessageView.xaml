@@ -13,7 +13,7 @@
 
     <i:Interaction.Triggers >
         <i:EventTrigger EventName = "Loaded" >
-            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
+            <i:InvokeCommandAction Command = "{Binding TeacherTaskMessageCommand}"
                                CommandParameter="{Binding ElementName= TeacherTaskMessageWd}"></i:InvokeCommandAction >
         </i:EventTrigger >
     </i:Interaction.Triggers >
@@ -31,15 +31,34 @@
             
             <Grid Grid.Row = "0" >
                 <StackPanel Orientation = "Horizontal" >
+                    <StackPanel Orientation="Horizontal"
+Grid.Row="0" Margin="0,0,0,0">
+                        <Label Cursor="Hand"
+    Height="45"
+    Grid.Row="0"
+    Width="47"
+    >
+                            <materialDesign:PackIcon Kind="ArrowLeft"
+                     Foreground="#55b3d9"
+      Height="40"                   
+      Width="35"/>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding back}"
+             CommandParameter="{Binding ElementName=studentchatyeucauwd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Label>
+                    </StackPanel>
                     <TextBlock Text = "Task: "
-                               Margin = "15,0,0,0" 
-                   HorizontalAlignment = "Center"
-                   VerticalAlignment = "Center"
-                   FontFamily = "{StaticResource Custom}"
-                   FontSize = "20"
-                   FontWeight = "SemiBold"
-                   />
-
+                                    Foreground="#55b3d9"
+                                    Margin = "15,0,0,0" 
+                        HorizontalAlignment = "Center"
+                        VerticalAlignment = "Center"
+                        FontFamily = "{StaticResource Custom}"
+                        FontSize = "20"
+                        FontWeight = "SemiBold"
+                        />
                     <TextBlock 
                         Margin = "15,0,0,0" 
                         Text = ""
@@ -163,8 +182,8 @@
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <i:InvokeCommandAction     
- Command="{Binding AddMsg}"
- CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"/>
+                                 Command="{Binding AddMsg}"
+                                 CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </RadioButton>

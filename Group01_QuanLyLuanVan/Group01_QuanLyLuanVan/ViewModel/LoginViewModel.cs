@@ -1,4 +1,5 @@
-﻿using Group01_QuanLyLuanVan.DAO;
+﻿using Group01_QuanLyLuanVan.Chat.Net;
+using Group01_QuanLyLuanVan.DAO;
 using Group01_QuanLyLuanVan.Model;
 using Group01_QuanLyLuanVan.View;
 using System;
@@ -69,8 +70,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             }
                             else if (tk.Quyen == 1)
                             {
+                                
                                 GiangVien gv = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
                                 Const.giangVien = gv;
+                                Const._server = new Server();
+                                Const._server.ConnectToServer(Const.giangVien.Username);
                                 Window oldWindow = App.Current.MainWindow;
                                 TeacherMainView teacherMainView = new TeacherMainView();
                                 App.Current.MainWindow = teacherMainView;
@@ -81,6 +85,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             {
                                 SinhVien sv = svDAO.FindOneByUsername(Username);
                                 Const.sinhVien = sv;
+
+                                Const._server = new Server();
+                                Const._server.ConnectToServer(Const.sinhVien.Username);
                                 Window oldWindow = App.Current.MainWindow;
                                 StudentMainView studentMainView = new StudentMainView();
                                 App.Current.MainWindow = studentMainView;

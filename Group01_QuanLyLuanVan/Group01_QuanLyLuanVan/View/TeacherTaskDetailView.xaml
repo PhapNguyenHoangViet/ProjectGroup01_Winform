@@ -13,7 +13,7 @@
 
     <i:Interaction.Triggers >
         <i:EventTrigger EventName = "Loaded" >
-            <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
+            <i:InvokeCommandAction Command = "{Binding LoadTasksCommand}"
                                CommandParameter="{Binding ElementName= TeacherTaskDetailWd}"></i:InvokeCommandAction >
         </i:EventTrigger >
     </i:Interaction.Triggers >

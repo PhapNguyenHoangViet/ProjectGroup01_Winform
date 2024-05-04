@@ -15,46 +15,101 @@ using Group01_QuanLyLuanVan.View;
 using Microsoft.Win32;
 using System.Data.Common;
 using System.ComponentModel;
+using Group01_QuanLyLuanVan.Chat.Net;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
-    public class StudentUpdateTaskViewModel : BaseViewModel, INotifyPropertyChanged
+    public class StudentUpdateTaskViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(string propertyName)
+        YeuCauDAO ycDAO = new YeuCauDAO();
+        MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
+
+        public ICommand ThemTask { get; set; }
+
+        private ObservableCollection<YeuCau> _ListTask;
+        public ObservableCollection<YeuCau> ListTask { get => _ListTask; set { _ListTask = value;/* OnPropertyChanged();*/ } }
+
+        public ObservableCollection<YeuCau> Tasks { get; set; }
+        public ICommand LoadTasksCommand { get; set; }
+        public ICommand MessageTaskCommand { get; set; }
+        private ObservableCollection<MessageTask> _ListMessage;
+        public ObservableCollection<MessageTask> ListMessage
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            get { return _ListMessage ?? (_ListMessage = new ObservableCollection<MessageTask>()); }
+            set { _ListMessage = value; }
         }
 
-        
-        YeuCauDAO ycDAO = new YeuCauDAO();
-        public ICommand ThemTask { get; set; }
-        
-        private ObservableCollection<YeuCau> _myCollection;
-        public ObservableCollection<YeuCau> MyCollection
-        {
-            get { return _myCollection ?? (_myCollection = new ObservableCollection<YeuCau>()); }
-            set { _myCollection = value; }
-        }
+        public ObservableCollection<MessageTask> MessageTasks { get; set; }
 
         public StudentUpdateTaskViewModel()
         {
-            
-            ThemTask = new RelayCommand<StudentUpdateTaskView>((p) => true, (p) => _ThemTask(p));
-            DataTable dataTable = ycDAO.LoadListYeuCau();
-            foreach (DataRow row in dataTable.Rows)
-            {               
-                YeuCau yeucau = new YeuCau
-                {
-                    
-                    NoiDung = row["NoiDung"].ToString()
-                };
-                MyCollection.Add(yeucau);
-            }
+            Tasks = new ObservableCollection<YeuCau>();
+            var tasksData = ycDAO.LoadListYeuCau();
+            foreach (DataRow row in tasksData.Rows)
+            {
+                int yeuCauId = int.Parse(row["yeuCauId"].ToString());
+                string noiDung = row["noiDung"].ToString();
+                string deTaiId = row["deTaiId"].ToString();
+                int trangThai = Convert.ToInt32(row["trangThai"]);
 
+
+                Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
+            }
+            ListTask = Tasks;
+            LoadTasksCommand = new RelayCommand<StudentUpdateTaskView>((p) => true, (p) => _LoadTasksCommand(p));
+            ThemTask = new RelayCommand<StudentUpdateTaskView>((p) => true, (p) => _ThemTask(p));
+            MessageTaskCommand = new RelayCommand<StudentUpdateTaskView>((p) => { return p.ListTaskView.SelectedItem == null ? false : true; }, (p) => _MessageTaskCommand(p));
         }
 
+        void _MessageTaskCommand(StudentUpdateTaskView studentTaskDetailView)
+        {
 
+
+            StudentChatYeuCauView messageView = new StudentChatYeuCauView();
+            YeuCau temp = (YeuCau)studentTaskDetailView.ListTaskView.SelectedItem;
+            Const.yeuCauId = temp.YeuCauId;
+            Const.YeuCau = temp;
+            ////messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
+            messageView.TenTask.Text = temp.NoiDung;
+            messageView.TienDo.Text = temp.TrangThai.ToString();
+            MessageTasks = new ObservableCollection<MessageTask>();
+            var messages = messageTaskDAO.LoadListMessageTask(temp.YeuCauId);
+            foreach (DataRow row in messages.Rows)
+            {
+                int tinNhanId = int.Parse(row["tinNhanId"].ToString());
+                string tinNhan = row["tinNhan"].ToString();
+                DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
+                string username = row["username"].ToString();
+                int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+            }
+
+            messageView.ListMessageView.ItemsSource = MessageTasks;
+            messageView.ListMessageView.SelectedItem = null;
+            StudentMainViewModel.MainFrame.Content = messageView;
+        }
+
+        void _LoadTasksCommand(StudentUpdateTaskView tasksView)
+        {
+            tasksView.ListTaskView.ItemsSource = listTask();
+
+        }
+        ObservableCollection<YeuCau> listTask()
+        {
+            Tasks = new ObservableCollection<YeuCau>();
+            var tasksData = ycDAO.LoadListYeuCau();
+            foreach (DataRow row in tasksData.Rows)
+            {
+                int yeuCauId = int.Parse(row["yeuCauId"].ToString());
+                string noiDung = row["noiDung"].ToString();
+                string deTaiId = row["deTaiId"].ToString();
+                int trangThai = Convert.ToInt32(row["trangThai"]);
+
+
+                Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
+            }
+            return Tasks;
+        }
 
         void _ThemTask(StudentUpdateTaskView p)
         {
@@ -108,77 +163,27 @@ namespace Group01_QuanLyLuanVan.ViewModel
                     {
                         conn.Close();
                     }
-                }
-
-                
-                DataTable dataTable = ycDAO.LoadListYeuCau();
-                if (dataTable.Rows.Count > 0)
-                {
-                    DataRow lastRow = dataTable.Rows[dataTable.Rows.Count - 1];
-                    
-
-                    YeuCau yeucau = new YeuCau
+                    Tasks = new ObservableCollection<YeuCau>();
+                    var tasksData = ycDAO.LoadListYeuCau();
+                    foreach (DataRow row in tasksData.Rows)
                     {
-                        
-                        NoiDung = lastRow["NoiDung"].ToString()
-                    };
-                    MyCollection.Add(yeucau);
-                }
-                p.ThemTask.Text = "";
-            }
+                        int yeuCauId = int.Parse(row["yeuCauId"].ToString());
+                        string noiDung = row["noiDung"].ToString();
+                        string deTaiId = row["deTaiId"].ToString();
+                        int trangThai = Convert.ToInt32(row["trangThai"]);
 
 
-
-        }
-
-
-       
-        public void UpdateTrangThai(string noiDung, int trangThai)
-        {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
-            {
-                conn.Open();
-                string sql = "UPDATE YeuCau SET trangThai = @TrangThai WHERE noiDung = @NoiDung";
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                {
-                    command.Parameters.AddWithValue("@TrangThai", trangThai);
-                    command.Parameters.AddWithValue("@NoiDung", noiDung);
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Cập nhật thành công!");
+                        Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
                     }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật không thành công!");
-                    }
+
+                    p.ThemTask.Text = "";
+
+                    StudentUpdateTaskView tasksView = new StudentUpdateTaskView();
+                    tasksView.ListTaskView.ItemsSource = Tasks;
+                    tasksView.ListTaskView.Items.Refresh();
+                    StudentMainViewModel.MainFrame.Content = tasksView;
                 }
             }
-        }
-
-
-
-    }
-
-    public class RelayCommand : ICommand
-    {
-        private readonly Action<object> _execute;
-
-        public RelayCommand(Action<object> execute)
-        {
-            _execute = execute;
-        }
-
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            _execute(parameter);
         }
     }
 }

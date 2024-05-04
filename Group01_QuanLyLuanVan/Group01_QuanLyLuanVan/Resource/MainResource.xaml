@@ -33,6 +33,10 @@
     <viewmodel:TeacherNotiDetailViewModel x:Key="TeacherNotiDetailVM"></viewmodel:TeacherNotiDetailViewModel>
     <viewmodel:TeacherNotiAddViewModel x:Key="TeacherNotiAddVM"></viewmodel:TeacherNotiAddViewModel>
 
+    <viewmodel:TeacherTaskMessageViewModel x:Key="TeacherTaskMessageVM"></viewmodel:TeacherTaskMessageViewModel>
+    <viewmodel:TeacherMailViewModel x:Key="TeacherMailVM"></viewmodel:TeacherMailViewModel>
+
+
     <viewmodel:StudentMainViewModel x:Key="StudentMainVM"></viewmodel:StudentMainViewModel>
     <viewmodel:StudentRegisterTopicViewModel x:Key="StudentRegisterVM"></viewmodel:StudentRegisterTopicViewModel>
     <viewmodel:StudentListTopicViewModel x:Key="StudentListTopicVM"></viewmodel:StudentListTopicViewModel>
@@ -42,5 +46,11 @@
     <viewmodel:StudentUpdateProgressViewModel x:Key="StudentUpdateProgessVM"></viewmodel:StudentUpdateProgressViewModel>
     <viewmodel:StudentReceiveEvaluationViewModel x:Key="StudentReceiveEvaluationVM"></viewmodel:StudentReceiveEvaluationViewModel>
     <viewmodel:StudentMailViewModel x:Key="StudentMailVM"></viewmodel:StudentMailViewModel>
-    <viewmodel:TeacherTaskMessageViewModel x:Key="TeacherTaskMessageVM"></viewmodel:TeacherTaskMessageViewModel>
+
+    <viewmodel:StudentChatYeuCauViewModel x:Key="StudentChatYeuCauVM"></viewmodel:StudentChatYeuCauViewModel>
+    <viewmodel:StudentUpdateInforViewModel x:Key="StudentUpdateInforVM"></viewmodel:StudentUpdateInforViewModel>
+
+    <viewmodel:StudentScoreViewModel x:Key="StudentScoreVM"></viewmodel:StudentScoreViewModel>
+    <viewmodel:StudentThesisViewModel x:Key="StudentThesisVM"></viewmodel:StudentThesisViewModel>
+
 </ResourceDictionary>

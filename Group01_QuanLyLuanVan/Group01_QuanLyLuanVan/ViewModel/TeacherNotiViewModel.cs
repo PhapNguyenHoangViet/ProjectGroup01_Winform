@@ -16,6 +16,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
     {
         DeTaiDAO dtDAO = new DeTaiDAO();
 
+
         ThongBaoDAO tbDAO = new ThongBaoDAO();
 
         private ObservableCollection<DeTai> _ListTopic;

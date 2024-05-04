@@ -43,13 +43,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
             get { return _ListMessage ?? (_ListMessage = new ObservableCollection<MessageTask>()); }
             set { _ListMessage = value; }
         }
-
+        public ICommand back { get; set; }
+        public ICommand LoadTasksCommand { get; set; }
         public ICommand MessageTaskCommand { get; set; }
 
         public ObservableCollection<MessageTask> MessageTasks { get; set; }
 
         public TeacherTaskDetailViewModel()
         {
+            back = new RelayCommand<TeacherTaskDetailView>((p) => true, p => _back(p));
+
             AddTask = new RelayCommand<TeacherTaskDetailView>((p) => true, (p) => _AddTask(p));
             MessageTaskCommand = new RelayCommand<TeacherTaskDetailView>((p) => { return p.ListTaskView.SelectedItem == null ? false : true; }, (p) => _MessageTaskCommand(p));
             var tasksdata = ycDAO.LoadListTask(Const.deTaiId);
@@ -61,12 +64,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 int trangThai = Convert.ToInt32(row["trangThai"]);
                 ListTask.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
             }
+            LoadTasksCommand = new RelayCommand<TeacherTaskDetailView>((p) => true, (p) => _LoadTasksCommand(p));
+
         }
 
         void _MessageTaskCommand(TeacherTaskDetailView teacherTaskDetailView)
         {
-            Const._server = new Server();
-            Const._server.ConnectToServer(Const.giangVien.Username);
+
 
             TeacherTaskMessageView messageView = new TeacherTaskMessageView();
             YeuCau temp = (YeuCau)teacherTaskDetailView.ListTaskView.SelectedItem;
@@ -125,6 +129,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 TeacherMainViewModel.MainFrame.Content = topicsView;
             }
         }
+
+        void _LoadTasksCommand(TeacherTaskDetailView tasksView)
+        {
+            tasksView.TenDeTai.Text = Const.DeTai.TenDeTai;
+            tasksView.ListTaskView.ItemsSource = listTask();
+
+        }
         ObservableCollection<YeuCau> listTask()
         {
             ListTask = new ObservableCollection<YeuCau>();
@@ -138,6 +149,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 ListTask.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
             }
             return ListTask;
+        }
+        void _back(TeacherTaskDetailView paramater)
+        {
+            TeacherTaskView taskView = new TeacherTaskView();
+            TeacherMainViewModel.MainFrame.Content = taskView;
         }
     }
 }

@@ -12,7 +12,11 @@ namespace Group01_QuanLyLuanVan.DAO
     public class SinhVienDAO
     {
         DBConnection conn = new DBConnection();
-
+        public void UpdateSinhVien(SinhVien sv)
+        {
+            string sqlStr = string.Format("update SinhVien set khoaId='{0}', hoTen=N'{1}', gioiTinh=N'{2}',ngaySinh='{3}', sdt='{4}', email='{5}', diaChi= N'{6}' where SinhVienId='{7}'", sv.KhoaId, sv.HoTen, sv.GioiTinh, sv.NgaySinh, sv.SDT, sv.Email, sv.DiaChi, sv.SinhVienId);
+            conn.Sql_Them_Xoa_Sua(sqlStr);
+        }
         public DataTable LoadListSinhVienDangKyDeTai()
         {
             DataTable dt = new DataTable();

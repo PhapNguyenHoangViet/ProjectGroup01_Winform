@@ -22,53 +22,9 @@ namespace Group01_QuanLyLuanVan.View
     /// </summary>
     public partial class StudentChatYeuCauView : Page
     {
-        public ObservableCollection<ChatYeuCau> Messages { get; set; }
-
         public StudentChatYeuCauView()
         {
             InitializeComponent();
-            Messages = new ObservableCollection<ChatYeuCau>();
-            MessageListView.ItemsSource = Messages;
-
-            // Thêm một số tin nhắn giả định để thử nghiệm
-            Messages.Add(new ChatYeuCau
-            {
-                TinNhanId = 1,
-                YeuCauId = 1,
-                NguoiGui = "Aliceeeeeee",
-                NguoiNhan = "Bob",
-                NoiDung = "Xin chào Bob!gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
-                ThoiGian = DateTime.Now,
-                AvatarPath = "avatar_alice.jpg"
-            });
-            Messages.Add(new ChatYeuCau
-            {
-                TinNhanId = 1,
-                YeuCauId = 1,
-                NguoiGui = "Bob",
-                NguoiNhan = "Alice",
-                NoiDung = "Xin chào Alice!",
-                ThoiGian = DateTime.Now.AddMinutes(1),
-                AvatarPath = "avatar_bob.jpg"
-            });
-        }
-        private void SendMessage_Click(object sender, RoutedEventArgs e)
-        {
-            string messageText = MessageTextBox.Text;
-            if (!string.IsNullOrWhiteSpace(messageText))
-            {
-                Messages.Add(new ChatYeuCau
-                {
-                    NguoiGui = "You",
-                    NguoiNhan = "Friend",
-                    NoiDung = messageText,
-                    ThoiGian = DateTime.Now,
-                    AvatarPath = "your_avatar.jpg" // Đường dẫn tới avatar của bạn
-                });
-
-                // Xóa nội dung của TextBox sau khi gửi
-                MessageTextBox.Text = "";
-            }
         }
     }
 }

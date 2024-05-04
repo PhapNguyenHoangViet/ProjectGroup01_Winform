@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\winform\QLLV_N1\QLLV_N1\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\
 Group01_QuanLyLuanVan
 none
 false
 DEBUG;TRACE
-D:\winform\QLLV_N1\QLLV_N1\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
-541737512672
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\App.xaml
+54-1361979224
 
-1251042202811
-161122315483
-MainWindow.xaml;Resource - Copy\MainResource.xaml;Resource - Copy\StyleResource.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;UserControls\UserControl1.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTeacherView1.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentAddTopicsView.xaml;View\StudentChatYeuCauView.xaml;View\StudentListTopicView.xaml;View\StudentMailView.xaml;View\StudentMainView.xaml;View\StudentNotiView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\StudentUpdateTaskView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMainView.xaml;View\TeacherNotiAddView.xaml;View\TeacherNotiDetailView.xaml;View\TeacherNotificationView.xaml;View\TeacherNotiView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;View\TeacherTaskDetailView.xaml;View\TeacherTaskMessageView.xaml;View\TeacherTaskView.xaml;View\TeacherUpdateInforView.xaml;View\VerifyCodeView.xaml;
+132-1366857737
+161316331227
+MainWindow.xaml;Resource\MainResource.xaml;Resource\StyleResource.xaml;UserControls\ControlBarUC.xaml;UserControls\SlideCard.xaml;UserControls\UserControl1.xaml;View\ADMainView.xaml;View\AdminManageStudentView.xaml;View\AdminManageTeacherView.xaml;View\AdminManageTeacherView1.xaml;View\AdminManageTopicView.xaml;View\AdminModifyStudentView.xaml;View\AdminModifyTeacherView.xaml;View\AdminModifyTopicView.xaml;View\ChangePasswordView.xaml;View\ForgetPasswordView.xaml;View\HomeView.xaml;View\LoginPageView.xaml;View\LoginView.xaml;View\SignUpView.xaml;View\StudentAddTopicsView.xaml;View\StudentChatYeuCauView.xaml;View\StudentListTopicView.xaml;View\StudentMailView.xaml;View\StudentMainView.xaml;View\StudentNotiView.xaml;View\StudentReceiveEvaluationView.xaml;View\StudentRegisterTopicView.xaml;View\StudentScoreView.xaml;View\StudentScoreView2.xaml;View\StudentSubmitEssayView.xaml;View\StudentThesisView.xaml;View\StudentUpdateInforView.xaml;View\StudentUpdateProgressView.xaml;View\StudentUpdateTaskView.xaml;View\SystemErrorReport.xaml;View\TeacherAddDissertationView.xaml;View\TeacherDissertationDetailView.xaml;View\TeacherDissertationView.xaml;View\TeacherMailView.xaml;View\TeacherMainView.xaml;View\TeacherNotiAddView.xaml;View\TeacherNotiDetailView.xaml;View\TeacherNotificationView.xaml;View\TeacherNotiView.xaml;View\TeacherProgressDetailView.xaml;View\TeacherProgressView.xaml;View\TeacherScoreView.xaml;View\TeacherSettingView.xaml;View\TeacherTaskDetailView.xaml;View\TeacherTaskMessageView.xaml;View\TeacherTaskView.xaml;View\TeacherUpdateInforView.xaml;View\VerifyCodeView.xaml;
 
 False
 

@@ -15,10 +15,15 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource StudentMainVM}"
-        Name="Studentmainview">
+        x:Name="Studentmainview">
 
 
-
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loadwd}"
+                               CommandParameter="{Binding ElementName=Studentmainview}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
             <BeginStoryboard>
@@ -80,46 +85,34 @@
                                 FontFamily="{StaticResource Custom}"
                                 >
                             </RadioButton>
-
-
                             <RadioButton
-                                Command="{Binding StudentUpdateProgressCM}"
+                                Command="{Binding StudentThesisCM}"
                                 Width="200"
-                                x:Name="btnCapNhatTienDo"
+                                x:Name="BtnStudentThesis"
                                 Uid="2"
-                                Style="{StaticResource BtnCapNhatTienDo}"
+                                Style="{StaticResource BtnStudentThesis}"
                                 FontFamily="{StaticResource Custom}"
                                 >
                             </RadioButton>
-
                             <RadioButton
                                 Command="{Binding StudentUpdateTaskCM}"
                                 Width="200"
                                 x:Name="btnCapNhatTask"
-                                Uid="2"
+                                Uid="3"
                                 Style="{StaticResource BtnCapNhatTask}"
                                 FontFamily="{StaticResource Custom}"
                                 >
                             </RadioButton>
 
                             <RadioButton
+                                Command="{Binding StudentScoreCM}"
                                 Width="200"
+                                x:Name="btnStudentScore"
+                                Uid="4"
                                 Style="{StaticResource BtnDiemLuanVan}"
                                 FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding }"
-                                Uid="3"
                                 >
                             </RadioButton>
-
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnNopLuanVan}"
-                                FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding }"
-                                Uid="4"
-                                >
-                            </RadioButton>
-
                             <RadioButton
                                 Command="{Binding StudentNotiCM}"
                                 Width="200"
@@ -181,34 +174,34 @@
                     </Border>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="113*"/>
-                            <ColumnDefinition Width="67*"/>
+                            <ColumnDefinition Width="139*"/>
+                            <ColumnDefinition Width="11*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="1">
-                            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                        <Grid Grid.Column="0">
+                            <StackPanel Orientation="Horizontal" Margin="650,0,0,0">
                                 <DockPanel Margin="0,0,25,0">
                                     <Border
-                                    Height="40"
-                                    Width="40"
-                                    Background="Black"
-                                    CornerRadius="50"
-                                    Margin="30,5,10,5">
+                                        Height="40"
+                                        Width="40"
+                                        Background="Black"
+                                        CornerRadius="50"
+                                        Margin="30,5,10,5">
 
                                         <Ellipse Height="40" Width="40" VerticalAlignment="Top">
                                             <Ellipse.Fill>
-                                                <ImageBrush ImageSource="{Binding Ava}"/>
+                                                <ImageBrush x:Name="Avatar" ImageSource="{Binding Ava, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                                             </Ellipse.Fill>
                                         </Ellipse>
 
                                     </Border>
                                     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
                                         <TextBlock x:Name="TenDangNhap" 
-                                        FontSize="15"
-                                        Text="Nguyen Hoang Viet Phap"
-                                        Foreground="black"
-                                        FontWeight="Thin"
-                                        FontFamily="{StaticResource Custom}"
-                                        >
+                                            FontSize="15"
+                                            Text=""
+                                            Foreground="black"
+                                            FontWeight="Thin"
+                                            FontFamily="{StaticResource Custom}"
+                                            >
 
                                         </TextBlock>
                                         <TextBlock x:Name="Quyen" 
@@ -221,8 +214,11 @@
 
                                     </StackPanel>
                                 </DockPanel>
-                                <Button Style="{StaticResource BtnSetting}" Height="50" x:Name="btnSetting" Command="{Binding SettingCM}" />
                             </StackPanel>
+                        </Grid>
+                        <Grid Grid.Column="1">
+
+                            <Button Style="{StaticResource BtnSetting}" Height="50" x:Name="btnStudentUpdateInfor" Command="{Binding StudentUpdateInforCM}" />
                         </Grid>
                     </Grid>
                     <Frame x:Name="frame"

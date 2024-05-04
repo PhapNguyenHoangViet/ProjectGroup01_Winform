@@ -11,6 +11,12 @@
       x:Name="updatetaskwd"
       DataContext="{StaticResource StudentUpdateTaskVM}"
       Title="StudentUpdateTaskView">
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadTasksCommand}"
+                               CommandParameter="{Binding ElementName= updatetaskwd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
 
     <Grid>
         <Grid.RowDefinitions >
@@ -26,8 +32,7 @@
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
                     Foreground = "#55b3d9"
-                    Margin = "15,10,0,0" Width = "650"
-                    HorizontalAlignment = "Center"
+                     Width = "660"
                     VerticalAlignment = "Center">
                     <Run Text = "CẬP NHẬT TASK" />
                 </TextBlock >
@@ -36,7 +41,119 @@
 
 
         <Grid Grid.Row="1">
-            
+            <StackPanel>
+                <Border                   
+                    Width = "652"
+                    Height = "50"
+                    CornerRadius = "10"
+                    >
+
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width = "462" />
+                            <ColumnDefinition Width = "190" />
+                        </Grid.ColumnDefinitions >
+                        <Grid Grid.Column = "0" >
+                            <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center" Width="442">
+                                <Image Source="/Resource/Image/menu.png" Width="30" Height="30" Margin="20,0,4,0"/>
+                                <TextBlock Text = "TASK"
+                                       HorizontalAlignment = "Left"
+                                       
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "16"
+                                        FontWeight = "SemiBold"
+                                       />
+                            </StackPanel >
+
+
+                        </Grid >
+                        <Grid Grid.Column = "1" >
+                            <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center">
+                                <Image Source="/Resource/Image/update.png" Width="30" Height="30" Margin="0,0,4,0"/>
+                                <TextBlock Text = "TIẾN ĐỘ"
+                                       HorizontalAlignment = "Center"
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "16"
+                                        FontWeight = "SemiBold"
+                                       />
+                            </StackPanel >
+
+                        </Grid >
+                    </Grid >
+
+                </Border >
+                <ListView ItemsSource="{Binding ListTask}" HorizontalContentAlignment="Stretch"                    
+                    x:Name = "ListTaskView"
+                    Height = "393"
+                    Width = "675"
+                    SelectionMode = "Single"
+                    ScrollViewer.VerticalScrollBarVisibility = "Hidden"
+                    Foreground="White"
+                    >
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <Border
+                                    BorderBrush="Gray"
+                                    BorderThickness="0.5"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                Width = "652"
+                                Height = "40"
+                                CornerRadius = "10"
+                                Background = "White"
+                                >
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="384"/>
+                                        <ColumnDefinition  Width="350"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <TextBlock
+                                                            x:Name="Ngay"
+                                                            VerticalAlignment="Center"
+                                                            Margin="30,0,0,0"
+                                                            Text="{Binding NoiDung}"
+                                                            Foreground="#1e90ff"
+                                                            FontSize="16"
+                                                            FontWeight="Bold"
+                                                            FontFamily="{StaticResource Custom}"
+                                                            
+                                                            TextWrapping="Wrap"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock
+                                                       HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        x:Name="TieuDe"
+                                                        Text="{Binding TrangThai}"
+                                                        Foreground="#FFA500"
+                                                        FontFamily="{StaticResource Custom}"
+                                                        FontSize="16"                                                           
+                                                        TextWrapping="Wrap"/>
+                                    </Grid>
+                                </Grid >
+
+                            </Border >
+                        </DataTemplate >
+                    </ListView.ItemTemplate >
+                    <ListView.ItemsPanel >
+                        <ItemsPanelTemplate >
+                            <WrapPanel Orientation = "Vertical" />
+                        </ItemsPanelTemplate >
+                    </ListView.ItemsPanel >
+                    <i:Interaction.Triggers >
+                        <i:EventTrigger EventName = "SelectionChanged" >
+                            <i:InvokeCommandAction Command = "{Binding MessageTaskCommand}"
+                                                       CommandParameter="{Binding ElementName=updatetaskwd}"></i:InvokeCommandAction >
+                        </i:EventTrigger >
+                    </i:Interaction.Triggers >
+                </ListView >
+            </StackPanel>
         </Grid>
 
         <Grid Grid.Row="2">

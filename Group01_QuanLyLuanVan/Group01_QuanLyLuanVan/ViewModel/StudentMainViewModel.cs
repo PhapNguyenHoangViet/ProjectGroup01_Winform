@@ -19,6 +19,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class StudentMainViewModel : BaseViewModel
     {
+        private string ava;
+        public string Ava { get => ava; set { ava = value; OnPropertyChanged(); } }
+        private string tenDangNhap;
+        public string TenDangNhap { get => tenDangNhap; set { tenDangNhap = value; OnPropertyChanged(); } }
+        public ICommand Loadwd { get; set; }
+        public ICommand StudentUpdateInforCM { get; set; }
         private string _selectedOption;
         public string SelectedOption
         {
@@ -34,7 +40,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         DeTaiDAO dtDAO = new DeTaiDAO();
         SinhVienDAO sinhVienDAO = new SinhVienDAO();
         GiangVienDAO gvDAO = new GiangVienDAO();
-            public ICommand LoadPageHomeCM { get; set; }
+        public ICommand LoadPageHomeCM { get; set; }
         public static Frame MainFrame { get; set; }
         public ICommand HomeStudentCM { get; set; }
         public ICommand StudentRegisterCM { get; set; }
@@ -44,11 +50,19 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand StudentNotiCM { get; set; }
 
         public ICommand StudentMailCM { get; set; }
+        public ICommand StudentScoreCM { get; set; }
+        public ICommand StudentThesisCM { get; set; }
+
+
         public ObservableCollection<DeTai> Topics { get; set; }
+        public void LoadTenND(StudentMainView p)
+        {
+            p.TenDangNhap.Text = Const.sinhVien.HoTen;
+        }
 
         public StudentMainViewModel()
         {
-
+            Loadwd = new RelayCommand<StudentMainView>((p) => true, (p) => _Loadwd(p));
 
             // Khởi tạo command để load giao diện ban đầu
             LoadPageHomeCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
@@ -62,13 +76,40 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             StudentRegisterCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-                dtDAO.LoadListTopicCoGV();
                 MainFrame.Content = new StudentListTopicView();
 
             });
+
+            StudentThesisCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+                GiangVien gv = new GiangVien();
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                {
+                    string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
+                    string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
+                    gv = gvDAO.FindOneById(gvId);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
+                }
+                MainFrame.Content = new StudentThesisView();
+            });
             StudentUpdateTaskCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-                ycDAO.LoadListYeuCau();
+                GiangVien gv = new GiangVien();
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                {
+                    string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
+                    string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
+                    gv = gvDAO.FindOneById(gvId);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
+                }
                 MainFrame.Content = new StudentUpdateTaskView();
 
             });
@@ -77,10 +118,44 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new StudentUpdateProgressView();
 
             });
+
+            StudentScoreCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+                GiangVien gv = new GiangVien();
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                {
+                    string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
+                    string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
+                    gv = gvDAO.FindOneById(gvId);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
+                }
+                MainFrame.Content = new StudentScoreView();
+
+            });
+
             StudentNotiCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-                tbDAO.LoadListThongBao();
+                GiangVien gv = new GiangVien();
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                {
+                    string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
+                    string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
+                    gv = gvDAO.FindOneById(gvId);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
+                }
                 MainFrame.Content = new StudentNotiView();
+            });
+            StudentUpdateInforCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+                MainFrame.Content = new StudentUpdateInforView();
 
             });
 
@@ -89,15 +164,19 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
                 StudentMailView studentMailView = new StudentMailView();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != ""&& Const.sinhVien.NhomId!= -1)
+                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
                     gv = gvDAO.FindOneById(gvId);
                 }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng kí đề tài.");
+                    return;
+                }
                 if (gv != null)
                 {
-
                     studentMailView.HoTen.Text = gv.HoTen.ToString();
                     studentMailView.EmailAddress.Text = gv.Email.ToString();
                 }
@@ -107,7 +186,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                     studentMailView.EmailAddress.Text = "";
                 }
                 MainFrame.Content = studentMailView;
-
             });
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
             {
@@ -128,7 +206,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 }
                 return parent;
             }
-
         }
+        void _Loadwd(StudentMainView p)
+        {
+            if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                Ava = Const._localLink + "/Resource/Image/addava.png";
+            else
+                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+            LoadTenND(p);
+        }
+
     }
+
 }

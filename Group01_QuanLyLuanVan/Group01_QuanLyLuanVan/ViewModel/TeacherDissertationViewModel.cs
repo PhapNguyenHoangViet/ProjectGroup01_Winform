@@ -103,21 +103,25 @@ namespace Group01_QuanLyLuanVan.ViewModel
             else
                 detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
             string thanhVien = "";
-            //MessageBox.Show(temp.DeTaiId.ToString());
-            //int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
-            //MessageBox.Show(nhomId.ToString());
+            if (detailTopic.TenTrangThai.Text != "Đã đăng ký")
+                thanhVien = "Đề tài chưa đăng ký";
+            else
+            {
+                int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
+                thanhVien += "Nhóm " + nhomId.ToString();
+                //if (nhomId != -1)
+                //{
+                //    List<SinhVien> sinhViens = svDAO.FindByDeTaiId(nhomId);
+                //    if (sinhViens != null)
+                //    {
+                //        foreach (SinhVien sinhVien in sinhViens)
+                //        {
+                //            thanhVien += sinhVien.HoTen + "; ";
+                //        }
+                //    }
+                //}
+            }
 
-            //if (nhomId != -1)
-            //{
-            //    List<SinhVien> sinhViens = svDAO.FindByDeTaiId(nhomId);
-            //    if (sinhViens != null)
-            //    {
-            //        foreach (SinhVien sinhVien in sinhViens)
-            //        {
-            //            thanhVien += sinhVien.HoTen + "/n";
-            //        }
-            //    }
-            //}
             detailTopic.ThanhVien.Text = thanhVien;
             ListTopic = Topics;
             topicsView.ListTopicView.ItemsSource = ListTopic;
@@ -217,6 +221,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 {
                     tenTrangThai = "Đề xuất";
                 }
+
                 if (an != 1)
                     Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
             }

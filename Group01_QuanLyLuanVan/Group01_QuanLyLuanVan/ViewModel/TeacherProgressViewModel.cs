@@ -18,6 +18,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         YeuCauDAO yeuCauDAO = new YeuCauDAO();
         TienDoDAO tienDoDAO = new TienDoDAO();
 
+
         private ObservableCollection<DeTai> _ListTopic;
         public ObservableCollection<DeTai> ListTopic { get => _ListTopic; set { _ListTopic = value; OnPropertyChanged(); } }
         private ObservableCollection<string> _ListTK;

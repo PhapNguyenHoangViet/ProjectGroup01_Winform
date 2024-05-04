@@ -95,25 +95,7 @@
 
                             <RadioButton
                                 Width="200"
-                                x:Name="btnTienDo"
-                                Uid="2"
-                                Style="{StaticResource BtnTienDo}"
-                                FontFamily="{StaticResource Custom}"
-                                Command="{Binding TeacherProgressCM}">
-                            </RadioButton>
-
-                            <RadioButton
-                                Width="200"
                                 Style="{StaticResource BtnChamDiem}"
-                                FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding }"
-                                Uid="3"
-                                Command="{Binding }">
-                            </RadioButton>
-
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnCheckDaoVan}"
                                 FontFamily="{StaticResource Custom}"
                                 Visibility="{Binding }"
                                 Uid="3"
@@ -140,9 +122,8 @@
                                 Width="200"
                                 Style="{StaticResource BtnSupport}"
                                 FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding SetNV}"
                                 Uid="6"
-                                Command="{Binding NotiCM}">
+                                Command="{Binding TeacherMailCM}">
                             </RadioButton>
                             <Grid Grid.Row="2" VerticalAlignment="Bottom">
                                 <Grid.ColumnDefinitions>

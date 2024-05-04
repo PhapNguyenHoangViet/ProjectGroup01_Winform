@@ -16,6 +16,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
     public class ADMainViewModel : BaseViewModel
     {
+
         GiangVienDAO gvDao = new GiangVienDAO();
         public static Frame MainFrame { get; set; }
         public ICommand LoadPageCM { get; set; }

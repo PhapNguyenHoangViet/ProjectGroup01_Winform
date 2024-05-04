@@ -119,18 +119,23 @@
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ADMainViewModel.cs" />
     <Compile Include="ViewModel\StudentAddTopicsViewModel.cs" />
+    <Compile Include="ViewModel\StudentChatYeuCauViewModel.cs" />
     <Compile Include="ViewModel\StudentListTopicViewModel.cs" />
     <Compile Include="ViewModel\StudentMailViewModel.cs" />
     <Compile Include="ViewModel\StudentMainViewModel.cs" />
     <Compile Include="ViewModel\StudentNotiViewModel.cs" />
     <Compile Include="ViewModel\StudentReceiveEvaluationViewModel.cs" />
     <Compile Include="ViewModel\StudentRegisterTopicViewModel.cs" />
+    <Compile Include="ViewModel\StudentScoreViewModel.cs" />
+    <Compile Include="ViewModel\StudentThesisViewModel.cs" />
+    <Compile Include="ViewModel\StudentUpdateInforViewModel.cs" />
     <Compile Include="ViewModel\StudentUpdateProgressViewModel.cs" />
     <Compile Include="ViewModel\StudentUpdateTaskViewModel.cs" />
     <Compile Include="ViewModel\SystemErrorReportViewModel.cs" />
     <Compile Include="ViewModel\TeacherAddDissertationViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationViewModel.cs" />
+    <Compile Include="ViewModel\TeacherMailViewModel.cs" />
     <Compile Include="ViewModel\TeacherMainViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotiAddViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotiDetailViewModel.cs" />
@@ -220,6 +225,9 @@
     <Compile Include="View\StudentSubmitEssayView.xaml.cs">
       <DependentUpon>StudentSubmitEssayView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StudentThesisView.xaml.cs">
+      <DependentUpon>StudentThesisView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentUpdateInforView.xaml.cs">
       <DependentUpon>StudentUpdateInforView.xaml</DependentUpon>
     </Compile>
@@ -240,6 +248,9 @@
     </Compile>
     <Compile Include="View\TeacherDissertationView.xaml.cs">
       <DependentUpon>TeacherDissertationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherMailView.xaml.cs">
+      <DependentUpon>TeacherMailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TeacherMainView.xaml.cs">
       <DependentUpon>TeacherMainView.xaml</DependentUpon>
@@ -295,14 +306,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Resource - Copy\MainResource.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resource - Copy\StyleResource.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Resource\MainResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -423,6 +426,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\StudentThesisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StudentUpdateInforView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -448,6 +455,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherDissertationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherMailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -531,9 +542,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resource - Copy\Font\NunitoRegular.ttf" />
-    <Resource Include="Resource - Copy\Font\NunitoBold.ttf" />
-    <Resource Include="Resource - Copy\Font\Nunito-ExtraBold.ttf" />
     <Resource Include="Resource\Font\Nunito-ExtraBold.ttf" />
     <Resource Include="Resource\Font\NunitoBold.ttf" />
     <Resource Include="Resource\Font\NunitoRegular.ttf" />
@@ -587,90 +595,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Image\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\addava.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\ava.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\bg1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\bg2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\congratulation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\date.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\mochi_mat_sang.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\note.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\noti.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\student_register.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\topic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\update.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\update2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Image\votay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\7979364.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\addava.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\bannerbook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\library.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\login-background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\NextAct.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\NextPas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\Password_16x16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\PrevAct.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource - Copy\Test\PrevPas.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Ava\addava.png" />

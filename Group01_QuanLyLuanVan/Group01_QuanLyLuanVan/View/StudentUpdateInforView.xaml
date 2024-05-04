@@ -7,11 +7,21 @@
       Width="700" Height="605"
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="StudentUpdateInforView">
+      Title="StudentUpdateInforView"
+      x:Name="StudentUpdateInforwd"
+      DataContext="{StaticResource StudentUpdateInforVM}">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction  Command="{Binding Loadwd}"
+                                    CommandParameter="{Binding ElementName=StudentUpdateInforwd}">
+
+            </i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="102"/>
+            <RowDefinition Height="378"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
@@ -26,74 +36,35 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="123*"/>
-                <ColumnDefinition Width="227*"/>
+                <ColumnDefinition Width="47*"/>
+                <ColumnDefinition Width="93*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="170"/>
+                    <RowDefinition Height="374"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Margin="20,0,0,10">
-                    <Border Margin="0,0,0,59">
-                        <Ellipse Width="150" HorizontalAlignment="Center" StrokeThickness="5" Margin="0,0,0,-49">
+                    <Border>
+                        <Ellipse Height="150" Width="150" 
+                                 VerticalAlignment="Top" HorizontalAlignment="Center" StrokeThickness="5">
                             <Ellipse.Effect>
                                 <DropShadowEffect ShadowDepth="0"
-                          Color="Black"
-                          Opacity="10"
-                          BlurRadius="10"/>
+                                  Color="Black"
+                                  Opacity="10"
+                                  BlurRadius="10"/>
                             </Ellipse.Effect>
                             <Ellipse.Fill>
-                                <ImageBrush x:Name="ProfilePicture" ImageSource="/Resource/Image/ava.png"/>
+                                <ImageBrush x:Name="ProfilePicture" ImageSource="{Binding Ava}"/>
                             </Ellipse.Fill>
-                        </Ellipse>
-                    </Border>
-                </Grid>
-                <Grid Grid.Row="1">
-                    <StackPanel Orientation="Vertical">
-                        <TextBox 
-                        Foreground="Black" 
-                        Margin="20,18,0,0"
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        MaxWidth="400" x:Name="Teacher" Text="{Binding Teacher}"
-                        materialDesign:HintAssist.Foreground="Black"
-                        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                        FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Giảng viên hướng dẫn"/>
-                        <TextBox 
-                        Foreground="Black" 
-                        Margin="20,20,0,0"
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        MaxWidth="400" x:Name="TopicBox"  Text="{Binding Topic}"
-                        materialDesign:HintAssist.Foreground="Black"
-                        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                        FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Đề tài"/>
-                        <Button  
-                        MaxWidth="400"
-                        Margin="20,20,0,0"
-                        VerticalAlignment="Top"
-                        Content="Sửa đề tài"
-                        BorderThickness="0"
-                        FontFamily="Josefin Sans"
-                        Foreground="White"
-                        Background="#55b3d9"
-                        Height="40"
-                        Style="{StaticResource MaterialDesignFlatMidBgButton}">
                             <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click">
-                                    <i:InvokeCommandAction Command="{Binding UpdateTopic}"
-                                                       CommandParameter="{Binding ElementName=StudentUpdateInforViewPage}"></i:InvokeCommandAction>
+                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding AddImage}"
+                                                              CommandParameter="{Binding ElementName=ProfilePicture}" ></i:InvokeCommandAction>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
-                        </Button>
-                    </StackPanel>
+                        </Ellipse>
+                    </Border>
                 </Grid>
             </Grid>
             <Grid Grid.Column="1" Margin="35,0,0,0">
@@ -102,22 +73,10 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <StackPanel Orientation="Vertical" Grid.RowSpan="2">
-                    <TextBox 
-                        Foreground="Black" 
-                        Margin="0,0,20,0"
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        VerticalAlignment="Top"
-                        AcceptsReturn="True"
-                        TextWrapping="Wrap"
-                        MaxWidth="400" x:Name="Name" Text="{Binding Name}"
-                        materialDesign:HintAssist.Foreground="Black"
-                        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                        FontFamily="Josefin Sans"
-                        materialDesign:HintAssist.Hint="Họ và tên"/>
-                    <StackPanel Orientation="Horizontal" Margin="0,20,20,0"
+                    <StackPanel Orientation="Horizontal" Margin="0,0,20,0"
                                 HorizontalAlignment="Center">
                         <TextBox    
-                            x:Name="IdBox"
+                            x:Name="sinhVienId"
                             Foreground="Black" 
                             materialDesign:HintAssist.Foreground="Black"
                             materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
@@ -128,20 +87,52 @@
                             TextWrapping="Wrap"
                             MaxWidth="400"
                             FontFamily="Josefin Sans"
-                            materialDesign:HintAssist.Hint="Mã số" Text ="{Binding Id}" Height="45"/>
+                            IsReadOnly="True"
+                            materialDesign:HintAssist.Hint="Mã số" Text ="{Binding SinhVienId}" Height="45"/>
                         <ComboBox  
                             Margin="20,0,0,0"
-                            x:Name="GTBox" FontFamily="Josefin Sans"
+                            x:Name="tenKhoa" FontFamily="Josefin Sans"
                             Style="{StaticResource MaterialDesignFilledComboBox}"
                             materialDesign:HintAssist.Foreground="Black"
                             materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
-                            materialDesign:HintAssist.Hint="Giới tính" SelectedIndex="{Binding GioiTinh}"
+                            materialDesign:HintAssist.Hint="Khoa" SelectedIndex="{Binding TenKhoa}"
                             Height="45"
                             Width="190">
                             <ComboBoxItem
-                                    Content="Nam" />
+                                Content="Công nghệ thông tin" />
                             <ComboBoxItem
-                                    Content="Nữ" />
+                                Content="Kinh tế" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,20,20,0"
+                            HorizontalAlignment="Center">
+                        <TextBox    
+                        x:Name="hoTen"
+                        Foreground="Black" 
+                        materialDesign:HintAssist.Foreground="Black"
+                        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
+                        Width="190"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        VerticalAlignment="Top"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        MaxWidth="400"
+                        FontFamily="Josefin Sans"
+                        materialDesign:HintAssist.Hint="Họ tên" Text ="{Binding HoTen}" Height="45"/>
+                        <ComboBox  
+        Margin="20,0,0,0"
+        x:Name="GTBox" FontFamily="Josefin Sans"
+        Style="{StaticResource MaterialDesignFilledComboBox}"
+        materialDesign:HintAssist.Foreground="Black"
+        materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
+        materialDesign:HintAssist.Hint="Giới tính" SelectedIndex="{Binding GioiTinh}"
+        Height="45"
+        Width="190">
+                            <ComboBoxItem
+                Content="Nam" />
+                            <ComboBoxItem
+                Content="Nữ" />
                         </ComboBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,20,20,0"
@@ -152,7 +143,7 @@
                             Foreground="Black" x:Name="DateBox"
                             FontFamily="Josefin Sans"
                             Focusable="False"
-                            materialDesign:HintAssist.Hint="Ngày sinh"  Text="{Binding DoB}" Style="{StaticResource MaterialDesignFilledDatePicker}"  
+                            materialDesign:HintAssist.Hint="Ngày sinh"  Text="{Binding NgaySinh}" Style="{StaticResource MaterialDesignFilledDatePicker}"  
                             Width="190">
                         </DatePicker>
                         <TextBox 
@@ -163,7 +154,7 @@
                             VerticalAlignment="Top"
                             AcceptsReturn="True"
                             TextWrapping="Wrap"
-                            HorizontalAlignment="Left" x:Name="SDTBox"  Text="{Binding SDT}" 
+                            HorizontalAlignment="Left" x:Name="sdt"  Text="{Binding SDT}" 
                             FontFamily="Josefin Sans"
                             materialDesign:HintAssist.Hint="Số điện thoại" />
                     </StackPanel>
@@ -178,6 +169,7 @@
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
                         FontFamily="Josefin Sans"
+                        IsReadOnly="True"
                         materialDesign:HintAssist.Hint="Email"/>
                     <TextBox 
                         Foreground="Black" 
@@ -186,7 +178,7 @@
                         VerticalAlignment="Top"
                         AcceptsReturn="True"
                         TextWrapping="Wrap"
-                        MaxWidth="400" x:Name="AddressBox"  Text="{Binding DiaChi}"
+                        MaxWidth="400" x:Name="DiaChi"  Text="{Binding DiaChi}"
                         materialDesign:HintAssist.Foreground="Black"
                         materialDesign:TextFieldAssist.UnderlineBrush="#1784C2"
                         FontFamily="Josefin Sans"
@@ -205,7 +197,7 @@
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <i:InvokeCommandAction Command="{Binding UpdateInfo}"
-                                                       CommandParameter="{Binding ElementName=StudentUpdateInforViewPage}"></i:InvokeCommandAction>
+                                                       CommandParameter="{Binding ElementName=StudUpdateInforWd}"></i:InvokeCommandAction>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </Button>
@@ -220,8 +212,14 @@
                 Height="25"
                 HorizontalAlignment="Left"
                 BorderBrush="Transparent"
-                Cursor="Hand"  Margin="505,38,0,63">
+                Cursor="Hand"  Margin="572,38,0,63">
 
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding ChangePass}"
+                                                       CommandParameter="{Binding ElementName=StudentUpdateInforwd}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="Transparent"/>
