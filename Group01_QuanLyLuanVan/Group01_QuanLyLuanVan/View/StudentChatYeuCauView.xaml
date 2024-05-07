@@ -131,7 +131,8 @@ CornerRadius = "10"
 
                                             <Ellipse Height="40" Width="40" VerticalAlignment="Top">
                                                 <Ellipse.Fill>
-                                                    <ImageBrush ImageSource="/Resource/Image/note.png"/>
+                                                    <ImageBrush x:Name="Avatar" ImageSource="{Binding Avatar}"/>
+
 
                                                 </Ellipse.Fill>
                                             </Ellipse>

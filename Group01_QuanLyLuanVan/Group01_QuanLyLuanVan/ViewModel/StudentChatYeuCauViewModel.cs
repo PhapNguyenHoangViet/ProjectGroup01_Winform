@@ -21,6 +21,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class StudentChatYeuCauViewModel : BaseViewModel, INotifyPropertyChanged
     {
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+
         private int _sliderValue;
         public int SliderValue
         {
@@ -70,7 +72,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+                TaiKhoan tk = new TaiKhoan();
+                tk = tkDAO.FindOneByUsername(username);
+                string ava = Const._localLink + tk.Avatar;
+
+                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
+
             }
 
             Users = new ObservableCollection<MessageTask>();
@@ -101,7 +108,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             Quyen = "0";
             var msg = Const._server.PacketReader.ReadMessage();
-            string[] splittedStrings = msg.Split(new string[] { "iiiiii" }, StringSplitOptions.None);
+            string[] splittedStrings = msg.Split(new string[] { "|" }, StringSplitOptions.None);
             string message = splittedStrings[0].ToString();
             int yeucauId = int.Parse(splittedStrings[1].ToString());
 
@@ -115,10 +122,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(lastRow["thoiGian"].ToString());
                 string username = lastRow["username"].ToString();
                 int yeuCauId = Convert.ToInt32(lastRow["yeuCauId"]);
+                TaiKhoan tk = new TaiKhoan();
+                tk = tkDAO.FindOneByUsername(username);
+                string ava = Const._localLink + tk.Avatar;
+
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-
+                    ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
                 });
             }
 
@@ -155,7 +165,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 Quyen = "0";
                 messageTaskDAO.AddMessage(p.Msg.Text, DateTime.Now, Const.sinhVien.Username, Const.yeuCauId);
-                Const._server.SendMessageToServer(Message + "iiiiii" + Const.yeuCauId.ToString());
+                Const._server.SendMessageToServer(Message + "|" + Const.yeuCauId.ToString());
 
 
                 //DataTable dataTable = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
@@ -191,7 +201,10 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+                TaiKhoan tk = new TaiKhoan();
+                tk = tkDAO.FindOneByUsername(username);
+                string ava = Const._localLink + tk.Avatar;
+                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
             }
             return ListMessage;
         }

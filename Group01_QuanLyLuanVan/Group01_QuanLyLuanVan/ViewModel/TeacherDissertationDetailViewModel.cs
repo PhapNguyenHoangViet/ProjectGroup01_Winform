@@ -21,11 +21,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand back { get; set; }
 
         public ICommand UpdateTopicCM { get; set; }
+        public ICommand UpdateTrangThaiTopicCM { get; set; }
+
+        
         public ICommand DeleteTopicCM { get; set; }
         public TeacherDissertationDetailViewModel()
         {
             back = new RelayCommand<TeacherDissertationDetailView>((p) => true, p => _back(p));
             UpdateTopicCM = new RelayCommand<TeacherDissertationDetailView>((p) => true, (p) => _UpdateTopicCM(p));
+            UpdateTrangThaiTopicCM = new RelayCommand<TeacherDissertationDetailView>((p) => true, (p) => _UpdateTrangThaiTopicCM(p));
             DeleteTopicCM = new RelayCommand<TeacherDissertationDetailView>((p) => true, (p) => _DeleteTopicCM(p));
         }
 
@@ -43,7 +47,17 @@ namespace Group01_QuanLyLuanVan.ViewModel
             int soLuong = int.Parse(p.SoLuong.Text);
             DeTai dt = new DeTai(deTaiId, tenDeTai, moTa, yeuCau, soLuong);
             deTaiDAO.UpdateTopic(dt);
-            MessageBox.Show("Đã cập nhật đề tài này !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Đã cập nhật đề tài này !", "THÔNG BÁO", MessageBoxButton.OK);
+            TeacherDissertationView topicsView = new TeacherDissertationView();
+            topicsView.ListTopicView.ItemsSource = listTopic();
+            topicsView.ListTopicView.Items.Refresh();
+            TeacherMainViewModel.MainFrame.Content = topicsView;
+        }
+
+        void _UpdateTrangThaiTopicCM(TeacherDissertationDetailView p)
+        {
+            string deTaiId = p.deTaiId.Text;
+            deTaiDAO.UpdateTrangThaiTopic(deTaiId);
             TeacherDissertationView topicsView = new TeacherDissertationView();
             topicsView.ListTopicView.ItemsSource = listTopic();
             topicsView.ListTopicView.Items.Refresh();
@@ -53,7 +67,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _DeleteTopicCM(TeacherDissertationDetailView p)
         {
             deTaiDAO.AnTopic(p.deTaiId.Text);
-            MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK);
             TeacherDissertationView topicsView = new TeacherDissertationView();
             topicsView.ListTopicView.ItemsSource = listTopic();
             topicsView.ListTopicView.Items.Refresh();

@@ -31,6 +31,7 @@ FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\V
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentScoreView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentScoreView2.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentSubmitEssayView.xaml;;
+FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentThesisView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentUpdateInforView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentUpdateProgressView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentUpdateTaskView.xaml;;
@@ -46,11 +47,12 @@ FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\V
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherNotiView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherProgressDetailView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherProgressView.xaml;;
+FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherScoreDetailView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherScoreView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherSettingView.xaml;;
+FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherStatisticView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherTaskDetailView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherTaskMessageView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\TeacherTaskView.xaml;;
 FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\VerifyCodeView.xaml;;
-FD:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\View\StudentThesisView.xaml;;
 

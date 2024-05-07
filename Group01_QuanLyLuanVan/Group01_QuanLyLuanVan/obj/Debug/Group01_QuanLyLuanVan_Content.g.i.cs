@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/addava.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/hoa.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/hoa_2fce7276.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/hoa_bd1ea271.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/hoa_f522d6ad.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/huyen.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/ava/phap.png")]
 
 

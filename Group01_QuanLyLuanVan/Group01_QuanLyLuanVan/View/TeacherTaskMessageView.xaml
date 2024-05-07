@@ -25,10 +25,11 @@
     BorderThickness = "5">
         <Grid >
             <Grid.RowDefinitions >
-                <RowDefinition Height = "58" />
+                <RowDefinition Height = "51" />
+                <RowDefinition Height = "77" />
                 <RowDefinition />
             </Grid.RowDefinitions >
-            
+
             <Grid Grid.Row = "0" >
                 <StackPanel Orientation = "Horizontal" >
                     <StackPanel Orientation="Horizontal"
@@ -74,8 +75,29 @@ Grid.Row="0" Margin="0,0,0,0">
                 </StackPanel >
             </Grid >
             <Grid Grid.Row="1">
+                <DockPanel VerticalAlignment="Center" 
+               Margin="10,0,10,0" Height="70"
+               >
+                    <StackPanel Orientation="Horizontal">
+
+                        <Slider  Value="{Binding SliderValue, Mode=TwoWay}" Maximum="100" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" Name="slValue" Foreground="#55b3d9" Height="28" Width="514"/>
+                        <TextBox x:Name ="TienDo" Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" Height="28" />
+                        <Button Content="Cập nhật" VerticalAlignment="Center" Margin="10,8,0,10" Width="106" Background="#55b3d9" BorderThickness="0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding UpdateTrangThaiCommand}"
+                                       CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"></i:InvokeCommandAction>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+
+                    </StackPanel>
+
+                </DockPanel>
+            </Grid>
+            <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="460"/>
+                    <RowDefinition Height="400"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
@@ -109,8 +131,7 @@ Grid.Row="0" Margin="0,0,0,0">
 
                                             <Ellipse Height="40" Width="40" VerticalAlignment="Top">
                                                 <Ellipse.Fill>
-                                                    <ImageBrush ImageSource="/Resource/Image/note.png"/>
-
+                                                    <ImageBrush x:Name="Avatar" ImageSource="{Binding Avatar}"/>
                                                 </Ellipse.Fill>
                                             </Ellipse>
 

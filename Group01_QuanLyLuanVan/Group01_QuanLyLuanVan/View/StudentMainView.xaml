@@ -15,7 +15,8 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource StudentMainVM}"
-        x:Name="Studentmainview">
+        x:Name="Studentmainview"
+        >
 
 
     <i:Interaction.Triggers>
@@ -113,24 +114,19 @@
                                 FontFamily="{StaticResource Custom}"
                                 >
                             </RadioButton>
-                            <RadioButton
-                                Command="{Binding StudentNotiCM}"
-                                Width="200"
-                                Style="{StaticResource BtnNoti}"
-                                FontFamily="{StaticResource Custom}"
-                                Uid="5"
-                                Visibility="{Binding }"
-                                >
-                            </RadioButton>
 
                             <RadioButton
+                                
+                                Command="{Binding StudentNotiCM}"
                                 Width="200"
-                                Style="{StaticResource BtnThongKe}"
+                                Style="{StaticResource BtnNoti1}"
                                 FontFamily="{StaticResource Custom}"
-                                Uid="6"
-                                Visibility="{Binding }"
-                                >
+                                Uid="5"
+                                Visibility="{Binding }">
+
                             </RadioButton>
+
+
 
                             <RadioButton
                                 Width="200"

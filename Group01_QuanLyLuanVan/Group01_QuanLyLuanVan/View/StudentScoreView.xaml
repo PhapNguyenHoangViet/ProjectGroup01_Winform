@@ -30,19 +30,13 @@
                 HorizontalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel Orientation="Horizontal"
+            <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center">
-                <Image Source="/Resource/Image/mochi_mat_sang.png" 
-                       Width="297" 
-                       Height="250"/>
-                <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Center">
-                    <TextBlock TextAlignment="Center" 
-                               FontSize="22"
-                               FontFamily="{StaticResource Custom}"
-                               Text="HỒI HỘP KHÔNG NÈ???"
-                               Margin="0,240,0,0">
-                    </TextBlock>
+                <Image Source="/Resource/Image/luanvan.png" 
+                       Width="519" 
+                       Height="389"/>
+                <StackPanel Orientation="Vertical" Height="348">
+
                     <Button Content="Xem điểm"
                                 FontFamily="Josefin Sans"
                                 Foreground="White"

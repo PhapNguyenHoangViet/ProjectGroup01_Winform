@@ -15,6 +15,19 @@ namespace Group01_QuanLyLuanVan.Model
         private string username;
         private int yeuCauId;
         private string uid;
+        private string avatar;
+
+
+        public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId, string avatar)
+        {
+            this.tinNhanId = tinNhanId;
+            this.tinNhan = tinNhan;
+            this.thoiGian = thoiGian;
+            this.username = username;
+            this.yeuCauId = yeuCauId;
+            this.avatar = avatar;
+
+        }
 
         public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId)
         {
@@ -23,6 +36,7 @@ namespace Group01_QuanLyLuanVan.Model
             this.thoiGian = thoiGian;
             this.username = username;
             this.yeuCauId = yeuCauId;
+
         }
 
         public MessageTask(string username, string uid)
@@ -37,5 +51,7 @@ namespace Group01_QuanLyLuanVan.Model
         public string Username { get => username; set => username = value; }
         public DateTime ThoiGian { get => thoiGian; set => thoiGian = value; }
         public string UID { get => uid; set => uid = value; }
+        public string Avatar { get => avatar; set => avatar = value; }
+
     }
 }

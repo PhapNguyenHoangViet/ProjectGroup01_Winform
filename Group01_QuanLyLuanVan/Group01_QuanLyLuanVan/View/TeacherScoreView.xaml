@@ -9,12 +9,12 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Height="605" Width="700"
       DataContext="{StaticResource TeacherScoreVM}"
-      x:Name="TeacherTaskWd">
+      x:Name="TeacherScoreWd">
 
     <i:Interaction.Triggers >
         <i:EventTrigger EventName = "Loaded" >
             <i:InvokeCommandAction Command = "{Binding LoadListTopicCommand}"
-                               CommandParameter="{Binding ElementName= TeacherTaskWd}"></i:InvokeCommandAction >
+                               CommandParameter="{Binding ElementName= TeacherScoreWd}"></i:InvokeCommandAction >
         </i:EventTrigger >
     </i:Interaction.Triggers >
     <Border
@@ -94,7 +94,7 @@
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "TextChanged" >
                                 <i:InvokeCommandAction Command = "{Binding SearchTopicsCommand}"
-                                   CommandParameter="{Binding ElementName= TeacherTaskWd}"></i:InvokeCommandAction >
+                                   CommandParameter="{Binding ElementName= TeacherScoreWd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
                     </TextBox >
@@ -115,13 +115,13 @@
                         <ListView.ItemTemplate >
                             <DataTemplate>
                                 <Border
-                                    BorderBrush="Gray" BorderThickness="0.5"
-                                    CornerRadius="10" Background = "white" Width="654" Height="110">
+            BorderBrush="Gray" BorderThickness="0.5"
+            CornerRadius="10" Background = "white" Width="654" Height="110">
                                     <Grid>
                                         <Grid >
                                             <StackPanel VerticalAlignment="Center" >
                                                 <StackPanel Orientation="Horizontal"
-                        >
+>
                                                     <Grid>
                                                         <Grid.ColumnDefinitions>
                                                             <ColumnDefinition Width="69"/>
@@ -132,57 +132,79 @@
                                                         </Grid>
                                                         <Grid Grid.Column="1">
                                                             <TextBlock
-                                                                VerticalAlignment="Center"
-                                                                FontWeight="Bold"
-                                                                x:Name="TenDeTai"
-                                                                Text="{Binding TenDeTai}"
-                                                                Foreground="#1e90ff"
-                                                                FontFamily="{StaticResource Custom}"
-                                                                FontSize="18"
-                                                                Width="526"
-                                                                TextWrapping="Wrap"/>
+                                        VerticalAlignment="Center"
+                                        FontWeight="Bold"
+                                        x:Name="TenDeTai"
+                                        Text="{Binding TenDeTai}"
+                                        Foreground="#1e90ff"
+                                        FontFamily="{StaticResource Custom}"
+                                        FontSize="18"
+                                        Width="526"
+                                        TextWrapping="Wrap"/>
                                                         </Grid>
                                                     </Grid>
                                                 </StackPanel>
                                                 <StackPanel Orientation="Horizontal"
-                                                    Margin="10,0,0,0" >
-                                                    <Grid>
+                            Margin="10,0,0,0" >
+                                                    <Grid Height="27" Width="630">
                                                         <Grid.ColumnDefinitions >
                                                             <ColumnDefinition Width = "70" />
-                                                            <ColumnDefinition Width = "160" />
-                                                            <ColumnDefinition />
+                                                            <ColumnDefinition Width = "110" />
+                                                            <ColumnDefinition Width = "207" />
+                                                            <ColumnDefinition Width = "52" />
+
+                                                            <ColumnDefinition Width="193" />
                                                         </Grid.ColumnDefinitions >
                                                         <Grid Grid.Column="0">
                                                             <TextBlock
-                                                                Text="Thể loại:"
-                                                                Margin="0,10,0,0"
-                                                                Foreground="gray"
-                                                                FontFamily="{StaticResource Custom}"
-                                                                FontSize="16"
-                                                                />
+                                        Text="Thể loại:"
+                                        Margin="0,10,0,0"
+                                        Foreground="gray"
+                                        FontFamily="{StaticResource Custom}"
+                                        FontSize="16"
+                                        />
                                                         </Grid>
                                                         <Grid Grid.Column="1">
                                                             <TextBlock
-                                                             x:Name="TenTheLoai"
-                                                            Text="{Binding TenTheLoai}"
-                                                            Margin="0,10,0,0"
-                                                            Foreground="gray"
-                                                            FontFamily="{StaticResource Custom}"
-                                                            FontSize="16"
-                                                            />
+                                     x:Name="TenTheLoai"
+                                    Text="{Binding TenTheLoai}"
+                                    Margin="0,10,0,0"
+                                    Foreground="gray"
+                                    FontFamily="{StaticResource Custom}"
+                                    FontSize="16"
+                                    />
                                                         </Grid>
                                                         <Grid Grid.Column="2">
                                                             <TextBlock 
-                                                                Margin="0,10,0,0"
-                                                                    x:Name="TenNhom"
-                                                                    Text="{Binding TenNhom}" 
-                                                                    Foreground="#FFA500" 
-                                                                    FontWeight="Bold"
-                                                                    FontSize="16"
-                                                                    FontFamily="{StaticResource Custom}" 
-                                                                    VerticalAlignment="Center" 
-                                                                    HorizontalAlignment="Center"     />
+                                        Margin="0,10,0,0"
+                                            x:Name="TenNhom"
+                                            Text="{Binding TenNhom}" 
+                                            Foreground="#FFA500" 
+                                            FontWeight="Bold"
+                                            FontSize="16"
+                                            FontFamily="{StaticResource Custom}" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center"     />
 
+                                                        </Grid>
+                                                        <Grid Grid.Column="3">
+                                                            <TextBlock
+                                    Text="Điểm:"
+                                    Margin="0,10,0,0"
+                                    Foreground="gray"
+                                    FontFamily="{StaticResource Custom}"
+                                    FontSize="16"
+                                    />
+                                                        </Grid>
+                                                        <Grid Grid.Column="4">
+                                                            <TextBlock
+                                     x:Name="Score"
+                                    Text="{Binding PhanTram}"
+                                    Margin="0,10,0,0"
+                                    Foreground="gray"
+                                    FontFamily="{StaticResource Custom}"
+                                    FontSize="16"
+                                    />
                                                         </Grid>
                                                     </Grid>
 
@@ -204,7 +226,7 @@
                         <i:Interaction.Triggers >
                             <i:EventTrigger EventName = "SelectionChanged" >
                                 <i:InvokeCommandAction Command = "{Binding DetailTopicsCommand}"
-                                                       CommandParameter="{Binding ElementName=TeacherTaskWd}"></i:InvokeCommandAction >
+                                                       CommandParameter="{Binding ElementName=TeacherScoreWd}"></i:InvokeCommandAction >
                             </i:EventTrigger >
                         </i:Interaction.Triggers >
                     </ListView >

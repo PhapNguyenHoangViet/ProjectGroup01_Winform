@@ -15,7 +15,7 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         DataContext="{StaticResource TeacherMainVM}"
-        Name="TeacherMainWd">
+        x:Name="TeacherMainWd">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -93,31 +93,29 @@
                                 Command="{Binding TeacherTaskCM}">
                             </RadioButton>
 
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnChamDiem}"
-                                FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding }"
-                                Uid="3"
-                                Command="{Binding }">
-                            </RadioButton>
+                            
 
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnNoti}"
                                 FontFamily="{StaticResource Custom}"
-                                Uid="4"
+                                Uid="3"
                                 Command="{Binding TeacherNotiCM}">
                             </RadioButton>
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnThongKe}"
                                 FontFamily="{StaticResource Custom}"
-                                Uid="5"
-                                Visibility="{Binding }"
-                                Command="{Binding }">
+                                Uid="4"
+                                Command="{Binding TeacherStatisticCM}">
                             </RadioButton>
-
+                            <RadioButton
+                                Width="200"
+                                Style="{StaticResource BtnChamDiem}"
+                                FontFamily="{StaticResource Custom}"
+                                Uid="5"
+                                Command="{Binding TeacherScoreCM}">
+                            </RadioButton>
                             <RadioButton
                                 Width="200"
                                 Style="{StaticResource BtnSupport}"

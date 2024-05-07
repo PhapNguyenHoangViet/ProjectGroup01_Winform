@@ -954,3 +954,13 @@ D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\ob
 D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherMailView.baml
 D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentThesisView.g.cs
 D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\StudentThesisView.baml
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherScoreDetailView.g.cs
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherScoreDetailView.baml
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherStatisticView.g.cs
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\obj\Debug\View\TeacherStatisticView.baml
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.dll
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.Wpf.dll
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.pdb
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.xml
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.Wpf.pdb
+D:\winform\ProjectGroup01_Winform\Group01_QuanLyLuanVan\Group01_QuanLyLuanVan\bin\Debug\LiveCharts.Wpf.xml

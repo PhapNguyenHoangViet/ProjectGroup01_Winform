@@ -11,7 +11,12 @@
       DataContext="{StaticResource TeacherNotiDetailVM}"
       x:Name="TeacherNotiDetailWd"
       Title="TeacherNotiDetailView">
-
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadListNotiCommand}"
+                               CommandParameter="{Binding ElementName= TeacherNotiDetailWd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="404*"/>
@@ -51,7 +56,7 @@
                             <i:Interaction.Triggers>
                                 <i:EventTrigger  EventName="MouseLeftButtonDown">
                                     <i:InvokeCommandAction Command="{Binding back}"
-                                                   CommandParameter="{Binding ElementName=TeacherTaskDetailWd}"></i:InvokeCommandAction>
+                                                   CommandParameter="{Binding ElementName=TeacherNotiDetailWd}"></i:InvokeCommandAction>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </Label>

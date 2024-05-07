@@ -4,7 +4,9 @@ using Group01_QuanLyLuanVan.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,10 +17,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
+
 namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class StudentMainViewModel : BaseViewModel
     {
+        private int _sum;
+        public int Sum
+        {
+            get { return _sum; }
+            set
+            {
+                if (_sum != value)
+                {
+                    _sum = value;
+                    OnPropertyChanged("Sum");
+                }
+            }
+        }
         private string ava;
         public string Ava { get => ava; set { ava = value; OnPropertyChanged(); } }
         private string tenDangNhap;
@@ -67,23 +83,27 @@ namespace Group01_QuanLyLuanVan.ViewModel
             // Khởi tạo command để load giao diện ban đầu
             LoadPageHomeCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
+                LoadTrangthai();
                 MainFrame = p;
                 p.Content = new HomeView();
             });
             HomeStudentCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 MainFrame.Content = new HomeView();
             });
             StudentRegisterCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 MainFrame.Content = new StudentListTopicView();
 
             });
 
             StudentThesisCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                if (Const.sinhVien.NhomId.ToString() != "-1")
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
@@ -98,8 +118,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             StudentUpdateTaskCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                if (Const.sinhVien.NhomId.ToString() != "-1")
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
@@ -115,14 +136,17 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             StudentUpdateProgressCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 MainFrame.Content = new StudentUpdateProgressView();
 
             });
 
             StudentScoreCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-                GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                LoadTrangthai();
+                GiangVien gv = new GiangVien(); 
+                if (Const.sinhVien.NhomId.ToString() != "-1")
+
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
@@ -139,8 +163,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
             StudentNotiCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                if (Const.sinhVien.NhomId.ToString() != "-1")
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
@@ -155,16 +180,17 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             StudentUpdateInforCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
+                LoadTrangthai();
                 MainFrame.Content = new StudentUpdateInforView();
 
             });
 
             StudentMailCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
-
+                LoadTrangthai();
                 StudentMailView studentMailView = new StudentMailView();
                 GiangVien gv = new GiangVien();
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
+                if (Const.sinhVien.NhomId.ToString() != "-1")
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
@@ -189,6 +215,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             });
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
             {
+                LoadTrangthai();
                 FrameworkElement window = GetParentWindow(p);
                 Window oldWindow = App.Current.MainWindow;
                 LoginView loginView = new LoginView();
@@ -210,10 +237,31 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _Loadwd(StudentMainView p)
         {
             if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
-                Ava = Const._localLink + "/Resource/Image/addava.png";
+                Ava = Const._localLink + "/Resource/Ava/addava.png";
             else
-                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                Ava = Const._localLink + Const.taiKhoan.Avatar;
             LoadTenND(p);
+
+            LoadTrangthai();
+
+        }
+        void LoadTrangthai()
+        {
+            string query = string.Format("SELECT COUNT(tb.trangthai) AS SoLuongTrangThai FROM ThongBao tb JOIN DeTai dt ON tb.deTaiId = dt.deTaiId JOIN SinhVien sv ON dt.nhomId = sv.nhomId JOIN TaiKhoan tk ON sv.username = tk.username WHERE tb.trangthai = 0 AND tk.username = 'phap'");
+
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                conn.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Sum = Convert.ToInt32(reader["SoLuongTrangThai"]);
+                    }
+                }
+            }
+
         }
 
     }

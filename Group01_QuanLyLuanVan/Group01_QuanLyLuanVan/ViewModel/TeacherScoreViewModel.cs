@@ -32,55 +32,63 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public TeacherScoreViewModel()
         {
             Topics = new ObservableCollection<DeTai>();
-            var topicsData = dtDAO.LoadListTopic(Const.giangVien.GiangVienId);
+            var topicsData = dtDAO.LoadListTopicScore(Const.giangVien.GiangVienId);
             foreach (DataRow row in topicsData.Rows)
             {
                 string deTaiId = row["deTaiId"].ToString();
                 string tenDeTai = row["tenDeTai"].ToString();
                 string tenTheLoai = row["tenTheLoai"].ToString();
-                int an = Convert.ToInt32(row["an"]);
+                int an = Convert.ToInt32(row["an"].ToString());
+                float diem = 0;
+                diem = float.Parse(row["diem"].ToString());
+
                 int nhomId = dtDAO.FindNhomIdByDeTaiId(deTaiId);
                 string tenNhom = "Nhóm " + nhomId.ToString();
 
+                string score = "";
+                
+                if (diem == 0)
+                    score = "Chưa chấm";
+                else score = diem.ToString();
+
                 if (an != 1 && nhomId != -1)
-                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, tenNhom));
+                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, tenNhom, score));
+
             }
             ListTopic = Topics;
             ListTK = new ObservableCollection<string>() { "Đề tài", "Thể loại", "Nhóm" };
-            DetailTopicsCommand = new RelayCommand<TeacherTaskView>((p) => { return p.ListTopicView.SelectedItem == null ? false : true; }, (p) => _DetailTopicsCommand(p));
-            SearchTopicsCommand = new RelayCommand<TeacherTaskView>((p) => { return p == null ? false : true; }, (p) => _SearchTopicsCommand(p));
-            LoadListTopicCommand = new RelayCommand<TeacherTaskView>((p) => true, (p) => _LoadListTopicCommand(p));
+            SearchTopicsCommand = new RelayCommand<TeacherScoreView>((p) => { return p == null ? false : true; }, (p) => _SearchTopicsCommand(p));
+            LoadListTopicCommand = new RelayCommand<TeacherScoreView>((p) => true, (p) => _LoadListTopicCommand(p));
+            DetailTopicsCommand = new RelayCommand<TeacherScoreView>((p) => { return p.ListTopicView.SelectedItem == null ? false : true; }, (p) => _DetailTopicsCommand(p));
+
         }
-        void _LoadListTopicCommand(TeacherTaskView topicsView)
+
+        void _DetailTopicsCommand(TeacherScoreView topicsView)
+        {
+            TeacherScoreDetailView scoreView = new TeacherScoreDetailView();
+            DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
+            Const.DeTai = temp;
+            scoreView.TenDeTai.Text = temp.TenDeTai;
+            if (temp.PhanTram == "Chưa chấm")
+                scoreView.score.Text = "";
+            else scoreView.score.Text = temp.PhanTram;
+
+            Const.deTaiId = temp.DeTaiId;
+            
+            TeacherMainViewModel.MainFrame.Content = scoreView;
+        }
+
+
+        void _LoadListTopicCommand(TeacherScoreView topicsView)
         {
             topicsView.ListTopicView.ItemsSource = listTopic();
             topicsView.ListTopicView.Items.Refresh();
             topicsView.cbxChon.SelectedIndex = 0;
         }
-        void _DetailTopicsCommand(TeacherTaskView topicsView)
-        {
-            // chuyển sang view detail topic
-            TeacherTaskDetailView taskView = new TeacherTaskDetailView();
-            DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
-            Const.DeTai = temp;
-            taskView.TenDeTai.Text = temp.TenDeTai;
-            Const.deTaiId = temp.DeTaiId;
-            Tasks = new ObservableCollection<YeuCau>();
-            var tasksdata = yeuCauDAO.LoadListTask(temp.DeTaiId);
-            foreach (DataRow row in tasksdata.Rows)
-            {
-                int yeuCauId = int.Parse(row["yeuCauId"].ToString());
-                string noiDung = row["noiDung"].ToString();
-                string deTaiId = row["deTaiId"].ToString();
-                int trangThai = Convert.ToInt32(row["trangThai"]);
-                Tasks.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
-            }
-            taskView.ListTaskView.ItemsSource = Tasks;
-            taskView.ListTaskView.SelectedItem = null;
-            TeacherMainViewModel.MainFrame.Content = taskView;
-        }
 
-        void _SearchTopicsCommand(TeacherTaskView topicsView)
+
+
+        void _SearchTopicsCommand(TeacherScoreView topicsView)
         {
             ObservableCollection<DeTai> temp = new ObservableCollection<DeTai>();
             if (topicsView.cbxChon.Text != "")
@@ -129,18 +137,27 @@ namespace Group01_QuanLyLuanVan.ViewModel
         ObservableCollection<DeTai> listTopic()
         {
             Topics = new ObservableCollection<DeTai>();
-            var topicsData = dtDAO.LoadListTopic(Const.giangVien.GiangVienId);
+            var topicsData = dtDAO.LoadListTopicScore(Const.giangVien.GiangVienId);
             foreach (DataRow row in topicsData.Rows)
             {
                 string deTaiId = row["deTaiId"].ToString();
                 string tenDeTai = row["tenDeTai"].ToString();
                 string tenTheLoai = row["tenTheLoai"].ToString();
-                int an = Convert.ToInt32(row["an"]);
+                int an = Convert.ToInt32(row["an"].ToString());
+                float diem = float.Parse(row["diem"].ToString());
+
                 int nhomId = dtDAO.FindNhomIdByDeTaiId(deTaiId);
                 string tenNhom = "Nhóm " + nhomId.ToString();
 
+                string score = "";
+
+                if (diem == 0)
+                    score = "Chưa chấm";
+                else score = diem.ToString();
+
                 if (an != 1 && nhomId != -1)
-                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, tenNhom));
+                    Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, tenNhom, score));
+
             }
             return Topics;
         }

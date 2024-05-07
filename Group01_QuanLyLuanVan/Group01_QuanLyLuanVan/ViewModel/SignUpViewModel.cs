@@ -122,7 +122,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
             tkDAO.Register(tk);
             svDAO.Register(sv);
+            try
+            {
+               
             File.Copy(linkaddimage, Const._localLink + @"/Resource/Ava/" + tk.Username + ((linkaddimage.Contains(".jpg")) ? ".jpg" : ".png").ToString(), true);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
             Window oldWindow = App.Current.MainWindow;
             oldWindow.Hide();

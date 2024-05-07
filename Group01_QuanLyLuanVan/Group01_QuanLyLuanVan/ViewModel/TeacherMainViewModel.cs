@@ -33,6 +33,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         
         public ICommand TeacherScoreCM { get; set; }
 
+        public ICommand TeacherStatisticCM { get; set; }
+
+
         public void LoadTenND(TeacherMainView p)
         {
             p.TenDangNhap.Text = Const.giangVien.HoTen;
@@ -84,6 +87,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new TeacherNotiView();
             });
 
+            TeacherStatisticCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherStatisticView();
+            });
+
             TeacherMailCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
             {
 
@@ -111,9 +119,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _Loadwd(TeacherMainView p)
         {
             if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
-                Ava = Const._localLink + "/Resource/Image/addava.png";
+                Ava = Const._localLink + "/Resource/Ava/addava.png";
             else
-                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                Ava = Const._localLink + Const.taiKhoan.Avatar;
             LoadTenND(p);
         }
     }

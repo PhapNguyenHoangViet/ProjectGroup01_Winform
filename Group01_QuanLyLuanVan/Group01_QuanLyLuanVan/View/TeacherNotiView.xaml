@@ -128,7 +128,7 @@
                                                             <ColumnDefinition />
                                                         </Grid.ColumnDefinitions>
                                                         <Grid Grid.Column="0">
-                                                            <Image Source="/Resource/Image/note.png" Width="40" Margin="10,0,9,5"/>
+                                                            <Image Source="/Resource/Image/noti4.png" Width="40" Margin="10,0,9,5"/>
                                                         </Grid>
                                                         <Grid Grid.Column="1">
                                                             <TextBlock
@@ -149,7 +149,10 @@
                                                     <Grid>
                                                         <Grid.ColumnDefinitions >
                                                             <ColumnDefinition Width = "70" />
-                                                            <ColumnDefinition Width = "160" />
+                                                            <ColumnDefinition Width = "110" />
+                                                            <ColumnDefinition Width = "207" />
+                                                            <ColumnDefinition Width = "52" />
+                                                            <ColumnDefinition Width="193" />
                                                             <ColumnDefinition />
                                                         </Grid.ColumnDefinitions >
                                                         <Grid Grid.Column="0">

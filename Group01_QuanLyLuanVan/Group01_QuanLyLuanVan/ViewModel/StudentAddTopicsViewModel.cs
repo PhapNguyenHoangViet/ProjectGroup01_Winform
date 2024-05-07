@@ -75,7 +75,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                         insertNhomCommand.Parameters.AddWithValue("@nhomId", nhomId);
                         insertNhomCommand.ExecuteNonQuery();
 
-                        string insertDeTaiQuery = "INSERT INTO DeTai (tenDeTai, moTa, yeuCauChung,trangThai, ngayBatDau,theLoaiId,nhomId, giangVienId, an) VALUES (@tenDeTai, @moTa, @yeuCauChung, @trangThai, @ngayBatDau,@theLoaiId, @nhomId, @giangVienId, @an)";
+                        string insertDeTaiQuery = "INSERT INTO DeTai (tenDeTai, moTa, yeuCauChung,trangThai, ngayBatDau,theLoaiId,nhomId, giangVienId, an, diem) VALUES (@tenDeTai, @moTa, @yeuCauChung, @trangThai, @ngayBatDau,@theLoaiId, @nhomId, @giangVienId, @an, @diem)";
                         SqlCommand insertDeTaiCommand = new SqlCommand(insertDeTaiQuery, conn, transaction);
                         insertDeTaiCommand.Parameters.AddWithValue("@tenDeTai", p.TenDeTai.Text);
                         insertDeTaiCommand.Parameters.AddWithValue("@moTa", p.MoTa.Text);
@@ -86,6 +86,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
                         insertDeTaiCommand.Parameters.AddWithValue("@nhomId", nhomId);
                         insertDeTaiCommand.Parameters.AddWithValue("@theLoaiId", theLoaiId);
                         insertDeTaiCommand.Parameters.AddWithValue("@giangVienId", giangVienId);
+                        insertDeTaiCommand.Parameters.AddWithValue("@diem", 0);
+
                         //insertDeTaiCommand.Parameters.AddWithValue("@soLuong", _selectedCount);
                         insertDeTaiCommand.ExecuteNonQuery();
 
@@ -93,6 +95,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                         string updateSinhVienUserQuery = String.Format("UPDATE SinhVien SET nhomId = @nhomId WHERE Username = '{0}'", Const.taiKhoan.Username);
                         SqlCommand updateSinhVienUserCommand = new SqlCommand(updateSinhVienUserQuery, conn, transaction);
                         updateSinhVienUserCommand.Parameters.AddWithValue("@nhomId", nhomId);
+                        Const.sinhVien.NhomId = nhomId;
                         updateSinhVienUserCommand.ExecuteNonQuery();
 
                         transaction.Commit();

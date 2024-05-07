@@ -149,7 +149,10 @@
                                                     <Grid>
                                                         <Grid.ColumnDefinitions >
                                                             <ColumnDefinition Width = "70" />
-                                                            <ColumnDefinition Width = "160" />
+                                                            <ColumnDefinition Width = "110" />
+                                                            <ColumnDefinition Width = "207" />
+                                                            <ColumnDefinition Width = "52" />
+                                                            <ColumnDefinition Width="193" />
                                                             <ColumnDefinition />
                                                         </Grid.ColumnDefinitions >
                                                         <Grid Grid.Column="0">

@@ -310,8 +310,8 @@
 
         </Grid>
         <Grid Grid.Row="7">
-            <Button Content="Cập nhập"
-                    Margin="490,0,50,0"
+            <Button Content="Cập nhật"
+                    Margin="520,0,50,0"
                             BorderThickness="0"
                             x:Name="btnregister"
                             materialDesign:ButtonAssist.CornerRadius="10"
@@ -323,8 +323,21 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>
+            <Button Content="Xác nhận"
+                    Margin="290,0,290,0"
+                    BorderThickness="0"
+                    x:Name="btnXacNhan"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    Background="#55b3d9" Height="32" VerticalAlignment="Center">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding UpdateTrangThaiTopicCM}"
+                       CommandParameter="{Binding ElementName=TeacherDissertationDetailWd}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
             <Button Content="Xóa"
-                Margin="50,0,490,0"
+                Margin="50,0,520,0"
                 BorderThickness="0"
                 x:Name="btnDelete"
                 materialDesign:ButtonAssist.CornerRadius="10"

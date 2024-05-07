@@ -18,15 +18,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherTaskDetailViewModel : BaseViewModel
     {
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
 
         YeuCauDAO ycDAO = new YeuCauDAO();
         MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         public ICommand AddTask { get; set; }
 
@@ -79,6 +75,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             Const.YeuCau = temp;
             //messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
             messageView.TenTask.Text = temp.NoiDung.ToString();
+            messageView.TienDo.Text = temp.TrangThai.ToString();
             MessageTasks = new ObservableCollection<MessageTask>();
             var messages = messageTaskDAO.LoadListMessageTask(temp.YeuCauId);
             foreach (DataRow row in messages.Rows)
@@ -88,7 +85,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+                TaiKhoan tk = tkDAO.FindOneByUsername(username);
+                string ava = "";
+                if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                    ava = Const._localLink + "/Resource/Ava/addava.png";
+                else
+                    ava = Const._localLink + tk.Avatar;
+
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
             }
 
             messageView.ListMessageView.ItemsSource = MessageTasks;

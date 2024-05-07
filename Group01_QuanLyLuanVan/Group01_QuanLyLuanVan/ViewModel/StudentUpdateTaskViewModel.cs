@@ -21,6 +21,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class StudentUpdateTaskViewModel : BaseViewModel
     {
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+
         YeuCauDAO ycDAO = new YeuCauDAO();
         MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
 
@@ -81,7 +83,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
+                TaiKhoan tk = new TaiKhoan();
+                tk = tkDAO.FindOneByUsername(username);
+                string ava = Const._localLink + tk.Avatar;
+
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
             }
 
             messageView.ListMessageView.ItemsSource = MessageTasks;

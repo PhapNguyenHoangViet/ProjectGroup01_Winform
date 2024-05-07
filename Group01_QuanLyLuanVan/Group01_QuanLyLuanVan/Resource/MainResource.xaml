@@ -3,9 +3,6 @@
                     xmlns:viewmodel="clr-namespace:Group01_QuanLyLuanVan.ViewModel"
                     xmlns:local="clr-namespace:Group01_QuanLyLuanVan.ViewModel">
  
-
-
-    <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
     <viewmodel:ADMainViewModel x:Key="ADMainVM"></viewmodel:ADMainViewModel>
     <viewmodel:AdminManageTeacherViewModel x:Key="AdminManageTeacherVM"></viewmodel:AdminManageTeacherViewModel>
 
@@ -26,6 +23,10 @@
     <viewmodel:TeacherProgressDetailViewModel x:Key="TeacherProgressDetailVM"></viewmodel:TeacherProgressDetailViewModel>
     <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
+    <viewmodel:TeacherStatisticViewModel x:Key="TeacherStatisticVM"></viewmodel:TeacherStatisticViewModel>
+
+    <viewmodel:TeacherScoreDetailViewModel x:Key="TeacherScoreDetailVM"></viewmodel:TeacherScoreDetailViewModel>
+
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
     <viewmodel:TeacherUpdateInforViewModel x:Key="TeacherUpdateInforVM"></viewmodel:TeacherUpdateInforViewModel>
     <viewmodel:TeacherTaskViewModel x:Key="TeacherTaskVM"></viewmodel:TeacherTaskViewModel>
@@ -52,5 +53,6 @@
 
     <viewmodel:StudentScoreViewModel x:Key="StudentScoreVM"></viewmodel:StudentScoreViewModel>
     <viewmodel:StudentThesisViewModel x:Key="StudentThesisVM"></viewmodel:StudentThesisViewModel>
+    <viewmodel:StudentScoreViewModel2 x:Key="StudentScoreVM2"></viewmodel:StudentScoreViewModel2>
 
 </ResourceDictionary>

@@ -34,8 +34,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         public LoginViewModel()
         {
-            Password = "";
-            Username = "";
             PasswordChangedCommand = new RelayCommand<PasswordBox>((p) => { return true; }, (p) => { Password = p.Password; });
 
             LoadLoginPageCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
@@ -76,16 +74,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
                                 Const._server = new Server();
                                 Const._server.ConnectToServer(Const.giangVien.Username);
                                 Window oldWindow = App.Current.MainWindow;
-                                TeacherMainView teacherMainView = new TeacherMainView();
+                                TeacherMainView teacherMainView = new TeacherMainView();   
                                 App.Current.MainWindow = teacherMainView;
                                 oldWindow.Close();
                                 teacherMainView.Show();
                             }
                             else
                             {
+
                                 SinhVien sv = svDAO.FindOneByUsername(Username);
                                 Const.sinhVien = sv;
-
                                 Const._server = new Server();
                                 Const._server.ConnectToServer(Const.sinhVien.Username);
                                 Window oldWindow = App.Current.MainWindow;

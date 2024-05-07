@@ -121,8 +121,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 //    }
                 //}
             }
+            if (detailTopic.TenTrangThai.Text == "Đề xuất")
+                detailTopic.btnXacNhan.Visibility = Visibility.Visible;
+            else
+                detailTopic.btnXacNhan.Visibility = Visibility.Collapsed;
 
-            detailTopic.ThanhVien.Text = thanhVien;
             ListTopic = Topics;
             topicsView.ListTopicView.ItemsSource = ListTopic;
             topicsView.ListTopicView.SelectedItem = null;
