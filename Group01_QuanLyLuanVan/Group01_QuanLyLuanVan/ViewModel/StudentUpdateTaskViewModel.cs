@@ -83,9 +83,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-                TaiKhoan tk = new TaiKhoan();
-                tk = tkDAO.FindOneByUsername(username);
-                string ava = Const._localLink + tk.Avatar;
+                TaiKhoan tk = tkDAO.FindOneByUsername(username);
+                string ava = "";
+                if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                    ava = Const._localLink + "/Resource/Ava/addava.png";
+                else
+                    ava = Const._localLink + tk.Avatar;
 
                 MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
             }

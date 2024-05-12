@@ -49,7 +49,7 @@ namespace Group01_QuanLyLuanVan.DAO
 
         public void Register(SinhVien model)
         {
-            string sqlStr = string.Format("Insert into SinhVien(id, hoTen, ngaySinh, gioiTinh, email, SDT, khoaId, username) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", model.Id, model.HoTen, model.NgaySinh, model.GioiTinh, model.Email, model.SDT, model.KhoaId, model.Username);
+            string sqlStr = string.Format("Insert into SinhVien(id, hoTen, ngaySinh, gioiTinh, email, SDT, khoaId, username) values('{0}', N'{1}', '{2}', N'{3}', '{4}', '{5}', '{6}', '{7}')", model.Id, model.HoTen, model.NgaySinh, model.GioiTinh, model.Email, model.SDT, model.KhoaId, model.Username);
             conn.Sql_Them_Xoa_Sua(sqlStr);
         }
 
@@ -94,30 +94,25 @@ namespace Group01_QuanLyLuanVan.DAO
                 return "";
             }
         }
-        public List<SinhVien> FindByDeTaiId(int nhom)
+        public string FindByDeTaiId(int nhom)
         {
-            List<SinhVien> dsTK = new List<SinhVien>();
-            string sqlStr = string.Format("(select * from SinhVien where nhomId = '{0}'", nhom);
+            string sinhVien = ": ";
+            string sqlStr = string.Format("select * from SinhVien where nhomId = '{0}'", nhom);
             DataTable tb = conn.Sql_Select(sqlStr);
             if (tb.Rows.Count > 0)
             {
                 for (int i = 0; i < tb.Rows.Count; i++)
                 {
                     DataRow dr = tb.Rows[i];
-                    int nhomId;
-                    if (dr["nhomId"].ToString() == "")
-                        nhomId = -1;
-                    else
-                        nhomId = int.Parse(dr["nhomId"].ToString());
-                    SinhVien sinhVien = new SinhVien(dr["sinhVienId"].ToString(), dr["hoTen"].ToString(), DateTime.Parse(dr["ngaySinh"].ToString()), dr["gioiTinh"].ToString(),
-                    dr["diaChi"].ToString(), dr["email"].ToString(), dr["sdt"].ToString(), dr["khoaId"].ToString(), dr["username"].ToString(), nhomId);
-                    dsTK.Add(sinhVien);
+                    sinhVien += dr["hoTen"].ToString(); 
+                    if (i!= tb.Rows.Count-1)
+                        sinhVien += ", ";
                 }
-                return dsTK;
+                return sinhVien;
             }
             else
             {
-                return null;
+                return "";
             }
         }
 

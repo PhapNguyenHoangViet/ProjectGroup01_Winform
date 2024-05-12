@@ -27,9 +27,21 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _ScoreDetailCM(TeacherScoreDetailView p)
         {
             string score = p.score.Text;
+            float parsedScore;
+
             if (score == "")
             {
                 MessageBox.Show("Vui lòng nhập điểm!");
+                return;
+            }
+            else if (!float.TryParse(score, out parsedScore))
+            {
+                MessageBox.Show("Vui lòng nhập số điểm!");
+                return;
+            }
+            else if (parsedScore > 10 || parsedScore < 0)
+            {
+                MessageBox.Show("Vui lòng nhập lại điểm!");
                 return;
             }
             else

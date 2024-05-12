@@ -59,43 +59,44 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         void _Register(SignUpView parameter)
         {
-            //if (parameter.username.Text == "" || password == "" || parameter.sinhVienId.Text == "" || parameter.tenKhoa.Text == "" || parameter.ngaySinh.SelectedDate == null || parameter.hoTen.Text == "" || parameter.gioiTinh.Text == "" || parameter.sdt.Text == "" || parameter.mail.Text == "")
-            //{
-            //    MessageBox.Show("Bạn chưa nhập đầy đủ thông tin !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Warning);
-            //    return;
-            //}
-            //if (tkDAO.FindOneByUsername(parameter.username.Text) != null)
-            //{
-            //    MessageBox.Show("Tên đăng nhập đã tồn tại !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
-            //if (DateTime.Now.Year - parameter.ngaySinh.SelectedDate.Value.Year < 18)
-            //{
-            //    MessageBox.Show("Số tuổi phải lớn hơn 18 !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
-            //string match1 = @"^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
-            //Regex reg1 = new Regex(match1);
-            //if (!reg1.IsMatch(parameter.sdt.Text))
-            //{
-            //    MessageBox.Show("Số điện thoại không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
-            //if (tkDAO.FindOneByMail(parameter.mail.Text) != null)
-            //{
-            //    MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
-            //string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
-            //Regex reg = new Regex(match);
-            //if (!reg.IsMatch(parameter.mail.Text))
-            //{
-            //    MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    return;
-            //}
+            if (parameter.username.Text == "" || password == "" || parameter.sinhVienId.Text == "" || parameter.tenKhoa.Text == "" || parameter.ngaySinh.SelectedDate == null || parameter.hoTen.Text == "" || parameter.gioiTinh.Text == "" || parameter.sdt.Text == "" || parameter.mail.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (tkDAO.FindOneByUsername(parameter.username.Text) != null)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (DateTime.Now.Year - parameter.ngaySinh.SelectedDate.Value.Year < 18)
+            {
+                MessageBox.Show("Số tuổi phải lớn hơn 18 !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            string match1 = @"^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$";
+            Regex reg1 = new Regex(match1);
+            if (!reg1.IsMatch(parameter.sdt.Text))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (tkDAO.FindOneByMail(parameter.mail.Text) != null)
+            {
+                MessageBox.Show("Email này đã được sử dụng !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            string match = @"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$";
+            Regex reg = new Regex(match);
+            if (!reg.IsMatch(parameter.mail.Text))
+            {
+                MessageBox.Show("Email không hợp lệ !", "THÔNG BÁO", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             TaiKhoan tk = new TaiKhoan();
             tk.Username = parameter.username.Text;
+
             tk.Password = password;
             tk.Mail = parameter.mail.Text;
             tk.Quyen = 2;
@@ -113,6 +114,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             sv.Email = parameter.mail.Text;
 
 
+
             if (linkaddimage == "/Resource/Image/addava.png")
                 tk.Avatar = "/Resource/Image/addava.png";
             else
@@ -122,6 +124,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
             tkDAO.Register(tk);
             svDAO.Register(sv);
+            Const.sinhVien = svDAO.FindOneByUsername(Const.taiKhoan.Username);
+            Const.taiKhoan = tkDAO.FindOneByUsername(Const.taiKhoan.Username);
             try
             {
                

@@ -66,8 +66,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         void _DeleteTopicCM(TeacherDissertationDetailView p)
         {
-            deTaiDAO.AnTopic(p.deTaiId.Text);
-            MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK);
+            if (p.TenTrangThai.Text == "Chưa đăng ký")
+            {
+                deTaiDAO.AnTopic(p.deTaiId.Text);
+                MessageBox.Show("Đã xóa đề tài này !", "THÔNG BÁO", MessageBoxButton.OK);
+            }
+            else {
+                MessageBox.Show("Bạn không thể xóa để tài đang đăng ký !", "THÔNG BÁO", MessageBoxButton.OK);
+                return;
+            }
+
             TeacherDissertationView topicsView = new TeacherDissertationView();
             topicsView.ListTopicView.ItemsSource = listTopic();
             topicsView.ListTopicView.Items.Refresh();

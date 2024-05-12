@@ -35,7 +35,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 string moTa = row["moTa"].ToString();
                 string yeuCauChung = row["yeuCauChung"].ToString();
                 DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
-                DateTime ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                DateTime ngayKetThuc;
+                try
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                }
+                catch
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
+                }
                 int nhomId = Convert.ToInt32(row["nhomId"]);
                 MyDeTai.Add(new DeTai(tenDeTai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, nhomId, hoTen, tenTheLoai));
             }
@@ -58,7 +66,15 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 string moTa = row["moTa"].ToString();
                 string yeuCauChung = row["yeuCauChung"].ToString();
                 DateTime ngayBatDau = Convert.ToDateTime(row["ngayBatDau"]);
-                DateTime ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                DateTime ngayKetThuc;
+                try
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayKetThuc"]);
+                }
+                catch
+                {
+                    ngayKetThuc = Convert.ToDateTime(row["ngayBatDau"]);
+                }
                 int nhomId = Convert.ToInt32(row["nhomId"]);
                 ListTopic.Add(new DeTai(tenDeTai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, nhomId, hoTen, tenTheLoai));
             }

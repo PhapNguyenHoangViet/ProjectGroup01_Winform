@@ -73,7 +73,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ObservableCollection<DeTai> Topics { get; set; }
         public void LoadTenND(StudentMainView p)
         {
-            p.TenDangNhap.Text = Const.sinhVien.HoTen;
+            SinhVien sv = sinhVienDAO.FindOneByUsername(Const.taiKhoan.Username);
+            Const.sinhVien = sv;
+            p.TenDangNhap.Text = Const.sinhVien.HoTen.ToString();
         }
 
         public StudentMainViewModel()
@@ -247,7 +249,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
         }
         void LoadTrangthai()
         {
-            string query = string.Format("SELECT COUNT(tb.trangthai) AS SoLuongTrangThai FROM ThongBao tb JOIN DeTai dt ON tb.deTaiId = dt.deTaiId JOIN SinhVien sv ON dt.nhomId = sv.nhomId JOIN TaiKhoan tk ON sv.username = tk.username WHERE tb.trangthai = 0 AND tk.username = 'phap'");
+            string query = string.Format("SELECT COUNT(tb.trangthai) AS SoLuongTrangThai FROM ThongBao tb JOIN DeTai dt ON tb.deTaiId = dt.deTaiId JOIN SinhVien sv ON dt.nhomId = sv.nhomId JOIN TaiKhoan tk ON sv.username = tk.username WHERE tb.trangthai = 0 AND tk.username = '{0}'", Const.taiKhoan.Username);
 
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
             {

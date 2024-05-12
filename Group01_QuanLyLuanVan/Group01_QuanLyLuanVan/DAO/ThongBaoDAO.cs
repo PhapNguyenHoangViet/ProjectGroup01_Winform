@@ -30,7 +30,7 @@ namespace Group01_QuanLyLuanVan.DAO
 
         public void AddThongBao(ThongBao tb)
         {
-            string sqlStr = string.Format("Insert into ThongBao(tieude, noidung, deTaiId, ngay) values(N'{0}', N'{1}', '{2}', '{3}')", tb.TieuDe, tb.NoiDung, tb.DeTaiId, tb.Ngay);
+            string sqlStr = string.Format("Insert into ThongBao(tieude, noidung, deTaiId, ngay, trangThai) values(N'{0}', N'{1}', '{2}', '{3}', 0)", tb.TieuDe, tb.NoiDung, tb.DeTaiId, tb.Ngay);
             conn.Sql_Them_Xoa_Sua(sqlStr);
         }
 

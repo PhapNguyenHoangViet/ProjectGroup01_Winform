@@ -102,25 +102,24 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 detailTopic.NgayKetThuc.Text = "";
             else
                 detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
+            
             string thanhVien = "";
             if (detailTopic.TenTrangThai.Text != "Đã đăng ký")
                 thanhVien = "Đề tài chưa đăng ký";
             else
             {
                 int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
-                thanhVien += "Nhóm " + nhomId.ToString();
-                //if (nhomId != -1)
-                //{
-                //    List<SinhVien> sinhViens = svDAO.FindByDeTaiId(nhomId);
-                //    if (sinhViens != null)
-                //    {
-                //        foreach (SinhVien sinhVien in sinhViens)
-                //        {
-                //            thanhVien += sinhVien.HoTen + "; ";
-                //        }
-                //    }
-                //}
+                thanhVien = "Nhóm " + nhomId.ToString();
+                if (nhomId != -1)
+                {
+                    string sinhViens = svDAO.FindByDeTaiId(nhomId);
+                    if (sinhViens != null)
+                    {
+                        thanhVien += sinhViens;
+                    }
+                }
             }
+            detailTopic.ThanhVien.Text = thanhVien;
             if (detailTopic.TenTrangThai.Text == "Đề xuất")
                 detailTopic.btnXacNhan.Visibility = Visibility.Visible;
             else
