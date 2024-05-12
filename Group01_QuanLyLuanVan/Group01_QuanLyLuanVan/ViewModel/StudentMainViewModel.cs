@@ -105,20 +105,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 LoadTrangthai();
                 GiangVien gv = new GiangVien();
-<<<<<<< HEAD
-                MessageBox.Show(Const.sinhVien.NhomId.ToString());
-                if (Const.sinhVien.NhomId.ToString() != "" && Const.sinhVien.NhomId != -1)
-=======
+
                 if (Const.sinhVien.NhomId.ToString() != "-1")
->>>>>>> Phap3
                 {
                     string dtTaiId = sinhVienDAO.FindDeTaiIdByNhomID(Const.sinhVien.NhomId);
                     string gvId = dtDAO.FindGiangVienIdByDeTaiId(dtTaiId);
                     gv = gvDAO.FindOneById(gvId);
                 }
-<<<<<<< HEAD
-                else {
-=======
                 else
                 {
                     MessageBox.Show("Vui lòng đăng kí đề tài.");
@@ -208,7 +201,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 }
                 else
                 {
->>>>>>> Phap3
                     MessageBox.Show("Vui lòng đăng kí đề tài.");
                     return;
                 }

@@ -17,12 +17,8 @@ namespace Group01_QuanLyLuanVan.Model
         private string uid;
         private string avatar;
 
-<<<<<<< HEAD
-        public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId)
-=======
 
         public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId, string avatar)
->>>>>>> Phap3
         {
             this.tinNhanId = tinNhanId;
             this.tinNhan = tinNhan;

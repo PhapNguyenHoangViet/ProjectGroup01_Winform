@@ -11,27 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
-<<<<<<< HEAD
-=======
 using Group01_QuanLyLuanVan.Chat.Net;
 using System.Windows.Controls;
 using System.Security.Cryptography;
 using System.Data.SqlClient;
->>>>>>> Phap3
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherTaskMessageViewModel : BaseViewModel, INotifyPropertyChanged
     {
-<<<<<<< HEAD
-        MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-=======
         TaiKhoanDAO tkDAO = new TaiKhoanDAO();
 
         private int _sliderValue;
@@ -55,7 +43,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
 
         MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
->>>>>>> Phap3
 
         public ICommand AddMsg { get; set; }
 
@@ -66,11 +53,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
             set { _ListMessage = value; }
         }
 
-<<<<<<< HEAD
-        public TeacherTaskMessageViewModel()
-        {
-            AddMsg = new RelayCommand<TeacherTaskMessageView>((p) => true, (p) => _AddMsg(p));
-=======
         public ICommand back { get; set; }    
         public ICommand LoadTaskMessageCommand { get; set; }
 
@@ -80,8 +62,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
             
             back = new RelayCommand<TeacherTaskMessageView>((p) => true, p => _back(p));
             UpdateTrangThaiCommand = new RelayCommand<TeacherTaskMessageView>((p) => true, (p) => _UpdateTrangThaiCommand(p));
-
->>>>>>> Phap3
             var msgsdata = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
             foreach (DataRow row in msgsdata.Rows)
             {
@@ -90,11 +70,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-<<<<<<< HEAD
-                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-            }
-        }
-=======
                 TaiKhoan tk = tkDAO.FindOneByUsername(username);
                 string ava = "";
                 if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
@@ -187,7 +162,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
         }
 
->>>>>>> Phap3
         void _AddMsg(TeacherTaskMessageView p)
         {
             if (p.Msg.Text == "")
@@ -197,33 +171,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
             }
             else
             {
-<<<<<<< HEAD
-                messageTaskDAO.AddMessage(p.Msg.Text, DateTime.Now, Const.giangVien.Username,Const.yeuCauId);
-                DataTable dataTable = messageTaskDAO.LoadListMessageTask(Const.yeuCauId);
-                if (dataTable.Rows.Count > 0)
-                {
-                    DataRow lastRow = dataTable.Rows[dataTable.Rows.Count - 1];
-                    int tinNhanId = int.Parse(lastRow["tinNhanId"].ToString());
-                    string tinNhan = lastRow["tinNhan"].ToString();
-                    DateTime thoiGian = DateTime.Parse(lastRow["thoiGian"].ToString());
-                    string username = lastRow["username"].ToString();
-                    int yeuCauId = Convert.ToInt32(lastRow["yeuCauId"]);
-                    ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-                }
-                p.Msg.Text = "";
-
-                TeacherTaskMessageView teacherTaskMessageView = new TeacherTaskMessageView();
-                teacherTaskMessageView.ListMessageView.ItemsSource = listMsg();
-                teacherTaskMessageView.ListMessageView.Items.Refresh();
-                TeacherMainViewModel.MainFrame.Content = teacherTaskMessageView;
-=======
                 Quyen = "1";
 
                 messageTaskDAO.AddMessage(p.Msg.Text, DateTime.Now, Const.giangVien.Username, Const.yeuCauId);
                 Const._server.SendMessageToServer(Message+ "|" + Const.yeuCauId.ToString());
                 p.Msg.Text = "";
-
->>>>>>> Phap3
             }
 
         }
@@ -238,12 +190,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-<<<<<<< HEAD
-                ListMessage.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-            }
-            return ListMessage;
-        }
-=======
                 TaiKhoan tk = tkDAO.FindOneByUsername(username);
                 string ava = "";
                 if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
@@ -286,6 +232,5 @@ namespace Group01_QuanLyLuanVan.ViewModel
             TeacherTaskDetailView taskView = new TeacherTaskDetailView();
             TeacherMainViewModel.MainFrame.Content = taskView;
         }
->>>>>>> Phap3
     }
 }

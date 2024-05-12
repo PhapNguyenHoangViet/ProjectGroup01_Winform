@@ -72,12 +72,8 @@ namespace Group01_QuanLyLuanVan.ViewModel
             YeuCau temp = (YeuCau)teacherTaskDetailView.ListTaskView.SelectedItem;
 
             Const.yeuCauId = temp.YeuCauId;
-<<<<<<< HEAD
-            messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
-=======
+
             Const.YeuCau = temp;
-            //messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
->>>>>>> Phap3
             messageView.TenTask.Text = temp.NoiDung.ToString();
             messageView.TienDo.Text = temp.TrangThai.ToString();
             MessageTasks = new ObservableCollection<MessageTask>();
@@ -89,10 +85,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
-<<<<<<< HEAD
-                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
-            }
-=======
                 TaiKhoan tk = tkDAO.FindOneByUsername(username);
                 string ava = "";
                 if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
@@ -102,8 +94,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
                 MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
             }
-
->>>>>>> Phap3
             messageView.ListMessageView.ItemsSource = MessageTasks;
             messageView.ListMessageView.SelectedItem = null;
             TeacherMainViewModel.MainFrame.Content = messageView;

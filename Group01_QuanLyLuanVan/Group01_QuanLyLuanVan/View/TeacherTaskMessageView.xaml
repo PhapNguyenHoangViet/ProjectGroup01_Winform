@@ -92,15 +92,6 @@ Grid.Row="0" Margin="0,0,0,0">
                         </Button>
 
                     </StackPanel>
-<<<<<<< HEAD
-                    <ListView ItemsSource="{Binding ListMessage}" HorizontalContentAlignment="Stretch"                    
-                        x:Name = "ListMessageView"
-                        Height = "364"
-                        Width = "671"
-                        SelectionMode = "Single"
-                        ScrollViewer.VerticalScrollBarVisibility = "Hidden"
-                        Foreground="White"
-=======
 
                 </DockPanel>
             </Grid>
@@ -117,7 +108,6 @@ Grid.Row="0" Margin="0,0,0,0">
                     SelectionMode = "Single"
                     ScrollViewer.VerticalScrollBarVisibility = "Hidden"
                     Foreground="White" Margin="12,0,12,10"
->>>>>>> Phap3
                     >
                         <ListView.ItemTemplate >
                             <DataTemplate>
@@ -137,38 +127,7 @@ Grid.Row="0" Margin="0,0,0,0">
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
 
-<<<<<<< HEAD
-                                        </Grid.ColumnDefinitions >
-                                        <Grid Grid.Column = "0" >
-                                            <TextBlock
-                                                Text = "{Binding TinNhan}"
-                                                HorizontalAlignment = "Center"
-                                                VerticalAlignment = "Center"
-                                                FontFamily = "{StaticResource Custom}"
-                                                FontSize = "12">
-                                            </TextBlock >
 
-                                        </Grid >
-                                        <Grid Grid.Column = "1" >
-                                            <TextBlock
-                                                Text = "{Binding Username}"
-                                                HorizontalAlignment = "Center"
-                                                VerticalAlignment = "Center"
-                                                FontFamily = "{StaticResource Custom}"
-                                                FontSize = "12">
-                                            </TextBlock >
-                                        </Grid >
-
-                                        <Grid Grid.Column = "2" >
-                                            <TextBlock
-                                                Text = "{Binding ThoiGian}"
-                                                HorizontalAlignment = "Center"
-                                                VerticalAlignment = "Center"
-                                                FontFamily = "{StaticResource Custom}"
-                                                FontSize = "12">
-                                            </TextBlock >
-                                        </Grid >
-=======
                                         <Grid Grid.Column="0" Margin="0,0,10,0">
 
                                             <Ellipse Height="40" Width="40" VerticalAlignment="Top">
@@ -204,74 +163,12 @@ Grid.Row="0" Margin="0,0,0,0">
                                             </Border>
 
                                         </Grid>
->>>>>>> Phap3
                                     </Grid >
 
                                 </Border >
                             </DataTemplate >
                         </ListView.ItemTemplate >
-<<<<<<< HEAD
-                        <ListView.ItemsPanel >
-                            <ItemsPanelTemplate >
-                                <WrapPanel Orientation = "Vertical" />
-                            </ItemsPanelTemplate >
-                        </ListView.ItemsPanel >
-                        <i:Interaction.Triggers >
-                            <i:EventTrigger EventName = "SelectionChanged" >
-                                <i:InvokeCommandAction Command = ""
-                                                       CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"></i:InvokeCommandAction >
-                            </i:EventTrigger >
-                        </i:Interaction.Triggers >
-                    </ListView >
 
-                    <StackPanel Orientation = "Horizontal" Height="61" Width="689" >
-                        <TextBlock Text = "Tin nhắn: "
-                                    Margin = "30,15,0,0" 
-                        HorizontalAlignment = "Center"
-                        VerticalAlignment = "Center"
-                        FontFamily = "{StaticResource Custom1}"
-                        FontSize = "16"
-                        FontWeight = "Light"
-                        />
-                        <Border BorderThickness="0.5" BorderBrush="Gray" CornerRadius="10" 
-                Margin = "20,15,0,0" Width="400" Height="40">
-                            <TextBox
-                                x:Name="Msg"
-                                HorizontalAlignment="Left"
-                        VerticalAlignment = "Center"
-                                Width="400"
-                                Height="40"
-                                 FontSize = "16"
-                                Margin = "0,8,0,0"
-                        FontWeight = "Light"
-                                FontFamily="{StaticResource Custom1}"
-                                BorderThickness="0"
-                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                                materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                materialDesign:TextFieldAssist.TextBoxViewMargin="20,0,0,0"/>
-                        </Border>
-                        <Button
-                            Content = "Gửi"
-                            Margin = "30,15,0,0"
-                            Width = "86"
-                            Height = "41"
-                            VerticalAlignment = "Center"
-                            materialDesign:ButtonAssist.CornerRadius = "15"
-                            Background = "#55b3d9"
-                            FontFamily = "{StaticResource Custom}">
-
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click">
-                                    <i:InvokeCommandAction     
-                            Command="{Binding AddMsg}"
-                            CommandParameter="{Binding ElementName=TeacherTaskMessageWd}"/>
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                        </Button>
-                    </StackPanel >
-                </StackPanel >
-            </Grid >
-=======
 
                     </ListView>
                 </Grid>
@@ -317,7 +214,6 @@ Grid.Row="0" Margin="0,0,0,0">
 
                 </StackPanel>
             </Grid>
->>>>>>> Phap3
         </Grid >
 
     </Border >
