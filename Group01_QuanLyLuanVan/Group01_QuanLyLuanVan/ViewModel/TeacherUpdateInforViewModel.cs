@@ -77,7 +77,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
                 Ava = Const._localLink + "/Resource/Image/addava.png";
             else
-                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                Ava = Const._localLink + Const.taiKhoan.Avatar;
             GiangVien gv = Const.giangVien;
             GiangVienId = gv.GiangVienId;
             NgaySinh = gv.NgaySinh.ToString();
@@ -131,17 +131,30 @@ namespace Group01_QuanLyLuanVan.ViewModel
             gv.Email = Mail;
             gv.DiaChi = DiaChi;
             gvDAO.UpdateGiangVien(gv);
-                        Const.giangVien = gv;
+            Const.giangVien = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
+
             Const.taiKhoan.Mail = Mail;
-            if (Ava == "/Resource/Image/addava.png")
-            { 
-                Const.taiKhoan.Avatar = "/Resource/Image/addava.png";
-            }
-            else 
+            string avatarFileName = Const.taiKhoan.Username + ((Ava.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+            string avatarPath = Const._localLink + @"/Resource/Ava/";
+
+            if (File.Exists(avatarPath + avatarFileName))
             {
-                Const.taiKhoan.Avatar = "/Resource/Ava/" + Const.taiKhoan.Username + ((Ava.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                string newAvatarFileName = GetUniqueFileName(avatarFileName);
+                File.Copy(Ava, avatarPath + newAvatarFileName, true);
+                Const.taiKhoan.Avatar = "/Resource/Ava/" + newAvatarFileName;
             }
+            else
+            {
+                File.Copy(Ava, avatarPath + avatarFileName, true);
+                Const.taiKhoan.Avatar = "/Resource/Ava/" + avatarFileName;
+            }
+
             tkDAO.UpdateTaiKhoan(Const.taiKhoan.Mail, Const.taiKhoan.Avatar, Const.taiKhoan.Username);
+
+            Const.taiKhoan = tkDAO.FindOneByUsername(Const.taiKhoan.Username);
+            GiangVien gv1 = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
+            Const.giangVien = gv1;
+
             Window oldWindow = App.Current.MainWindow;
             TeacherMainView teacherMainView = new TeacherMainView();
             App.Current.MainWindow = teacherMainView;
@@ -163,6 +176,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             ChangePasswordView changePasswordView = new ChangePasswordView();
             TeacherMainViewModel.MainFrame.Content = changePasswordView;
+        }
+
+        private string GetUniqueFileName(string fileName)
+        {
+            string nameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
+            string extension = Path.GetExtension(fileName);
+            string uniqueName = nameWithoutExtension + "_" + Guid.NewGuid().ToString().Substring(0, 8) + extension;
+            return uniqueName;
         }
     }
 }

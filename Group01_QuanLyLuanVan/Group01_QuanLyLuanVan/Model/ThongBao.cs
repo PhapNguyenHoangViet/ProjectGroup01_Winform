@@ -13,6 +13,7 @@ namespace Group01_QuanLyLuanVan.Model
         private string noiDung;
         private string deTaiId;
         private DateTime ngay;
+        private string tenTrangThai;
 
         public ThongBao() { }
 
@@ -32,10 +33,20 @@ namespace Group01_QuanLyLuanVan.Model
             this.deTaiId = deTaiId;
             this.ngay = ngay;
         }
+        public ThongBao(int thongBaoId, string tieuDe, string noiDung, string deTaiId, DateTime ngay, string tenTrangThai)
+        {
+            this.thongBaoId = thongBaoId;
+            this.tieuDe = tieuDe;
+            this.noiDung = noiDung;
+            this.deTaiId = deTaiId;
+            this.ngay = ngay;
+            this.tenTrangThai = tenTrangThai;
+        }
         public int ThongBaoId { get => thongBaoId; set => thongBaoId = value; }
         public string TieuDe { get => tieuDe; set => tieuDe = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public string DeTaiId { get => deTaiId; set => deTaiId = value; }
         public DateTime Ngay { get => ngay; set => ngay = value; }
+        public string TenTrangThai { get => tenTrangThai; set => tenTrangThai = value; }
     }
 }

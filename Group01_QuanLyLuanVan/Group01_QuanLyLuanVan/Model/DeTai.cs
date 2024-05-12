@@ -25,8 +25,26 @@ namespace Group01_QuanLyLuanVan.Model
         private string tenNhom;
         private int an;
         private string phanTram;
+        private string diemStr;
+        private float diem;
+
 
         public DeTai() { }
+        public DeTai(float diem)
+        {
+            this.diem = diem;
+        }
+        public DeTai(string tenDeTai, string moTa, string yeuCauChung, DateTime ngayBatDau, DateTime ngayKetThuc, int nhomId, string hoTen, string tenTheLoai)
+        {
+            this.tenDeTai = tenDeTai;
+            this.moTa = moTa;
+            this.yeuCauChung = yeuCauChung;
+            this.ngayBatDau = ngayBatDau;
+            this.ngayKetThuc = ngayKetThuc;
+            this.nhomId = nhomId;
+            this.hoTen = hoTen;
+            this.tenTheLoai = tenTheLoai;
+        }
 
         public DeTai(string deTaiId, string tenDeTai, string moTa, string yeuCauChung,
             int soLuong, int trangThai, DateTime ngayBatDau, DateTime ngayKetThuc, string theLoaiId,
@@ -159,5 +177,10 @@ namespace Group01_QuanLyLuanVan.Model
         public string TenNhom { get => tenNhom; set => tenNhom = value; }
         public int An { get => an; set => an = value; }
         public string PhanTram { get => phanTram; set => phanTram = value; }
+        public string DiemStr { get => diemStr; set => diemStr = value; }
+
+        public float Diem { get => diem; set => diem = value; }
+
+
     }
 }

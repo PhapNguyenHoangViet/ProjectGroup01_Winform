@@ -11,11 +11,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Input;
+using Group01_QuanLyLuanVan.Chat.Net;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherTaskViewModel : BaseViewModel
     {
+
         DeTaiDAO dtDAO = new DeTaiDAO();
 
         YeuCauDAO yeuCauDAO = new YeuCauDAO();
@@ -64,6 +66,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             // chuyển sang view detail topic
             TeacherTaskDetailView taskView = new TeacherTaskDetailView();
             DeTai temp = (DeTai)topicsView.ListTopicView.SelectedItem;
+            Const.DeTai = temp;
             taskView.TenDeTai.Text = temp.TenDeTai;
             Const.deTaiId =  temp.DeTaiId;
             Tasks = new ObservableCollection<YeuCau>();

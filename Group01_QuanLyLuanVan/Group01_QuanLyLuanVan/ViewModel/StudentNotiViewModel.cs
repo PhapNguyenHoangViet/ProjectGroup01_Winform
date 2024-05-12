@@ -4,7 +4,9 @@ using Group01_QuanLyLuanVan.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class StudentNotiViewModel : BaseViewModel
     {
+
         ThongBaoDAO tbDAO = new ThongBaoDAO();
         private ObservableCollection<ThongBao> _ListThongBao;
         public ObservableCollection<ThongBao> ListThongBao { get => _ListThongBao; set { _ListThongBao = value;/* OnPropertyChanged();*/ } }
@@ -36,16 +39,25 @@ namespace Group01_QuanLyLuanVan.ViewModel
         {
             ThongBaos = new ObservableCollection<ThongBao>();
             var thongBaosData = tbDAO.LoadListThongBao();
-
             foreach (DataRow row in thongBaosData.Rows)
             {
                 int thongBaoId = Convert.ToInt32(row["thongBaoId"]);
+                int trangThai = Convert.ToInt32(row["trangthai"]);
                 string tieuDe = row["tieuDe"].ToString();
                 string noiDung = row["noiDung"].ToString();
                 string deTaiId = row["deTaiId"].ToString();
                 DateTime ngay = Convert.ToDateTime(row["ngay"]);
+                string tenTrangThai = "";
 
-                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
+                if (trangThai == 1)
+                {
+                    tenTrangThai = "Đã đọc";
+                }
+                else
+                {
+                    tenTrangThai = "Chưa đọc";
+                }
+                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay, tenTrangThai));
             }
             ListThongBao = ThongBaos;
             LoadThongBaosCommand = new RelayCommand<StudentNotiView>((p) => true, (p) => _LoadThongBaosCommand(p));
@@ -62,12 +74,22 @@ namespace Group01_QuanLyLuanVan.ViewModel
             foreach (DataRow row in thongBaosData.Rows)
             {
                 int thongBaoId = Convert.ToInt32(row["thongBaoId"]);
+                int trangThai = Convert.ToInt32(row["trangthai"]);
                 string tieuDe = row["tieuDe"].ToString();
                 string noiDung = row["noiDung"].ToString();
                 string deTaiId = row["deTaiId"].ToString();
                 DateTime ngay = Convert.ToDateTime(row["ngay"]);
+                string tenTrangThai = "";
 
-                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
+                if (trangThai == 1)
+                {
+                    tenTrangThai = "Đã đọc";
+                }
+                else
+                {
+                    tenTrangThai = "Chưa đọc";
+                }
+                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay, tenTrangThai));
             }
             return ThongBaos;
         }
@@ -77,7 +99,18 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 var selectedThongBao = (ThongBao)tbView.ListThongBaoView.SelectedItem;
                 SelectedThongBaoNoiDung = selectedThongBao.NoiDung;
+
             }
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+            {
+                conn.Open();
+                string updatetrangthaiQuery = "UPDATE ThongBao SET trangthai = 1 WHERE deTaiId IN (SELECT deTaiId FROM DeTai WHERE nhomId = @nhomid) AND noiDung = @noidung ";
+                SqlCommand updatetrangthaiQueryCommand = new SqlCommand(updatetrangthaiQuery, conn);
+                updatetrangthaiQueryCommand.Parameters.AddWithValue("@noidung", SelectedThongBaoNoiDung);
+                updatetrangthaiQueryCommand.Parameters.AddWithValue("@nhomid", Const.sinhVien.NhomId);
+                updatetrangthaiQueryCommand.ExecuteNonQuery();
+            }
+
         }
     }
 }

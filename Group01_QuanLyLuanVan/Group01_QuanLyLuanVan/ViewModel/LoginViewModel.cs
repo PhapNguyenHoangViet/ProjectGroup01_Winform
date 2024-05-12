@@ -1,4 +1,5 @@
-﻿using Group01_QuanLyLuanVan.DAO;
+﻿using Group01_QuanLyLuanVan.Chat.Net;
+using Group01_QuanLyLuanVan.DAO;
 using Group01_QuanLyLuanVan.Model;
 using Group01_QuanLyLuanVan.View;
 using System;
@@ -33,8 +34,6 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
         public LoginViewModel()
         {
-            Password = "";
-            Username = "";
             PasswordChangedCommand = new RelayCommand<PasswordBox>((p) => { return true; }, (p) => { Password = p.Password; });
 
             LoadLoginPageCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
@@ -45,58 +44,63 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
             LoginCM = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
-
-                try
-                {
                     TaiKhoan tk = tkDAO.FindOne(Username, Password);
                     Const.taiKhoan = tk;
 
-                    if (tk != null)
+                if (tk != null)
+                {
+                    if (tk.TrangThai == 0)
                     {
-                        if (tk.TrangThai == 0)
-                        {
-                            MessageBox.Show("Tài khoản chưa được kích hoạt!", "Thông báo", MessageBoxButton.OK);
-                        }
-                        else 
-                        {
-                            if (tk.Quyen == 0)
-                            {
-                                Window oldWindow = App.Current.MainWindow;
-                                ADMainView adMainView = new ADMainView();
-                                App.Current.MainWindow = adMainView;
-                                oldWindow.Close();
-                                adMainView.Show();
-                            }
-                            else if (tk.Quyen == 1)
-                            {
-                                GiangVien gv = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
-                                Const.giangVien = gv;
-                                Window oldWindow = App.Current.MainWindow;
-                                TeacherMainView teacherMainView = new TeacherMainView();
-                                App.Current.MainWindow = teacherMainView;
-                                oldWindow.Close();
-                                teacherMainView.Show();
-                            }
-                            else
-                            {
-                                SinhVien sv = svDAO.FindOneByUsername(Username);
-                                Const.sinhVien = sv;
-                                Window oldWindow = App.Current.MainWindow;
-                                StudentMainView studentMainView = new StudentMainView();
-                                App.Current.MainWindow = studentMainView;
-                                oldWindow.Close();
-                                studentMainView.Show();
-                            }
-                        }
+                        MessageBox.Show("Tài khoản chưa được kích hoạt!", "Thông báo", MessageBoxButton.OK);
                     }
                     else
                     {
-                        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButton.OK);
+                        if (tk.Quyen == 0)
+                        {
+                            Window oldWindow = App.Current.MainWindow;
+                            ADMainView adMainView = new ADMainView();
+                            App.Current.MainWindow = adMainView;
+                            oldWindow.Close();
+                            adMainView.Show();
+                        }
+                        else if (tk.Quyen == 1)
+                        {
+
+                            GiangVien gv = gvDAO.FindOneByUsername(Const.taiKhoan.Username);
+                            Const.giangVien = gv;
+
+                            Const._server = new Server();
+                            Const._server.ConnectToServer(Const.taiKhoan.Username);
+                            Window oldWindow = App.Current.MainWindow;
+                            TeacherMainView teacherMainView = new TeacherMainView();
+                            App.Current.MainWindow = teacherMainView;
+                            oldWindow.Close();
+                            teacherMainView.Show();
+                        }
+                        else
+                        {
+
+                            SinhVien sv = svDAO.FindOneByUsername(Const.taiKhoan.Username);
+                            Const.sinhVien = sv;
+
+                            Const._server = new Server();
+                            Const._server.ConnectToServer(Const.taiKhoan.Username);
+
+                            Window oldWindow = App.Current.MainWindow;
+                            StudentMainView studentMainView = new StudentMainView();
+
+                            App.Current.MainWindow = studentMainView;
+
+                            studentMainView.Show();
+                            oldWindow.Close();
+
+
+                        }
                     }
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Mất kết nối đến cơ sở dữ liệu!", "Thông báo", MessageBoxButton.OK);
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButton.OK);
                 }
             });
 

@@ -12,19 +12,17 @@ using System.Windows.Input;
 using System.Windows;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using Group01_QuanLyLuanVan.Chat.Net;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
     public class TeacherTaskDetailViewModel : BaseViewModel
     {
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+
         YeuCauDAO ycDAO = new YeuCauDAO();
         MessageTaskDAO messageTaskDAO = new MessageTaskDAO();
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         public ICommand AddTask { get; set; }
 
@@ -41,13 +39,16 @@ namespace Group01_QuanLyLuanVan.ViewModel
             get { return _ListMessage ?? (_ListMessage = new ObservableCollection<MessageTask>()); }
             set { _ListMessage = value; }
         }
-
+        public ICommand back { get; set; }
+        public ICommand LoadTasksCommand { get; set; }
         public ICommand MessageTaskCommand { get; set; }
 
         public ObservableCollection<MessageTask> MessageTasks { get; set; }
 
         public TeacherTaskDetailViewModel()
         {
+            back = new RelayCommand<TeacherTaskDetailView>((p) => true, p => _back(p));
+
             AddTask = new RelayCommand<TeacherTaskDetailView>((p) => true, (p) => _AddTask(p));
             MessageTaskCommand = new RelayCommand<TeacherTaskDetailView>((p) => { return p.ListTaskView.SelectedItem == null ? false : true; }, (p) => _MessageTaskCommand(p));
             var tasksdata = ycDAO.LoadListTask(Const.deTaiId);
@@ -59,16 +60,26 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 int trangThai = Convert.ToInt32(row["trangThai"]);
                 ListTask.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
             }
+            LoadTasksCommand = new RelayCommand<TeacherTaskDetailView>((p) => true, (p) => _LoadTasksCommand(p));
+
         }
 
         void _MessageTaskCommand(TeacherTaskDetailView teacherTaskDetailView)
         {
+
+
             TeacherTaskMessageView messageView = new TeacherTaskMessageView();
             YeuCau temp = (YeuCau)teacherTaskDetailView.ListTaskView.SelectedItem;
 
             Const.yeuCauId = temp.YeuCauId;
+<<<<<<< HEAD
             messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
+=======
+            Const.YeuCau = temp;
+            //messageView.TenDeTai.Text = teacherTaskDetailView.TenDeTai.Text;
+>>>>>>> Phap3
             messageView.TenTask.Text = temp.NoiDung.ToString();
+            messageView.TienDo.Text = temp.TrangThai.ToString();
             MessageTasks = new ObservableCollection<MessageTask>();
             var messages = messageTaskDAO.LoadListMessageTask(temp.YeuCauId);
             foreach (DataRow row in messages.Rows)
@@ -78,8 +89,21 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 DateTime thoiGian = DateTime.Parse(row["thoiGian"].ToString());
                 string username = row["username"].ToString();
                 int yeuCauId = Convert.ToInt32(row["yeuCauId"]);
+<<<<<<< HEAD
                 MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId));
             }
+=======
+                TaiKhoan tk = tkDAO.FindOneByUsername(username);
+                string ava = "";
+                if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
+                    ava = Const._localLink + "/Resource/Ava/addava.png";
+                else
+                    ava = Const._localLink + tk.Avatar;
+
+                MessageTasks.Add(new MessageTask(tinNhanId, tinNhan, thoiGian, username, yeuCauId, ava));
+            }
+
+>>>>>>> Phap3
             messageView.ListMessageView.ItemsSource = MessageTasks;
             messageView.ListMessageView.SelectedItem = null;
             TeacherMainViewModel.MainFrame.Content = messageView;
@@ -112,10 +136,17 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 p.TaskName.Text = "";
 
                 TeacherTaskDetailView topicsView = new TeacherTaskDetailView();
+                topicsView.TenDeTai.Text = Const.DeTai.TenDeTai;
                 topicsView.ListTaskView.ItemsSource = listTask();
                 topicsView.ListTaskView.Items.Refresh();
                 TeacherMainViewModel.MainFrame.Content = topicsView;
             }
+        }
+
+        void _LoadTasksCommand(TeacherTaskDetailView tasksView)
+        {
+            tasksView.TenDeTai.Text = Const.DeTai.TenDeTai;
+            tasksView.ListTaskView.ItemsSource = listTask();
 
         }
         ObservableCollection<YeuCau> listTask()
@@ -131,6 +162,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 ListTask.Add(new YeuCau(yeuCauId, noiDung, trangThai, deTaiId));
             }
             return ListTask;
+        }
+        void _back(TeacherTaskDetailView paramater)
+        {
+            TeacherTaskView taskView = new TeacherTaskView();
+            TeacherMainViewModel.MainFrame.Content = taskView;
         }
     }
 }

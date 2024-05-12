@@ -24,7 +24,7 @@
                     FontFamily="Josefin Sans"
                     FontSize=" 25"
                     Margin="0,20,0,10"                    
-                    Foreground="#353A55"
+                    Foreground="#55b3d9"
                     FontWeight="Bold"
                     HorizontalAlignment="Center"
                     />
@@ -69,7 +69,7 @@
                                 Height = "40"
                                 CornerRadius = "10"
                                 Margin = "0,0,10,0"
-                                Background = "#353A55"
+                                Background = "#55b3d9"
                                 >
                                 <Grid >
                                     <Grid.ColumnDefinitions >

@@ -18,7 +18,8 @@ namespace Group01_QuanLyLuanVan.Model
         private string sdt;
         private string khoaId;
         private string username;
-
+        private string soLuongTaskGiao;
+        private string soLuongTaskHoanThanh;
         public GiangVien() { }
 
         public GiangVien(string giangVienId, string hoTen, DateTime ngaySinh, string gioiTinh, string diaChi, string email, string sdt, string khoaId, string username)
@@ -33,6 +34,15 @@ namespace Group01_QuanLyLuanVan.Model
             this.khoaId = khoaId;
             this.username = username;
         }
+
+        public GiangVien(string giangVienId, string hoTen, string soLuongTaskGiao)
+        {
+            this.giangVienId = giangVienId;
+            this.hoTen = hoTen;
+            this.soLuongTaskGiao = soLuongTaskGiao;
+        }
+        public string SoLuongTaskGiao { get => soLuongTaskGiao; set => soLuongTaskGiao = value; }
+        public string SoLuongTaskHoanThanh { get => soLuongTaskHoanThanh; set => soLuongTaskHoanThanh = value; }
 
         public string GiangVienId { get => giangVienId; set => giangVienId = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }

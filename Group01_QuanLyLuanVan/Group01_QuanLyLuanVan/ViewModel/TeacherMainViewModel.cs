@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows;
 using Group01_QuanLyLuanVan.Properties;
+using Group01_QuanLyLuanVan.DAO;
 
 namespace Group01_QuanLyLuanVan.ViewModel
 {
@@ -28,6 +29,13 @@ namespace Group01_QuanLyLuanVan.ViewModel
         public ICommand TeacherTaskCM { get; set; }
         public ICommand TeacherProgressCM { get; set; }
         public ICommand TeacherNotiCM { get; set; }
+        public ICommand TeacherMailCM { get; set; }
+        
+        public ICommand TeacherScoreCM { get; set; }
+
+        public ICommand TeacherStatisticCM { get; set; }
+
+
         public void LoadTenND(TeacherMainView p)
         {
             p.TenDangNhap.Text = Const.giangVien.HoTen;
@@ -64,6 +72,11 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new TeacherTaskView();
             });
 
+            TeacherScoreCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherScoreView();
+            });
+
             TeacherProgressCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
             {
                 MainFrame.Content = new TeacherProgressView();
@@ -74,6 +87,25 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 MainFrame.Content = new TeacherNotiView();
             });
 
+            TeacherStatisticCM = new RelayCommand<Frame>((p) => { return true; }, (p) =>
+            {
+                MainFrame.Content = new TeacherStatisticView();
+            });
+
+            TeacherMailCM = new RelayCommand<Frame>((P) => { return true; }, (P) =>
+            {
+
+                TeacherMailView teacherMailView = new TeacherMailView();
+                GiangVien gv = new GiangVien();
+                
+                if (gv != null)
+                {
+                    teacherMailView.HoTen.Text = "";
+                    teacherMailView.EmailAddress.Text = "";
+                }
+                MainFrame.Content = teacherMailView;
+
+            });
             SignoutCM = new RelayCommand<FrameworkElement>((p) => { return p == null ? false : true; }, (p) =>
             {
                 Window oldWindow = App.Current.MainWindow;
@@ -87,9 +119,9 @@ namespace Group01_QuanLyLuanVan.ViewModel
         void _Loadwd(TeacherMainView p)
         {
             if (Const.taiKhoan.Avatar == "/Resource/Image/addava.png")
-                Ava = Const._localLink + "/Resource/Image/addava.png";
+                Ava = Const._localLink + "/Resource/Ava/addava.png";
             else
-                Ava = Const._localLink + "/Resource/Ava/" + Const.taiKhoan.Username + ((Const.taiKhoan.Avatar.Contains(".jpg")) ? ".jpg" : ".png").ToString();
+                Ava = Const._localLink + Const.taiKhoan.Avatar;
             LoadTenND(p);
         }
     }

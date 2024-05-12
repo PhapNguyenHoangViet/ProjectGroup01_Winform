@@ -1,9 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-                    xmlns:viewmodel="clr-namespace:Group01_QuanLyLuanVan.ViewModel">
-
-    <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+                    xmlns:viewmodel="clr-namespace:Group01_QuanLyLuanVan.ViewModel"
+                    xmlns:local="clr-namespace:Group01_QuanLyLuanVan.ViewModel">
+ 
     <viewmodel:ADMainViewModel x:Key="ADMainVM"></viewmodel:ADMainViewModel>
+    <viewmodel:AdminManageTeacherViewModel x:Key="AdminManageTeacherVM"></viewmodel:AdminManageTeacherViewModel>
+
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:ForgetPasswordViewModel x:Key="ForgetPassVM"></viewmodel:ForgetPasswordViewModel>
     <viewmodel:SignUpViewModel x:Key="SignUpVM"></viewmodel:SignUpViewModel>
@@ -21,12 +23,20 @@
     <viewmodel:TeacherProgressDetailViewModel x:Key="TeacherProgressDetailVM"></viewmodel:TeacherProgressDetailViewModel>
     <viewmodel:TeacherProgressViewModel x:Key="TeacherProgressVM"></viewmodel:TeacherProgressViewModel>
     <viewmodel:TeacherScoreViewModel x:Key="TeacherScoreVM"></viewmodel:TeacherScoreViewModel>
+    <viewmodel:TeacherStatisticViewModel x:Key="TeacherStatisticVM"></viewmodel:TeacherStatisticViewModel>
+
+    <viewmodel:TeacherScoreDetailViewModel x:Key="TeacherScoreDetailVM"></viewmodel:TeacherScoreDetailViewModel>
+
     <viewmodel:TeacherSettingViewModel x:Key="TeacherSettingVM"></viewmodel:TeacherSettingViewModel>
     <viewmodel:TeacherUpdateInforViewModel x:Key="TeacherUpdateInforVM"></viewmodel:TeacherUpdateInforViewModel>
     <viewmodel:TeacherTaskViewModel x:Key="TeacherTaskVM"></viewmodel:TeacherTaskViewModel>
     <viewmodel:TeacherTaskDetailViewModel x:Key="TeacherTaskDetailVM"></viewmodel:TeacherTaskDetailViewModel>
     <viewmodel:TeacherNotiDetailViewModel x:Key="TeacherNotiDetailVM"></viewmodel:TeacherNotiDetailViewModel>
     <viewmodel:TeacherNotiAddViewModel x:Key="TeacherNotiAddVM"></viewmodel:TeacherNotiAddViewModel>
+
+    <viewmodel:TeacherTaskMessageViewModel x:Key="TeacherTaskMessageVM"></viewmodel:TeacherTaskMessageViewModel>
+    <viewmodel:TeacherMailViewModel x:Key="TeacherMailVM"></viewmodel:TeacherMailViewModel>
+
 
     <viewmodel:StudentMainViewModel x:Key="StudentMainVM"></viewmodel:StudentMainViewModel>
     <viewmodel:StudentRegisterTopicViewModel x:Key="StudentRegisterVM"></viewmodel:StudentRegisterTopicViewModel>
@@ -37,5 +47,12 @@
     <viewmodel:StudentUpdateProgressViewModel x:Key="StudentUpdateProgessVM"></viewmodel:StudentUpdateProgressViewModel>
     <viewmodel:StudentReceiveEvaluationViewModel x:Key="StudentReceiveEvaluationVM"></viewmodel:StudentReceiveEvaluationViewModel>
     <viewmodel:StudentMailViewModel x:Key="StudentMailVM"></viewmodel:StudentMailViewModel>
-    <viewmodel:TeacherTaskMessageViewModel x:Key="TeacherTaskMessageVM"></viewmodel:TeacherTaskMessageViewModel>
+
+    <viewmodel:StudentChatYeuCauViewModel x:Key="StudentChatYeuCauVM"></viewmodel:StudentChatYeuCauViewModel>
+    <viewmodel:StudentUpdateInforViewModel x:Key="StudentUpdateInforVM"></viewmodel:StudentUpdateInforViewModel>
+
+    <viewmodel:StudentScoreViewModel x:Key="StudentScoreVM"></viewmodel:StudentScoreViewModel>
+    <viewmodel:StudentThesisViewModel x:Key="StudentThesisVM"></viewmodel:StudentThesisViewModel>
+    <viewmodel:StudentScoreViewModel2 x:Key="StudentScoreVM2"></viewmodel:StudentScoreViewModel2>
+
 </ResourceDictionary>

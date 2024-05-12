@@ -31,7 +31,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
             {
                 tkDAO.UpdateStatus(Const.taiKhoan.Username);
                 Window oldWindow = App.Current.MainWindow;
+                LoginView LoginView = new LoginView();
+
+                App.Current.MainWindow = LoginView;
+
+                LoginView.Show();
+
                 oldWindow.Close();
+
             }
             else
             {

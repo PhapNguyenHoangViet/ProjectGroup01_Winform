@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,25 @@ namespace Group01_QuanLyLuanVan.View
         public StudentNotiView()
         {
             InitializeComponent();
+        }
+    }
+    public class TenTrangThaiToColorConverterNoti : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value != null && value is string tenTrangThai)
+            {
+                if (tenTrangThai == "Đã đọc")
+                    return new SolidColorBrush(Color.FromArgb(255, 30, 144, 255));
+                else if (tenTrangThai == "Chưa đọc")
+                    return new SolidColorBrush(Color.FromArgb(255, 39, 94, 162));
+            }
+            return new SolidColorBrush(Colors.Transparent); // Mặc định trả về màu trong suốt
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

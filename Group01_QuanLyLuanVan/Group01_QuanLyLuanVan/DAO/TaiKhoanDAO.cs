@@ -13,9 +13,9 @@ namespace Group01_QuanLyLuanVan.DAO
     public class TaiKhoanDAO
     {
         DBConnection dbcon = new DBConnection();
-        public DataTable KiemTraThongTinTaiKhoan(string username, string passowrd)
+        public DataTable KiemTraThongTinTaiKhoan(string username, string password)
         {
-            string sqlStr = string.Format("(select * from TaiKhoan where username='{0}' and password='{1}' ) ", username, passowrd);
+            string sqlStr = string.Format("(select * from TaiKhoan where username='{0}' and password='{1}' ) ", username, password);
             return dbcon.Sql_Select(sqlStr);
         }
 
@@ -51,9 +51,9 @@ namespace Group01_QuanLyLuanVan.DAO
             }
         }
 
-        public TaiKhoan FindOne(string username, string passowrd)
+        public TaiKhoan FindOne(string username, string password)
         {
-            string sqlStr = string.Format("(select * from TaiKhoan where username='{0}' and password='{1}' ) ", username, passowrd);
+            string sqlStr = string.Format("select * from TaiKhoan where username='{0}' and password='{1}'", username, password);
             DataTable tb = dbcon.Sql_Select(sqlStr);
             if (tb.Rows.Count > 0)
             {

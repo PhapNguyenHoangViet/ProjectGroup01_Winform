@@ -45,6 +45,7 @@ namespace Group01_QuanLyLuanVan.DAO
         public DataTable LoadListYeuCau()
         {
             DataTable dt = new DataTable();
+            //string sqlStr = string.Format("SELECT yeuCauId, noiDung, yc.trangThai, yc.deTaiId FROM YeuCau yc INNER JOIN DeTai dt ON yc.deTaiId = dt.deTaiId INNER JOIN SinhVien sv ON dt.nhomId = sv.nhomId WHERE sv.sinhVienId = 'SV21110589'");
             string sqlStr = string.Format("SELECT yeuCauId, noiDung, yc.trangThai, yc.deTaiId FROM YeuCau yc INNER JOIN DeTai dt ON yc.deTaiId = dt.deTaiId INNER JOIN SinhVien sv ON dt.nhomId = sv.nhomId WHERE sv.sinhVienId = '{0}'", Const.sinhVien.SinhVienId);
             dt = conn.Sql_Select(sqlStr);
             return dt;

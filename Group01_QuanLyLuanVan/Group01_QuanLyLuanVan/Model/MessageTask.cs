@@ -14,6 +14,24 @@ namespace Group01_QuanLyLuanVan.Model
         private DateTime thoiGian;
         private string username;
         private int yeuCauId;
+        private string uid;
+        private string avatar;
+
+<<<<<<< HEAD
+        public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId)
+=======
+
+        public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId, string avatar)
+>>>>>>> Phap3
+        {
+            this.tinNhanId = tinNhanId;
+            this.tinNhan = tinNhan;
+            this.thoiGian = thoiGian;
+            this.username = username;
+            this.yeuCauId = yeuCauId;
+            this.avatar = avatar;
+
+        }
 
         public MessageTask(int tinNhanId, string tinNhan, DateTime thoiGian, string username, int yeuCauId)
         {
@@ -22,6 +40,13 @@ namespace Group01_QuanLyLuanVan.Model
             this.thoiGian = thoiGian;
             this.username = username;
             this.yeuCauId = yeuCauId;
+
+        }
+
+        public MessageTask(string username, string uid)
+        {
+            this.username = username;
+            this.uid = uid;
         }
 
         public int TinNhanId { get => tinNhanId; set => tinNhanId = value; }
@@ -29,5 +54,8 @@ namespace Group01_QuanLyLuanVan.Model
         public int YeuCauId { get => yeuCauId; set => yeuCauId = value; }
         public string Username { get => username; set => username = value; }
         public DateTime ThoiGian { get => thoiGian; set => thoiGian = value; }
+        public string UID { get => uid; set => uid = value; }
+        public string Avatar { get => avatar; set => avatar = value; }
+
     }
 }

@@ -15,11 +15,14 @@ namespace Group01_QuanLyLuanVan.ViewModel
     public class TeacherNotiDetailViewModel:BaseViewModel
     {
         ThongBaoDAO tbDAO = new ThongBaoDAO();
+        DeTaiDAO dtDAO = new DeTaiDAO();
+        public ICommand back { get; set; }
+
         private ObservableCollection<ThongBao> _ListThongBao;
         public ObservableCollection<ThongBao> ListThongBao { get => _ListThongBao; set { _ListThongBao = value; OnPropertyChanged(); } }
         public ICommand DetailThongBaoCommand { get; set; }
         public ObservableCollection<ThongBao> ThongBaos { get; set; }
-        public ICommand LoadThongBaosCommand { get; set; }
+        public ICommand LoadListNotiCommand { get; set; }
 
         private string _selectedThongBaoNoiDung;
         public string SelectedThongBaoNoiDung
@@ -33,8 +36,12 @@ namespace Group01_QuanLyLuanVan.ViewModel
         }
         public ICommand AddNoti { get; set; }
 
+
         public TeacherNotiDetailViewModel()
         {
+            back = new RelayCommand<TeacherNotiDetailView>((p) => true, p => _back(p));
+            LoadListNotiCommand = new RelayCommand<TeacherNotiDetailView>((p) => true, (p) => _LoadListNotiCommand(p));
+
             ThongBaos = new ObservableCollection<ThongBao>();
             var thongBaosData = tbDAO.LoadListThongBao(Const.deTaiId);
 
@@ -48,6 +55,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
 
                 ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
             }
+
             ListThongBao = ThongBaos;
             DetailThongBaoCommand = new RelayCommand<TeacherNotiDetailView>((p) => { return p.ListThongBaoView.SelectedItem == null ? false : true; }, (p) => _DetailThongBaoCommand(p));
             AddNoti = new RelayCommand<TeacherNotiDetailView>((p) => true, (p) => _AddNoti(p));
@@ -65,6 +73,38 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 var selectedThongBao = (ThongBao)tbView.ListThongBaoView.SelectedItem;
                 SelectedThongBaoNoiDung = selectedThongBao.NoiDung;
             }
+        }
+
+        void _back(TeacherNotiDetailView paramater)
+        {
+            TeacherNotiView taskView = new TeacherNotiView();
+            TeacherMainViewModel.MainFrame.Content = taskView;
+        }
+
+        void _LoadListNotiCommand(TeacherNotiDetailView topicsView)
+        {
+            topicsView.ListThongBaoView.ItemsSource = listNoti();
+            topicsView.ListThongBaoView.Items.Refresh();
+            topicsView.TenDeTai.Text = dtDAO.FindTenDeTaiByDeTaiId(Const.deTaiId);
+        }
+
+        ObservableCollection<ThongBao> listNoti()
+        {
+            ThongBaos = new ObservableCollection<ThongBao>();
+            var thongBaosData = tbDAO.LoadListThongBao(Const.deTaiId);
+
+            foreach (DataRow row in thongBaosData.Rows)
+            {
+                int thongBaoId = Convert.ToInt32(row["thongBaoId"]);
+                string tieuDe = row["tieuDe"].ToString();
+                string noiDung = row["noiDung"].ToString();
+                string deTaiId = row["deTaiId"].ToString();
+                DateTime ngay = Convert.ToDateTime(row["ngay"]);
+
+                ThongBaos.Add(new ThongBao(thongBaoId, tieuDe, noiDung, deTaiId, ngay));
+            }
+
+            return ThongBaos;
         }
     }
 }

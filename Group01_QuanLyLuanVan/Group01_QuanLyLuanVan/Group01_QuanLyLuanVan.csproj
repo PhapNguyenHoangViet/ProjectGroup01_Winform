@@ -37,6 +37,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -68,8 +74,9 @@
     </ApplicationDefinition>
     <Compile Include="Chat\Core\RelayCommand.cs" />
     <Compile Include="Chat\Core\ObservableObject.cs" />
+    <Compile Include="Chat\Net\IO\PacketBuilder.cs" />
+    <Compile Include="Chat\Net\IO\PacketReader.cs" />
     <Compile Include="Chat\Net\Server.cs" />
-    <Compile Include="Chat\ViewModel\ChatViewModel.cs" />
     <Compile Include="DAO\ComboBoxData.cs" />
     <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\DeTaiDAO.cs" />
@@ -104,29 +111,36 @@
     <Compile Include="UserControls\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AdminManageTeacherViewModel.cs" />
+    <Compile Include="ViewModel\AdminManageTeacherViewModel1.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\ForgetPasswordViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ADMainViewModel.cs" />
     <Compile Include="ViewModel\StudentAddTopicsViewModel.cs" />
+    <Compile Include="ViewModel\StudentChatYeuCauViewModel.cs" />
     <Compile Include="ViewModel\StudentListTopicViewModel.cs" />
     <Compile Include="ViewModel\StudentMailViewModel.cs" />
     <Compile Include="ViewModel\StudentMainViewModel.cs" />
     <Compile Include="ViewModel\StudentNotiViewModel.cs" />
     <Compile Include="ViewModel\StudentReceiveEvaluationViewModel.cs" />
     <Compile Include="ViewModel\StudentRegisterTopicViewModel.cs" />
+    <Compile Include="ViewModel\StudentScoreViewModel.cs" />
+    <Compile Include="ViewModel\StudentScoreViewModel2.cs" />
+    <Compile Include="ViewModel\StudentThesisViewModel.cs" />
+    <Compile Include="ViewModel\StudentUpdateInforViewModel.cs" />
     <Compile Include="ViewModel\StudentUpdateProgressViewModel.cs" />
     <Compile Include="ViewModel\StudentUpdateTaskViewModel.cs" />
     <Compile Include="ViewModel\SystemErrorReportViewModel.cs" />
     <Compile Include="ViewModel\TeacherAddDissertationViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherDissertationViewModel.cs" />
+    <Compile Include="ViewModel\TeacherMailViewModel.cs" />
     <Compile Include="ViewModel\TeacherMainViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotiAddViewModel.cs" />
     <Compile Include="ViewModel\TeacherNotiDetailViewModel.cs" />
@@ -134,8 +148,10 @@
     <Compile Include="ViewModel\TeacherNotiViewModel.cs" />
     <Compile Include="ViewModel\TeacherProgressDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherProgressViewModel.cs" />
+    <Compile Include="ViewModel\TeacherScoreDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherScoreViewModel.cs" />
     <Compile Include="ViewModel\TeacherSettingViewModel.cs" />
+    <Compile Include="ViewModel\TeacherStatisticViewModel.cs" />
     <Compile Include="ViewModel\TeacherTaskDetailViewModel.cs" />
     <Compile Include="ViewModel\TeacherTaskMessageViewModel.cs" />
     <Compile Include="ViewModel\TeacherTaskViewModel.cs" />
@@ -149,6 +165,9 @@
     </Compile>
     <Compile Include="View\AdminManageTeacherView.xaml.cs">
       <DependentUpon>AdminManageTeacherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminManageTeacherView1.xaml.cs">
+      <DependentUpon>AdminManageTeacherView1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AdminManageTopicView.xaml.cs">
       <DependentUpon>AdminManageTopicView.xaml</DependentUpon>
@@ -183,6 +202,9 @@
     <Compile Include="View\StudentAddTopicsView.xaml.cs">
       <DependentUpon>StudentAddTopicsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StudentChatYeuCauView.xaml.cs">
+      <DependentUpon>StudentChatYeuCauView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentListTopicView.xaml.cs">
       <DependentUpon>StudentListTopicView.xaml</DependentUpon>
     </Compile>
@@ -210,6 +232,9 @@
     <Compile Include="View\StudentSubmitEssayView.xaml.cs">
       <DependentUpon>StudentSubmitEssayView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StudentThesisView.xaml.cs">
+      <DependentUpon>StudentThesisView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StudentUpdateInforView.xaml.cs">
       <DependentUpon>StudentUpdateInforView.xaml</DependentUpon>
     </Compile>
@@ -230,6 +255,9 @@
     </Compile>
     <Compile Include="View\TeacherDissertationView.xaml.cs">
       <DependentUpon>TeacherDissertationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherMailView.xaml.cs">
+      <DependentUpon>TeacherMailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TeacherMainView.xaml.cs">
       <DependentUpon>TeacherMainView.xaml</DependentUpon>
@@ -252,11 +280,17 @@
     <Compile Include="View\TeacherProgressView.xaml.cs">
       <DependentUpon>TeacherProgressView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\TeacherScoreDetailView.xaml.cs">
+      <DependentUpon>TeacherScoreDetailView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TeacherScoreView.xaml.cs">
       <DependentUpon>TeacherScoreView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TeacherSettingView.xaml.cs">
       <DependentUpon>TeacherSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeacherStatisticView.xaml.cs">
+      <DependentUpon>TeacherStatisticView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TeacherTaskDetailView.xaml.cs">
       <DependentUpon>TeacherTaskDetailView.xaml</DependentUpon>
@@ -317,6 +351,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AdminManageTeacherView1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AdminManageTopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -361,6 +399,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\StudentChatYeuCauView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StudentListTopicView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -397,6 +439,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\StudentThesisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\StudentUpdateInforView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -422,6 +468,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherDissertationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherMailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -453,11 +503,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\TeacherScoreDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TeacherScoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TeacherSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeacherStatisticView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -540,11 +598,43 @@
     <Resource Include="Resource\Image\votay.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resource\Ava\" />
+    <Resource Include="Resource\Image\task1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\Image\noti.png" />
     <Resource Include="Resource\Image\topic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\update2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Ava\addava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\notification %282%29.png" />
+    <Resource Include="Resource\Image\noti2.png" />
+    <Resource Include="Resource\Image\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\noti3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\noti4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\luanvan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

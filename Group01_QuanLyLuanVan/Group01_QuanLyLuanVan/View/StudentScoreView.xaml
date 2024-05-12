@@ -8,7 +8,11 @@
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Height="605" Width="700"
-      Title="StudentScoreView">
+      Title="StudentScoreView"
+      x:Name="StudentScoreViewwd"
+      
+      DataContext="{StaticResource StudentScoreVM}"
+      >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -26,19 +30,13 @@
                 HorizontalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel Orientation="Horizontal"
+            <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center">
-                <Image Source="/Resource/Image/mochi_mat_sang.png" 
-                       Width="297" 
-                       Height="250"/>
-                <StackPanel Orientation="Vertical"
-                            HorizontalAlignment="Center">
-                    <TextBlock TextAlignment="Center" 
-                               FontSize="22"
-                               FontFamily="{StaticResource Custom}"
-                               Text="HỒI HỘP KHÔNG NÈ???"
-                               Margin="0,240,0,0">
-                    </TextBlock>
+                <Image Source="/Resource/Image/luanvan.png" 
+                       Width="519" 
+                       Height="389"/>
+                <StackPanel Orientation="Vertical" Height="348">
+
                     <Button Content="Xem điểm"
                                 FontFamily="Josefin Sans"
                                 Foreground="White"
@@ -46,6 +44,12 @@
                                 Width="200"
                                 Margin="0,30,0,0"
                                 materialDesign:ButtonAssist.CornerRadius="10">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding StudentScoreCM}"
+                       CommandParameter="{Binding ElementName=StudentScoreViewwd}"></i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
                     </Button>
                 </StackPanel>
             </StackPanel>

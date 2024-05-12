@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Group01_QuanLyLuanVan.ViewModel"
+      xmlns:convert="clr-namespace:Group01_QuanLyLuanVan.View"
       mc:Ignorable="d" 
       xmlns:i= "http://schemas.microsoft.com/xaml/behaviors"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -100,6 +100,7 @@
                         </i:Interaction.Triggers >
                     </TextBox >
                     <Button
+                    BorderThickness="0"
                     Content = "+Thêm"
                     Margin = "20,0,0,0"
                     Width = "80"
@@ -122,7 +123,7 @@
 
                     <ListView ItemsSource="{Binding ListTopic}" HorizontalContentAlignment="Stretch"                    
                     x:Name = "ListTopicView"
-                    Height = "410"
+                    Height = "448"
                     Width = "670"
                     SelectionMode = "Single"
                     ScrollViewer.VerticalScrollBarVisibility = "Hidden"
@@ -209,18 +210,23 @@
                                                             />
                                                         </Grid>
                                                         <Grid Grid.Column="4">
+                                                            <Grid.Resources>
+                                                                <convert:TenTrangThaiToColorConverter x:Key="TenTrangThaiConverter"></convert:TenTrangThaiToColorConverter>
+                                                            </Grid.Resources>
                                                             <Border CornerRadius="10" Width="100" 
-                                                                    BorderBrush="#00cd66" BorderThickness="1" Padding="5">
+                                                                BorderThickness="1" Padding="5"
+                                                                BorderBrush="{Binding TenTrangThai, Converter={StaticResource TenTrangThaiConverter}}">
                                                                 <TextBlock 
                                                                     x:Name="TenTrangThai"
                                                                     Text="{Binding TenTrangThai}" 
-                                                                    Foreground="#00cd66" 
+                                                                    Foreground="{Binding TenTrangThai, Converter={StaticResource TenTrangThaiConverter}}" 
                                                                     FontWeight="Bold"
                                                                     FontFamily="{StaticResource Custom}" 
                                                                     VerticalAlignment="Center" 
-                                                                    HorizontalAlignment="Center"     />
+                                                                    HorizontalAlignment="Center" />     
                                                             </Border>
                                                         </Grid>
+
                                                     </Grid>
 
                                                 </StackPanel>

@@ -59,5 +59,22 @@ namespace Group01_QuanLyLuanVan.DAO
             dt = conn.Sql_Select(sqlStr);
             return dt;
         }
+
+        public DataTable ListGiangVienXuatSac()
+        {
+            DataTable dt = new DataTable();
+            String sqlStr = string.Format("select * from GiangVien");
+            dt = conn.Sql_Select(sqlStr);
+            return dt;
+        }
+
+        public DataTable ListGiangVienTot()
+        {
+            DataTable dt = new DataTable();
+            String sqlStr = string.Format("SELECT gv.giangVienId, gv.hoTen AS TenGiangVien, COUNT(*) AS SoLuongTaskGiao\r\nFROM GiangVien gv\r\nJOIN DeTai dt ON gv.giangVienId = dt.giangVienId\r\nJOIN YeuCau yc ON dt.deTaiId = yc.deTaiId\r\nGROUP BY gv.giangVienId, gv.hoTen;\r\n");
+            dt = conn.Sql_Select(sqlStr);
+            return dt;
+        }
+
     }
 }

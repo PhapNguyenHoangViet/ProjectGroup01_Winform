@@ -93,7 +93,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
             detailTopic.deTaiId.Text = temp.DeTaiId;
             detailTopic.TenDeTai.Text = temp.TenDeTai;
             detailTopic.TenTheLoai.Text = temp.TenTheLoai;
-            detailTopic.HoTen.Text = Const.giangVien.HoTen;
+            detailTopic.TenTrangThai.Text = temp.TenTrangThai;
             detailTopic.MoTa.Text = temp.MoTa;
             detailTopic.YeuCau.Text = temp.YeuCauChung;
             detailTopic.SoLuong.Text = temp.SoLuong.ToString();
@@ -102,23 +102,29 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 detailTopic.NgayKetThuc.Text = "";
             else
                 detailTopic.NgayKetThuc.Text = temp.NgayKetThuc.ToString();
+            
             string thanhVien = "";
-            //MessageBox.Show(temp.DeTaiId.ToString());
-            //int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
-            //MessageBox.Show(nhomId.ToString());
-
-            //if (nhomId != -1)
-            //{
-            //    List<SinhVien> sinhViens = svDAO.FindByDeTaiId(nhomId);
-            //    if (sinhViens != null)
-            //    {
-            //        foreach (SinhVien sinhVien in sinhViens)
-            //        {
-            //            thanhVien += sinhVien.HoTen + "/n";
-            //        }
-            //    }
-            //}
+            if (detailTopic.TenTrangThai.Text != "Đã đăng ký")
+                thanhVien = "Đề tài chưa đăng ký";
+            else
+            {
+                int nhomId = svDAO.FindNhomIDByDeTaiId(temp.DeTaiId);
+                thanhVien = "Nhóm " + nhomId.ToString();
+                if (nhomId != -1)
+                {
+                    string sinhViens = svDAO.FindByDeTaiId(nhomId);
+                    if (sinhViens != null)
+                    {
+                        thanhVien += sinhViens;
+                    }
+                }
+            }
             detailTopic.ThanhVien.Text = thanhVien;
+            if (detailTopic.TenTrangThai.Text == "Đề xuất")
+                detailTopic.btnXacNhan.Visibility = Visibility.Visible;
+            else
+                detailTopic.btnXacNhan.Visibility = Visibility.Collapsed;
+
             ListTopic = Topics;
             topicsView.ListTopicView.ItemsSource = ListTopic;
             topicsView.ListTopicView.SelectedItem = null;
@@ -217,6 +223,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                 {
                     tenTrangThai = "Đề xuất";
                 }
+
                 if (an != 1)
                     Topics.Add(new DeTai(deTaiId, tenDeTai, tenTheLoai, moTa, yeuCauChung, ngayBatDau, ngayKetThuc, soLuong, tenTrangThai));
             }

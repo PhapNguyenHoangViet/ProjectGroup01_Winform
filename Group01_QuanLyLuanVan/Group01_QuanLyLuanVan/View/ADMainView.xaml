@@ -71,7 +71,7 @@
                                 IsChecked="True"  
                                 FontFamily="{StaticResource Custom}"
                                 Uid="0"
-                                Command="{Binding HomeCM}">
+                                Command="{Binding HomeAdminCM}">
                             </RadioButton>
 
                             <RadioButton
@@ -80,58 +80,24 @@
                                 Uid="1"
                                 FontFamily="{StaticResource Custom}"
                                 x:Name="btnTeachers"
-                                Command="{Binding }">
+                                Command="{Binding GiaoVienTotCM}">
                             </RadioButton>
 
                             <RadioButton
                                 Width="200"
-                                Style="{StaticResource BtnQLSinhVien}"
+                                Style="{StaticResource BtnQLGiaoVien1}"
                                 Uid="1"
                                 FontFamily="{StaticResource Custom}"
-                                x:Name="btnStudents"
-                                Command="{Binding }">
+                                x:Name="btnTeachers1"
+                                Command="{Binding GiaoVienTotCM1}">
                             </RadioButton>
 
 
-                            <RadioButton
-                                Width="200"
-                                x:Name="btnQLPT"
-                                Uid="2"
-                                Style="{StaticResource BtnQLLuanVan}"
-                                FontFamily="{StaticResource Custom}"
-                                Command="{Binding FineMoneyCM}">
-                            </RadioButton>
-
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnSupport}"
-                                FontFamily="{StaticResource Custom}"
-                                Visibility="{Binding SetNV}"
-                                Uid="3"
-                                Command="{Binding NotiCM}">
-                            </RadioButton>
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnNoti}"
-                                FontFamily="{StaticResource Custom}"
-                                Uid="4"
-                                Visibility="{Binding SetQuanLy}"
-                                Command="{Binding SupportCM}">
-                            </RadioButton>
-
-                            <RadioButton
-                                Width="200"
-                                Style="{StaticResource BtnThongKe}"
-                                FontFamily="{StaticResource Custom}"
-                                Uid="5"
-                                Visibility="{Binding }"
-                                Command="{Binding }">
-                            </RadioButton>
 
                             <Grid Grid.Row="2" VerticalAlignment="Bottom">
                                 <Button
                                     Style="{StaticResource BtnLogOut}"
-                                    FontFamily="{StaticResource Custom}" Margin="-5,0,0,-65"
+                                    FontFamily="{StaticResource Custom}" Margin="-25,0,0,-65"
                                     Command="{Binding SignoutCM}"
                                     CommandParameter="{Binding ElementName=ADMainWd}">
                                 </Button>

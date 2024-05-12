@@ -91,6 +91,7 @@ namespace Group01_QuanLyLuanVan.ViewModel
                             string updateSinhVienUserQuery = String.Format("UPDATE SinhVien SET nhomId = @nhomId WHERE Username = '{0}'", Const.taiKhoan.Username);
                             SqlCommand updateSinhVienUserCommand = new SqlCommand(updateSinhVienUserQuery, conn, transaction);
                             updateSinhVienUserCommand.Parameters.AddWithValue("@nhomId", nhomId);
+                            Const.sinhVien.NhomId = nhomId;
                             updateSinhVienUserCommand.ExecuteNonQuery();
 
                             // Commit transaction

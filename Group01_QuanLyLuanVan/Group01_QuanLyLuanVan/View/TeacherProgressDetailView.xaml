@@ -237,6 +237,7 @@
                                 materialDesign:TextFieldAssist.TextBoxViewMargin="20,0,0,0"/>
                         </Border>
                         <Button
+                            BorderThickness="0"
                             Content = "+ Thêm"
                             Margin = "30,15,0,0"
                             Width = "86"

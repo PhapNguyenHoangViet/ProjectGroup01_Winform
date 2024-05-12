@@ -11,13 +11,19 @@
       x:Name="updatetaskwd"
       DataContext="{StaticResource StudentUpdateTaskVM}"
       Title="StudentUpdateTaskView">
+    <i:Interaction.Triggers >
+        <i:EventTrigger EventName = "Loaded" >
+            <i:InvokeCommandAction Command = "{Binding LoadTasksCommand}"
+                               CommandParameter="{Binding ElementName= updatetaskwd}"></i:InvokeCommandAction >
+        </i:EventTrigger >
+    </i:Interaction.Triggers >
 
     <Grid>
         <Grid.RowDefinitions >
             <RowDefinition Height = "65" />
-            <RowDefinition Height = "372" />
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height = "476" />
+            <RowDefinition />
+
         </Grid.RowDefinitions >
         <Grid Grid.Row = "0" >
             <StackPanel Orientation = "Horizontal" >
@@ -26,8 +32,7 @@
                     FontFamily = "{StaticResource Custom}"
                     FontSize = "30"
                     Foreground = "#55b3d9"
-                    Margin = "15,10,0,0" Width = "650"
-                    HorizontalAlignment = "Center"
+                     Width = "660"
                     VerticalAlignment = "Center">
                     <Run Text = "CẬP NHẬT TASK" />
                 </TextBlock >
@@ -36,61 +41,139 @@
 
 
         <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="0*"/>
-            </Grid.RowDefinitions>
-            <DataGrid ItemsSource="{Binding MyCollection}"
-              AutoGenerateColumns="False"
-              CanUserAddRows="False"
-              CanUserResizeColumns="False"
-              IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Task" Binding="{Binding NoiDung}" Width="580" IsReadOnly="True"/>
-                    <DataGridTemplateColumn Header="Select">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"
-                              Command="{Binding DataContext.CheckBoxCommand, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
-                              CommandParameter="{Binding}">
-                                    <CheckBox.Style>
-                                        <Style TargetType="CheckBox">
-                                            <Setter Property="BorderThickness" Value="1" />
-                                            <Setter Property="BorderBrush" Value="Black" />
-                                            <Style.Triggers>
-                                                <Trigger Property="IsChecked" Value="True">
-                                                    <Setter Property="BorderThickness" Value="0" />
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </CheckBox.Style>
-                                </CheckBox>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+            <StackPanel>
+                <Border                   
+                    Width = "652"
+                    Height = "50"
+                    CornerRadius = "10"
+                    >
+
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width = "462" />
+                            <ColumnDefinition Width = "190" />
+                        </Grid.ColumnDefinitions >
+                        <Grid Grid.Column = "0" >
+                            <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center" Width="442">
+                                <Image Source="/Resource/Image/menu.png" Width="30" Height="30" Margin="20,0,4,0"/>
+                                <TextBlock Text = "TASK"
+                                       HorizontalAlignment = "Left"
+                                       
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "16"
+                                        FontWeight = "SemiBold"
+                                       />
+                            </StackPanel >
 
 
+                        </Grid >
+                        <Grid Grid.Column = "1" >
+                            <StackPanel Orientation = "Horizontal"
+                                            HorizontalAlignment="Center">
+                                <Image Source="/Resource/Image/update.png" Width="30" Height="30" Margin="0,0,4,0"/>
+                                <TextBlock Text = "TIẾN ĐỘ"
+                                       HorizontalAlignment = "Center"
+                                       VerticalAlignment = "Center"
+                                       FontFamily = "{StaticResource Custom}"
+                                       FontSize = "16"
+                                        FontWeight = "SemiBold"
+                                       />
+                            </StackPanel >
+
+                        </Grid >
+                    </Grid >
+
+                </Border >
+                <ListView ItemsSource="{Binding ListTask}" HorizontalContentAlignment="Stretch"                    
+                    x:Name = "ListTaskView"
+                    Height = "393"
+                    Width = "675"
+                    SelectionMode = "Single"
+                    ScrollViewer.VerticalScrollBarVisibility = "Hidden"
+                    Foreground="White"
+                    >
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <Border
+                                    BorderBrush="Gray"
+                                    BorderThickness="0.5"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                Width = "652"
+                                Height = "40"
+                                CornerRadius = "10"
+                                Background = "White"
+                                >
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="384"/>
+                                        <ColumnDefinition  Width="350"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <TextBlock
+                                                            x:Name="Ngay"
+                                                            VerticalAlignment="Center"
+                                                            Margin="30,0,0,0"
+                                                            Text="{Binding NoiDung}"
+                                                            Foreground="#1e90ff"
+                                                            FontSize="16"
+                                                            FontWeight="Bold"
+                                                            FontFamily="{StaticResource Custom}"
+                                                            
+                                                            TextWrapping="Wrap"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBlock
+                                                       HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center"
+                                                        x:Name="TieuDe"
+                                                        Text="{Binding TrangThai}"
+                                                        Foreground="#FFA500"
+                                                        FontFamily="{StaticResource Custom}"
+                                                        FontSize="16"                                                           
+                                                        TextWrapping="Wrap"/>
+                                    </Grid>
+                                </Grid >
+
+                            </Border >
+                        </DataTemplate >
+                    </ListView.ItemTemplate >
+                    <ListView.ItemsPanel >
+                        <ItemsPanelTemplate >
+                            <WrapPanel Orientation = "Vertical" />
+                        </ItemsPanelTemplate >
+                    </ListView.ItemsPanel >
+                    <i:Interaction.Triggers >
+                        <i:EventTrigger EventName = "SelectionChanged" >
+                            <i:InvokeCommandAction Command = "{Binding MessageTaskCommand}"
+                                                       CommandParameter="{Binding ElementName=updatetaskwd}"></i:InvokeCommandAction >
+                        </i:EventTrigger >
+                    </i:Interaction.Triggers >
+                </ListView >
+            </StackPanel>
         </Grid>
 
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Height="40">
                 <TextBox
                     x:Name="ThemTask"
-                    FontFamily="{StaticResource Custom}"
+                    FontFamily="Italy"
                     HorizontalAlignment="Left"
                     Width="575"
+                    FontSize="14"
                     BorderThickness="1"
                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                     materialDesign:TextFieldAssist.TextFieldCornerRadius="6"
-                    materialDesign:HintAssist.Hint="THÊM TASK"
+                    materialDesign:HintAssist.Hint="Thêm task"
                     materialDesign:TextFieldAssist.TextBoxViewMargin="0,3,0,0"
                     materialDesign:TextFieldAssist.UnderlineBrush="Black"
-                    Padding="20,10,0,0"
+                    Padding="10"
                     />
 
-                <Button Content="+THÊM"
+                <Button Content="THÊM"
                             Height="40"
                             Margin="10,0,0,0"
                             Width="115"                       
@@ -108,53 +191,6 @@
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Row="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="294"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" Margin="0,0,20,0">
-                <StackPanel>
-                    <TextBlock
-                        Foreground="#55b3d9"
-                        Text="Tổng số các task đã hoàn thành: "
-                        FontFamily="{StaticResource Custom}"
-                        FontSize="16"
-                        />
-                    <TextBlock
-                        Foreground="#55b3d9" 
-                        Text="Tổng số các task chưa hoàn thành: "
-                        FontFamily="{StaticResource Custom}"
-                        FontSize="16"
-                        Margin="0,20,0,0"
-                        />
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="1">
-                <StackPanel HorizontalAlignment="Left">
-                    <TextBlock
-                            Text="{Binding TongHT}"
-                            Foreground="#55b3d9"
-                            x:Name="TongHT"
-                            Margin="0,0,30,0"
-                            FontFamily="{StaticResource Custom}"
-                            FontSize="16"
-                            HorizontalAlignment="Right"
-                        />
-                    <TextBlock
-                            Text="{Binding TongCHT}"
-                            Foreground="#55b3d9"
-                            x:Name="TongCHT"
-                            Margin="0,20,30,0"
-                            FontFamily="{StaticResource Custom}"
-                            FontSize="16"
-                            HorizontalAlignment="Right"
-                        />
-                </StackPanel>
-
-            </Grid>
-        </Grid>
     </Grid>
 </Page>
